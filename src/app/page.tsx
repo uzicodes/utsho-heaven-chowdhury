@@ -28,7 +28,7 @@ export default function Home() {
         </h1>
         {/* Profile Section */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 mt-6 mb-8">
-          <span className="text-lg md:text-xl">Hello, I'm Aayush Bharti</span>
+          <span className="text-lg md:text-xl">Hello, I&apos;m Utsho Heaven Chowdhury</span>
           <Image
             src="/profile-placeholder.png"
             alt="Profile picture"
@@ -44,11 +44,11 @@ export default function Home() {
             href="#connect"
             className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full font-semibold shadow transition"
           >
-            Let's Connect <span className="text-xl">→</span>
+            Let&apos;s Connect <span className="text-xl">→</span>
           </a>
           <span className="text-sm md:text-base flex items-center gap-2">
             <svg width="20" height="20" fill="currentColor" className="inline-block"><path d="M2.003 5.884L10 11.382l7.997-5.498A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"/><path d="M18 8.118l-8 5.5-8-5.5V16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"/></svg>
-            hello@aayushbharti.in
+            utshozi11@gmail.com
           </span>
         </div>
       </main>
