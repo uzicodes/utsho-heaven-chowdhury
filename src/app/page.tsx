@@ -17,7 +17,7 @@ export default function Home() {
         {/* Announcement Badge */}
         <div className="mt-20 mb-4 flex justify-center">
           <span className="bg-blue-700 text-xs text-white px-3 py-1 rounded-full font-semibold flex items-center gap-2 shadow-md">
-            <span className="bg-blue-400 rounded px-2 py-0.5 text-xs font-bold">New</span> Next Ventures is live!
+            
           </span>
         </div>
         {/* Headline */}
