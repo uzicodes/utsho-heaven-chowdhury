@@ -12,10 +12,8 @@ export default function Home() {
           height={80}
           priority
         />
-        <h1 className="text-4xl font-bold mb-2 text-gray-900 dark:text-gray-100">Hi, I'm Utsho Heaven Chowdhury</h1>
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-          Welcome to my portfolio! I'm a passionate developer building modern web experiences with Next.js and Tailwind CSS.
-        </p>
+        <h1>Hi, I&apos;m Utsho Heaven Chowdhury</h1>
+        <p>Welcome to my portfolio! I&apos;m a passionate developer building modern web experiences with Next.js and Tailwind CSS.</p>
         <div className="flex justify-center gap-4 mb-4">
           {/* Placeholder for navigation or social links */}
           <a href="#projects" className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">Projects</a>
