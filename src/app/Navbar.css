@@ -3,8 +3,9 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(45, 45, 45, 0.95);
-  backdrop-filter: blur(10px);
+  background: rgba(45, 45, 45, 0.6); /* More transparent */
+  backdrop-filter: blur(18px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.18); /* Subtle white border */
   border-radius: 50px;
   padding: 12px 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -13,8 +14,14 @@
 }
 
 .navbar.scrolled {
-  background: rgba(45, 45, 45, 0.98);
-  backdrop-filter: blur(15px);
+  background: rgba(45, 45, 45, 0.72); /* Slightly less transparent when scrolled */
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50px;
+  padding: 12px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .navbar:hover {
