@@ -5,8 +5,6 @@ import {
   Youtube, 
   Facebook
 } from "lucide-react";
-import ProfileCard from "./ProfileCard";
-import "./ProfileCard.css";
 
 // Mock SlidingLogoMarqueeItem interface
 interface SlidingLogoMarqueeItem {
@@ -105,18 +103,6 @@ const SlidingLogoMarqueeDemo = () => {
           gap="0.5rem"
           className="mx-auto w-full"
         />
-        {/* Profile Card centered below the marquee */}
-        <div className="flex justify-center mt-8">
-          <ProfileCard
-            avatarUrl="/dp.jpeg"
-            name="Utsho Heaven Chowdhury"
-            title="Full Stack Developer"
-            handle="utshodev"
-            status="Online"
-            contactText="Contact"
-            showUserInfo={true}
-          />
-        </div>
         {/* Gradient overlays for fade effect */}
         <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-gray-50 to-transparent dark:from-gray-900 pointer-events-none" />
         <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-gray-50 to-transparent dark:from-gray-900 pointer-events-none" />
