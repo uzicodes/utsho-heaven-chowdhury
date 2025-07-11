@@ -9,13 +9,7 @@ A personal portfolio website showcasing my projects, skills, and resume. Built t
 - [@uzicodes](https://www.github.com/uzicodes)
 
 
-## Project Details
 
-To start this project run
-
-```bash
-  npm run dev
-```
 
 
 ## Tech Stack
