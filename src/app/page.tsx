@@ -47,7 +47,7 @@ export default function Home() {
         <div style={{ marginBottom: '2.5rem' }} />
         {/* Call to Action & Contact */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
-          <a href="#connect" className="button"><span>Let's Connect</span></a>
+          <a href="#connect" className="button"><span>Let&apos;s Connect</span></a>
         </div>
       </main>
       {/* Subtle Glow at Bottom */}
