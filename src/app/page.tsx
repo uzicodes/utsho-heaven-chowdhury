@@ -21,22 +21,19 @@ export default function Home() {
           </span>
         </div>
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-2">
-          I help founders turn ideas
-          <br />
-          into seamless <span className="italic font-serif">digital experiences</span>
-        </h1>
+        
         {/* Profile Section */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 mt-6 mb-8">
           <span className="text-lg md:text-xl">Hello, I&apos;m Utsho Heaven Chowdhury</span>
+          <br></br>
           <Image
-            src="/profile-placeholder.png"
+            src="/dp.jpeg"
             alt="Profile picture"
-            width={40}
-            height={40}
+            width={100}
+            height={100}
             className="rounded-full border-2 border-white mx-2"
           />
-          <span className="text-lg md:text-xl">a Full Stack Developer</span>
+          
         </div>
         {/* Call to Action & Contact */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
