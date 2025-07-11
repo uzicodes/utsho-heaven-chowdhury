@@ -26,3 +26,183 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Spinner Loader Styles */
+.spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 100px;
+  height: 100px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+  z-index: 1;
+}
+
+.spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Gradient Animated Button Styles */
+.button {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #272727;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.button:hover::before {
+  opacity: 0.7;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.button:hover:after {
+  opacity: 1;
+}
+
+.real-button {
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  z-index: 1;
+  outline: none;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.backdrop {
+  position: absolute;
+  inset: -9900%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #0000 0,
+    #0000 20%,
+    #111111aa 50%
+  );
+  background-size: 3px 3px;
+  z-index: -1;
+}
+
+.spin {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: 0.5;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.real-button:active ~ div .spin {
+  opacity: 1;
+}
+
+.spin-blur {
+  filter: blur(2em) url(#unopaq);
+}
+
+.spin-intense {
+  inset: -0.125em;
+  filter: blur(0.25em) url(#unopaq2);
+  border-radius: 0.75em;
+}
+
+.spin-inside {
+  inset: -2px;
+  border-radius: inherit;
+  filter: blur(2px) url(#unopaq3);
+  z-index: 0;
+}
+
+.spin::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  animation:
+    speen 8s cubic-bezier(0.56, 0.15, 0.28, 0.86) infinite,
+    woah 4s infinite;
+  animation-play-state: paused;
+}
+
+.real-button:hover ~ div .spin::before {
+  animation-play-state: running;
+}
+
+.spin-blur::before {
+  background: linear-gradient(90deg, #f50 30%, #0000 50%, #05f 70%);
+}
+
+.spin-intense::before {
+  background: linear-gradient(90deg, #f95 20%, #0000 45% 55%, #59f 80%);
+}
+
+.spin-inside::before {
+  background: linear-gradient(90deg, #fc9 30%, #0000 45% 55%, #9cf 70%);
+}
+
+@keyframes speen {
+  0% {
+    rotate: 10deg;
+  }
+  50% {
+    rotate: 190deg;
+  }
+  to {
+    rotate: 370deg;
+  }
+}
+
+@keyframes woah {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 0.75;
+  }
+  to {
+    scale: 1;
+  }
+}

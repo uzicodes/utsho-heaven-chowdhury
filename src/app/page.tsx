@@ -25,28 +25,29 @@ export default function Home() {
         {/* Profile Section */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 mt-6 mb-8">
           <span className="text-lg md:text-xl">Hello, I&apos;m Utsho Heaven Chowdhury</span>
-          <br></br>
-          <Image
-            src="/dp.jpeg"
-            alt="Profile picture"
-            width={100}
-            height={100}
-            className="rounded-full border-2 border-white mx-2"
-          />
-          
+          <br />
+          <div style={{ position: "relative", width: 100, height: 100, display: "inline-block" }}>
+            <span className="spinner"></span>
+            <Image
+              src="/dp.jpeg"
+              alt="Profile picture"
+              width={90}
+              height={90}
+              className="rounded-full border-2 border-white mx-2"
+              style={{
+                position: "absolute",
+                top: 5,
+                left: 5,
+                zIndex: 2,
+              }}
+            />
+          </div>
         </div>
+        
+        <div style={{ marginBottom: '2.5rem' }} />
         {/* Call to Action & Contact */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
-          <a
-            href="#connect"
-            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full font-semibold shadow transition"
-          >
-            Let&apos;s Connect <span className="text-xl">→</span>
-          </a>
-          <span className="text-sm md:text-base flex items-center gap-2">
-            <svg width="20" height="20" fill="currentColor" className="inline-block"><path d="M2.003 5.884L10 11.382l7.997-5.498A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"/><path d="M18 8.118l-8 5.5-8-5.5V16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"/></svg>
-            utshozi11@gmail.com
-          </span>
+          <a href="#connect" className="button"><span>Let's Connect</span></a>
         </div>
       </main>
       {/* Subtle Glow at Bottom */}
