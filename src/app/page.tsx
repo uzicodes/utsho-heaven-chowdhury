@@ -25,12 +25,12 @@ export default function Home() {
           <br />
           <div style={{ position: "relative", width: 100, height: 100, display: "inline-block" }}>
             <span className="spinner"></span>
-            <Image
+          <Image
               src="/dp.jpeg"
-              alt="Profile picture"
+            alt="Profile picture"
               width={90}
               height={90}
-              className="rounded-full border-2 border-white mx-2"
+            className="rounded-full border-2 border-white mx-2"
               style={{
                 position: "absolute",
                 top: 5,
