@@ -7,9 +7,6 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white overflow-hidden">
       {/* Logo */}
-      <div className="absolute top-6 left-8 z-10">
-        <Image src="/logo.svg" alt="Logo" width={48} height={48} />
-      </div>
       {/* Navbar */}
       <Navbar />
       {/* Main Content */}
