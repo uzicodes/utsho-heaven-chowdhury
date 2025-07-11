@@ -10,6 +10,8 @@ export default function Home() {
       {/* Logo */}
       {/* Navbar */}
       <Navbar />
+      {/* Spacer to add space between Navbar and headline */}
+      <div style={{ height: '65px' }} />
       {/* Main Content */}
       <main className="flex flex-col items-center justify-center min-h-[80vh] text-center px-4">
         {/* Announcement Badge */}

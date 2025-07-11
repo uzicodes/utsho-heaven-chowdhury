@@ -5,6 +5,8 @@ import {
   Youtube, 
   Facebook
 } from "lucide-react";
+import ProfileCard from "./ProfileCard";
+import "./ProfileCard.css";
 
 // Mock SlidingLogoMarqueeItem interface
 interface SlidingLogoMarqueeItem {
@@ -69,19 +71,24 @@ const SlidingLogoMarqueeDemo = () => {
   const sampleLogos: SlidingLogoMarqueeItem[] = [
     { 
       id: "1", 
-      content: <Facebook className="text-blue-600 hover:text-blue-700 transition-colors" /> 
+      content: <Facebook style={{ color: '#1877F3' }} fill="#1877F3" stroke="none" />
     },
     { 
       id: "2", 
-      content: <Github className="text-gray-800 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 transition-colors" /> 
+      content: <Github style={{ color: '#181717' }} fill="#181717" stroke="none" />
     },
     { 
       id: "3", 
-      content: <Linkedin className="text-blue-700 hover:text-blue-800 transition-colors" /> 
+      content: <Linkedin style={{ color: '#0A66C2' }} fill="#0A66C2" stroke="none" />
     },
     { 
       id: "4", 
-      content: <Youtube className="text-red-600 hover:text-red-700 transition-colors" /> 
+      content: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21.8 8.001a2.75 2.75 0 0 0-1.93-1.94C18.2 6 12 6 12 6s-6.2 0-7.87.06A2.75 2.75 0 0 0 2.2 8.001 28.6 28.6 0 0 0 2 12a28.6 28.6 0 0 0 .2 3.999 2.75 2.75 0 0 0 1.93 1.94C5.8 18 12 18 12 18s6.2 0 7.87-.06a2.75 2.75 0 0 0 1.93-1.94A28.6 28.6 0 0 0 22 12a28.6 28.6 0 0 0-.2-3.999z" fill="#FF0000"/>
+          <polygon points="10 15 15 12 10 9 10 15" fill="#fff" />
+        </svg>
+      )
     }
   ];
 
@@ -98,6 +105,18 @@ const SlidingLogoMarqueeDemo = () => {
           gap="0.5rem"
           className="mx-auto w-full"
         />
+        {/* Profile Card centered below the marquee */}
+        <div className="flex justify-center mt-8">
+          <ProfileCard
+            avatarUrl="/dp.jpeg"
+            name="Utsho Heaven Chowdhury"
+            title="Full Stack Developer"
+            handle="utshodev"
+            status="Online"
+            contactText="Contact"
+            showUserInfo={true}
+          />
+        </div>
         {/* Gradient overlays for fade effect */}
         <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-gray-50 to-transparent dark:from-gray-900 pointer-events-none" />
         <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-gray-50 to-transparent dark:from-gray-900 pointer-events-none" />
