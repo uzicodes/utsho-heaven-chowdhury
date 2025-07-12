@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Navbar from "./Navbar";
-import SlidingLogoMarqueeDemo from "./SlidingLogoMarqueeDemo";
 
 export default function Home() {
   return (
@@ -49,10 +48,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-2">
           <a href="#connect" className="button"><span>Let&apos;s Connect</span></a>
         </div>
-        {/* Sliding Logo Marquee under the button */}
-        <div style={{ marginTop: '2.5rem' }}>
-          <SlidingLogoMarqueeDemo />
-        </div>
+
       </main>
       {/* Subtle Glow at Bottom */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vw] h-40 bg-gradient-to-t from-purple-900/60 to-transparent rounded-t-full blur-2xl opacity-60 pointer-events-none" />
