@@ -7,17 +7,15 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white overflow-hidden">
       {/* Top Left Logo and Navbar Row */}
-    <div className="flex items-center gap-4 z-[1100]" style={{ left: "50px", top: "30px", position: "fixed" }}>
-        {/* Logo with glowing circle */}
-        <div style={{ position: "relative", width: 48, height: 48 }}>
-          <span className="spinner" style={{ position: "absolute", top: 0, left: 0, width: 48, height: 48, zIndex: 1 }}></span>
+      <div className="flex items-center gap-4 z-[1100]" style={{ left: "50px", top: "23px", position: "fixed" }}>
+        <div style={{ position: "relative", width: 52, height: 52 }}>
           <Image
             src="/dp.jpeg"
             alt="Profile picture"
-            width={40}
-            height={40}
+            width={52}
+            height={52}
             className="rounded-full border-2 border-white"
-            style={{ position: "absolute", top: 4, left: 4, zIndex: 2 }}
+            style={{ position: "absolute", top: 5, left: 5, zIndex: 2 }}
           />
         </div>
         {/* Navbar */}
