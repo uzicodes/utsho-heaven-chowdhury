@@ -39,10 +39,10 @@ const Navbar = () => {
 
   const navLinks = [
     { id: "home", icon: FaHome, text: "Home", href: "/" },
-    { id: "skills", icon: FaCode, text: "Skills", href: "/skills" },
-    { id: "project", icon: FaLaptopCode, text: "Projects", href: "/projects" },
-    { id: "education", icon: FaGraduationCap, text: "Education", href: "/education" },
-    { id: "contacts", icon: FaEnvelope, text: "Contacts", href: "/contacts" },
+  { id: "skills", icon: FaCode, text: "Skills", href: "/skills" },
+  { id: "project", icon: FaLaptopCode, text: "Projects", href: "/projects" },
+  { id: "education", icon: FaGraduationCap, text: "Education", href: "/education" },
+  { id: "contacts", icon: FaEnvelope, text: "Contacts", href: "/contacts" },
   ];
 
   return (
