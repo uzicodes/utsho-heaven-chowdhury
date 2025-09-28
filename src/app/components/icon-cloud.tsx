@@ -1,0 +1,114 @@
+"use client";
+import React, { useEffect, useMemo, useState, ReactElement } from "react";
+import { useTheme } from "next-themes";
+import { Cloud, fetchSimpleIcons, renderSimpleIcon, SimpleIcon } from "react-icon-cloud";
+
+interface CloudProps {
+  containerProps: {
+    style: React.CSSProperties;
+  };
+  options: {
+    reverse: boolean;
+    depth: number;
+    wheelZoom: boolean;
+    imageScale: number;
+    activeCursor: string;
+    tooltip: string;
+    initial: [number, number];
+    clickToFront: number;
+    tooltipDelay: number;
+    outlineColour: string;
+    maxSpeed: number;
+    minSpeed: number;
+    // dragControl?: boolean;
+  };
+}
+
+export const cloudProps: CloudProps = {
+  containerProps: {
+    style: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "100%",
+      paddingTop: 40,
+    },
+  },
+  options: {
+    reverse: true,
+    depth: 1,
+    wheelZoom: false,
+    imageScale: 2,
+    activeCursor: "default",
+    tooltip: "native",
+    initial: [0.1, -0.1],
+    clickToFront: 500,
+    tooltipDelay: 0,
+    outlineColour: "#000",
+    maxSpeed: 0.04,
+    minSpeed: 0.02,
+    // dragControl: false,
+  },
+};
+
+export const renderCustomIcon = (
+  icon: SimpleIcon,
+  theme: "light" | "dark" | undefined,
+  imageArray?: string[]
+): ReactElement =>
+  renderSimpleIcon({
+    icon,
+    bgHex: theme === "light" ? "#f3f2ef" : "#080510",
+    fallbackHex: theme === "light" ? "#6e6e73" : "#ffffff",
+    minContrastRatio: theme === "dark" ? 2 : 1.2,
+    size: 42,
+    aProps: {
+      href: undefined,
+      target: undefined,
+      rel: undefined,
+      onClick: (e: React.MouseEvent<HTMLAnchorElement>) => e.preventDefault(),
+    },
+  });
+
+interface IconCloudProps {
+  iconSlugs?: string[];
+  imageArray?: string[];
+}
+
+export default function IconCloud({
+  iconSlugs = [],
+  imageArray,
+}: IconCloudProps): ReactElement | null {
+  const [data, setData] = useState<{ simpleIcons: Record<string, SimpleIcon> } | null>(null);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    if (iconSlugs.length > 0) {
+      fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+    }
+  }, [iconSlugs]);
+
+  const renderedIcons = useMemo(() => {
+    if (!data) return null;
+
+    return Object.values(data.simpleIcons).map((icon) =>
+      renderCustomIcon(icon, theme || "dark")
+    );
+  }, [data, theme]);
+
+  return (
+    // @ts-ignore
+    <Cloud {...cloudProps}>
+      <>
+        <>{renderedIcons}</>
+        {imageArray &&
+          imageArray.length > 0 &&
+          imageArray.map((image, index) => (
+            <a key={index} href="#" onClick={(e) => e.preventDefault()}>
+              <img height={42} width={42} alt="A globe" src={image} />
+            </a>
+          ))}
+      </>
+    </Cloud>
+  );
+}
