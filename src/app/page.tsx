@@ -1,10 +1,8 @@
 "use client";
 
 
-
-
 import Image from 'next/image';
-import Navbar from './Navbar';
+import Navbar from './navbar';
 
 export default function Home() {
   return (
@@ -52,7 +50,7 @@ export default function Home() {
                   background: '#7df9ff',
                   boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
                   animation: 'glow-pulse 2s ease-in-out infinite alternate',
-                  top: '1px',
+                  top: '-120px',
                   left: '50%',
                   transform: 'translateX(-50%)'
                 }}
