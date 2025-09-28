@@ -77,7 +77,6 @@ interface IconCloudProps {
 
 export default function IconCloud({
   iconSlugs = [],
-  imageArray,
 }: IconCloudProps): ReactElement | null {
   const [data, setData] = useState<{ simpleIcons: Record<string, SimpleIcon> } | null>(null);
   const { theme } = useTheme();
@@ -92,22 +91,16 @@ export default function IconCloud({
     if (!data) return null;
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "dark")
+      renderCustomIcon(icon, (theme as "light" | "dark" | undefined) || "dark")
     );
   }, [data, theme]);
 
   return (
-    // @ts-ignore
+  // @ts-expect-error: react-icon-cloud types are incomplete for Cloud props
     <Cloud {...cloudProps}>
       <>
         <>{renderedIcons}</>
-        {imageArray &&
-          imageArray.length > 0 &&
-          imageArray.map((image, index) => (
-            <a key={index} href="#" onClick={(e) => e.preventDefault()}>
-              <img height={42} width={42} alt="A globe" src={image} />
-            </a>
-          ))}
+        {/* Removed imageArray rendering */}
       </>
     </Cloud>
   );
