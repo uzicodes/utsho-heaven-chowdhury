@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+
+.changaone-font {
+  font-family: 'Changa One', sans-serif;
+}
 @import "tailwindcss";
 
 :root {

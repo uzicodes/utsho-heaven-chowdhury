@@ -1,117 +1,113 @@
 "use client";
 
-
+import Head from 'next/head';
 import Image from 'next/image';
 import Navbar from './navbar';
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen text-white overflow-hidden bg-black">
-      <Navbar />
-
-
-      
-  {/* Main Content - Ready for homepage sections */}
-      <main className="relative z-10 pt-20 min-h-[300vh]">
-        {/* Hero Section */}
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex min-h-[65vh] items-center">
-            {/* Left Side - Hero Text */}
-            <div className="w-full lg:w-1/2">
-              <div className="space-y-6">
-                <h1 className="hero-text text-3xl lg:text-7xl xl:text-8xl font-bold leading-tight">
-                  <span className="text-white">
-                    Hello I&apos;m{' '}
-                  </span>
-                  <span 
-                    className="block hero-name"
-                    style={{ 
-                      backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent'
-                    }}
-                  >
-                    UTSHO HEAVEN CHOWDHURY
-                  </span>
-                </h1>
-
-
+    <>
+      <Head>
+        <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
+      </Head>
+      <div className="relative min-h-screen text-white overflow-hidden bg-black">
+        <Navbar />
+        <main className="relative z-10 pt-20 min-h-[300vh]">
+          {/* Hero Section */}
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="flex min-h-[65vh] items-center">
+              {/* Left Side - Hero Text */}
+              <div className="w-full lg:w-1/2">
+                <div className="space-y-6" style={{marginTop: '-6.5rem'}}>
+                  <h1 className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                    <span className="text-white" style={{fontSize: '2.7rem'}}>Hello I&apos;m,</span>
+                    <span
+                      className="hero-name whitespace-nowrap changaone-font"
+                      style={{
+                        backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
+                        backgroundClip: 'text',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        fontSize: 'clamp(0.5rem, 3.5vw, 2.8rem)',
+                        display: 'block',
+                        marginTop: '-0.1rem',
+                        lineHeight: '1'
+                      }}
+                    >
+                      UTSHO HEAVEN CHOWDHURY
+                    </span>
+                  </h1>
+                </div>
               </div>
-            </div>
-
-            {/* Right Side - Glowing Card */}
-            <div className="w-full lg:w-1/2 relative">
-              <div 
-                className="rounded-2xl p-1 absolute"
-                style={{
-                  width: '320px', 
-                  height: '400px',
-                  background: '#7df9ff',
-                  boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
-                  animation: 'glow-pulse 2s ease-in-out infinite alternate',
-                  top: '-120px',
-                  left: '50%',
-                  transform: 'translateX(-50%)'
-                }}
-              >
+              {/* Right Side - Glowing Card */}
+              <div className="w-full lg:w-1/2 relative">
                 <div 
-                  className="bg-gray-900 rounded-xl h-full flex items-start justify-center pt-1 pb-1 px-1"
+                  className="rounded-2xl p-1 absolute"
                   style={{
-                    backgroundColor: 'rgba(17, 24, 39, 0.95)'
+                    width: '320px', 
+                    height: '400px',
+                    background: '#7df9ff',
+                    boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
+                    animation: 'glow-pulse 2s ease-in-out infinite alternate',
+                    top: '-120px',
+                    left: '50%',
+                    transform: 'translateX(-50%)'
                   }}
                 >
-                  <Image 
-                    src="/DP_removed_BG.png" 
-                    alt="Profile" 
-                    width={320}
-                    height={400}
-                    className="w-full h-full object-cover rounded-lg"
+                  <div 
+                    className="bg-gray-900 rounded-xl h-full flex items-start justify-center pt-1 pb-1 px-1"
                     style={{
-                      filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))',
-                      objectPosition: 'center bottom'
+                      backgroundColor: 'rgba(17, 24, 39, 0.95)'
                     }}
-                  />
+                  >
+                    <Image 
+                      src="/DP_removed_BG.png" 
+                      alt="Profile" 
+                      width={320}
+                      height={400}
+                      className="w-full h-full object-cover rounded-lg"
+                      style={{
+                        filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))',
+                        objectPosition: 'center bottom'
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Additional Content Section 1 - About Me */}
-        <div className="container mx-auto px-6 lg:px-8 mt-32">
-          <div className="min-h-[80vh] flex items-center justify-center">
-            <div className="text-center max-w-4xl">
-              <h2 className="text-4xl lg:text-6xl font-bold mb-8">
-                About
-              </h2>
-              <p className="text-xl text-gray-400 leading-relaxed">
-
-              </p>
+          {/* Additional Content Section 1 - About Me */}
+          <div className="container mx-auto px-6 lg:px-8 mt-32">
+            <div className="min-h-[80vh] flex items-center justify-center">
+              <div className="text-center max-w-4xl">
+                <h2 className="text-4xl lg:text-6xl font-bold mb-8">
+                  About
+                </h2>
+                <p className="text-xl text-gray-400 leading-relaxed">
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        
-        {/* Additional Content Section 2 - Skills Preview */}
-        <div className="container mx-auto px-6 lg:px-8 mt-32">
-          <div className="min-h-[80vh] flex items-center justify-center">
-            <div className="text-center max-w-4xl">
-              <h2 className="text-4xl lg:text-6xl font-bold mb-8">
-                I Work With
-              </h2>
-              <p className="text-xl text-gray-400 leading-relaxed mb-8">
-
-              </p>
-              <a 
-                href="/skills"
-                className="button relative inline-flex items-center justify-center px-8 py-3 text-lg font-medium"
-              >
-                <span className="relative z-10">Explore My Skills</span>
-              </a>
+          {/* Additional Content Section 2 - Skills Preview */}
+          <div className="container mx-auto px-6 lg:px-8 mt-32">
+            <div className="min-h-[80vh] flex items-center justify-center">
+              <div className="text-center max-w-4xl">
+                <h2 className="text-4xl lg:text-6xl font-bold mb-8">
+                  I Work With
+                </h2>
+                <p className="text-xl text-gray-400 leading-relaxed mb-8">
+                </p>
+                <a 
+                  href="/skills"
+                  className="button relative inline-flex items-center justify-center px-8 py-3 text-lg font-medium"
+                >
+                  <span className="relative z-10">Explore My Skills</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
-  );
-}
+        </main>
+      </div>
+    </>
+    );
+  }
