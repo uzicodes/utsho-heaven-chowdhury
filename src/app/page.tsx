@@ -18,17 +18,17 @@ export default function Home() {
             <div className="flex min-h-[65vh] items-center">
               {/* Left Side - Hero Text */}
               <div className="w-full lg:w-1/2">
-                <div className="space-y-6" style={{marginTop: '-6.5rem'}}>
+                <div className="space-y-6" style={{marginTop: '-7.2rem'}}>
                   <h1 className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                    <span className="text-white" style={{fontSize: '2.7rem'}}>Hello I&apos;m,</span>
+                    <span className="text-white" style={{fontSize: '2.5rem'}}>Hello I&apos;m,</span>
                     <span
-                      className="hero-name whitespace-nowrap changaone-font"
+                      className="hero-name whitespace-nowrap lilitaone-font"
                       style={{
                         backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
                         backgroundClip: 'text',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
-                        fontSize: 'clamp(0.5rem, 3.5vw, 2.8rem)',
+                        fontSize: '50px',
                         display: 'block',
                         marginTop: '-0.1rem',
                         lineHeight: '1'
@@ -49,7 +49,7 @@ export default function Home() {
                     background: '#7df9ff',
                     boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
                     animation: 'glow-pulse 2s ease-in-out infinite alternate',
-                    top: '-120px',
+                    top: '-70.0px',
                     left: '50%',
                     transform: 'translateX(-50%)'
                   }}
