@@ -4,7 +4,8 @@
 import Navbar from '@/app/Navbar';
 import { Card, CardContent } from "@/app/components/card";
 import { Badge } from "@/app/components/badge";
-import IconCloudDemo from "@/app/components/globe";
+import dynamic from "next/dynamic";
+const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { Code2, Paintbrush, Database, Layout, Cpu, Cloud, LucideIcon } from "lucide-react";
 
