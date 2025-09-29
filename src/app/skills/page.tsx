@@ -85,6 +85,7 @@ const SkillsSection: React.FC = () => {
   { name: "Go", icon: <img src="/icons/backend/go.png" alt="Go" width={48} height={48} /> },
   { name: "Python", icon: <img src="/icons/backend/python.png" alt="Python" width={48} height={48} /> },
   { name: "Ruby", icon: <img src="/icons/backend/ruby.png" alt="Ruby" width={48} height={48} /> },
+  { name: "FASTapi", icon: <img src="/icons/backend/fastapi.png" alt="FASTapi" width={48} height={48} /> },
       ],
     },
     {
@@ -98,17 +99,19 @@ const SkillsSection: React.FC = () => {
   { name: "Redis", icon: <img src="/icons/database/redis.png" alt="Redis" width={48} height={48} /> },
   { name: "PostgreSQL", icon: <img src="/icons/database/postgressql.png" alt="PostgreSQL" width={48} height={48} /> },
   { name: "Supabase", icon: <img src="/icons/database/supabase.png" alt="Supabase" width={48} height={48} /> },
+  
       ],
     },
     {
       icon: Cloud,
-      title: "Cloud & DevOps",
+  title: "DevOps",
       color: "text-orange-400",
       skills: [
-        { name: "Git", icon: <span /> },
-        { name: "GitHub", icon: <span /> },
-        { name: "Linux", icon: <span /> },
-        { name: "google analytics", icon: <span /> },
+  { name: "AWS", icon: <img src="/icons/cloud/aws.png" alt="AWS" width={50} height={50} /> },
+  { name: "Docker", icon: <img src="/icons/cloud/docker.png" alt="Docker" width={51} height={51} /> },
+  { name: "GitLab", icon: <img src="/icons/cloud/gitLab.png" alt="GitLab" width={48} height={48} /> },
+  { name: "GitHub", icon: <img src="/icons/cloud/github.png" alt="GitHub" width={50} height={50} /> },
+  { name: "Google Cloud", icon: <img src="/icons/cloud/googlecloud.png" alt="Google Cloud" width={48} height={48} /> },
       ],
     },
     {
