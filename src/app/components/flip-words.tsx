@@ -17,7 +17,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
   const [currentWord, setCurrentWord] = useState<string>(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
-  // thanks for the fix Julian - https://github.com/Julian-AT
+  
   const startAnimation = useCallback(() => {
     const word: string = words[words.indexOf(currentWord) + 1] || words[0];
     setCurrentWord(word);
@@ -38,6 +38,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
       }}
     >
       <motion.div
+        style={{ color: '#0B74E3' }}
         initial={{
           opacity: 0,
           y: 10,
@@ -65,7 +66,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
         )}
         key={currentWord}
       >
-        {/* edit suggested by Sajal: https://x.com/DewanganSajal */}
+        
         {currentWord.split(" ").map((word: string, wordIndex: number) => (
           <motion.span
             key={word + wordIndex}

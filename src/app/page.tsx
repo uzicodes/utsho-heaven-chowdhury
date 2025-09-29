@@ -10,10 +10,9 @@ import { FlipWords } from './components/flip-words';
 export default function Home() {
   const words = [
     "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript & TypeScript Lover",
-    "React & NextJS Developer",
-    "Learning MARN Stack",
-    "Git & GitHub for Version Control",
+    "Python | TypeScript | React | Next.Js ",
+    "Hands on Experience on MERN ",
+    "Machine Learning & Deep Learning ",
     "Passionate about Clean Code",
   ];
 
