@@ -12,7 +12,7 @@ export default function Home() {
     "Full-Stack Developer & UI/UX Enthusiast",
     "Python | TypeScript | React | Next.Js ",
     "Hands on Experience on MERN ",
-    "Machine Learning & Deep Learning ",
+    "Machine Learning  |  Deep Learning ",
     "Passionate about Clean Code",
   ];
 
@@ -49,11 +49,11 @@ export default function Home() {
                     </span>
                   </h1>
                   {/* Role badge */}
-                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
+                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px]">
                     <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
                     <span>
                       <FlipWords
-                        className={"text-lg sm:text-xl text-blue-400 font-medium"}
+                        className={"flipwords-font text-lg sm:text-xl text-blue-400 font-medium"}
                         words={words}
                       />
                     </span>
