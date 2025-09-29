@@ -9,11 +9,11 @@ import { FlipWords } from './components/flip-words';
 
 export default function Home() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
+    "Full-Stack Developer | UI/UX Enthusiast",
     "Python | TypeScript | React | Next.Js ",
-    "Hands on Experience on MERN ",
-    "Machine Learning  |  Deep Learning ",
-    "Passionate about Clean Code",
+    "Hands on Experience on MERN stack ",
+    "Machine Learning  | CV |  Deep Learning",
+    "Let's Build Something Amazing Together !",
   ];
 
   return (
@@ -33,13 +33,13 @@ export default function Home() {
                   <h1 className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                     <span className="text-white" style={{fontSize: '2.5rem'}}>Hello I&apos;m,</span>
                     <span
-                      className="hero-name whitespace-nowrap lilitaone-font"
+                      className="hero-name whitespace-nowrap hogers-font"
                       style={{
                         backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
                         backgroundClip: 'text',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
-                        fontSize: '50px',
+                        fontSize: '45px',
                         display: 'block',
                         marginTop: '-0.1rem',
                         lineHeight: '1'
@@ -49,7 +49,7 @@ export default function Home() {
                     </span>
                   </h1>
                   {/* Role badge */}
-                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px]">
+                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px] ml-auto" style={{ marginLeft: '80px' }}>
                     <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
                     <span>
                       <FlipWords
