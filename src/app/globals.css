@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'Colus';
+  src: url('/fonts/colus.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.colus-font {
+  font-family: 'Colus', sans-serif;
+}
+@font-face {
   font-family: 'Hogers';
   src: url('/fonts/hogers.ttf') format('truetype');
   font-weight: normal;
@@ -8,7 +18,7 @@
 .hogers-font {
   font-family: 'Hogers', sans-serif;
 }
-  
+
 
 
 

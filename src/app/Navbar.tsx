@@ -52,10 +52,10 @@ const Navbar = () => {
     <header className="navbar-header">
       <div className="navbar-wrapper">
         <div className="navbar-gradient-border">
-          <nav className="navbar-content">
+          <nav className="navbar-content colus-font">
             {/* Mobile Menu Button */}
             <div className="navbar-mobile-header">
-              <a href="#" className="navbar-logo">Portfolio</a>
+              <a href="#" className="navbar-logo">Utsho Heaven Chowdhury</a>
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="navbar-menu-button"
