@@ -1,4 +1,6 @@
+
 "use client";
+import React from "react";
 
 
 import Navbar from '@/app/Navbar';
@@ -9,33 +11,13 @@ const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: fal
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { Code2, Paintbrush, Database, Layout, Cpu, Cloud, LucideIcon } from "lucide-react";
 
-import {
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-  FaLinux,
-  FaFigma,
-  FaGithub,
-  FaJsSquare,
-} from "react-icons/fa";
-import {
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiMongodb,
-  SiRedux,
-  SiFirebase,
-  SiVercel,
-  SiVite,
-  SiNetlify,
-  SiRender,
-  SiReactquery,
-  SiMongoose,
-  SiGoogleanalytics,
-} from "react-icons/si";
-import { TbBrandVscode } from "react-icons/tb";
-import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
-import { MdAnimation } from "react-icons/md";
+
+import ReactIcon from "@/app/components/icons/frontend/react";
+import HtmlIcon from "@/app/components/icons/frontend/html";
+import CssIcon from "@/app/components/icons/frontend/css";
+import JavascriptIcon from "@/app/components/icons/frontend/javascript";
+import TypescriptIcon from "@/app/components/icons/frontend/typescript";
+import TailwindIcon from "@/app/components/icons/frontend/tailwind";
 
 
 
@@ -75,16 +57,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ icon: Icon, title, skills, color 
       </div>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
-          <Badge
-            key={index + 1}
-            variant="outline"
-            className="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
-          >
-            <span className="transform group-hover/badge:scale-110 transition-transform duration-300">
-              {skill.icon}
-            </span>
-            <span className="font-medium">{skill.name}</span>
-          </Badge>
+          <span key={index + 1}>
+            {skill.icon}
+          </span>
         ))}
       </div>
     </CardContent>
@@ -98,39 +73,12 @@ const SkillsSection: React.FC = () => {
       title: "Frontend Development",
       color: "text-blue-400",
       skills: [
-        { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-        {
-          name: "Next.js",
-          icon: <SiNextdotjs className="w-4 h-4 text-white" />,
-        },
-        {
-          name: "JavaScript",
-          icon: <FaJsSquare className="w-4 h-4 text-[#F7DF1E]" />,
-        },
-        {
-          name: "TypeScript",
-          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-        },
-        {
-          name: "HTML5",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#E34F26]" />,
-        },
-        {
-          name: "CSS3",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#1572B6]" />,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-        },
-        {
-          name: "Bootstrap",
-          icon: <SiTailwindcss className="w-4 h-4 text-[#563D7C]" />,
-        },
-        {
-          name: "Ant Design",
-          icon: <AiOutlineAntDesign className="w-4 h-4 text-[#3bb0fa]" />,
-        },
+  { name: "React", icon: <ReactIcon /> },
+  { name: "HTML5", icon: <HtmlIcon /> },
+  { name: "CSS3", icon: <CssIcon /> },
+  { name: "JavaScript", icon: <JavascriptIcon /> },
+  { name: "TypeScript", icon: <TypescriptIcon /> },
+  { name: "Tailwind CSS", icon: <TailwindIcon /> },
       ],
     },
     {
@@ -138,30 +86,12 @@ const SkillsSection: React.FC = () => {
       title: "Backend Development",
       color: "text-green-400",
       skills: [
-        {
-          name: "Node.js",
-          icon: <FaNodeJs className="w-4 h-4 text-[#339933]" />,
-        },
-        {
-          name: "Express.js",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#000000]" />,
-        },
-        {
-          name: "Mongoose",
-          icon: <SiMongoose className="w-4 h-4 text-red-500" />,
-        },
-        {
-          name: "MongoDB",
-          icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
-        },
-        {
-          name: "REST APIs",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
-        },
-        {
-          name: "Google Cloud",
-          icon: <SiVercel className="w-4 h-4 text-[#4285F4]" />,
-        },
+        { name: "Node.js", icon: <span /> },
+        { name: "Express.js", icon: <span /> },
+        { name: "Mongoose", icon: <span /> },
+        { name: "MongoDB", icon: <span /> },
+        { name: "REST APIs", icon: <span /> },
+        { name: "Google Cloud", icon: <span /> },
       ],
     },
     {
@@ -169,19 +99,10 @@ const SkillsSection: React.FC = () => {
       title: "UI/UX Design",
       color: "text-purple-400",
       skills: [
-        { name: "Figma", icon: <FaFigma className="w-4 h-4 text-[#F24E1E]" /> },
-        {
-          name: "Responsive Design",
-          icon: <Layout className="w-4 h-4 text-[#38B2AC]" />,
-        },
-        {
-          name: "Wireframing",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#9CA3AF]" />,
-        },
-        {
-          name: "Prototyping",
-          icon: <MdAnimation className="w-4 h-4 text-[#F59E0B]" />,
-        },
+        { name: "Figma", icon: <span /> },
+        { name: "Responsive Design", icon: <span /> },
+        { name: "Wireframing", icon: <span /> },
+        { name: "Prototyping", icon: <span /> },
       ],
     },
     {
@@ -189,13 +110,10 @@ const SkillsSection: React.FC = () => {
       title: "Cloud & DevOps",
       color: "text-orange-400",
       skills: [
-        { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
-        { name: "GitHub", icon: <FaGithub className="w-4 h-4 text-[#181717]" /> },
-        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
-        {
-          name: "google analytics",
-          icon: <SiGoogleanalytics className="w-4 h-4 text-[#FCC624]" />,
-        },
+        { name: "Git", icon: <span /> },
+        { name: "GitHub", icon: <span /> },
+        { name: "Linux", icon: <span /> },
+        { name: "google analytics", icon: <span /> },
       ],
     },
     {
@@ -203,33 +121,15 @@ const SkillsSection: React.FC = () => {
       title: "Tools & Technologies",
       color: "text-pink-400",
       skills: [
-        {
-          name: "VS Code",
-          icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />,
-        },
-        { name: "Redux", icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> },
-        {
-          name: "Tanstack Query",
-          icon: <SiReactquery className="w-4 h-4 text-[#e7cf4a]" />,
-        },
-        { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> },
-        {
-          name: "Render",
-          icon: <SiRender className="w-4 h-4 text-[#fff]" />,
-        },
-        {
-          name: "Firebase",
-          icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" />,
-        },
-        {
-          name: "NextAuth",
-          icon: <SiFirebase className="w-4 h-4 text-[#007ACC]" />,
-        },
-        {
-          name: "Netlify",
-          icon: <SiNetlify className="w-4 h-4 text-[#00C7B7]" />,
-        },
-        { name: "Vercel", icon: <SiVercel className="w-4 h-4 text-white" /> },
+        { name: "VS Code", icon: <span /> },
+        { name: "Redux", icon: <span /> },
+        { name: "Tanstack Query", icon: <span /> },
+        { name: "Vite", icon: <span /> },
+        { name: "Render", icon: <span /> },
+        { name: "Firebase", icon: <span /> },
+        { name: "NextAuth", icon: <span /> },
+        { name: "Netlify", icon: <span /> },
+        { name: "Vercel", icon: <span /> },
       ],
     },
     {
@@ -237,22 +137,10 @@ const SkillsSection: React.FC = () => {
       title: "Creative Skills",
       color: "text-yellow-400",
       skills: [
-        {
-          name: "UI Animation",
-          icon: <MdAnimation className="w-4 h-4 text-[#FF4081]" />,
-        },
-        {
-          name: "SVG Animation",
-          icon: <MdAnimation className="w-4 h-4 text-[#00C853]" />,
-        },
-        {
-          name: "3D Modeling",
-          icon: <Cpu className="w-4 h-4 text-[#7C4DFF]" />,
-        },
-        {
-          name: "Graphic Design",
-          icon: <Paintbrush className="w-4 h-4 text-[#FF6D00]" />,
-        },
+        { name: "UI Animation", icon: <span /> },
+        { name: "SVG Animation", icon: <span /> },
+        { name: "3D Modeling", icon: <span /> },
+        { name: "Graphic Design", icon: <span /> },
       ],
     },
   ];
