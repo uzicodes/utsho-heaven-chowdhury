@@ -1,11 +1,22 @@
 "use client";
 
+
 import Navbar from './Navbar';
 import Head from 'next/head';
 import Image from 'next/image';
+import { FlipWords } from './components/flip-words';
 
 
 export default function Home() {
+  const words = [
+    "Full-Stack Developer & UI/UX Enthusiast",
+    "JavaScript & TypeScript Lover",
+    "React & NextJS Developer",
+    "Learning MARN Stack",
+    "Git & GitHub for Version Control",
+    "Passionate about Clean Code",
+  ];
+
   return (
     <>
       <Head>
@@ -38,6 +49,16 @@ export default function Home() {
                       UTSHO HEAVEN CHOWDHURY
                     </span>
                   </h1>
+                  {/* Role badge */}
+                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
+                    <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
+                    <span>
+                      <FlipWords
+                        className={"text-lg sm:text-xl text-blue-400 font-medium"}
+                        words={words}
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
               {/* Right Side - Glowing Card */}
