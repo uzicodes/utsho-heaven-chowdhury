@@ -45,13 +45,13 @@ const SkillCard: React.FC<SkillCardProps> = ({ icon: Icon, title, skills, color 
   <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
     <CardContent className="p-6 relative z-10">
-      <div className="flex items-center gap-4 mb-6">
+      <div className="flex items-center justify-center gap-4 mb-6 w-full">
         <div
           className={`p-3 rounded-xl bg-gray-800/50 ${color} group-hover:scale-110 transition-transform duration-300`}
         >
           <Icon className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
           {title}
         </h3>
       </div>
@@ -73,12 +73,12 @@ const SkillsSection: React.FC = () => {
       title: "Frontend Development",
       color: "text-blue-400",
       skills: [
-  { name: "React", icon: <ReactIcon /> },
-  { name: "HTML5", icon: <HtmlIcon /> },
-  { name: "CSS3", icon: <CssIcon /> },
-  { name: "JavaScript", icon: <JavascriptIcon /> },
-  { name: "TypeScript", icon: <TypescriptIcon /> },
-  { name: "Tailwind CSS", icon: <TailwindIcon /> },
+  { name: "React", icon: null },
+  { name: "HTML5", icon: null },
+  { name: "CSS3", icon: null },
+  { name: "JavaScript", icon: null },
+  { name: "TypeScript", icon: null },
+  { name: "Tailwind CSS", icon: null },
       ],
     },
     {
