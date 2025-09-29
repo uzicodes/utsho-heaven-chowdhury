@@ -9,7 +9,7 @@ import { Badge } from "@/app/components/badge";
 import dynamic from "next/dynamic";
 const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
 import { AiOutlineAntDesign } from "react-icons/ai";
-import { Code2, Paintbrush, Database, Layout, Cpu, Cloud, LucideIcon } from "lucide-react";
+import { Code2, Paintbrush, Database, Layout, Cpu, Cloud, LucideIcon, Settings } from "lucide-react";
 
 
 
@@ -76,27 +76,28 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      icon: Database,
+      icon: Settings,
       title: "Backend Development",
-      color: "text-green-400",
+      color: "text-purple-400",
       skills: [
-        { name: "Node.js", icon: <span /> },
-        { name: "Express.js", icon: <span /> },
-        { name: "Mongoose", icon: <span /> },
-        { name: "MongoDB", icon: <span /> },
-        { name: "REST APIs", icon: <span /> },
-        { name: "Google Cloud", icon: <span /> },
+  { name: "Node.js", icon: <img src="/icons/backend/node.js.png" alt="Node.js" width={48} height={48} /> },
+  { name: "Express.js", icon: <img src="/icons/backend/express.png" alt="Express.js" width={48} height={48} /> },
+  { name: "Go", icon: <img src="/icons/backend/go.png" alt="Go" width={48} height={48} /> },
+  { name: "Python", icon: <img src="/icons/backend/python.png" alt="Python" width={48} height={48} /> },
+  { name: "Ruby", icon: <img src="/icons/backend/ruby.png" alt="Ruby" width={48} height={48} /> },
       ],
     },
     {
-      icon: Layout,
-      title: "UI/UX Design",
-      color: "text-purple-400",
+  icon: Database,
+  title: "Database",
+      color: "text-green-400",
       skills: [
-        { name: "Figma", icon: <span /> },
-        { name: "Responsive Design", icon: <span /> },
-        { name: "Wireframing", icon: <span /> },
-        { name: "Prototyping", icon: <span /> },
+  { name: "Firebase", icon: <img src="/icons/database/firebase.png" alt="Firebase" width={48} height={48} /> },
+  { name: "MongoDB", icon: <img src="/icons/database/mongodb.png" alt="MongoDB" width={48} height={48} /> },
+  { name: "MySQL", icon: <img src="/icons/database/mysql.png" alt="MySQL" width={48} height={48} /> },
+  { name: "Redis", icon: <img src="/icons/database/redis.png" alt="Redis" width={48} height={48} /> },
+  { name: "PostgreSQL", icon: <img src="/icons/database/postgressql.png" alt="PostgreSQL" width={48} height={48} /> },
+  { name: "Supabase", icon: <img src="/icons/database/supabase.png" alt="Supabase" width={48} height={48} /> },
       ],
     },
     {
@@ -128,7 +129,7 @@ const SkillsSection: React.FC = () => {
     },
     {
       icon: Paintbrush,
-      title: "Creative Skills",
+      title: "UI/UX Skills",
       color: "text-yellow-400",
       skills: [
         { name: "UI Animation", icon: <span /> },
