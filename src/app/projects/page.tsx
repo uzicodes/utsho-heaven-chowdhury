@@ -126,7 +126,6 @@ export default function Projects() {
   return (
     <>
   <Navbar />
-  <div className="mt-16" />
       <ReactLenis root>
         <main className="bg-black relative z-10 min-h-screen" ref={container}>
           <section className="text-white w-full bg-slate-950">
@@ -175,16 +174,16 @@ function Card({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0 project-container"
+      className={`h-screen flex items-center justify-center sticky top-0 project-container ${i === 0 ? 'mt-0' : ''}`}
     >
       <motion.div
         style={{
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          top: i === 0 ? "0" : `calc(-5vh + ${i * 25}px)`,
           transform: `scale(var(--project-scale, 1))`,
-          marginTop: "var(--project-margin, 0)",
+          marginTop: i === 0 ? "0" : "var(--project-margin, 0)",
         }}
-        className="relative -top-[25%] h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card"
+        className={`relative ${i === 0 ? 'top-0' : '-top-[25%]'} h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card`}
         whileHover={{
           y: -8,
           transition: { duration: 0.3 },
