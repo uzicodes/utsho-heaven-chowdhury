@@ -12,13 +12,6 @@ import { AiOutlineAntDesign } from "react-icons/ai";
 import { Code2, Paintbrush, Database, Layout, Cpu, Cloud, LucideIcon } from "lucide-react";
 
 
-import ReactIcon from "@/app/components/icons/frontend/react";
-import HtmlIcon from "@/app/components/icons/frontend/html";
-import CssIcon from "@/app/components/icons/frontend/css";
-import JavascriptIcon from "@/app/components/icons/frontend/javascript";
-import TypescriptIcon from "@/app/components/icons/frontend/typescript";
-import TailwindIcon from "@/app/components/icons/frontend/tailwind";
-
 
 
 
@@ -55,7 +48,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ icon: Icon, title, skills, color 
           {title}
         </h3>
       </div>
-      <div className="flex flex-wrap gap-2">
+  <div className="flex flex-wrap gap-2 justify-center w-full">
         {skills.map((skill, index) => (
           <span key={index + 1}>
             {skill.icon}
@@ -73,12 +66,13 @@ const SkillsSection: React.FC = () => {
       title: "Frontend Development",
       color: "text-blue-400",
       skills: [
-  { name: "React", icon: null },
-  { name: "HTML5", icon: null },
-  { name: "CSS3", icon: null },
-  { name: "JavaScript", icon: null },
-  { name: "TypeScript", icon: null },
-  { name: "Tailwind CSS", icon: null },
+  { name: "React", icon: <img src="/icons/frontend/react.png" alt="React" width={48} height={48} /> },
+  { name: "HTML5", icon: <img src="/icons/frontend/html.png" alt="HTML5" width={48} height={48} /> },
+  { name: "CSS3", icon: <img src="/icons/frontend/css.png" alt="CSS3" width={48} height={48} /> },
+  { name: "JavaScript", icon: <img src="/icons/frontend/javascript.png" alt="JavaScript" width={48} height={48} /> },
+  { name: "TypeScript", icon: <img src="/icons/frontend/typescript.png" alt="TypeScript" width={48} height={48} /> },
+  { name: "Bootstrap", icon: <img src="/icons/frontend/bootstrap.png" alt="Bootstrap" width={48} height={48} /> },
+  { name: "Tailwind CSS", icon: <img src="/icons/frontend/tailwind.png" alt="Tailwind CSS" width={48} height={48} /> },
       ],
     },
     {
