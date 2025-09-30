@@ -66,7 +66,7 @@ export default function Home() {
                     </span>
                   </h1>
                   {/* Role badge */}
-                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px] ml-auto" style={{ marginLeft: '5px' }}>
+                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px] ml-auto" style={{ marginLeft: '-5px' }}>
                     <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
                     <span>
                       <FlipWords
@@ -99,7 +99,7 @@ export default function Home() {
                     <a
                       href="https://calendly.com/utsho/30min"
                       target="_blank"
-                      className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                      className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                     >
                       <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                         <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
