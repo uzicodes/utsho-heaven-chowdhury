@@ -44,7 +44,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ icon: Icon, title, skills, color 
         >
           <Icon className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center">
+  <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center colus-font">
           {title}
         </h3>
       </div>
@@ -63,7 +63,7 @@ const SkillsSection: React.FC = () => {
   const skillCategories: SkillCategory[] = [
     {
       icon: Code2,
-      title: "Frontend Development",
+      title: "Frontend",
       color: "text-blue-400",
       skills: [
   { name: "React", icon: <img src="/icons/frontend/react.png" alt="React" width={48} height={48} /> },
@@ -77,7 +77,7 @@ const SkillsSection: React.FC = () => {
     },
     {
       icon: Settings,
-      title: "Backend Development",
+      title: "Backend",
       color: "text-purple-400",
       skills: [
   { name: "Node.js", icon: <img src="/icons/backend/node.js.png" alt="Node.js" width={48} height={48} /> },
@@ -116,7 +116,7 @@ const SkillsSection: React.FC = () => {
     },
     {
       icon: Cpu,
-      title: "Tools & Technologies",
+      title: "Tools & Techs",
       color: "text-pink-400",
       skills: [
   { name: "VS Code", icon: <img src="/icons/tools/vscode.png" alt="VS Code" width={48} height={48} /> },
@@ -129,7 +129,7 @@ const SkillsSection: React.FC = () => {
     },
     {
       icon: Paintbrush,
-      title: "UI/UX Skills",
+      title: "UI/UX",
       color: "text-yellow-400",
       skills: [
   { name: "Figma", icon: <img src="/icons/ui/figma.png" alt="Figma" width={48} height={48} /> },

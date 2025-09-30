@@ -29,9 +29,26 @@ export default function Home() {
             <div className="flex min-h-[65vh] items-center">
               {/* Left Side - Hero Text */}
               <div className="w-full lg:w-1/2">
-                <div className="space-y-6" style={{marginTop: '-7.2rem'}}>
+                <div className="space-y-6" style={{marginTop: '-0.20rem'}}>
+                  {/* Welcome badge */}
+                  <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
+                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                    <span className="text-gray-300 text-xs sm:text-sm font-medium">
+                      Avaiable to Work
+                    </span>
+                  </div>
                   <h1 className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                    <span className="text-white" style={{fontSize: '2.5rem'}}>Hello I&apos;m,</span>
+                    <span
+                      className="text-white"
+                      style={{
+                        fontSize: '2.5rem',
+                        display: 'block',
+                        marginBottom: '0.5rem',
+                        marginTop: '0'
+                      }}
+                    >
+                      Hello I&apos;m,
+                    </span>
                     <span
                       className="hero-name whitespace-nowrap hogers-font"
                       style={{
@@ -41,7 +58,7 @@ export default function Home() {
                         WebkitTextFillColor: 'transparent',
                         fontSize: '45px',
                         display: 'block',
-                        marginTop: '-0.1rem',
+                        marginTop: '0',
                         lineHeight: '1'
                       }}
                     >
@@ -57,6 +74,10 @@ export default function Home() {
                         words={words}
                       />
                     </span>
+                  </div>
+                  {/* Description under flipping words */}
+                  <div className="mt-4 text-xl text-gray-300 max-w-xl ml-auto lora-font" style={{ marginLeft: '5px' }}>
+                    Full-Stack Developer actively seeking opportunities to integrate intelligent systems into Real-world solutions.
                   </div>
                 </div>
               </div>

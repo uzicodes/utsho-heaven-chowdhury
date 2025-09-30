@@ -30,9 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* Custom Cursor for all pages */}
-        <Cursor>
-          <CursorPointer />
-        </Cursor>
+        <Cursor />
         {children}
       </body>
     </html>
