@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <div className="relative min-h-screen text-white overflow-hidden bg-black">
         <Navbar />
-        <main className="relative z-10 pt-20 min-h-[300vh]">
+  <main className="relative z-10 pt-32 min-h-[300vh]">
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex min-h-[65vh] items-center">
@@ -66,7 +66,7 @@ export default function Home() {
                     </span>
                   </h1>
                   {/* Role badge */}
-                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px] ml-auto" style={{ marginLeft: '80px' }}>
+                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px] ml-auto" style={{ marginLeft: '5px' }}>
                     <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
                     <span>
                       <FlipWords
@@ -78,6 +78,35 @@ export default function Home() {
                   {/* Description under flipping words */}
                   <div className="mt-4 text-xl text-gray-300 max-w-xl ml-auto lora-font" style={{ marginLeft: '5px' }}>
                     Full-Stack Developer actively seeking opportunities to integrate intelligent systems into Real-world solutions.
+                  </div>
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s mt-4">
+                    {/* View Projects Button */}
+                    <a
+                      href="https://app.daily.dev/mdmohiuddin"
+                      className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                    >
+                      <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
+                        <span className="relative flex items-center justify-center gap-2 text-white font-medium">
+                          <span>Learn More</span>
+                          <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
+                        </span>
+                      </span>
+                    </a>
+
+                    {/* Contact Button */}
+                    <a
+                      href="https://calendly.com/mohiu5204/free-consultation"
+                      target="_blank"
+                      className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                    >
+                      <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
+                        <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
+                          <span>Free Consultation</span>
+                          <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
+                        </span>
+                      </span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -91,7 +120,7 @@ export default function Home() {
                     background: '#7df9ff',
                     boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
                     animation: 'glow-pulse 2s ease-in-out infinite alternate',
-                    top: '-70.0px',
+                    top: '-140px',
                     left: '50%',
                     transform: 'translateX(-50%)'
                   }}
