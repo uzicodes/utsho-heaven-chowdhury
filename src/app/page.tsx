@@ -109,6 +109,21 @@ export default function Home() {
                       </span>
                     </a>
                   </div>
+                  {/* Social Icons Row */}
+                  <div className="flex gap-2.5 mt-6 items-center">
+                    <img src="/socials/github.png" alt="GitHub" width={32} height={32} className="rounded-full ml-1" />
+                    <img src="/socials/linkedin.png" alt="LinkedIn" width={32} height={32} className="rounded-full ml-1" />
+
+                    <img src="/socials/gmail.png" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
+
+
+                    {/* Gmail address */}
+                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 animate__animated animate__fadeInDown animate__delay-1s ml-3.9">
+                      <span className="text-gray-300 text-xs sm:text-sm font-medium">
+                        utshozi11@gmail.com
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
               {/* Right Side - Glowing Card */}
@@ -121,7 +136,7 @@ export default function Home() {
                     background: '#7df9ff',
                     boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
                     animation: 'glow-pulse 2s ease-in-out infinite alternate',
-                    top: '-140px',
+                    top: '-150px',
                     left: '50%',
                     transform: 'translateX(-50%)'
                   }}
