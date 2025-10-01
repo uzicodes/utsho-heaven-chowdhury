@@ -35,7 +35,7 @@ const projects: Project[] = [
     title: "Portfolio - Previous Version 🔥",
     description:
       "portfolio A sleek and responsive portfolio website built with React and Tailwind CSS. framer Motion for smooth for animations. design created using figma  💻✨",
-    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747502779/w25knkkuhydkv39xfdhx.png",
+    link: "/projects/project-1.png",
     color: "#0be890",
     githubLink: "https://github.com/MDmohiuddin-web/portfolio",
     liveLink: "https://mohiuddin-portfolio.vercel.app/",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     title: "FashionFusing  built with React and Tailwind CSS ",
     description:
       "FashionFusing is a fashion e-commerce website built with React and Tailwind CSS. It offers a seamless shopping experience with a wide range of clothing and accessories.",
-    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747502995/zppranpjgq653b7ek2lh.png",
+    link: "/projects/project-2.png",
     color: "#8f89ff",
     githubLink: "https://github.com/MDmohiuddin-web/FashionFusing-Clint",
     liveLink: "https://fashionfusing.netlify.app/",
@@ -53,7 +53,7 @@ const projects: Project[] = [
     title: "interior-desigin",
     description:
       "Landing page for interior design built with React and Tailwind CSS. design created using framer Motion for smooth for animations  💻✨",
-    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1747503121/rs4ksl4ny18zugirpja4.png",
+    link: "/projects/project-3.png",
     color: "#fff",
     githubLink: "https://github.com/MDmohiuddin-web/Interior-design-landingpage",
     liveLink: "https://interior-desigin.netlify.app/",
@@ -62,7 +62,7 @@ const projects: Project[] = [
     title: "Quick Blog - A Personal Blogging Platform",
     description:
       "Quick Blog is a fast and efficient personal blogging platform built with React, Tailwind CSS, Node.js, Express, and MongoDB. It allows users to read and Admin can write blog posts seamlessly. The platform features a user-friendly interface and responsive design for an optimal reading experience. Images are stored using ImageKit for efficient retrieval. The platform is optimized for speed and performance",
-    link: "https://res.cloudinary.com/dcjcdkgzy/image/upload/v1753514510/otkybklzzlq5okka3xbj.png",
+    link: "/projects/project-4.png",
     color: "#5044e5",
     githubLink: "https://github.com/MDmohiuddin-web/quick-blog-client",
     githubLinkServer: "https://github.com/MDmohiuddin-web/quick-blog-server",
@@ -196,9 +196,9 @@ function Card({
             <motion.img
               src={url}
               alt={title}
-              className="w-full h-full object-cover"
-              initial={{ scale: 1 }}
-              whileHover={{ scale: 1.05 }}
+              className="w-full h-full object-contain"
+              initial={{ scale: 0.85 }}
+              whileHover={{ scale: 0.9 }}
               transition={{ duration: 0.4 }}
             />
             {/* Colored overlay on hover */}
