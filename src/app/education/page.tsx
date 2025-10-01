@@ -18,7 +18,7 @@ const EducationSection: React.FC = () => {
 	const educationData = [
 			{
 				degree: "Higher Secondary Education (HSC)",
-				school: "Cantonment Public School and College, Saidpur",
+				school: "Cantonment Public School & College, Saidpur",
 				year: "2018 - 2020",
 				achievements: ["GPA: 5.0 (Out of 5)", "Subject: Science"],
 				skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
@@ -28,7 +28,7 @@ const EducationSection: React.FC = () => {
 			},
 			{
 				degree: "Bachelors in Computer Science (CS)",
-				school: "BRAC University, Dhaka,Bangladesh",
+				school: "BRAC University, Dhaka",
 				year: "2022 - 2026",
 				achievements: ["GPA: 0.00 (Out of 4)", "Subject: Computer Science"],
 				skills: ["Data Structures", "Algorithms", "DBMS", "OS", "Compiler Design"],
@@ -61,7 +61,7 @@ const EducationSection: React.FC = () => {
 	};
 
 	return (
-		<section className="min-h-screen relative overflow-hidden py-40 bg-[#04081A]">
+	<section className="min-h-screen relative overflow-hidden py-32 bg-[#04081A]">
 			{/* Grid Background */}
 			<div className="absolute inset-0 z-0">
 				<div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
@@ -74,12 +74,9 @@ const EducationSection: React.FC = () => {
 					initial={{ opacity: 0, y: -20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
-					className="text-center mb-16"
+					className="text-center mb-8 mt-0"
 				>
-					<h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent mb-6">
-						Educational Journey
-					</h2>
-					<p className="text-gray-300 max-w-2xl mx-auto text-lg">
+					<p className="text-gray-300 max-w-2xl mx-auto text-lg mt-0 lora-font">
 						My educational journey has been transformative, equipping me with the expertise to excel in my field.
 					</p>
 				</motion.div>
@@ -111,11 +108,11 @@ const EducationSection: React.FC = () => {
 																														className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
 																														style={{ maxWidth: '80px', maxHeight: '80px' }}
 																													/>
-																					<h3 className="text-2xl font-bold text-white">
+																					<h3 className="text-2xl font-bold colus-font" style={{ color: '#27ADF5' }}>
 																						{edu.degree}
 																					</h3>
 																				</div>
-																				<p className="text-lg text-gray-300 flex items-center justify-center gap-2">
+																				<p className="text-lg flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
 																					{edu.school}
 																				</p>
 																				<p className="text-gray-400 flex items-center justify-center gap-2">
