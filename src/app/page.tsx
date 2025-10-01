@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <div className="relative min-h-screen text-white overflow-hidden bg-black">
         <Navbar />
-  <main className="relative z-10 pt-32 min-h-[300vh]">
+          <main className="bg-[#04081A] min-h-screen relative z-10 pt-32">
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex min-h-[65vh] items-center">
