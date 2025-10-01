@@ -32,13 +32,13 @@ interface CardProps {
 
 const projects: Project[] = [
   {
-    title: "Portfolio - Previous Version 🔥",
+    title: "LAMB FALCONS - Official Club Site",
     description:
       "portfolio A sleek and responsive portfolio website built with React and Tailwind CSS. framer Motion for smooth for animations. design created using figma  💻✨",
     link: "/projects/project-1.png",
     color: "#0be890",
-    githubLink: "https://github.com/MDmohiuddin-web/portfolio",
-    liveLink: "https://mohiuddin-portfolio.vercel.app/",
+    githubLink: "https://github.com/uzicodes/lamb-falcons",
+    liveLink: "https://lamb-falcons.vercel.app/",
   },
   {
     title: "FashionFusing  built with React and Tailwind CSS ",
@@ -61,7 +61,7 @@ const projects: Project[] = [
   {
     title: "Quick Blog - A Personal Blogging Platform",
     description:
-      "Quick Blog is a fast and efficient personal blogging platform built with React, Tailwind CSS, Node.js, Express, and MongoDB. It allows users to read and Admin can write blog posts seamlessly. The platform features a user-friendly interface and responsive design for an optimal reading experience. Images are stored using ImageKit for efficient retrieval. The platform is optimized for speed and performance",
+      "Quick Blog is a fast and efficient personal blogging platform built with React, Tailwind CSS, Node.js, Express, and MongoDB. It allows users to read and Admin can write blog posts seamlessly. The platform features a user-friendnt retrieval. The platform is optimized for speed and performance",
     link: "/projects/project-4.png",
     color: "#5044e5",
     githubLink: "https://github.com/MDmohiuddin-web/quick-blog-client",
@@ -244,19 +244,7 @@ function Card({
                   whileHover={{ y: -3 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={color}
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
+                  <img src="/socials/github.png" alt="GitHub" width={22} height={22} className="inline-block align-middle" />
                   <span
                     className="text-xs md:text-sm font-medium"
                     style={{ color }}
@@ -275,19 +263,7 @@ function Card({
                     whileHover={{ y: -3 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke={color}
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
+                    <img src="/socials/github.png" alt="GitHub" width={22} height={22} className="inline-block align-middle" />
                     <span
                       className="text-xs md:text-sm font-medium"
                       style={{ color }}
