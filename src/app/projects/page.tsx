@@ -30,13 +30,13 @@ interface CardProps {
 
 const projects: Project[] = [
   {
-    title: "Portfolio - Previous Version 🔥",
+    title: "LAMB FALCONS - Official Club Site ",
     description:
       "portfolio A sleek and responsive portfolio website built with React and Tailwind CSS. framer Motion for smooth for animations. design created using figma  💻✨",
     link: "/projects/project-1.png",
     color: "#0be890",
-    githubLink: "https://github.com/MDmohiuddin-web/portfolio",
-    liveLink: "https://mohiuddin-portfolio.vercel.app/",
+    githubLink: "https://github.com/uzicodes/lamb-falcons",
+    liveLink: "https://lamb-falcons.vercel.app/",
   },
   {
     title: "FashionFusing  built with React and Tailwind CSS ",
@@ -218,7 +218,7 @@ function Card({
                 />
                 <div className="h-[1px] w-12 md:w-20 bg-gray-600" />
               </div>
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
                 {title}
               </h2>
               <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md">
