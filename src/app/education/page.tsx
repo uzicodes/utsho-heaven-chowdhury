@@ -42,11 +42,13 @@ const EducationSection: React.FC = () => {
 
 	const certificationData = [
 		{
-			title: "AWS Certified Solutions Architect",
-			issuer: "Amazon Web Services",
-			date: "January 2024",
-			credentialId: "AWS-SA-2024-001",
-			skills: ["Cloud Architecture", "AWS Services", "Security"],
+			title: "AI ENGINEER FOR DEVELOPERS ASSOCIATE",
+			issuer: "DataCamp",
+			date: "Agust 2025",
+			credentialId: "AIEDA0014623486342",
+			skills: ["LLMs", "MLOPs", "LangChain"],
+			pdfUrl: "https://drive.google.com/file/d/1VjhvU30KzGRGuVRpZOBk7v78eyTww7mP/preview",
+			fullViewUrl: "https://drive.google.com/file/d/1VjhvU30KzGRGuVRpZOBk7v78eyTww7mP/view?usp=sharing",
 		},
 		{
 			title: "React Advanced Certification",
@@ -54,6 +56,8 @@ const EducationSection: React.FC = () => {
 			date: "November 2023",
 			credentialId: "META-REACT-2023-456",
 			skills: ["React.js", "Hooks", "Performance"],
+			pdfUrl: "https://drive.google.com/file/d/2DUMMY_FILE_ID_2/preview",
+			fullViewUrl: "https://drive.google.com/file/d/2DUMMY_FILE_ID_2/view",
 		},
 		{
 			title: "Machine Learning Specialization",
@@ -61,6 +65,8 @@ const EducationSection: React.FC = () => {
 			date: "September 2023",
 			credentialId: "STANFORD-ML-2023-789",
 			skills: ["Neural Networks", "Deep Learning", "Python"],
+			pdfUrl: "https://drive.google.com/file/d/3DUMMY_FILE_ID_3/preview",
+			fullViewUrl: "https://drive.google.com/file/d/3DUMMY_FILE_ID_3/view",
 		},
 		{
 			title: "Kubernetes Administrator",
@@ -68,6 +74,8 @@ const EducationSection: React.FC = () => {
 			date: "July 2023",
 			credentialId: "CNCF-CKA-2023-321",
 			skills: ["Kubernetes", "Docker", "DevOps"],
+			pdfUrl: "https://drive.google.com/file/d/4DUMMY_FILE_ID_4/preview",
+			fullViewUrl: "https://drive.google.com/file/d/4DUMMY_FILE_ID_4/view",
 		},
 		{
 			title: "Cybersecurity Professional",
@@ -75,6 +83,8 @@ const EducationSection: React.FC = () => {
 			date: "May 2023",
 			credentialId: "COMPTIA-SEC-2023-654",
 			skills: ["Network Security", "Threat Detection", "Compliance"],
+			pdfUrl: "https://drive.google.com/file/d/5DUMMY_FILE_ID_5/preview",
+			fullViewUrl: "https://drive.google.com/file/d/5DUMMY_FILE_ID_5/view",
 		},
 	];
 
@@ -222,12 +232,13 @@ const EducationSection: React.FC = () => {
 									{/* PDF Preview Section */}
 									<div className="md:w-2/5 bg-gradient-to-br from-gray-800 to-gray-900 p-6 flex items-center justify-center relative overflow-hidden">
 										<div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px]" />
-										<div className="relative z-10 w-full h-64 bg-white/5 rounded-lg border border-white/10 flex flex-col items-center justify-center">
-											<FileText className="w-20 h-20 text-teal-400 mb-4" />
-											<div className="text-center">
-												<p className="text-white font-semibold mb-2">Certificate Preview</p>
-												<p className="text-gray-400 text-sm">PDF Document</p>
-											</div>
+										<div className="relative z-10 w-full h-64 bg-white rounded-lg overflow-hidden shadow-lg">
+											<iframe
+												src={cert.pdfUrl}
+												className="w-full h-full"
+												title={cert.title}
+												style={{ border: 'none' }}
+											/>
 											<div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
 												<Award className="w-3 h-3" />
 												Verified
@@ -270,10 +281,15 @@ const EducationSection: React.FC = () => {
 												))}
 											</div>
 
-											<button className="mt-4 flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors text-sm font-semibold">
+											<a 
+												href={cert.fullViewUrl} 
+												target="_blank" 
+												rel="noopener noreferrer"
+												className="mt-4 flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors text-sm font-semibold"
+											>
 												<ExternalLink className="w-4 h-4" />
 												View Full Certificate
-											</button>
+											</a>
 										</div>
 									</div>
 								</div>
