@@ -1,8 +1,5 @@
 "use client";
 
-
-
-
 import Navbar from '../Navbar';
 import { useState } from "react";
 import {
@@ -19,26 +16,26 @@ const EducationSection: React.FC = () => {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
 	const educationData = [
-		{
-			degree: "Secondary School Certificate (SSC)",
-			school: "Feni Alia Kamil - M.A Madrasah ",
-			mascot: "📘",
-			year: "2020",
-			achievements: ["GPA: 4.0 (Out of 5)", "Subject: Science"],
-			skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
-			description:
-				"Acquired a strong foundation in science and mathematics, fostering analytical and problem-solving skills.",
-		},
-		{
-			degree: "Diploma in Computer Science (CSE)",
-			school: "Institute of Computer Science and Technology (ICST)",
-			mascot: "💻",
-			year: "2020-2024",
-			achievements: ["GPA: 3.47 (Out of 4)", "Subject: Computer Science"],
-			skills: ["Web Development", "Data Structure", "Database Management Systems"],
-			description:
-				"Acquired foundational knowledge in computer science, programming languages, and software development principles.",
-		},
+			{
+				degree: "Higher Secondary Education (HSC)",
+				school: "Cantonment Public School and College, Saidpur",
+				year: "2018 - 2020",
+				achievements: ["GPA: 5.0 (Out of 5)", "Subject: Science"],
+				skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+				description:
+					"Acquired a strong foundation in Science and Mathematics, fostering analytical and problem-solving skills.",
+				logo: "/cpscs.png",
+			},
+			{
+				degree: "Bachelors in Computer Science (CS)",
+				school: "BRAC University, Dhaka,Bangladesh",
+				year: "2022 - 2026",
+				achievements: ["GPA: 0.00 (Out of 4)", "Subject: Computer Science"],
+				skills: ["Data Structures", "Algorithms", "DBMS", "OS", "Compiler Design"],
+				description:
+					"Acquired foundational knowledge in computer science, programming languages, and software development principles.",
+				logo: "/brac.png",
+			},
 	];
 
 	const containerVariants: Variants = {
@@ -106,55 +103,59 @@ const EducationSection: React.FC = () => {
 							onMouseLeave={() => setHoveredIndex(null)}
 						>
 							<div className="space-y-6">
-								<div className="space-y-2">
-									<div className="flex items-center gap-3">
-										<span className="text-3xl">{edu.mascot}</span>
-										<h3 className="text-2xl font-bold text-white">
-											{edu.degree}
-										</h3>
-									</div>
-									<p className="text-lg text-gray-300 flex items-center gap-2">
-										<BookOpen className="w-5 h-5 text-teal-500" />
-										{edu.school}
-									</p>
-									<p className="text-gray-400 flex items-center gap-2">
-										<Calendar className="w-4 h-4" />
-										{edu.year}
-									</p>
-								</div>
+																			<div className="space-y-2 text-center">
+																				<div className="flex flex-col items-center gap-3">
+																													<img
+																														src={edu.logo}
+																														alt={edu.school + ' logo'}
+																														className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
+																														style={{ maxWidth: '80px', maxHeight: '80px' }}
+																													/>
+																					<h3 className="text-2xl font-bold text-white">
+																						{edu.degree}
+																					</h3>
+																				</div>
+																				<p className="text-lg text-gray-300 flex items-center justify-center gap-2">
+																					{edu.school}
+																				</p>
+																				<p className="text-gray-400 flex items-center justify-center gap-2">
+																					<Calendar className="w-4 h-4" />
+																					{edu.year}
+																				</p>
+																			</div>
 
 								<p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">
 									{edu.description}
 								</p>
 
-								<div className="space-y-3">
-									<h4 className="text-sm font-semibold text-white flex items-center gap-2">
-										<Trophy className="w-4 h-4 text-yellow-500" />
-										Key Achievements
-									</h4>
-									<div className="flex flex-wrap gap-2">
-										{edu.achievements.map((achievement, i) => (
-											<div
-												key={i}
-												className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 flex items-center gap-2 text-sm"
-											>
-												<Award className="w-4 h-4" />
-												<span>{achievement}</span>
-											</div>
-										))}
-									</div>
-								</div>
+																<div className="space-y-3 text-center">
+																	<h4 className="text-sm font-semibold text-white flex items-center justify-center gap-2">
+																		<Trophy className="w-4 h-4 text-yellow-500" />
+																		Key Achievements
+																	</h4>
+																	<div className="flex flex-wrap justify-center gap-2">
+																		{edu.achievements.map((achievement, i) => (
+																			<div
+																				key={i}
+																				className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 flex items-center gap-2 text-sm justify-center"
+																			>
+																				<Award className="w-4 h-4" />
+																				<span>{achievement}</span>
+																			</div>
+																		))}
+																	</div>
+																</div>
 
-								<div className="flex flex-wrap gap-2">
-									{edu.skills.map((skill, i) => (
-										<span
-											key={i}
-											className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
-										>
-											{skill}
-										</span>
-									))}
-								</div>
+																<div className="flex flex-wrap justify-center gap-2">
+																	{edu.skills.map((skill, i) => (
+																		<span
+																			key={i}
+																			className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
+																		>
+																			{skill}
+																		</span>
+																	))}
+																</div>
 							</div>
 						</motion.div>
 					))}
