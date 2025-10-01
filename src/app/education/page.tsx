@@ -7,6 +7,8 @@ import {
 	Calendar,
 	BookOpen,
 	Trophy,
+	FileText,
+	ExternalLink,
 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
@@ -36,6 +38,44 @@ const EducationSection: React.FC = () => {
 					"Acquired foundational knowledge in computer science, programming languages, and software development principles.",
 				logo: "/brac.png",
 			},
+	];
+
+	const certificationData = [
+		{
+			title: "AWS Certified Solutions Architect",
+			issuer: "Amazon Web Services",
+			date: "January 2024",
+			credentialId: "AWS-SA-2024-001",
+			skills: ["Cloud Architecture", "AWS Services", "Security"],
+		},
+		{
+			title: "React Advanced Certification",
+			issuer: "Meta",
+			date: "November 2023",
+			credentialId: "META-REACT-2023-456",
+			skills: ["React.js", "Hooks", "Performance"],
+		},
+		{
+			title: "Machine Learning Specialization",
+			issuer: "Stanford University",
+			date: "September 2023",
+			credentialId: "STANFORD-ML-2023-789",
+			skills: ["Neural Networks", "Deep Learning", "Python"],
+		},
+		{
+			title: "Kubernetes Administrator",
+			issuer: "Cloud Native Computing Foundation",
+			date: "July 2023",
+			credentialId: "CNCF-CKA-2023-321",
+			skills: ["Kubernetes", "Docker", "DevOps"],
+		},
+		{
+			title: "Cybersecurity Professional",
+			issuer: "CompTIA",
+			date: "May 2023",
+			credentialId: "COMPTIA-SEC-2023-654",
+			skills: ["Network Security", "Threat Detection", "Compliance"],
+		},
 	];
 
 	const containerVariants: Variants = {
@@ -151,6 +191,95 @@ const EducationSection: React.FC = () => {
 							</div>
 						</motion.div>
 					))}
+				</motion.div>
+
+				{/* Certifications Section */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.4 }}
+					className="mt-20"
+				>
+					<div className="text-center mb-12">
+						<h2 className="text-4xl font-bold mb-4 colus-font" style={{ color: '#27ADF5' }}>
+							Professional Certifications
+						</h2>
+						<p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
+							Continuous learning and professional development through industry-recognized certifications
+						</p>
+					</div>
+
+					<div className="grid grid-cols-1 gap-6">
+						{certificationData.map((cert, index) => (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+								animate={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.5, delay: index * 0.1 }}
+								className="group relative border border-blue-400/20 rounded-xl overflow-hidden bg-gray-900/50 backdrop-blur-sm hover:border-teal-500 transition-all duration-300"
+							>
+								<div className="flex flex-col md:flex-row">
+									{/* PDF Preview Section */}
+									<div className="md:w-2/5 bg-gradient-to-br from-gray-800 to-gray-900 p-6 flex items-center justify-center relative overflow-hidden">
+										<div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px]" />
+										<div className="relative z-10 w-full h-64 bg-white/5 rounded-lg border border-white/10 flex flex-col items-center justify-center">
+											<FileText className="w-20 h-20 text-teal-400 mb-4" />
+											<div className="text-center">
+												<p className="text-white font-semibold mb-2">Certificate Preview</p>
+												<p className="text-gray-400 text-sm">PDF Document</p>
+											</div>
+											<div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
+												<Award className="w-3 h-3" />
+												Verified
+											</div>
+										</div>
+									</div>
+
+									{/* Certificate Details Section */}
+									<div className="md:w-3/5 p-6 flex flex-col justify-center">
+										<div className="space-y-4">
+											<div>
+												<h3 className="text-2xl font-bold text-white mb-2 colus-font group-hover:text-teal-400 transition-colors">
+													{cert.title}
+												</h3>
+												<p className="text-lg flex items-center gap-2 colus-font" style={{ color: '#73F527' }}>
+													<BookOpen className="w-4 h-4" />
+													{cert.issuer}
+												</p>
+											</div>
+
+											<div className="flex items-center gap-4 text-gray-400 text-sm">
+												<span className="flex items-center gap-2">
+													<Calendar className="w-4 h-4" />
+													{cert.date}
+												</span>
+												<span className="flex items-center gap-2">
+													<FileText className="w-4 h-4" />
+													ID: {cert.credentialId}
+												</span>
+											</div>
+
+											<div className="flex flex-wrap gap-2">
+												{cert.skills.map((skill, i) => (
+													<span
+														key={i}
+														className="px-3 py-1 text-xs rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+													>
+														{skill}
+													</span>
+												))}
+											</div>
+
+											<button className="mt-4 flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors text-sm font-semibold">
+												<ExternalLink className="w-4 h-4" />
+												View Full Certificate
+											</button>
+										</div>
+									</div>
+								</div>
+							</motion.div>
+						))}
+					</div>
 				</motion.div>
 			</div>
 		</section>
