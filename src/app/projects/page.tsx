@@ -41,32 +41,31 @@ const projects: Project[] = [
     liveLink: "https://lamb-falcons.vercel.app/",
   },
   {
-    title: "FashionFusing  built with React and Tailwind CSS ",
+    title: "Screen Box - Your Simple Streaming Solution",
     description:
-      "FashionFusing is a fashion e-commerce website built with React and Tailwind CSS. It offers a seamless shopping experience with a wide range of clothing and accessories.",
+      "Screen Box is a simple streaming solution built with React and Tailwind CSS. It provides an easy way to watch your favorite shows and movies.",
     link: "/projects/project-2.png",
     color: "#8f89ff",
-    githubLink: "https://github.com/MDmohiuddin-web/FashionFusing-Clint",
-    liveLink: "https://fashionfusing.netlify.app/",
+    githubLink: "https://github.com/uzicodes/screen-box",
+    liveLink: "https://screen-box.vercel.app/",
   },
   {
-    title: "interior-desigin",
+    title: "The Culinary Canvas",
     description:
       "Landing page for interior design built with React and Tailwind CSS. design created using framer Motion for smooth for animations  💻✨",
     link: "/projects/project-3.png",
     color: "#fff",
-    githubLink: "https://github.com/MDmohiuddin-web/Interior-design-landingpage",
-    liveLink: "https://interior-desigin.netlify.app/",
+    githubLink: "https://github.com/uzicodes/culinary-canvas",
+    liveLink: "https://the-culinary-canvas.vercel.app/",
   },
   {
-    title: "Quick Blog - A Personal Blogging Platform",
+    title: "Go-Dhaka",
     description:
       "Quick Blog is a fast and efficient personal blogging platform built with React, Tailwind CSS, Node.js, Express, and MongoDB. It allows users to read and Admin can write blog posts seamlessly. The platform features a user-friendnt retrieval. The platform is optimized for speed and performance",
     link: "/projects/project-4.png",
     color: "#5044e5",
-    githubLink: "https://github.com/MDmohiuddin-web/quick-blog-client",
-    githubLinkServer: "https://github.com/MDmohiuddin-web/quick-blog-server",
-    liveLink: "https://quick-blog-client-lemon.vercel.app/",
+    githubLink: "https://github.com/uzicodes/go-dhaka",
+    liveLink: "https://go-dhaka.vercel.app/",
   },
 ];
 
