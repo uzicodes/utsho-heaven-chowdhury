@@ -20,7 +20,7 @@ const EducationSection: React.FC = () => {
 				degree: "Higher Secondary Education (HSC)",
 				school: "Cantonment Public School & College, Saidpur",
 				year: "2018 - 2020",
-				achievements: ["GPA: 5.0 (Out of 5)", "Subject: Science"],
+				achievements: ["CGPA: 5.0 (Out of 5)", "Subject: Science"],
 				skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
 				description:
 					"Acquired a strong foundation in Science and Mathematics, fostering analytical and problem-solving skills.",
@@ -30,7 +30,7 @@ const EducationSection: React.FC = () => {
 				degree: "Bachelors in Computer Science (CS)",
 				school: "BRAC University, Dhaka",
 				year: "2022 - 2026",
-				achievements: ["GPA: 0.00 (Out of 4)", "Subject: Computer Science"],
+				achievements: ["CGPA: 0.00 (Out of 4)", "Subject: Computer Science"],
 				skills: ["Data Structures", "Algorithms", "DBMS", "OS", "Compiler Design"],
 				description:
 					"Acquired foundational knowledge in computer science, programming languages, and software development principles.",
@@ -130,16 +130,11 @@ const EducationSection: React.FC = () => {
 																		<Trophy className="w-4 h-4 text-yellow-500" />
 																		Key Achievements
 																	</h4>
-																	<div className="flex flex-wrap justify-center gap-2">
-																		{edu.achievements.map((achievement, i) => (
-																			<div
-																				key={i}
-																				className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 flex items-center gap-2 text-sm justify-center"
-																			>
-																				<Award className="w-4 h-4" />
-																				<span>{achievement}</span>
-																			</div>
-																		))}
+																	<div className="flex justify-center">
+																		<div className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 flex items-center gap-2 text-sm justify-center">
+																			<Award className="w-4 h-4" />
+																			<span>{edu.achievements[0]}</span>
+																		</div>
 																	</div>
 																</div>
 
