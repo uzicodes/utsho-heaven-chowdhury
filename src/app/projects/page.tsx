@@ -12,7 +12,6 @@ interface Project {
   link: string;
   color: string;
   githubLink: string;
-  githubLinkServer?: string;
   liveLink: string;
 }
 
@@ -26,7 +25,6 @@ interface CardProps {
   range: [number, number];
   targetScale: number;
   githubLink: string;
-  githubLinkServer?: string;
   liveLink: string;
 }
 
@@ -142,7 +140,6 @@ export default function Projects() {
                   range={[i * 0.25, 1]}
                   targetScale={targetScale}
                   githubLink={project.githubLink}
-                  githubLinkServer={project.githubLinkServer}
                   liveLink={project.liveLink}
                 />
               );
@@ -164,7 +161,6 @@ function Card({
   range,
   targetScale,
   githubLink,
-  githubLinkServer,
   liveLink,
 }: CardProps) {
   const container = useRef<HTMLDivElement>(null);
@@ -251,26 +247,7 @@ function Card({
                     Code
                   </span>
                 </motion.a>
-                {/* GitHub Server Link */}
-                {githubLinkServer && (
-                  <motion.a
-                    title="GitHub Server Link"
-                    href={githubLinkServer}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-2"
-                    whileHover={{ y: -3 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    <img src="/socials/github.png" alt="GitHub" width={22} height={22} className="inline-block align-middle" />
-                    <span
-                      className="text-xs md:text-sm font-medium"
-                      style={{ color }}
-                    >
-                      Code
-                    </span>
-                  </motion.a>
-                )}
+               
                 {/* Live Link */}
                 <motion.a
                   title="Live Link"
