@@ -20,7 +20,7 @@ const EducationSection: React.FC = () => {
 	const educationData = [
 			{
 				degree: "Higher Secondary Education (HSC)",
-				school: "Cantonment Public School & College, Saidpur",
+				school: "Cantonment Public College, Saidpur",
 				year: "2018 - 2020",
 				achievements: ["CGPA: 5.0 (Out of 5)", "Subject: Science"],
 				skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
@@ -178,7 +178,7 @@ const EducationSection: React.FC = () => {
 																														className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
 																														style={{ maxWidth: '80px', maxHeight: '80px' }}
 																													/>
-																					<h3 className="text-2xl font-bold colus-font" style={{ color: '#27ADF5' }}>
+																					<h3 className="text-2xl font-bold colus-font" style={{ color: '#BD9082' }}>
 																						{edu.degree}
 																					</h3>
 																				</div>
