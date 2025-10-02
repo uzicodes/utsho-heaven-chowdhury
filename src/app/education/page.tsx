@@ -78,7 +78,7 @@ const EducationSection: React.FC = () => {
 			fullViewUrl: "https://drive.google.com/file/d/1pM-5PcxfzGN7QZhcvL4kwxU_IogNjln4/view?usp=sharing",
 		},
 		{
-			title: "HTML5- Coursera",
+			title: "HTML5 - Coursera",
 			issuer: "University of Michigan",
 			date: "Mar 2024",
 			credentialId: "https://coursera.org/verify/PW72RW7XK7YE",
@@ -269,7 +269,7 @@ const EducationSection: React.FC = () => {
 									<div className="md:w-3/5 p-6 flex flex-col justify-center">
 										<div className="space-y-4">
 											<div>
-												<h3 className="text-2xl font-bold text-white mb-2 colus-font group-hover:text-teal-400 transition-colors">
+												<h3 className="text-2xl font-bold mb-2 colus-font group-hover:text-teal-400 transition-colors" style={{ color: '#BD9082' }}>
 													{cert.title}
 												</h3>
 												<p className="text-lg flex items-center gap-2 colus-font" style={{ color: '#73F527' }}>
