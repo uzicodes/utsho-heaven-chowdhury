@@ -86,6 +86,26 @@ const EducationSection: React.FC = () => {
 			certImage: "/certifications/5.png",
 			fullViewUrl: "https://drive.google.com/file/d/11FIJr7lgpvdk3eK8CgG_w8bf99hmkwL9/view?usp=sharing",
 		},
+		{
+			title: "Machine Learning with Python- Coursera",
+			issuer: "IBM",
+			date: "Mar 2024",
+			credentialId: "https://coursera.org/verify/ZVUEWPX28NAL",
+			skills: ["Network Security", "Threat Detection", "Compliance"],
+			certImage: "/certifications/6.png",
+			fullViewUrl: "https://drive.google.com/file/d/13ud1g4NgBMpd3a3MFntaQmQ_g96DRvU1/view?usp=sharing",
+		}
+
+
+
+
+
+
+
+
+
+
+
 	];
 
 	const containerVariants: Variants = {
