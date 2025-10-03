@@ -3,7 +3,7 @@
 import * as React from "react";
 import Navbar from "../Navbar";
 import { MapPin, Mail } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 interface ContactItem {
@@ -15,12 +15,7 @@ interface ContactItem {
 
 export default function Contact() {
   const contactItems: ContactItem[] = [
-    {
-      icon: <FaWhatsapp className="w-6 h-6 text-green-500" />,
-      label: "Phone",
-      link: "https://wa.me/+8801865540885",
-      text: "+880 1865540885",
-    },
+
     {
       icon: <Mail className="w-6 h-6 text-purple-400" />,
       label: "Email",
@@ -33,11 +28,28 @@ export default function Contact() {
       link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
       text: "Connect with me on LinkedIn",
     },
+
     {
       icon: <FaGithub className="w-6 h-6" />,
       label: "Github",
       link: "https://github.com/uzicodes",
       text: "Check out my GitHub",
+    },
+	{
+      icon: <FaFacebook className="w-6 h-6" />,
+      label: "Facebook",
+      link: "https://facebook.com/uzicodes",
+      text: "Check out my Facebook",
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-pink-500">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+        </svg>
+      ),
+      label: "Instagram",
+      link: "https://instagram.com/utsh0x",
+      text: "Check out my Instagram",
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
@@ -86,6 +98,11 @@ export default function Contact() {
                       </div>
                     </div>
                   ))}
+                  <div className="mt-6 text-xs text-gray-400">
+                    <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons" target="_blank" rel="noopener noreferrer">
+                      Instagram icons created by Grow studio - Flaticon
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
