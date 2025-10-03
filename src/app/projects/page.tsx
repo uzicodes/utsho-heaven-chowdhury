@@ -41,7 +41,7 @@ const projects: Project[] = [
   {
     title: "SCREEN BOX ",
     description:
-      "FashionFusing is a fashion e-commerce website built with React and Tailwind CSS. It offers a seamless shopping experience with a wide range of clothing and accessories.",
+      "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. \n Next.js, React, TypeScript, Tailwind, Supabase, ESLint, Vercel",
     link: "/projects/project-2.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/screen-box",
@@ -221,11 +221,13 @@ function Card({
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
                 {title}
               </h2>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md lora-font">
-                {i === 0
-                  ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
-                  : description}
-              </p>
+                <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md lora-font">
+                  {i === 0
+                    ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
+                    : i === 1
+                      ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
+                      : description}
+                </p>
             </div>
             <div className="mt-4 md:mt-auto pt-4">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
