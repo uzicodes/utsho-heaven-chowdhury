@@ -25,14 +25,14 @@ export default function Contact() {
       icon: <FaLinkedin className="w-6 h-6 text-blue-500" />,
       label: "Linkedin",
       link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
-      text: "Connect with me on LinkedIn",
+      text: "Connect",
     },
 
     {
       icon: <FaGithub className="w-6 h-6" />,
       label: "Github",
       link: "https://github.com/uzicodes",
-      text: "Check out my GitHub",
+      text: "uzicodes",
     },
     {
       icon: (
@@ -41,8 +41,8 @@ export default function Contact() {
         </svg>
       ),
       label: "Facebook",
-      link: "https://facebook.com/uzicodes",
-      text: "Check out my Facebook",
+      link: "https://www.facebook.com/utsh0z",
+      text: "utsh0z",
     },
     {
       icon: (
@@ -52,7 +52,7 @@ export default function Contact() {
       ),
       label: "Instagram",
       link: "https://instagram.com/utsh0x",
-      text: "Check out my Instagram",
+      text: "utsh0x",
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
@@ -91,7 +91,7 @@ export default function Contact() {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-600 capitalize cursor-pointer hover:text-white duration-500"
+                            className="text-blue-600 cursor-pointer hover:text-white duration-500"
                           >
                             {item.text}
                           </a>
