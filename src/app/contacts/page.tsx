@@ -3,7 +3,6 @@
 import * as React from "react";
 import Navbar from "../Navbar";
 import { MapPin, Mail } from "lucide-react";
-import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 interface ContactItem {
@@ -35,8 +34,12 @@ export default function Contact() {
       link: "https://github.com/uzicodes",
       text: "Check out my GitHub",
     },
-	{
-      icon: <FaFacebook className="w-6 h-6" />,
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-blue-600">
+          <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z" />
+        </svg>
+      ),
       label: "Facebook",
       link: "https://facebook.com/uzicodes",
       text: "Check out my Facebook",
@@ -75,7 +78,7 @@ export default function Contact() {
                     Have a question or want to work together? Drop us a message!
                   </p>
                 </div>
-                <div className="space-y-8">
+                <div className="space-y-5">
                   {contactItems.map((item, index) => (
                     <div key={index} className="flex items-center space-x-4">
                       <div className="bg-pink-500/10 p-3 rounded-lg">
@@ -98,11 +101,6 @@ export default function Contact() {
                       </div>
                     </div>
                   ))}
-                  <div className="mt-6 text-xs text-gray-400">
-                    <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons" target="_blank" rel="noopener noreferrer">
-                      Instagram icons created by Grow studio - Flaticon
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
