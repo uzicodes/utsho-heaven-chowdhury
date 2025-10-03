@@ -246,7 +246,7 @@ function Card({
                   whileHover={{ y: -3 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <img src="/socials/github.png" alt="GitHub" width={22} height={22} className="inline-block align-middle" />
+                  <img src="/git-2.png" alt="GitHub" width={35} height={35} className="inline-block align-middle" />
                   <span
                     className="text-xs md:text-sm font-medium"
                     style={{ color }}
