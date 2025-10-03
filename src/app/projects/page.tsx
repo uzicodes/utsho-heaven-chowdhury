@@ -41,7 +41,7 @@ const projects: Project[] = [
   {
     title: "SCREEN BOX ",
     description:
-      "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. \n Next.js, React, TypeScript, Tailwind, Supabase, ESLint, Vercel",
+      "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. \n Next.js, React, TypeScript, Tailwind, Supabase (PostgreSQL), ESLint, Vercel",
     link: "/projects/project-2.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/screen-box",
@@ -50,7 +50,7 @@ const projects: Project[] = [
   {
     title: "Culinary Canvas",
     description:
-      "Landing page for interior design built with React and Tailwind CSS. design created using framer Motion for smooth for animations  💻✨",
+      "Intuitive web platform that lets you effortlessly discover, customize, and order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking and personalized account features. \n Next.js, React, Typescript, Tailwind, MongoDB, Vercel",
     link: "/projects/project-3.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
@@ -59,7 +59,7 @@ const projects: Project[] = [
   {
     title: "GO Dhaka",
     description:
-      "GO Dhaka is a comprehensive platform designed to connect userxpress, and MongoDB, it offers a seamless experience for users to .",
+      "Your essential navigator for effortless travel, providing all Dhaka metro, bus routes, and fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient, and stress-free. No logins required. Google Maps for real-time traffic updates \n Next.js, React, TypeScript, Material-UI, Vercel",
     link: "/projects/project-4.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/go-dhaka",
@@ -226,7 +226,11 @@ function Card({
                     ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
                     : i === 1
                       ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
-                      : description}
+                      : i === 2
+                        ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
+                        : i === 3
+                          ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
+                          : description}
                 </p>
             </div>
             <div className="mt-4 md:mt-auto pt-4">
