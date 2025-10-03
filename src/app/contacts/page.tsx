@@ -24,25 +24,25 @@ export default function Contact() {
     {
       icon: <Mail className="w-6 h-6 text-purple-400" />,
       label: "Email",
-      link: "mailto:mohiu5204@gmail.com",
-      text: "mohiu5204@gmail.com",
+      link: "mailto:utshozi11@gmail.com",
+      text: "utshozi11@gmail.com",
     },
     {
       icon: <FaLinkedin className="w-6 h-6 text-blue-500" />,
       label: "Linkedin",
-      link: "https://www.linkedin.com/in/mohammedmohiuddin/",
+      link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
       text: "Connect with me on LinkedIn",
     },
     {
       icon: <FaGithub className="w-6 h-6" />,
       label: "Github",
-      link: "https://github.com/MDmohiuddin-web",
+      link: "https://github.com/uzicodes",
       text: "Check out my GitHub",
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
       label: "Location",
-      text: "Feni, Chattogram, Bangladesh",
+      text: "Dhaka, Bangladesh",
     },
   ];
 
