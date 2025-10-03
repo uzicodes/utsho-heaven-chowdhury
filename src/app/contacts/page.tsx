@@ -75,7 +75,7 @@ export default function Contact() {
                     Get in Touch
                   </h2>
                   <p className="text-gray-300 text-lg">
-                    Have a question or want to work together? Drop us a message!
+                    Questions or want to work together? Drop a message !
                   </p>
                 </div>
                 <div className="space-y-5">
