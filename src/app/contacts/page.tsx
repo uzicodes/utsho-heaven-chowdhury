@@ -46,6 +46,27 @@ export default function Contact() {
     },
   ];
 
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+  formData.append("access_key", "25e65c88-7b8e-4e47-95f0-c289b90213e5");
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -87,6 +108,16 @@ export default function Contact() {
                     </div>
                   ))}
                 </div>
+              </div>
+              {/* Contact Form - right side */}
+              <div className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl shadow-xl flex flex-col items-center">
+                <form onSubmit={onSubmit} className="w-full max-w-md flex flex-col gap-4">
+                  <input type="text" name="name" required placeholder="Your Name" className="px-4 py-2 rounded bg-white/10 text-black" />
+                  <input type="email" name="email" required placeholder="Your Email" className="px-4 py-2 rounded bg-white/10 text-black" />
+                  <textarea name="message" required placeholder="Your Message" className="px-4 py-2 rounded bg-white/10 text-black" />
+                  <button type="submit" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-6 rounded font-semibold hover:opacity-90 transition-opacity">Submit Form</button>
+                </form>
+                <span className="mt-4 text-sm text-green-400">{result}</span>
               </div>
             </div>
           </div>
