@@ -31,8 +31,8 @@ interface CardProps {
 const projects: Project[] = [
   {
     title: "LAMB FALCONS - Official Club Site ",
-    description:
-      "portfolio A sleek and responsive portfolio website built with React and Tailwind CSS. framer Motion for smooth for animations. design created using figma  💻✨",
+      description:
+        "This platform serves as the modern, dynamic, & central online hub for our club, providing public visitors with essential club details while offering a secure login & dedicated member portal for private access & deeper community engagement.\n Next.js, React, TypeScript, Tailwind, Firebase, Framer Motion, Vercel.",
     link: "/projects/project-1.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
@@ -221,8 +221,10 @@ function Card({
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
                 {title}
               </h2>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md">
-                {description}
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md lora-font">
+                {i === 0
+                  ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
+                  : description}
               </p>
             </div>
             <div className="mt-4 md:mt-auto pt-4">
