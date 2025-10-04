@@ -101,14 +101,13 @@ export default function Contact() {
                           {item.icon}
                         </div>
                         <div>
-                          <h3 className="font-semibold" style={{ fontFamily: 'Lora, serif' }}>{item.label}</h3>
                           {item.link ? (
                             <a
                               href={item.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-blue-600 cursor-pointer hover:text-white duration-500"
-                              style={{ fontFamily: 'Lora, serif' }}
+                              className="cursor-pointer hover:text-white duration-500"
+                              style={{ fontFamily: 'Lora, serif', color: '#E3984D' }}
                             >
                               {item.text}
                             </a>
