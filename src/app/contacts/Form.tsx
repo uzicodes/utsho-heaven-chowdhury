@@ -18,7 +18,7 @@ const Form = () => {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Message Sent Successfully");
       (event.target as HTMLFormElement).reset();
     } else {
       console.log("Error", data);
