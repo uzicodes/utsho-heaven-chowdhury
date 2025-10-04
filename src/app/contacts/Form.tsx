@@ -12,7 +12,7 @@ const Form = () => {
     const phone = form.phone.value;
     // Email must contain '@'
     if (!email.includes('@')) {
-      window.alert("Please add a valid email");
+      window.alert("Please add a valid E-mail");
       return;
     }
     // Phone must be digits and special characters only, max 15 chars
