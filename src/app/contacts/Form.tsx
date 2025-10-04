@@ -16,6 +16,10 @@ const Form = () => {
           <span>Email</span>
         </label> 
         <label>
+          <input className="input" type="tel" placeholder="" required />
+          <span>Mobile Number</span>
+        </label>
+        <label>
           <textarea className="input" rows={4} placeholder="" required />
           <span>Message</span>
         </label>
@@ -27,11 +31,15 @@ const Form = () => {
 
 const StyledWrapper = styled.div`
   .form {
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 350px;
-    padding: 20px;
+  max-width: 1400px;
+  width: 100%;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
     border-radius: 20px;
     position: relative;
     background-color: #1a1a1a;
@@ -104,10 +112,13 @@ const StyledWrapper = styled.div`
     background-color: #333;
     color: #fff;
     width: 100%;
-    padding: 20px 05px 05px 10px;
+    min-width: 400px;
+    padding: 20px 10px 5px 16px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1.1em;
   }
 
   .form label .input + span {
