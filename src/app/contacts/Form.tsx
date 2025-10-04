@@ -69,14 +69,14 @@ const StyledWrapper = styled.div`
 
   .heading {
     display: block;
-    color: white;
+    color: #d3f35f;
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 20px;
   }
   .c1 {
     display: block;
-    color: #d3f35f;
+    color: #CC6D0E;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 20px;
