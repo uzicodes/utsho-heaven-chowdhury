@@ -2,23 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Form = () => {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target as HTMLFormElement);
+    formData.append("access_key", "25e65c88-7b8e-4e47-95f0-c289b90213e5");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      (event.target as HTMLFormElement).reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <StyledWrapper>
       <div className="form-container">
-        <div className="form">
+        <form className="form" onSubmit={onSubmit}>
           <span className="heading">Contact me</span>
           <span className="c1">Please fill out the details</span>
-          <input className="input" type="text" placeholder="Name" />
-          <input className="input" type="email" placeholder="E-mail" />
-          <input className="input" type="tel" placeholder="Phone" />
-          <textarea className="input" placeholder="Message" rows={4} />
-          
+          <input className="input" type="text" name="name" placeholder="Name" required />
+          <input className="input" type="email" name="email" placeholder="E-mail" required />
+          <input className="input" type="tel" name="phone" placeholder="Phone" required />
+          <textarea className="input" name="message" placeholder="Message" rows={4} required />
           <div className="button-container">
-            <div className="send-button">Send Message</div>
-            <div className="reset-button-container">
-            </div>
+            <button type="submit" className="send-button">Send Message</button>
+            <div className="reset-button-container"></div>
           </div>
-        </div>
+          <span style={{ color: '#caf438', fontWeight: 'bold', marginTop: '10px', display: 'block' }}>{result}</span>
+        </form>
       </div>
     </StyledWrapper>
   );
