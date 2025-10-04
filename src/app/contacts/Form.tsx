@@ -31,7 +31,7 @@ const Form = () => {
 
 const StyledWrapper = styled.div`
   .form {
-    margin-top: 48px;
+  margin-top: 96px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -55,7 +55,7 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     padding-left: 30px;
-    color: #00bfff;
+  color: #5BF527;
   }
 
   .title::before {
@@ -77,7 +77,7 @@ const StyledWrapper = styled.div`
     width: 16px;
     border-radius: 50%;
     left: 0px;
-    background-color: #00bfff;
+  background-color: #5BF527;
   }
 
   .message, 
@@ -95,7 +95,7 @@ const StyledWrapper = styled.div`
   }
 
   .signin a {
-    color: #00bfff;
+  color: #5BF527;
   }
 
   .flex {
