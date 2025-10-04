@@ -54,8 +54,10 @@ const StyledWrapper = styled.div`
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: 30px;
-  color: #5BF527;
+    justify-content: center;
+    padding-left: 0;
+    color: #5BF527;
+    text-align: center;
   }
 
   .title::before {
@@ -66,7 +68,6 @@ const StyledWrapper = styled.div`
   .title::after {
     width: 18px;
     height: 18px;
-    animation: pulse 1s linear infinite;
   }
 
   .title::before,
@@ -80,7 +81,12 @@ const StyledWrapper = styled.div`
   background-color: #5BF527;
   }
 
-  .message, 
+  .message {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-bottom: 10px;
+  }
   .signin {
     font-size: 14.5px;
     color: rgba(255, 255, 255, 0.7);
@@ -159,20 +165,12 @@ const StyledWrapper = styled.div`
     background-color: #00bfff;
   }
 
+
   .submit:hover {
     background-color: #00bfff96;
   }
 
-  @keyframes pulse {
-    from {
-      transform: scale(0.9);
-      opacity: 1;
-    }
-
-    to {
-      transform: scale(1.8);
-      opacity: 0;
-    }
-  }`;
+  /* pulse animation removed */
+`
 
 export default Form;
