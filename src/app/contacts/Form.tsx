@@ -7,7 +7,20 @@ const Form = () => {
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target as HTMLFormElement);
+    const form = event.target as HTMLFormElement;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    // Email must contain '@'
+    if (!email.includes('@')) {
+      window.alert("Please add a valid email");
+      return;
+    }
+    // Phone must be digits and special characters only, max 15 chars
+    if (!/^[\d\s\-\+\(\)\.]{1,15}$/.test(phone)) {
+      window.alert("Please add a valid number");
+      return;
+    }
+    const formData = new FormData(form);
     formData.append("access_key", "25e65c88-7b8e-4e47-95f0-c289b90213e5");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -19,7 +32,7 @@ const Form = () => {
 
     if (data.success) {
       setResult("Message Sent Successfully");
-      (event.target as HTMLFormElement).reset();
+      form.reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -33,8 +46,8 @@ const Form = () => {
           <span className="heading">Contact me</span>
           <span className="c1">Please fill out the details</span>
           <input className="input" type="text" name="name" placeholder="Name" required />
-          <input className="input" type="email" name="email" placeholder="E-mail" required />
-          <input className="input" type="tel" name="phone" placeholder="Phone" required />
+          <input className="input" type="email" name="email" placeholder="E-mail" required pattern=".*@.*" />
+          <input className="input" type="tel" name="phone" placeholder="Phone" required pattern="\d{1,15}" maxLength={15} />
           <textarea className="input" name="message" placeholder="Message" rows={4} required />
           <div className="button-container">
             <button type="submit" className="send-button">Send Message</button>
