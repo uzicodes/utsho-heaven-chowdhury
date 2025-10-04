@@ -7,6 +7,7 @@ import Navbar from "../Navbar";
 import Head from "next/head";
 import { MapPin, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
 
 interface ContactItem {
   icon: React.ReactNode;
@@ -58,6 +59,12 @@ export default function Contact() {
       text: "utsh0x",
     },
     {
+      icon: <FaTwitter className="w-6 h-6 text-blue-500" />,
+      label: "Twitter",
+      link: "https://twitter.com/utsh0",
+      text: "utsh0",
+    },
+    {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
       label: "Location",
       text: "Dhaka, Bangladesh",
@@ -85,7 +92,7 @@ export default function Contact() {
               {/* Contact Info */}
               <div className="space-y-8 flex flex-col justify-center items-center h-full">
                 <div className="space-y-5 lg:pr-0">
-                  <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Colus, sans-serif' }}>Get in Touch</h3>
+                  <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Colus, sans-serif', marginTop: '48px' }}>Get in Touch</h3>
                   <div className="mb-7.5"></div>
                   {contactItems.map((item, index) => (
                     <div key={index} className="flex items-center space-x-4">
