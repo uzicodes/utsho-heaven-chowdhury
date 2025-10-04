@@ -6,17 +6,16 @@ const Form = () => {
     <StyledWrapper>
       <div className="form-container">
         <div className="form">
-          <span className="heading">Campus Ambassador Program</span>
-          <span className="c1">Become a Campus Ambassador</span>
+          <span className="heading">Contact me</span>
+          <span className="c1">Please fill out the details</span>
           <input className="input" type="text" placeholder="Name" />
           <input className="input" type="email" placeholder="E-mail" />
           <input className="input" type="tel" placeholder="Phone" />
           <textarea className="input" placeholder="Message" rows={4} />
-          <span className="c2">Join our ambassador program and get exclusive perks!</span>
+          
           <div className="button-container">
-            <div className="send-button">Become an Ambassador</div>
+            <div className="send-button">Send Message</div>
             <div className="reset-button-container">
-              <div className="reset-button" id="reset-btn">Logout</div>
             </div>
           </div>
         </div>
