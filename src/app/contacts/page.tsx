@@ -1,6 +1,8 @@
 "use client";
 
 import * as React from "react";
+import dynamic from "next/dynamic";
+const Form = dynamic(() => import("./Form"), { ssr: false });
 import Navbar from "../Navbar";
 import { MapPin, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
@@ -102,6 +104,10 @@ export default function Contact() {
                     </div>
                   ))}
                 </div>
+              </div>
+              {/* Form on the right side */}
+              <div className="flex justify-center items-center w-full">
+                <Form />
               </div>
             </div>
           </div>
