@@ -186,25 +186,13 @@
   animation: gradient-x 3s linear infinite;
 }
 
-/* Elastic Bounce Animation */
-@keyframes elasticBounce {
-  0% {
-    transform: scale(0.8);
-  }
-  40% {
-    transform: scale(1.15, 0.95);
-  }
-  60% {
-    transform: scale(0.95, 1.05);
-  }
-  80% {
-    transform: scale(1.05, 0.95);
-  }
-  100% {
-    transform: scale(1);
-  }
+@keyframes wiggle {
+  0% { transform: rotate(-2deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
 }
-
 .navbar-link:hover::before {
   content: "";
   position: absolute;
@@ -212,7 +200,7 @@
   background: rgba(233, 213, 255, 0.3);
   border-radius: 9999px;
   z-index: -1;
-  animation: elasticBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: wiggle 0.5s linear;
 }
 
  
