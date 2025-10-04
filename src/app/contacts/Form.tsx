@@ -30,10 +30,10 @@ const StyledWrapper = styled.div`
   }
 
   .form-container {
-    max-width: 700px;
-    margin: 30px;
-    background-color: #001925;
-    padding: 30px;
+      max-width: 400px;
+      margin: 80px 10px 10px 10px;
+      background-color: #001925;
+      padding: 16px;
     border-left: 5px solid #caf438;
     clip-path: polygon(
       0 0,
@@ -105,18 +105,23 @@ const StyledWrapper = styled.div`
 
   .form-container .form .button-container {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
+    width: 100%;
   }
 
   .form-container .form .button-container .send-button {
-    flex-basis: 70%;
     background: #caf438;
-    padding: 10px;
+    padding: 10px 32px;
     color: #001925;
     text-align: center;
     font-weight: bold;
     border: 1px solid transparent;
     transition: all 0.2s ease-in-out;
+    min-width: 180px;
+    display: block;
+    margin: 0;
   }
 
   .form-container .form .button-container .send-button:hover {
