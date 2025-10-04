@@ -61,8 +61,8 @@ export default function Contact() {
     {
       icon: <FaTwitter className="w-6 h-6 text-blue-500" />,
       label: "Twitter",
-      link: "https://twitter.com/utsh0",
-      text: "utsh0",
+      link: "https://twitter.com/utsh0w",
+      text: "utsh0w",
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
@@ -94,29 +94,31 @@ export default function Contact() {
                 <div className="space-y-5 lg:pr-0">
                   <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Colus, sans-serif', marginTop: '48px' }}>Get in Touch</h3>
                   <div className="mb-7.5"></div>
-                  {contactItems.map((item, index) => (
-                    <div key={index} className="flex items-center space-x-4">
-                      <div className="bg-pink-500/10 p-3 rounded-lg">
-                        {item.icon}
+                  <div className="space-y-4">
+                    {contactItems.map((item, index) => (
+                      <div key={index} className="flex items-center space-x-4">
+                        <div className="bg-pink-500/10 p-3 rounded-lg">
+                          {item.icon}
+                        </div>
+                        <div>
+                          <h3 className="font-semibold" style={{ fontFamily: 'Lora, serif' }}>{item.label}</h3>
+                          {item.link ? (
+                            <a
+                              href={item.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 cursor-pointer hover:text-white duration-500"
+                              style={{ fontFamily: 'Lora, serif' }}
+                            >
+                              {item.text}
+                            </a>
+                          ) : (
+                            <p className="text-gray-400" style={{ fontFamily: 'Lora, serif' }}>{item.text}</p>
+                          )}
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="font-semibold" style={{ fontFamily: 'Lora, serif' }}>{item.label}</h3>
-                        {item.link ? (
-                          <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-600 cursor-pointer hover:text-white duration-500"
-                            style={{ fontFamily: 'Lora, serif' }}
-                          >
-                            {item.text}
-                          </a>
-                        ) : (
-                          <p className="text-gray-400" style={{ fontFamily: 'Lora, serif' }}>{item.text}</p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
               {/* Form on the right side */}
