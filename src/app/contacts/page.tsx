@@ -4,6 +4,7 @@ import * as React from "react";
 import dynamic from "next/dynamic";
 const Form = dynamic(() => import("./Form"), { ssr: false });
 import Navbar from "../Navbar";
+import Head from "next/head";
 import { MapPin, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
@@ -65,40 +66,46 @@ export default function Contact() {
 
   return (
     <>
+      <Head>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+        <style>{`
+          @font-face {
+            font-family: 'Colus';
+            src: url('/fonts/colus.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+          }
+        `}</style>
+      </Head>
       <Navbar />
       <main className="pt-20 lg:pt-[0rem] bg-[#04081A] text-white min-h-screen">
         <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-0 items-center">
               {/* Contact Info */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                    Get in Touch
-                  </h2>
-                  <p className="text-gray-300 text-lg">
-                    Questions or want to work together? Drop a message !
-                  </p>
-                </div>
-                <div className="space-y-5">
+              <div className="space-y-8 flex flex-col justify-center items-center h-full">
+                <div className="space-y-5 lg:pr-0">
+                  <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Colus, sans-serif' }}>Get in Touch</h3>
+                  <div className="mb-7.5"></div>
                   {contactItems.map((item, index) => (
                     <div key={index} className="flex items-center space-x-4">
                       <div className="bg-pink-500/10 p-3 rounded-lg">
                         {item.icon}
                       </div>
                       <div>
-                        <h3 className="font-semibold">{item.label}</h3>
+                        <h3 className="font-semibold" style={{ fontFamily: 'Lora, serif' }}>{item.label}</h3>
                         {item.link ? (
                           <a
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600 cursor-pointer hover:text-white duration-500"
+                            style={{ fontFamily: 'Lora, serif' }}
                           >
                             {item.text}
                           </a>
                         ) : (
-                          <p className="text-gray-400">{item.text}</p>
+                          <p className="text-gray-400" style={{ fontFamily: 'Lora, serif' }}>{item.text}</p>
                         )}
                       </div>
                     </div>
@@ -106,7 +113,7 @@ export default function Contact() {
                 </div>
               </div>
               {/* Form on the right side */}
-              <div className="flex justify-center items-center w-full">
+              <div className="flex justify-center items-center w-full lg:justify-center">
                 <Form />
               </div>
             </div>
