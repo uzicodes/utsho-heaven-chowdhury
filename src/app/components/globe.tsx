@@ -32,6 +32,17 @@ const slugs: string[] = [
   "androidstudio",
   "sonarqube",
   "figma",
+  "canva",
+  "notion",
+  "slack",
+  "linux",
+  "googlecloud",
+  "mongodb",
+  "redis",
+  "tailwindcss",
+  "ruby",
+  "python", 
+  "photshop",
 ];
 
 function IconCloudDemo() {
