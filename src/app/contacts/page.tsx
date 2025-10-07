@@ -92,7 +92,7 @@ export default function Contact() {
               {/* Contact Info */}
               <div className="space-y-8 flex flex-col justify-center items-center h-full">
                 <div className="space-y-5 lg:pr-0">
-                  <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Colus, sans-serif', marginTop: '48px' }}>Get in Touch</h3>
+                  <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Lora, serif', marginTop: '48px' }}>Get in Touch</h3>
                   <div className="mb-7.5"></div>
                   <div className="space-y-4">
                     {contactItems.map((item, index) => (
