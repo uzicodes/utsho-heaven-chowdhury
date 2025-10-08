@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import "./contacts-socials.css";
 import dynamic from "next/dynamic";
 const Form = dynamic(() => import("./Form"), { ssr: false });
 import Navbar from "../Navbar";
@@ -97,9 +98,23 @@ export default function Contact() {
                   <div className="space-y-4">
                     {contactItems.map((item, index) => (
                       <div key={index} className="flex items-center space-x-4">
-                        <div className="bg-pink-500/10 p-3 rounded-lg">
-                          {item.icon}
-                        </div>
+                        {item.link ? (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="contact-social-icon-link"
+                            style={{ display: 'inline-block' }}
+                          >
+                            <div className="bg-pink-500/10 p-3 rounded-lg contact-social-icon">
+                              {item.icon}
+                            </div>
+                          </a>
+                        ) : (
+                          <div className="bg-pink-500/10 p-3 rounded-lg contact-social-icon">
+                            {item.icon}
+                          </div>
+                        )}
                         <div>
                           {item.link ? (
                             <a
