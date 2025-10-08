@@ -1,3 +1,12 @@
+/* Social icon hover animation (migrated from contacts-socials.css) */
+.contact-social-icon {
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.contact-social-icon:hover {
+  transform: scale(1.18) rotate(-8deg);
+  box-shadow: 0 4px 18px 0 rgba(0, 255, 163, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+  z-index: 2;
+}
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
 @font-face {

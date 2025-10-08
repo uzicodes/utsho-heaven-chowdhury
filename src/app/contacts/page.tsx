@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import "./contacts-socials.css";
 import dynamic from "next/dynamic";
 const Form = dynamic(() => import("./Form"), { ssr: false });
 import Navbar from "../Navbar";
