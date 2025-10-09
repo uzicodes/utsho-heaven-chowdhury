@@ -215,7 +215,11 @@ const EducationSection: React.FC = () => {
 						   variants={cardVariants}
 						   initial="hidden"
 						   animate="visible"
-						   className="relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm border-blue-400/20 w-full max-w-md"
+						   className={`relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-md ${
+							   hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
+						   }`}
+						   onMouseEnter={() => setHoveredIndex(99)}
+						   onMouseLeave={() => setHoveredIndex(null)}
 					   >
 						   <div className="space-y-6">
 							   <div className="space-y-2 text-center">
@@ -266,15 +270,19 @@ const EducationSection: React.FC = () => {
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 gap-6">
-						{certificationData.map((cert, index) => (
-							<motion.div
-								key={index}
-								initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-								animate={{ opacity: 1, x: 0 }}
-								transition={{ duration: 0.5, delay: index * 0.1 }}
-								className="group relative border border-blue-400/20 rounded-xl overflow-hidden bg-gray-900/50 backdrop-blur-sm hover:border-teal-500 transition-all duration-300"
-							>
+					   <div className="grid grid-cols-1 gap-6">
+						   {certificationData.map((cert, index) => (
+							   <motion.div
+								   key={index}
+								   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+								   animate={{ opacity: 1, x: 0 }}
+								   transition={{ duration: 0.5, delay: index * 0.1 }}
+								   className={`group relative border rounded-xl overflow-hidden bg-gray-900/50 backdrop-blur-sm transition-all duration-300 ${
+									   hoveredIndex === (100 + index) ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
+								   }`}
+								   onMouseEnter={() => setHoveredIndex(100 + index)}
+								   onMouseLeave={() => setHoveredIndex(null)}
+							   >
 								<div className="flex flex-col md:flex-row">
 									{/* PDF Preview Section */}
 									<div className="md:w-2/5 bg-gradient-to-br from-gray-800 to-gray-900 p-6 flex items-center justify-center relative overflow-hidden">
