@@ -209,7 +209,7 @@ const EducationSection: React.FC = () => {
 					   ))}
 				   </motion.div>
 
-				   {/* Dummy Card Centered Below */}
+				   {/* Thesis Card Centered Below */}
 				   <div className="flex justify-center mt-8">
 					   <motion.div
 						   variants={cardVariants}
@@ -227,19 +227,19 @@ const EducationSection: React.FC = () => {
 										   style={{ maxWidth: '80px', maxHeight: '80px' }}
 									   />
 									   <h3 className="text-2xl font-bold colus-font" style={{ color: '#BD9082' }}>
-										   Dummy Degree
+										   Thesis
 									   </h3>
 								   </div>
 								   <p className="text-lg flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
-									   Dummy School
+									   BRAC University
 								   </p>
 								   <p className="text-gray-400 flex items-center justify-center gap-2">
 									   <Calendar className="w-4 h-4" />
-									   20XX - 20YY
+									   2026
 								   </p>
 							   </div>
-							   <p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">
-								   Dummy description goes here. You can edit this card later.
+							   <p className="text-gray-300 text-sm text-center">
+								   "Multimodal Deep Learning for Medical Image<br />Segmentation"
 							   </p>
 							   <div className="flex flex-wrap justify-center gap-2">
 								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Dummy Skill 1</span>
