@@ -137,7 +137,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #CCF542;
+  color: #43B819;
   text-decoration: none;
   position: relative;
 }
@@ -151,12 +151,12 @@
 
 .navbar-link:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: #43B819;
 }
 
 .navbar-link-active {
   background: rgba(255, 255, 255, 0.15);
-  color: white;
+  color: #43B819;
 }
 
 .navbar-link-text {
