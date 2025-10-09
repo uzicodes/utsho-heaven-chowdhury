@@ -195,18 +195,6 @@ const EducationSection: React.FC = () => {
 									{edu.description}
 								</p>
 
-																<div className="space-y-3 text-center">
-																	<h4 className="text-sm font-semibold text-white flex items-center justify-center gap-2">
-																		<Trophy className="w-4 h-4 text-yellow-500" />
-																		Key Achievements
-																	</h4>
-																	<div className="flex justify-center">
-																		<div className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 flex items-center gap-2 text-sm justify-center">
-																			<Award className="w-4 h-4" />
-																			<span>{edu.achievements[0]}</span>
-																		</div>
-																	</div>
-																</div>
 
 																<div className="flex flex-wrap justify-center gap-2">
 																	{edu.skills.map((skill, i) => (
