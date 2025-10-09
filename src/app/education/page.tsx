@@ -221,8 +221,8 @@ const EducationSection: React.FC = () => {
 							   <div className="space-y-2 text-center">
 								   <div className="flex flex-col items-center gap-3">
 									   <img
-										   src="/dummy.png"
-										   alt="Dummy School logo"
+										   src="/thesis.png"
+										   alt="Thesis logo"
 										   className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
 										   style={{ maxWidth: '80px', maxHeight: '80px' }}
 									   />
@@ -239,7 +239,7 @@ const EducationSection: React.FC = () => {
 								   </p>
 							   </div>
 							   <p className="text-gray-300 text-sm text-center">
-								   "Multimodal Deep Learning for Medical Image<br />Segmentation"
+								   "Multimodal Deep Learning for Medical Image Segmentation"
 							   </p>
 							   <div className="flex flex-wrap justify-center gap-2">
 								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Dummy Skill 1</span>
