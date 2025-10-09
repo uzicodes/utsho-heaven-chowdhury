@@ -151,65 +151,104 @@ const EducationSection: React.FC = () => {
 					</p>
 				</motion.div>
 
-				<motion.div
-					variants={containerVariants}
-					initial="hidden"
-					animate="visible"
-					className="grid grid-cols-1 md:grid-cols-2 gap-8"
-				>
-					{educationData.map((edu, index) => (
-						<motion.div
-							key={index}
-							variants={cardVariants}
-							className={`relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${
-								hoveredIndex === index
-									? "border-teal-500 scale-[1.02]"
-									: "border-blue-400/20"
-							}`}
-							onMouseEnter={() => setHoveredIndex(index)}
-							onMouseLeave={() => setHoveredIndex(null)}
-						>
-							<div className="space-y-6">
-																			<div className="space-y-2 text-center">
-																				<div className="flex flex-col items-center gap-3">
-																													<img
-																														src={edu.logo}
-																														alt={edu.school + ' logo'}
-																														className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
-																														style={{ maxWidth: '80px', maxHeight: '80px' }}
-																													/>
-																					<h3 className="text-2xl font-bold colus-font" style={{ color: '#BD9082' }}>
-																						{edu.degree}
-																					</h3>
-																				</div>
-																				<p className="text-lg flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
-																					{edu.school}
-																				</p>
-																				<p className="text-gray-400 flex items-center justify-center gap-2">
-																					<Calendar className="w-4 h-4" />
-																					{edu.year}
-																				</p>
-																			</div>
 
-								<p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">
-									{edu.description}
-								</p>
+				   <motion.div
+					   variants={containerVariants}
+					   initial="hidden"
+					   animate="visible"
+					   className="grid grid-cols-1 md:grid-cols-2 gap-8"
+				   >
+					   {educationData.map((edu, index) => (
+						   <motion.div
+							   key={index}
+							   variants={cardVariants}
+							   className={`relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${
+								   hoveredIndex === index
+									   ? "border-teal-500 scale-[1.02]"
+									   : "border-blue-400/20"
+							   }`}
+							   onMouseEnter={() => setHoveredIndex(index)}
+							   onMouseLeave={() => setHoveredIndex(null)}
+						   >
+							   <div className="space-y-6">
+								   <div className="space-y-2 text-center">
+									   <div className="flex flex-col items-center gap-3">
+										   <img
+											   src={edu.logo}
+											   alt={edu.school + ' logo'}
+											   className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
+											   style={{ maxWidth: '80px', maxHeight: '80px' }}
+										   />
+										   <h3 className="text-2xl font-bold colus-font" style={{ color: '#BD9082' }}>
+											   {edu.degree}
+										   </h3>
+									   </div>
+									   <p className="text-lg flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
+										   {edu.school}
+									   </p>
+									   <p className="text-gray-400 flex items-center justify-center gap-2">
+										   <Calendar className="w-4 h-4" />
+										   {edu.year}
+									   </p>
+								   </div>
+								   <p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">
+									   {edu.description}
+								   </p>
+								   <div className="flex flex-wrap justify-center gap-2">
+									   {edu.skills.map((skill, i) => (
+										   <span
+											   key={i}
+											   className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
+										   >
+											   {skill}
+										   </span>
+									   ))}
+								   </div>
+							   </div>
+						   </motion.div>
+					   ))}
+				   </motion.div>
 
-
-																<div className="flex flex-wrap justify-center gap-2">
-																	{edu.skills.map((skill, i) => (
-																		<span
-																			key={i}
-																			className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
-																		>
-																			{skill}
-																		</span>
-																	))}
-																</div>
-							</div>
-						</motion.div>
-					))}
-				</motion.div>
+				   {/* Dummy Card Centered Below */}
+				   <div className="flex justify-center mt-8">
+					   <motion.div
+						   variants={cardVariants}
+						   initial="hidden"
+						   animate="visible"
+						   className="relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm border-blue-400/20 w-full max-w-md"
+					   >
+						   <div className="space-y-6">
+							   <div className="space-y-2 text-center">
+								   <div className="flex flex-col items-center gap-3">
+									   <img
+										   src="/dummy.png"
+										   alt="Dummy School logo"
+										   className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
+										   style={{ maxWidth: '80px', maxHeight: '80px' }}
+									   />
+									   <h3 className="text-2xl font-bold colus-font" style={{ color: '#BD9082' }}>
+										   Dummy Degree
+									   </h3>
+								   </div>
+								   <p className="text-lg flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
+									   Dummy School
+								   </p>
+								   <p className="text-gray-400 flex items-center justify-center gap-2">
+									   <Calendar className="w-4 h-4" />
+									   20XX - 20YY
+								   </p>
+							   </div>
+							   <p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">
+								   Dummy description goes here. You can edit this card later.
+							   </p>
+							   <div className="flex flex-wrap justify-center gap-2">
+								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Dummy Skill 1</span>
+								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Dummy Skill 2</span>
+								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Dummy Skill 3</span>
+							   </div>
+						   </div>
+					   </motion.div>
+				   </div>
 
 				{/* Certifications Section */}
 				<motion.div
