@@ -209,6 +209,11 @@ const EducationSection: React.FC = () => {
 					   ))}
 				   </motion.div>
 
+
+
+
+
+
 				   {/* Thesis Card Centered Below */}
 				   <div className="flex justify-center mt-8">
 					   <motion.div
@@ -246,13 +251,17 @@ const EducationSection: React.FC = () => {
 								   "Multimodal Deep Learning for Medical Image Segmentation"
 							   </p>
 							   <div className="flex flex-wrap justify-center gap-2">
-								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Dummy Skill 1</span>
-								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Dummy Skill 2</span>
-								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Dummy Skill 3</span>
+								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">CNN</span>
+								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Model Optimization</span>
+								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"> Fusion</span>
+								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">U-net</span>
 							   </div>
 						   </div>
 					   </motion.div>
 				   </div>
+
+
+
 
 				{/* Certifications Section */}
 				<motion.div
