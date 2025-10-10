@@ -80,7 +80,7 @@ export default function Home() {
                     Full-Stack Developer actively seeking opportunities to integrate intelligent systems into Real-world solutions.
                   </div>
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s mt-4">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 animate__animated animate__fadeInUp animate__delay-2s mt-4">
                     {/* View Projects Button */}
                     <a
                       href="https://drive.google.com/file/d/1pkzW6I5kco3v7WrxpyGXqTHQJSpSERjz/view?usp=sharing"
@@ -101,9 +101,9 @@ export default function Home() {
                       target="_blank"
                       className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                     >
-                      <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
-                        <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
-                          <span className="colus-font">Free Consultation</span>
+                      <span className="block px-1 sm:px-2 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
+                        <span className="relative flex items-center justify-end gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
+                          <span className="colus-font"> Consultations</span>
                           <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
                         </span>
                       </span>
