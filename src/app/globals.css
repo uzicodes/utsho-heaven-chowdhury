@@ -1,5 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+/* Hide default cursor on all interactive elements so only custom cursor shows */
+a, button, [role="button"], input, select, textarea {
+  cursor: none !important;
+}
 /* Social icon hover animation (migrated from contacts-socials.css) */
 .contact-social-icon {
   transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
