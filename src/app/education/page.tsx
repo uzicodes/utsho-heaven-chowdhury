@@ -279,7 +279,7 @@ const EducationSection: React.FC = () => {
 						</p>
 					</div>
 
-					   <div className="grid grid-cols-1 gap-6">
+					   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 						   {certificationData.map((cert, index) => (
 							   <motion.div
 								   key={index}
@@ -288,74 +288,63 @@ const EducationSection: React.FC = () => {
 								   transition={{ duration: 0.5, delay: index * 0.1 }}
 								   className={`group relative border rounded-xl overflow-hidden bg-gray-900/50 backdrop-blur-sm transition-all duration-300 ${
 									   hoveredIndex === (100 + index) ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
-								   }`}
+								   } p-3`}
 								   onMouseEnter={() => setHoveredIndex(100 + index)}
 								   onMouseLeave={() => setHoveredIndex(null)}
 							   >
-								<div className="flex flex-col md:flex-row">
-									{/* PDF Preview Section */}
-									<div className="md:w-2/5 bg-gradient-to-br from-gray-800 to-gray-900 p-6 flex items-center justify-center relative overflow-hidden">
-										<div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:20px_20px]" />
-										<div className="relative z-10 w-full h-64 bg-white rounded-lg overflow-hidden shadow-lg">
-											<img
-												src={cert.certImage}
-												alt={cert.title}
-												className="w-full h-full object-contain"
-											/>
-											<div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
-												<Award className="w-3 h-3" />
-												Verified
-											</div>
-										</div>
-									</div>
-
-									{/* Certificate Details Section */}
-									<div className="md:w-3/5 p-6 flex flex-col justify-center">
-										<div className="space-y-4">
-											<div>
-												<h3 className="text-2xl font-bold mb-2 colus-font group-hover:text-teal-400 transition-colors" style={{ color: '#BD9082' }}>
-													{cert.title}
-												</h3>
-												<p className="text-lg flex items-center gap-2 colus-font" style={{ color: '#73F527' }}>
-													<BookOpen className="w-4 h-4" />
-													{cert.issuer}
-												</p>
-											</div>
-
-											<div className="flex items-center gap-4 text-gray-400 text-sm">
-												<span className="flex items-center gap-2">
-													<Calendar className="w-4 h-4" />
-													{cert.date}
-												</span>
-												<span className="flex items-center gap-2">
-													<FileText className="w-4 h-4" />
-													ID: {cert.credentialId}
-												</span>
-											</div>
-
-											<div className="flex flex-wrap gap-2">
-												{cert.skills.map((skill, i) => (
-													<span
-														key={i}
-														className="px-3 py-1 text-xs rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
-													>
-														{skill}
-													</span>
-												))}
-											</div>
-
-											<a 
-												href={cert.fullViewUrl} 
-												target="_blank" 
-												rel="noopener noreferrer"
-												className="mt-4 flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors text-sm font-semibold"
-											>
-												<ExternalLink className="w-4 h-4" />
-												View Full Certificate
-											</a>
-										</div>
-									</div>
-								</div>
+								   {/* Certificate Preview at Top */}
+								   <div className="w-full mb-2">
+									   <div className="relative w-full h-40 bg-white rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+										   <img
+											   src={cert.certImage}
+											   alt={cert.title}
+											   className="w-full h-full object-contain"
+										   />
+										   <div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
+											   <Award className="w-3 h-3" />
+											   Verified
+										   </div>
+									   </div>
+								   </div>
+								   {/* Certificate Details Below */}
+								   <div className="space-y-2 px-1 pb-2">
+									   <h3 className="text-lg font-bold mb-1 colus-font group-hover:text-teal-400 transition-colors text-left" style={{ color: '#BD9082', fontSize: '1rem' }}>
+										   {cert.title}
+									   </h3>
+									   <p className="text-sm flex items-center gap-2 colus-font text-left" style={{ color: '#73F527', fontSize: '0.95rem' }}>
+										   <BookOpen className="w-4 h-4" />
+										   {cert.issuer}
+									   </p>
+									   <div className="flex items-center gap-3 text-gray-400 text-xs">
+										   <span className="flex items-center gap-1">
+											   <Calendar className="w-4 h-4" />
+											   {cert.date}
+										   </span>
+										   <span className="flex items-center gap-1">
+											   <FileText className="w-4 h-4" />
+											   ID: {cert.credentialId}
+										   </span>
+									   </div>
+									   <div className="flex flex-wrap gap-1 mt-1">
+										   {cert.skills.map((skill, i) => (
+											   <span
+												   key={i}
+												   className="px-2 py-0.5 text-[0.7rem] rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+											   >
+												   {skill}
+											   </span>
+										   ))}
+									   </div>
+									   <a 
+										   href={cert.fullViewUrl} 
+										   target="_blank" 
+										   rel="noopener noreferrer"
+										   className="mt-2 flex items-center gap-1 text-teal-400 hover:text-teal-300 transition-colors text-xs font-semibold"
+									   >
+										   <ExternalLink className="w-4 h-4" />
+										   View Full Certificate
+									   </a>
+								   </div>
 							</motion.div>
 						))}
 					</div>
