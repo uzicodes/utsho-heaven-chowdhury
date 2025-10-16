@@ -307,15 +307,15 @@ const EducationSection: React.FC = () => {
 									   </div>
 								   </div>
 								   {/* Certificate Details Below */}
-								   <div className="space-y-2 px-1 pb-2">
-									   <h3 className="text-lg font-bold mb-1 colus-font group-hover:text-teal-400 transition-colors text-left" style={{ color: '#BD9082', fontSize: '1rem' }}>
+								   <div className="space-y-2 px-1 pb-2 text-center">
+									   <h3 className="text-lg font-bold mb-1 colus-font group-hover:text-teal-400 transition-colors" style={{ color: '#BD9082', fontSize: '1rem' }}>
 										   {cert.title}
 									   </h3>
-									   <p className="text-sm flex items-center gap-2 colus-font text-left" style={{ color: '#73F527', fontSize: '0.95rem' }}>
+									   <p className="text-sm flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
 										   <BookOpen className="w-4 h-4" />
 										   {cert.issuer}
 									   </p>
-									   <div className="flex items-center gap-3 text-gray-400 text-xs">
+									   <div className="flex items-center justify-center gap-3 text-gray-400 text-xs">
 										   <span className="flex items-center gap-1">
 											   <Calendar className="w-4 h-4" />
 											   {cert.date}
@@ -325,7 +325,7 @@ const EducationSection: React.FC = () => {
 											   ID: {cert.credentialId}
 										   </span>
 									   </div>
-									   <div className="flex flex-wrap gap-1 mt-1">
+									   <div className="flex flex-wrap justify-center gap-1 mt-1">
 										   {cert.skills.map((skill, i) => (
 											   <span
 												   key={i}
@@ -339,7 +339,7 @@ const EducationSection: React.FC = () => {
 										   href={cert.fullViewUrl} 
 										   target="_blank" 
 										   rel="noopener noreferrer"
-										   className="mt-2 flex items-center gap-1 text-teal-400 hover:text-teal-300 transition-colors text-xs font-semibold"
+										   className="mt-2 flex items-center justify-center gap-1 text-teal-400 hover:text-teal-300 transition-colors text-xs font-semibold"
 									   >
 										   <ExternalLink className="w-4 h-4" />
 										   View Full Certificate
