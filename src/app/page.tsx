@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Head from 'next/head';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
+import BookshelfSection from './BookshelfSection';
 
 
 export default function Home() {
@@ -174,6 +175,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            <BookshelfSection />
           </div>
           {/* Additional Content Section 2 - Skills Preview */}
           <div className="container mx-auto px-6 lg:px-8 mt-32">
