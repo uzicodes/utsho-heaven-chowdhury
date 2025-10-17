@@ -165,16 +165,7 @@ export default function Home() {
             </div>
           </div>
           {/* Additional Content Section 1 - About Me */}
-          <div className="container mx-auto px-6 lg:px-8 mt-32">
-            <div className="min-h-[80vh] flex items-center justify-center">
-              <div className="text-center max-w-4xl">
-                <h2 className="text-4xl lg:text-6xl font-bold mb-8">
-                  About
-                </h2>
-                <p className="text-xl text-gray-400 leading-relaxed">
-                </p>
-              </div>
-            </div>
+          <div className="container mx-auto px-6 lg:px-8 mt-20">
             <BookshelfSection />
           </div>
           {/* Additional Content Section 2 - Skills Preview */}
