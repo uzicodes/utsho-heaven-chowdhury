@@ -69,7 +69,7 @@ const BookshelfSection = () => {
       <div className="max-w-6xl w-full">
         <div className="text-center mb-16">
           <p className="text-lg text-muted-foreground">
-            A curated collection of literary treasures
+            Curated collection of my Favorite Books
           </p>
         </div>
 
@@ -77,13 +77,11 @@ const BookshelfSection = () => {
         <div className="relative">
           {/* Shelf */}
           <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/80 h-8 rounded-lg shadow-2xl mb-8">
-            {/* Removed top shelf vertical gradient line */}
           </div>
 
           {/* Books Container */}
           <div 
-            className="flex justify-center items-end gap-1 pb-8 perspective-1000"
-            style={{ perspective: "2000px" }}
+            className="flex justify-center items-end gap-1 pb-0 perspective-1000" style={{ perspective: "2000px", marginTop: "-3.5rem" }}
           >
             {books.map((book, index) => (
               <div
@@ -112,7 +110,6 @@ const BookshelfSection = () => {
                   
                   {/* Spine Text */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {/* Removed spine text for clean image-only spines */}
                   </div>
                   
                   {/* Spine Details */}
@@ -160,13 +157,10 @@ const BookshelfSection = () => {
 
           {/* Bottom Shelf */}
           <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl">
-            {/* Removed bottom shelf vertical gradient line */}
           </div>
         </div>
 
-        <p className="text-center mt-12 text-muted-foreground italic">
-          Hover over the books to see their covers
-        </p>
+
       </div>
     </section>
   );
