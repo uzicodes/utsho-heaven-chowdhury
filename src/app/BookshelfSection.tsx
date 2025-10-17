@@ -115,9 +115,7 @@ const BookshelfSection = () => {
                   
                   {/* Spine Text */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-shelf-paper text-xs font-bold writing-mode-vertical rotate-180 px-2 text-center leading-tight">
-                      {book.title}
-                    </p>
+                    {/* Removed spine text for clean image-only spines */}
                   </div>
                   
                   {/* Spine Details */}
@@ -134,7 +132,7 @@ const BookshelfSection = () => {
                     opacity: hoveredBook === book.id ? 1 : 0,
                     transform:
                       hoveredBook === book.id
-                        ? "translateZ(0) rotateY(0) scale(1)"
+                        ? "translateZ(0px) rotateY(0deg) scale(1)"
                         : "translateZ(-50px) rotateY(-90deg) scale(0.8)",
                     transformStyle: "preserve-3d",
                     pointerEvents: hoveredBook === book.id ? "auto" : "none",
