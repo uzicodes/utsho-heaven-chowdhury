@@ -12,7 +12,7 @@ interface Book {
 const books: Book[] = [
   {
     id: 1,
-    title: "1988",
+    title: "The Alchemist",
     author: "Paulo Coelho",
     cover: "/books/alchemist/cover.jpg",
     spineColor: "bg-[url('/books/alchemist/spine.jpg')] bg-cover bg-center",
@@ -26,24 +26,24 @@ const books: Book[] = [
   },
   {
     id: 3,
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    cover: "https://placehold.co/240x360?text=Book",
-    spineColor: "from-blue-800 to-yellow-600",
+    title: "Rich Dad Poor Dad",
+    author: "Robert Kiyosaki",
+    cover: "/books/rich/cover.png",
+    spineColor: "bg-[url('/books/rich/spine.png')] bg-cover bg-center",
   },
   {
     id: 4,
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
-  cover: "https://placehold.co/240x360?text=Book",
-    spineColor: "from-amber-800 to-stone-700",
+    cover: "/books/mockingbird/cover.jpg",
+    spineColor: "bg-[url('/books/mockingbird/spine.png')] bg-cover bg-center",
   },
   {
     id: 5,
-    title: "Pride and Prejudice",
-    author: "Jane Austen",
-  cover: "https://placehold.co/240x360?text=Book",
-    spineColor: "from-rose-900 to-amber-100",
+    title: "Abar tora Kipte Ho",
+    author: "Anisul Haque",
+    cover: "/books/kipte/cover.jpg",
+    spineColor: "bg-[url('/books/kipte/spine.png')] bg-cover bg-center",
   },
   {
     id: 6,
