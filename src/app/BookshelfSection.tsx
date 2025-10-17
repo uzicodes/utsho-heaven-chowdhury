@@ -68,9 +68,6 @@ const BookshelfSection = () => {
   <section className="min-h-screen flex items-center justify-center py-20 px-4">
       <div className="max-w-6xl w-full">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Favorite Books
-          </h2>
           <p className="text-lg text-muted-foreground">
             A curated collection of literary treasures
           </p>
@@ -80,7 +77,7 @@ const BookshelfSection = () => {
         <div className="relative">
           {/* Shelf */}
           <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/80 h-8 rounded-lg shadow-2xl mb-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent rounded-lg" />
+            {/* Removed top shelf vertical gradient line */}
           </div>
 
           {/* Books Container */}
@@ -163,7 +160,7 @@ const BookshelfSection = () => {
 
           {/* Bottom Shelf */}
           <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent rounded-lg" />
+            {/* Removed bottom shelf vertical gradient line */}
           </div>
         </div>
 
