@@ -41,6 +41,18 @@ const EducationSection: React.FC = () => {
 	];
 
 	const certificationData = [
+		
+		
+		{
+			title: "Foundations of Coding Full-Stack",
+			issuer: "Microsoft",
+			date: "October 2025",
+			credentialId: "M50AAPBVJFET",
+			skills: ["LLMs", "MLOPs", "LangChain"],
+			certImage: "/certifications/7.png",
+			fullViewUrl: "https://drive.google.com/file/d/1Q3x_w_Iwlb0cohXrWVn4tm64VYKczhcn/view?usp=sharing",
+		},
+		
 		{
 			title: "AI ENGINEER FOR DEVELOPERS ASSOCIATE",
 			issuer: "DataCamp",
@@ -51,6 +63,16 @@ const EducationSection: React.FC = () => {
 			fullViewUrl: "https://drive.google.com/file/d/1VjhvU30KzGRGuVRpZOBk7v78eyTww7mP/view?usp=sharing",
 		},
 		{
+			title: "Introduction to Software Engineering",
+			issuer: "IBM",
+			date: "October 2025",
+			credentialId: "QM1QKTZTM236",
+			skills: ["OCI", "Vault & Conda", "OCI MLOPs"],
+			certImage: "/certifications/8.png",
+			fullViewUrl: "https://drive.google.com/file/d/1T05lfqIkMfn1nzfz_4oV5uvoS76LBm9q/view?usp=sharing",
+		},
+
+		{
 			title: "OCI Data Science Professional",
 			issuer: "Oracle",
 			date: "August 2025",
@@ -59,6 +81,12 @@ const EducationSection: React.FC = () => {
 			certImage: "/certifications/2.png",
 			fullViewUrl: "https://drive.google.com/file/d/1xGWSLvbODGYOYfrP4zBcy_KpAt-rdIbc/view?usp=sharing",
 		},
+
+
+
+
+
+
 		{
 			title: "AI Engineer for Data Scientists",
 			issuer: "DataCamp",
@@ -67,6 +95,15 @@ const EducationSection: React.FC = () => {
 			skills: ["Pytorch", "CNN,RNN", "Llama 3"],
 			certImage: "/certifications/3.png",
 			fullViewUrl: "https://drive.google.com/file/d/1yJVLWXUgIGJJDrrejNTelkiqS0GaD6a-/view?usp=sharing",
+		},
+        {
+			title: "Neural Networks & Deep Learning",
+			issuer: "DeepLearning",
+			date: "October 2025",
+			credentialId: "TG627PO8LN5T",
+			skills: ["Prompt Engineering", "Ethics", "GAN AI"],
+			certImage: "/certifications/9.png",
+			fullViewUrl: "https://drive.google.com/file/d/1Rg5o2O7opV2ZF9K1-gyLWC9ZVAZE02Pl/view?usp=sharing",
 		},
 		{
 			title: "AI+ Foundation Certificate",
