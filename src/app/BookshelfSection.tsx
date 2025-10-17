@@ -47,17 +47,17 @@ const books: Book[] = [
   },
   {
     id: 6,
-    title: "The Catcher in the Rye",
-    author: "J.D. Salinger",
-  cover: "https://placehold.co/240x360?text=Book",
-    spineColor: "from-red-700 to-gray-600",
+    title: "The Let them theory",
+    author: "Mel Robbins",
+    cover: "/books/let/cover.jpg",
+    spineColor: "bg-[url('/books/let/spine.png')] bg-cover bg-center",
   },
   {
     id: 7,
-    title: "Brave New World",
-    author: "Aldous Huxley",
-  cover: "https://placehold.co/240x360?text=Book",
-    spineColor: "from-blue-600 to-cyan-400",
+    title: "The 5 AM Club",
+    author: "Robin Sharma",
+    cover: "/books/5am/cover.jpg",
+    spineColor: "bg-[url('/books/5am/spine.png')] bg-cover bg-center",
   },
 ];
 
