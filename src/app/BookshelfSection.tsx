@@ -12,10 +12,10 @@ interface Book {
 const books: Book[] = [
   {
     id: 1,
-    title: "1984",
-    author: "George Orwell",
-  cover: "https://placehold.co/240x360?text=Book",
-    spineColor: "from-red-900 to-black",
+    title: "1988",
+    author: "Paulo Coelho",
+  cover: "/books/alchemist/cover.jpg",
+  spineColor: "bg-[url('/books/alchemist/spine.jpg')] bg-cover bg-center",
   },
   {
     id: 2,
