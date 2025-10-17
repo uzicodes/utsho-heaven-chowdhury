@@ -68,9 +68,9 @@ const BookshelfSection = () => {
   <section className="min-h-screen flex items-center justify-center py-20 px-4">
       <div className="max-w-6xl w-full">
         <div className="text-center mb-16">
-          <p className="text-lg text-muted-foreground">
-            Curated collection of my Favorite Books
-          </p>
+            <p className="text-3xl md:text-4xl fluneta-font" style={{ color: '#DEB34B' }}>
+              handpicked my Favorite Books
+            </p>
         </div>
 
         {/* Bookshelf */}
@@ -81,7 +81,7 @@ const BookshelfSection = () => {
 
           {/* Books Container */}
           <div 
-            className="flex justify-center items-end gap-1 pb-0 perspective-1000" style={{ perspective: "2000px", marginTop: "-3.5rem" }}
+            className="flex justify-center items-end gap-1 pb-0 perspective-1000" style={{ perspective: "2000px", marginTop: "-5.2rem" }}
           >
             {books.map((book, index) => (
               <div

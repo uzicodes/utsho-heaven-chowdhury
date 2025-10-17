@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+
+@font-face {
+  font-family: 'Fluneta';
+  src: url('/fonts/fluneta.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fluneta-font {
+  font-family: 'Fluneta', sans-serif;
+}
+
 /* Hide default cursor on all interactive elements so only custom cursor shows */
 a, button, [role="button"], input, select, textarea {
   cursor: none !important;
