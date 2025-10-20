@@ -47,9 +47,8 @@ export default function About(): React.ReactElement {
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">
                       {" "}
-                      <a href="https://app.daily.dev/mdmohiuddin" target="_blank" rel="noopener noreferrer" className="text-blue-400"> app.daily.dev</a>
+                      <a href="https://app.daily.dev/" target="_blank" rel="noopener noreferrer" className="text-blue-400"> app.daily.dev</a>
                     </cite>
-                    
                   </div>
                 </blockquote>
               </div>

@@ -167,27 +167,7 @@ export default function Home() {
           {/* Additional Content Section 1 - About Me */}
           <div className="container mx-auto px-6 lg:px-8 mt-20">
             <BookshelfSection />
-            <div className="container mx-auto px-6 lg:px-8 mt-20">
-              {require('./about/about').default()}
-            </div>
-          </div>
-          {/* Additional Content Section 2 - Skills Preview */}
-          <div className="container mx-auto px-6 lg:px-8 mt-32">
-            <div className="min-h-[80vh] flex items-center justify-center">
-              <div className="text-center max-w-4xl">
-                <h2 className="text-4xl lg:text-6xl font-bold mb-8">
-                  I Work With
-                </h2>
-                <p className="text-xl text-gray-400 leading-relaxed mb-8">
-                </p>
-                <a 
-                  href="/skills"
-                  className="button relative inline-flex items-center justify-center px-8 py-3 text-lg font-medium"
-                >
-                  <span className="relative z-10">Explore My Skills</span>
-                </a>
-              </div>
-            </div>
+            {require('./about/about').default()}
           </div>
         </main>
       </div>
