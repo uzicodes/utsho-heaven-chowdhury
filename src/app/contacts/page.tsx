@@ -46,7 +46,7 @@ export default function Contact() {
       ),
       label: "Facebook",
       link: "https://www.facebook.com/utsh0z",
-      text: "utsh0z",
+      text: "Add Friend",
     },
     {
       icon: (
@@ -56,13 +56,13 @@ export default function Contact() {
       ),
       label: "Instagram",
       link: "https://instagram.com/utsh0x",
-      text: "utsh0x",
+      text: "Follow Me",
     },
     {
       icon: <FaTwitter className="w-6 h-6 text-blue-500" />,
       label: "Twitter",
       link: "https://twitter.com/utsh0w",
-      text: "utsh0w",
+      text: "Tweet",
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
