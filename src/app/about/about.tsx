@@ -1,5 +1,5 @@
-import HeroImg from "public/about.jpg";
 import Image from "next/image";
+const HeroImg = "/about.jpg";
 import React from "react";
 
 export default function About(): React.ReactElement {
@@ -13,8 +13,7 @@ export default function About(): React.ReactElement {
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="relative mb-6 sm:mb-0">
               <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent">
-                <img
-                  as={Image}
+                <Image
                   src={HeroImg}
                   className="rounded-[15px] shadow block"
                   alt="payments illustration"

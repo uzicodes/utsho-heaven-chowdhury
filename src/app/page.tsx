@@ -167,6 +167,9 @@ export default function Home() {
           {/* Additional Content Section 1 - About Me */}
           <div className="container mx-auto px-6 lg:px-8 mt-20">
             <BookshelfSection />
+            <div className="container mx-auto px-6 lg:px-8 mt-20">
+              {require('./about/about').default()}
+            </div>
           </div>
           {/* Additional Content Section 2 - Skills Preview */}
           <div className="container mx-auto px-6 lg:px-8 mt-32">
