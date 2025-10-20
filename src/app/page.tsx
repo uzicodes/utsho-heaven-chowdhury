@@ -168,6 +168,7 @@ export default function Home() {
           <div className="container mx-auto px-6 lg:px-8 mt-20">
             <BookshelfSection />
             {require('./about/about').default()}
+            <div style={{ background: '#04081A', height: '2rem', width: '100%' }} />
           </div>
         </main>
       </div>
