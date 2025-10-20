@@ -1,5 +1,5 @@
 import Image from "next/image";
-const HeroImg = "/about.jpg";
+const HeroImg = "/about.png";
 import React from "react";
 
 export default function About(): React.ReactElement {
@@ -26,19 +26,16 @@ export default function About(): React.ReactElement {
 
             <div className="relative space-y-4">
               <p className="text-white">
-                {`Hello! I'm Mohi Uddin, a passionate JavaScript developer
-                specializing in creating innovative web solutions and
+                {`Hello! Utsho Heaven Chowdhury, a passionate Full-Stack developer
+                specializing in creating innovative Web solutions &
                 user-friendly interfaces.`}
-                <span className="font-bold text-white">
-                  Using React & Next.js Framework
-                </span>
                 ,{` I'm dedicated to simplifying development workflows.`}
               </p>
               <p className="text-white">
                 {`My focus is on making web development faster, easier, and
-                accessible to all developers. Currently, I'm expanding into
-                backend development to grow as a full-stack developer and create
-                seamless, secure web applications.`}
+                accessible to all developers. Currently, I'm focusing into
+                backend development to create
+                seamless & secure web applications.`}
               </p>
 
               <div className="pt-6">
@@ -49,7 +46,7 @@ export default function About(): React.ReactElement {
 
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">
-                      Mohi Uddin, Creator of the Frontend Developer Squad at{" "}
+                      {" "}
                       <a href="https://app.daily.dev/mdmohiuddin" target="_blank" rel="noopener noreferrer" className="text-blue-400"> app.daily.dev</a>
                     </cite>
                     
