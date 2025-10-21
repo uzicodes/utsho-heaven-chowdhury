@@ -28,15 +28,15 @@ const books: Book[] = [
     id: 3,
     title: "Rich Dad Poor Dad",
     author: "Robert Kiyosaki",
-    cover: "/books/rich/cover.png",
-    spineColor: "bg-[url('/books/rich/spine.png')] bg-cover bg-center",
+    cover: "/books/rich/cover.jpg",
+    spineColor: "bg-[url('/books/rich/spine.jpg')] bg-cover bg-center",
   },
   {
     id: 4,
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
     cover: "/books/mockingbird/cover.jpg",
-    spineColor: "bg-[url('/books/mockingbird/spine.png')] bg-cover bg-center",
+    spineColor: "bg-[url('/books/mockingbird/spine.jpg')] bg-cover bg-center",
   },
   {
     id: 5,
@@ -50,14 +50,14 @@ const books: Book[] = [
     title: "The Let them theory",
     author: "Mel Robbins",
     cover: "/books/let/cover.jpg",
-    spineColor: "bg-[url('/books/let/spine.png')] bg-cover bg-center",
+    spineColor: "bg-[url('/books/let/spine.jpg')] bg-cover bg-center",
   },
   {
     id: 7,
     title: "The 5 AM Club",
     author: "Robin Sharma",
     cover: "/books/5am/cover.jpg",
-    spineColor: "bg-[url('/books/5am/spine.png')] bg-cover bg-center",
+    spineColor: "bg-[url('/books/5am/spine.jpg')] bg-cover bg-center",
   },
 ];
 
