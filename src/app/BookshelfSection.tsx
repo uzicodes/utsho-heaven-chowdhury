@@ -43,7 +43,7 @@ const books: Book[] = [
     title: "Abar tora Kipte Ho",
     author: "Anisul Haque",
     cover: "/books/kipte/cover.jpg",
-    spineColor: "bg-[url('/books/kipte/spine.png')] bg-cover bg-center",
+    spineColor: "bg-[url('/books/kipte/spine.jpg')] bg-cover bg-center",
   },
   {
     id: 6,
