@@ -25,13 +25,13 @@ export default function About(): React.ReactElement {
             </div>
 
             <div className="relative space-y-4">
-              <p className="text-white">
+              <p className="text-white lora-font">
                 {`Hello! Utsho Heaven Chowdhury, a passionate Full-Stack developer
                 specializing in creating innovative Web solutions &
                 user-friendly interfaces.`}
                 ,{` I'm dedicated to simplifying development workflows.`}
               </p>
-              <p className="text-white">
+              <p className="text-white lora-font">
                 {`My focus is on making web development faster, easier, and
                 accessible to all developers. Currently, I'm focusing into
                 backend development to create
@@ -40,14 +40,13 @@ export default function About(): React.ReactElement {
 
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
-                  <p className="text-white">
+                  <p className="text-white lora-font">
                    {`I' am a lifelong learner and a dedicated supporter of the developer community, committed to creating new and effective tools and ideas to empower developers. As the creator of the Frontend Developer Squad at app.daily.dev, I am championing new technologies to help developers build better and more efficient applications. I share this knowledge and experience with my community, so that we can all move forward together.`}
                   </p>
 
                   <div className="mt-6 space-y-3">
                     <cite className="block font-medium text-white">
                       {" "}
-                      <a href="https://app.daily.dev/" target="_blank" rel="noopener noreferrer" className="text-blue-400"> app.daily.dev</a>
                     </cite>
                   </div>
                 </blockquote>
