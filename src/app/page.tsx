@@ -112,10 +112,29 @@ export default function Home() {
                   </div>
                   {/* Social Icons Row */}
                   <div className="flex gap-2.5 mt-6 items-center">
-                    <img src="/socials/github.png" alt="GitHub" width={32} height={32} className="rounded-full ml-1" />
-                    <img src="/socials/linkedin.png" alt="LinkedIn" width={32} height={32} className="rounded-full ml-1" />
+                    <button
+                      aria-label="GitHub"
+                      className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
+                      onClick={() => window.open('https://github.com/uzicodes', '_blank')}
+                    >
+                      <img src="/socials/github.png" alt="GitHub" width={32} height={32} className="rounded-full ml-1" />
+                    </button>
 
-                    <img src="/socials/gmail.png" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
+                    <button
+                      aria-label="LinkedIn"
+                      className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
+                      onClick={() => window.open('https://www.linkedin.com/in/utsho-heaven-chowdhury/', '_blank')}
+                    >
+                      <img src="/socials/linkedin.png" alt="LinkedIn" width={32} height={32} className="rounded-full ml-1" />
+                    </button>
+
+                    <button
+                      aria-label="Email"
+                      className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
+                      onClick={() => window.location.href = 'mailto:utshozi11@gmail.com'}
+                    >
+                      <img src="/socials/gmail.png" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
+                    </button>
 
 
                     {/* Gmail address */}
