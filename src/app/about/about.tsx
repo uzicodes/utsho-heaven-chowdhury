@@ -7,8 +7,8 @@ export default function About(): React.ReactElement {
     <>
   <section id="about" className="text-white" style={{ background: '#04081A', marginBottom: '2rem' }}>
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-          <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl text-white">
-            Developer, Designer, Creator, Innovator
+          <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl cairo-font" style={{ color: '#DEB34B' }}>
+            Developer, Designer Creator, Innovator
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="relative mb-6 sm:mb-0">
@@ -41,7 +41,7 @@ export default function About(): React.ReactElement {
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white lora-font">
-                   {`I' am a lifelong learner and a dedicated supporter of the developer community, committed to creating new and effective tools and ideas to empower developers. As the creator of the Frontend Developer Squad at app.daily.dev, I am championing new technologies to help developers build better and more efficient applications. I share this knowledge and experience with my community, so that we can all move forward together.`}
+                   {`I' am a lifelong learner and a dedicated supporter of the developer community, committed to creating new and effective tools and ideas to empower developers. I am championing new technologies to help developers build better & more efficient applications. I want to share this knowledge and experience with my community, so that we can all move forward together.`}
                   </p>
 
                   <div className="mt-6 space-y-3">
