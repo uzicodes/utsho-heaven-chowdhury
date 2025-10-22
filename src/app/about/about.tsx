@@ -26,7 +26,7 @@ export default function About(): React.ReactElement {
 
             <div className="relative space-y-4">
               <p className="text-white lora-font">
-                {`Hello! Utsho Heaven Chowdhury, a passionate Full-Stack developer
+                {`A passionate Full-Stack developer
                 specializing in creating innovative Web solutions &
                 user-friendly interfaces.`}
                 ,{` I'm dedicated to simplifying development workflows.`}
@@ -45,9 +45,6 @@ export default function About(): React.ReactElement {
                   </p>
 
                   <div className="mt-6 space-y-3">
-                    <cite className="block font-medium text-white">
-                      {" "}
-                    </cite>
                   </div>
                 </blockquote>
               </div>
