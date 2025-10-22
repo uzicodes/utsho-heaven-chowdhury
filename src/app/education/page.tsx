@@ -349,7 +349,6 @@ const EducationSection: React.FC = () => {
 										   {cert.title}
 									   </h3>
 									   <p className="text-sm flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
-										   <BookOpen className="w-4 h-4" />
 										   {cert.issuer}
 									   </p>
 									   <div className="flex items-center justify-center gap-3 text-gray-400 text-xs">
