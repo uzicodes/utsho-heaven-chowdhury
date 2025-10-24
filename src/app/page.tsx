@@ -2,6 +2,7 @@
 
 
 import Navbar from './Navbar';
+import { useIsMobile } from '../lib/useIsMobile';
 import Head from 'next/head';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
@@ -17,6 +18,8 @@ export default function Home() {
     "Let's Build Something Amazing Together !",
   ];
 
+  const isMobile = useIsMobile(640);
+
   return (
     <>
       <Head>
@@ -24,7 +27,7 @@ export default function Home() {
       </Head>
       <div className="relative min-h-screen text-white overflow-hidden bg-black">
         <Navbar />
-          <main className="bg-[#04081A] min-h-screen relative z-10 pt-32">
+        <main className="bg-[#04081A] min-h-screen relative z-10 pt-32">
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex min-h-[65vh] items-center">
@@ -38,34 +41,61 @@ export default function Home() {
                       Avaiable to Work
                     </span>
                   </div>
-                  <h1 className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                    <span
-                      className="text-white"
-                      style={{
-                        fontSize: '2.5rem',
-                        display: 'block',
-                        marginBottom: '0.5rem',
-                        marginTop: '0'
-                      }}
-                    >
-                      Hello I&apos;m,
-                    </span>
-                    <span
-                      className="hero-name whitespace-nowrap hogers-font"
-                      style={{
-                        backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        fontSize: '45px',
-                        display: 'block',
-                        marginTop: '0',
-                        lineHeight: '1'
-                      }}
-                    >
-                      UTSHO HEAVEN CHOWDHURY
-                    </span>
-                  </h1>
+                  {isMobile ? (
+                    <>
+                      <h1 className="hero-text text-2xl font-bold leading-tight text-center mb-2">
+                        <span className="text-white block mb-1 mt-0">Hello I&apos;m,</span>
+                        <span
+                          className="hero-name whitespace-nowrap hogers-font"
+                          style={{
+                            backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            fontSize: '2rem',
+                            display: 'block',
+                            marginTop: '0',
+                            lineHeight: '1',
+                            wordBreak: 'break-word',
+                          }}
+                        >
+                          UTSHO HEAVEN CHOWDHURY
+                        </span>
+                      </h1>
+                      <div className="flex justify-center mb-4">
+                        <img src="/DP_removed_BG.png" alt="Profile" width={180} height={180} style={{ maxWidth: '80vw', height: 'auto', borderRadius: '1rem', objectFit: 'cover' }} />
+                      </div>
+                    </>
+                  ) : (
+                    <h1 className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                      <span
+                        className="text-white"
+                        style={{
+                          fontSize: '2.5rem',
+                          display: 'block',
+                          marginBottom: '0.5rem',
+                          marginTop: '0'
+                        }}
+                      >
+                        Hello I&apos;m,
+                      </span>
+                      <span
+                        className="hero-name whitespace-nowrap hogers-font"
+                        style={{
+                          backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
+                          backgroundClip: 'text',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          fontSize: '45px',
+                          display: 'block',
+                          marginTop: '0',
+                          lineHeight: '1'
+                        }}
+                      >
+                        UTSHO HEAVEN CHOWDHURY
+                      </span>
+                    </h1>
+                  )}
                   {/* Role badge */}
                   <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px] ml-auto" style={{ marginLeft: '-5px' }}>
                     <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
