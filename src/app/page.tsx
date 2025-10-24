@@ -42,30 +42,25 @@ export default function Home() {
                     </span>
                   </div>
                   {isMobile ? (
-                    <>
-                      <h1 className="hero-text text-2xl font-bold leading-tight text-center mb-2">
-                        <span className="text-white block mb-1 mt-0">Hello I&apos;m,</span>
-                        <span
-                          className="hero-name whitespace-nowrap hogers-font"
-                          style={{
-                            backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
-                            backgroundClip: 'text',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            fontSize: '2rem',
-                            display: 'block',
-                            marginTop: '0',
-                            lineHeight: '1',
-                            wordBreak: 'break-word',
-                          }}
-                        >
-                          UTSHO HEAVEN CHOWDHURY
-                        </span>
-                      </h1>
-                      <div className="flex justify-center mb-4">
-                        <img src="/DP_removed_BG.png" alt="Profile" width={180} height={180} style={{ maxWidth: '80vw', height: 'auto', borderRadius: '1rem', objectFit: 'cover' }} />
-                      </div>
-                    </>
+                    <h1 className="hero-text text-2xl font-bold leading-tight text-center mb-2">
+                      <span className="text-white block mb-1 mt-0">Hello I&apos;m,</span>
+                      <span
+                        className="hero-name whitespace-nowrap hogers-font"
+                        style={{
+                          backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
+                          backgroundClip: 'text',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          fontSize: '2rem',
+                          display: 'block',
+                          marginTop: '0',
+                          lineHeight: '1',
+                          wordBreak: 'break-word',
+                        }}
+                      >
+                        UTSHO HEAVEN CHOWDHURY
+                      </span>
+                    </h1>
                   ) : (
                     <h1 className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                       <span
@@ -106,6 +101,12 @@ export default function Home() {
                       />
                     </span>
                   </div>
+                  {/* Mobile Image - only shown on mobile screens */}
+                  {isMobile && (
+                    <div className="flex justify-center my-6">
+                      <img src="/DP_removed_BG.png" alt="Profile" width={200} height={200} style={{ maxWidth: '80vw', height: 'auto', borderRadius: '1rem', objectFit: 'cover' }} />
+                    </div>
+                  )}
                   {/* Description under flipping words */}
                   <div className="mt-4 text-xl text-gray-300 max-w-xl ml-auto lora-font" style={{ marginLeft: '5px' }}>
                     Full-Stack Developer actively seeking opportunities to integrate intelligent systems into Real-world solutions.
@@ -176,41 +177,43 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* Right Side - Glowing Card */}
-              <div className="w-full lg:w-1/2 relative">
-                <div 
-                  className="rounded-2xl p-1 absolute"
-                  style={{
-                    width: '320px', 
-                    height: '400px',
-                    background: '#7df9ff',
-                    boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
-                    animation: 'glow-pulse 2s ease-in-out infinite alternate',
-                    top: '-150px',
-                    left: '50%',
-                    transform: 'translateX(-50%)'
-                  }}
-                >
+              {/* Right Side - Glowing Card (hidden on mobile) */}
+              {!isMobile && (
+                <div className="w-full lg:w-1/2 relative">
                   <div 
-                    className="bg-gray-900 rounded-xl h-full flex items-start justify-center pt-1 pb-1 px-1"
+                    className="rounded-2xl p-1 absolute"
                     style={{
-                      backgroundColor: 'rgba(17, 24, 39, 0.95)'
+                      width: '320px', 
+                      height: '400px',
+                      background: '#7df9ff',
+                      boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
+                      animation: 'glow-pulse 2s ease-in-out infinite alternate',
+                      top: '-150px',
+                      left: '50%',
+                      transform: 'translateX(-50%)'
                     }}
                   >
-                    <Image 
-                      src="/DP_removed_BG.png" 
-                      alt="Profile" 
-                      width={320}
-                      height={400}
-                      className="w-full h-full object-cover rounded-lg"
+                    <div 
+                      className="bg-gray-900 rounded-xl h-full flex items-start justify-center pt-1 pb-1 px-1"
                       style={{
-                        filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))',
-                        objectPosition: 'center bottom'
+                        backgroundColor: 'rgba(17, 24, 39, 0.95)'
                       }}
-                    />
+                    >
+                      <Image 
+                        src="/DP_removed_BG.png" 
+                        alt="Profile" 
+                        width={320}
+                        height={400}
+                        className="w-full h-full object-cover rounded-lg"
+                        style={{
+                          filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))',
+                          objectPosition: 'center bottom'
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
           {/* Additional Content Section 1 - About Me */}
