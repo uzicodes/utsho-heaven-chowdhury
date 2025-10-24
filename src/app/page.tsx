@@ -35,27 +35,31 @@ export default function Home() {
               <div className="w-full lg:w-1/2">
                 <div className="space-y-6" style={{marginTop: '-0.20rem'}}>
                   {/* Welcome badge */}
-                  <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
-                    <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                    <span className="text-gray-300 text-xs sm:text-sm font-medium">
-                      Avaiable to Work
-                    </span>
+                  <div className={`flex ${isMobile ? 'justify-center' : ''}`}>
+                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2 animate__animated animate__fadeInDown animate__delay-1s">
+                      <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+                      <span className="text-gray-300 text-xs sm:text-sm font-medium">
+                        Avaiable to Work
+                      </span>
+                    </div>
                   </div>
                   {isMobile ? (
-                    <h1 className="hero-text text-2xl font-bold leading-tight text-center mb-2">
-                      <span className="text-white block mb-1 mt-0">Hello I&apos;m,</span>
+                    <h1 className="hero-text font-bold leading-tight text-center mb-2">
+                      <span className="text-white block mb-1 mt-0" style={{ fontSize: '1.25rem' }}>Hello I&apos;m,</span>
                       <span
-                        className="hero-name whitespace-nowrap hogers-font"
+                        className="hero-name hogers-font"
                         style={{
                           backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
                           backgroundClip: 'text',
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent',
-                          fontSize: '2rem',
+                          fontSize: '1.5rem',
                           display: 'block',
                           marginTop: '0',
-                          lineHeight: '1',
-                          wordBreak: 'break-word',
+                          lineHeight: '1.2',
+                          whiteSpace: 'normal',
+                          wordWrap: 'break-word',
+                          maxWidth: '100%',
                         }}
                       >
                         UTSHO HEAVEN CHOWDHURY
@@ -92,18 +96,20 @@ export default function Home() {
                     </h1>
                   )}
                   {/* Role badge */}
-                  <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s min-w-[320px] min-h-[64px] ml-auto" style={{ marginLeft: '-5px' }}>
-                    <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
-                    <span>
-                      <FlipWords
-                        className={"flipwords-font text-lg sm:text-xl text-blue-400 font-medium"}
-                        words={words}
-                      />
-                    </span>
+                  <div className={`flex ${isMobile ? 'justify-center' : ''}`}>
+                    <div className={`inline-flex items-center gap-2 sm:gap-3 ${isMobile ? 'px-3 py-2' : 'px-4 sm:px-8 py-3 sm:py-5'} rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 ${isMobile ? 'mb-6 sm:mb-8' : 'mb-2'} backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s ${isMobile ? 'min-w-[280px] min-h-[48px]' : 'min-w-[320px] min-h-[64px]'}`} style={!isMobile ? { marginLeft: '-5px' } : {}}>
+                      <i className={`fas fa-rocket text-blue-400 animate-bounce ${isMobile ? 'text-xs' : 'text-sm sm:text-base'}`}></i>
+                      <span>
+                        <FlipWords
+                          className={isMobile ? "flipwords-font text-sm text-blue-400 font-medium" : "flipwords-font text-lg sm:text-xl text-blue-400 font-medium"}
+                          words={words}
+                        />
+                      </span>
+                    </div>
                   </div>
                   {/* Mobile Image - only shown on mobile screens */}
                   {isMobile && (
-                    <div className="flex justify-center my-6">
+                    <div className="flex justify-center -mt-20">
                       <img src="/DP_removed_BG.png" alt="Profile" width={200} height={200} style={{ maxWidth: '80vw', height: 'auto', borderRadius: '1rem', objectFit: 'cover' }} />
                     </div>
                   )}
