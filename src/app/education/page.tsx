@@ -216,7 +216,7 @@ const EducationSection: React.FC = () => {
 											   className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
 											   style={{ maxWidth: '80px', maxHeight: '80px' }}
 										   />
-										   <h3 className="text-2xl font-bold colus-font" style={{ color: '#BD9082' }}>
+										   <h3 className="text-2xl font-bold colus-font" style={{ color: '#DB5151' }}>
 											   {edu.degree}
 										   </h3>
 									   </div>
@@ -272,7 +272,7 @@ const EducationSection: React.FC = () => {
 										   className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
 										   style={{ maxWidth: '80px', maxHeight: '80px' }}
 									   />
-									   <h3 className="text-2xl font-bold colus-font" style={{ color: '#BD9082' }}>
+									   <h3 className="text-2xl font-bold colus-font" style={{ color: '#DB5151' }}>
 										   Thesis
 									   </h3>
 								   </div>
