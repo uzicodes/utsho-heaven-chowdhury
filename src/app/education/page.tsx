@@ -183,7 +183,7 @@ const EducationSection: React.FC = () => {
 					transition={{ duration: 0.6 }}
 					className="text-center mb-8 mt-0"
 				>
-					<p className="max-w-2xl mx-auto text-lg mt-0 lora-font" style={{ color: '#CC604B' }}>
+					<p className="max-w-2xl mx-auto text-lg mt-0 lora-font" style={{ color: '#FFFFFF' }}>
 						My educational journey has been transformative, equipping me with the expertise to excel in my field.
 					</p>
 				</motion.div>
