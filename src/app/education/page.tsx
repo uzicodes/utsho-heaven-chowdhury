@@ -115,7 +115,7 @@ const EducationSection: React.FC = () => {
 			fullViewUrl: "https://drive.google.com/file/d/1pM-5PcxfzGN7QZhcvL4kwxU_IogNjln4/view?usp=sharing",
 		},
 		{
-			title: "HTML5 - Coursera",
+			title: "HTML 5",
 			issuer: "University of Michigan",
 			date: "Mar 2024",
 			credentialId: "PW72RW7XK7YE",
