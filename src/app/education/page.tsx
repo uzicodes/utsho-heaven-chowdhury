@@ -343,7 +343,7 @@ const EducationSection: React.FC = () => {
 								   </div>
 								   {/* Certificate Details Below */}
 								   <div className="space-y-2 px-1 pb-2 text-center">
-									   <h3 className="text-lg font-bold mb-1 colus-font group-hover:text-teal-400 transition-colors" style={{ color: '#BD9082', fontSize: '1rem' }}>
+									   <h3 className="text-lg font-bold mb-1 colus-font group-hover:text-teal-400 transition-colors" style={{ color: '#DB5151', fontSize: '1rem' }}>
 										   {cert.title}
 									   </h3>
 									   <p className="text-sm flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
