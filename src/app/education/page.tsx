@@ -19,7 +19,7 @@ const EducationSection: React.FC = () => {
 
 	const educationData = [
 			{
-				degree: "Higher Secondary Education (HSC)",
+				degree: "Higher Secondary Certificate (HSC)",
 				school: "Cantonment Public College, Saidpur",
 				year: "2018 - 2020",
 				achievements: ["CGPA: 5.0 (Out of 5)", "Subject: Science"],
