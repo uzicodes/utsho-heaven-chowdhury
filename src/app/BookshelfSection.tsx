@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Image from "next/image";
-import GitHubCalendar from "react-github-calendar";
 
 interface Book {
   id: number;
@@ -66,26 +65,25 @@ const BookshelfSection = () => {
   const [hoveredBook, setHoveredBook] = useState<number | null>(null);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center py-20 px-4">
+  <section className="min-h-screen flex items-center justify-center py-20 px-4">
       <div className="max-w-6xl w-full">
         <div className="text-center mb-16">
-          <p className="text-3xl md:text-4xl fluneta-font" style={{ color: '#DEB34B' }}>
-            handpicked my Favorite Books
-          </p>
+            <p className="text-3xl md:text-4xl fluneta-font" style={{ color: '#DEB34B' }}>
+              handpicked my Favorite Books
+            </p>
         </div>
 
         {/* Bookshelf */}
         <div className="relative">
           {/* Shelf */}
-          <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/80 h-8 rounded-lg shadow-2xl mb-8" />
+          <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/80 h-8 rounded-lg shadow-2xl mb-8">
+          </div>
 
           {/* Books Container */}
-          <div
-            className="flex justify-center items-end gap-1 pb-0 perspective-1000"
-            style={{ perspective: "2000px", marginTop: "-5.2rem" }}
+          <div 
+            className="flex justify-center items-end gap-1 pb-0 perspective-1000" style={{ perspective: "2000px", marginTop: "-5.2rem" }}
           >
             {books.map((book, index) => (
-              // ...existing code...
               <div
                 key={book.id}
                 className="relative transition-all duration-500 ease-out"
@@ -109,12 +107,16 @@ const BookshelfSection = () => {
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20 rounded-sm" />
+                  
                   {/* Spine Text */}
-                  <div className="absolute inset-0 flex items-center justify-center" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                  </div>
+                  
                   {/* Spine Details */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent" />
                 </div>
+
                 {/* Book Cover (hover view) */}
                 <div
                   className="absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-500"
@@ -139,6 +141,7 @@ const BookshelfSection = () => {
                       sizes="(max-width: 600px) 100vw, 240px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/30" />
+                    
                     {/* Book Info Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4">
                       <h3 className="text-white font-bold text-lg mb-1">
@@ -151,23 +154,12 @@ const BookshelfSection = () => {
               </div>
             ))}
           </div>
-          {/* Bottom Shelf */}
-          <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl" />
-        </div>
 
-        {/* GitHub Contribution Graph */}
-        <div className="flex justify-center items-center mt-12 mb-4 w-full">
-          <div className="w-full max-w-xl mx-auto">
-            <GitHubCalendar
-              username="uzicodes"
-              blockSize={16}
-              blockMargin={4}
-              fontSize={14}
-              colorScheme="dark"
-              style={{ width: '100%' }}
-            />
+          {/* Bottom Shelf */}
+          <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl">
           </div>
         </div>
+
 
       </div>
     </section>
