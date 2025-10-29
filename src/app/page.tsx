@@ -7,6 +7,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
 import BookshelfSection from './BookshelfSection';
+import GitHubCalendar from 'react-github-calendar';
 
 
 export default function Home() {
@@ -117,6 +118,7 @@ export default function Home() {
                   <div className="mt-4 text-xl text-gray-300 max-w-xl ml-auto lora-font" style={{ marginLeft: '5px' }}>
                     Full-Stack Developer actively seeking opportunities to integrate intelligent systems into Real-world solutions.
                   </div>
+                  {/* GitHub Contribution Graph */}
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 animate__animated animate__fadeInUp animate__delay-2s mt-4">
                     {/* View Projects Button */}
