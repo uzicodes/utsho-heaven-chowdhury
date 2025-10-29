@@ -1,7 +1,6 @@
 import Image from "next/image";
 const HeroImg = "/about.png";
 import React from "react";
-import GitHubCalendar from 'react-github-calendar';
 
 export default function About(): React.ReactElement {
   return (
@@ -46,13 +45,6 @@ export default function About(): React.ReactElement {
                   </p>
 
                   <div className="mt-6 space-y-3">
-                  </div>
-                  {/* GitHub Contribution Graph */}
-                  <div className="mt-8 flex justify-center">
-                    <div className="bg-[#161B22] p-4 rounded-xl shadow-lg">
-                      <h3 className="text-sm font-bold mb-2 text-white text-center">GitHub Contributions</h3>
-                      <GitHubCalendar username="uzicodes" blockSize={7} blockMargin={1} fontSize={8} theme={{light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'], dark: ['#161B22', '#0e4429', '#006d32', '#26a641', '#40c463']}} />
-                    </div>
                   </div>
                 </blockquote>
               </div>
