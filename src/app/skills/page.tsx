@@ -71,7 +71,6 @@ const SkillsSection: React.FC = () => {
   { name: "CSS3", icon: <img src="/icons/frontend/css.png" alt="CSS3" width={48} height={48} /> },
   { name: "JavaScript", icon: <img src="/icons/frontend/javascript.png" alt="JavaScript" width={48} height={48} /> },
   { name: "TypeScript", icon: <img src="/icons/frontend/typescript.png" alt="TypeScript" width={48} height={48} /> },
-  { name: "Bootstrap", icon: <img src="/icons/frontend/bootstrap.png" alt="Bootstrap" width={48} height={48} /> },
   { name: "Tailwind CSS", icon: <img src="/icons/frontend/tailwind.png" alt="Tailwind CSS" width={48} height={48} /> },
       ],
     },
