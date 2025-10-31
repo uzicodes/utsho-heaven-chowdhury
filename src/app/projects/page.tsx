@@ -204,7 +204,7 @@ function Card({
               transition={{ duration: 0.3 }}
             />
             {/* Project number */}
-            <div className={`absolute left-4 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium ${i === 2 ? 'top-40 md:top-56' : 'top-4 md:top-6'}`}> 
+            <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
               Project {i + 1}
             </div>
           </div>
