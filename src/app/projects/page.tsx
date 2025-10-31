@@ -39,22 +39,22 @@ const projects: Project[] = [
     liveLink: "https://lamb-falcons.vercel.app/",
   },
   {
-    title: "SCREEN BOX ",
-    description:
-      "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. \n Next.js, React, TypeScript, Tailwind, Supabase (PostgreSQL), ESLint, Vercel",
-    link: "/projects/project-2.jpg",
-    color: "#0be890",
-    githubLink: "https://github.com/uzicodes/screen-box",
-    liveLink: "https://screen-box.vercel.app/",
-  },
-  {
     title: "Culinary Canvas",
     description:
       "Intuitive web platform that lets you effortlessly discover, customize, and order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking and personalized account features. \n Next.js, React, Typescript, Tailwind, MongoDB, Vercel",
-    link: "/projects/project-3.jpg",
+    link: "/projects/project-2.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
+  },
+  {
+    title: "SCREEN BOX ",
+    description:
+      "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. \n Next.js, React, TypeScript, Tailwind, Supabase (PostgreSQL), ESLint, Vercel",
+    link: "/projects/project-3.jpg",
+    color: "#0be890",
+    githubLink: "https://github.com/uzicodes/screen-box",
+    liveLink: "https://screen-box.vercel.app/",
   },
   {
     title: "GO Dhaka",
@@ -204,7 +204,7 @@ function Card({
               transition={{ duration: 0.3 }}
             />
             {/* Project number */}
-            <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
+            <div className={`absolute left-4 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium ${i === 2 ? 'top-40 md:top-56' : 'top-4 md:top-6'}`}> 
               Project {i + 1}
             </div>
           </div>
