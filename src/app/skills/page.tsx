@@ -9,7 +9,6 @@ import { Badge } from "@/app/components/badge";
 import dynamic from "next/dynamic";
 const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
 import { AiOutlineAntDesign } from "react-icons/ai";
-import { Code2, Paintbrush, Database, Layout, Cpu, Cloud, LucideIcon, Settings } from "lucide-react";
 
 
 
@@ -21,29 +20,23 @@ interface Skill {
 }
 
 interface SkillCardProps {
-  icon: LucideIcon;
   title: string;
   skills: Skill[];
   color: string;
 }
 
 interface SkillCategory {
-  icon: LucideIcon;
   title: string;
   color: string;
   skills: Skill[];
 }
 
-const SkillCard: React.FC<SkillCardProps> = ({ icon: Icon, title, skills, color }) => (
+const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
   <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
     <CardContent className="p-6 relative z-10">
       <div className="flex items-center justify-center gap-4 mb-6 w-full">
-        <div
-          className={`p-3 rounded-xl bg-gray-800/50 ${color} group-hover:scale-110 transition-transform duration-300`}
-        >
-          <Icon className="w-8 h-8" />
-        </div>
+
   <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center colus-font">
           {title}
         </h3>
@@ -62,7 +55,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ icon: Icon, title, skills, color 
 const SkillsSection: React.FC = () => {
   const skillCategories: SkillCategory[] = [
     {
-      icon: Code2,
+      
       title: "Frontend",
       color: "text-blue-400",
       skills: [
@@ -75,7 +68,7 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      icon: Settings,
+      
       title: "Backend",
       color: "text-purple-400",
       skills: [
@@ -88,8 +81,8 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-  icon: Database,
-  title: "Database",
+  
+      title: "Database",
       color: "text-green-400",
       skills: [
   { name: "Firebase", icon: <img src="/icons/database/firebase.png" alt="Firebase" width={48} height={48} /> },
@@ -102,8 +95,8 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      icon: Cloud,
-  title: "DevOps",
+      
+      title: "DevOps",
       color: "text-orange-400",
       skills: [
   { name: "AWS", icon: <img src="/icons/cloud/aws.png" alt="AWS" width={50} height={50} /> },
@@ -114,7 +107,6 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      icon: Cpu,
       title: "Tools & Techs",
       color: "text-pink-400",
       skills: [
@@ -127,7 +119,6 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      icon: Paintbrush,
       title: "UI/UX",
       color: "text-yellow-400",
       skills: [
@@ -153,7 +144,6 @@ const SkillsSection: React.FC = () => {
           {skillCategories.map((category, index) => (
             <SkillCard
               key={index}
-              icon={category.icon}
               title={category.title}
               skills={category.skills}
               color={category.color}
