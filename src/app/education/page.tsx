@@ -98,7 +98,7 @@ const EducationSection: React.FC = () => {
 		},
         {
 			title: "Neural Networks & Deep Learning",
-			issuer: "DeepLearning",
+			issuer: "Deep Learning",
 			date: "October 2025",
 			credentialId: "TG627PO8LN5T",
 			skills: ["Vectorization", "Shallow NN", "Deep NN"],
