@@ -116,15 +116,17 @@ const EducationSection: React.FC = () => {
 			certImage: "/certifications/9.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1Rg5o2O7opV2ZF9K1-gyLWC9ZVAZE02Pl/view?usp=sharing",
 		},
-		{
-			title: "AI+ Foundation Certificate",
-			issuer: "AI CERTs",
-			date: "June 2025",
-			credentialId: "7d3694dfdedc",
-			skills: ["Prompt Engineering", "Ethics", "GAN AI"],
-			certImage: "/certifications/4.jpg",
-			fullViewUrl: "https://drive.google.com/file/d/1pM-5PcxfzGN7QZhcvL4kwxU_IogNjln4/view?usp=sharing",
+
+				{
+			title: "Machine Learning with Python",
+			issuer: "IBM",
+			date: "Mar 2024",
+			credentialId: "ZVUEWPX28NAL",
+			skills: ["scikit-learn", "KNN, SVM", "Model Evaluation"],
+			certImage: "/certifications/6.jpg",
+			fullViewUrl: "https://drive.google.com/file/d/13ud1g4NgBMpd3a3MFntaQmQ_g96DRvU1/view?usp=sharing",
 		},
+
 		{
 			title: "HTML 5",
 			issuer: "University of Michigan",
@@ -134,16 +136,16 @@ const EducationSection: React.FC = () => {
 			certImage: "/certifications/5.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/11FIJr7lgpvdk3eK8CgG_w8bf99hmkwL9/view?usp=sharing",
 		},
-		{
-			title: "Machine Learning with Python",
-			issuer: "IBM",
-			date: "Mar 2024",
-			credentialId: "ZVUEWPX28NAL",
-			skills: ["scikit-learn", "KNN, SVM", "Model Evaluation"],
-			certImage: "/certifications/6.jpg",
-			fullViewUrl: "https://drive.google.com/file/d/13ud1g4NgBMpd3a3MFntaQmQ_g96DRvU1/view?usp=sharing",
-		}
 
+        {
+			title: "AI+ Foundation Certificate",
+			issuer: "AI CERTs",
+			date: "June 2025",
+			credentialId: "7d3694dfdedc",
+			skills: ["Prompt Engineering", "Ethics", "GAN AI"],
+			certImage: "/certifications/4.jpg",
+			fullViewUrl: "https://drive.google.com/file/d/1pM-5PcxfzGN7QZhcvL4kwxU_IogNjln4/view?usp=sharing",
+		}
 
 
 
