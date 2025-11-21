@@ -197,7 +197,7 @@ const EducationSection: React.FC = () => {
 						   <motion.div
 							   key={index}
 							   variants={cardVariants}
-							   className={`relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${
+							   className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${
 								   hoveredIndex === index
 									   ? "border-teal-500 scale-[1.02]"
 									   : "border-blue-400/20"
@@ -205,20 +205,20 @@ const EducationSection: React.FC = () => {
 							   onMouseEnter={() => setHoveredIndex(index)}
 							   onMouseLeave={() => setHoveredIndex(null)}
 						   >
-							   <div className="space-y-6">
+							   <div className="space-y-4">
 								   <div className="space-y-2 text-center">
-									   <div className="flex flex-col items-center gap-3">
+									   <div className="flex flex-col items-center gap-2">
 										   <img
 											   src={edu.logo}
 											   alt={edu.school + ' logo'}
-											   className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
-											   style={{ maxWidth: '80px', maxHeight: '80px' }}
+											   className="h-16 w-16 object-contain rounded-full bg-white/80 p-2 shadow"
+											   style={{ maxWidth: '64px', maxHeight: '64px' }}
 										   />
-										   <h3 className="text-2xl font-bold colus-font" style={{ color: '#DB5151' }}>
+										   <h3 className="text-xl font-bold colus-font" style={{ color: '#DB5151' }}>
 											   {edu.degree}
 										   </h3>
 									   </div>
-									   <p className="text-lg flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
+									   <p className="text-base flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
 										   {edu.school}
 									   </p>
 								   <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -248,32 +248,32 @@ const EducationSection: React.FC = () => {
 
 				   {/* Thesis Card Centered Below */}
 				   <div className="flex justify-center mt-8">
-					   <motion.div
-						   variants={cardVariants}
-						   initial="hidden"
-						   animate="visible"
-						   className={`relative border rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-md ${
-							   hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
-						   }`}
-						   onMouseEnter={() => setHoveredIndex(99)}
-						   onMouseLeave={() => setHoveredIndex(null)}
-					   >
-						   <div className="space-y-6">
-							   <div className="space-y-2 text-center">
-								   <div className="flex flex-col items-center gap-3">
-									   <img
-										   src="/thesis.png"
-										   alt="Thesis logo"
-										   className="h-20 w-20 object-contain rounded-full bg-white/80 p-2 shadow"
-										   style={{ maxWidth: '80px', maxHeight: '80px' }}
-									   />
-									   <h3 className="text-2xl font-bold colus-font" style={{ color: '#DB5151' }}>
-										   Thesis
-									   </h3>
-								   </div>
-								   <p className="text-lg flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
-									   BRAC University
-								   </p>
+				   <motion.div
+					   variants={cardVariants}
+					   initial="hidden"
+					   animate="visible"
+					   className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-md ${
+						   hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
+					   }`}
+					   onMouseEnter={() => setHoveredIndex(99)}
+					   onMouseLeave={() => setHoveredIndex(null)}
+				   >
+					   <div className="space-y-4">
+						   <div className="space-y-2 text-center">
+							   <div className="flex flex-col items-center gap-2">
+								   <img
+									   src="/thesis.png"
+									   alt="Thesis logo"
+									   className="h-16 w-16 object-contain rounded-full bg-white/80 p-2 shadow"
+									   style={{ maxWidth: '64px', maxHeight: '64px' }}
+								   />
+								   <h3 className="text-xl font-bold colus-font" style={{ color: '#DB5151' }}>
+									   Thesis
+								   </h3>
+							   </div>
+							   <p className="text-base flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
+								   BRAC University
+							   </p>
 								   <p className="text-gray-400 flex items-center justify-center gap-2">
 									   <Calendar className="w-4 h-4" />
 									   2026
