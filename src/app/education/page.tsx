@@ -73,6 +73,17 @@ const EducationSection: React.FC = () => {
 		},
 
 		{
+			title: "Docker Foundations Professional",
+			issuer: "LinkedIn",
+			date: "November 2025",
+			credentialId: "bae5286ae7168f489ab567d1fe9602e9804f4237369b065c715ad3386f5ac33b",
+			skills: ["OCI", "Vault & Conda", "OCI MLOPs"],
+			certImage: "/certifications/10.png",
+			fullViewUrl: "https://drive.google.com/file/d/1yBXVNV6GtR0qoVYNESu5xLgHa0AIhbDu/view?usp=sharing",
+		},
+
+
+		{
 			title: "OCI Data Science Professional",
 			issuer: "Oracle",
 			date: "August 2025",
