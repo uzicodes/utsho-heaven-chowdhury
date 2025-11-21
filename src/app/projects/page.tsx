@@ -50,7 +50,7 @@ const projects: Project[] = [
     {
     title: "Northern Paribahan",
     description:
-      "Comprehensive platform for seamless ticket booking  with real-time seat availability & instant ticket confirmation**. Provides users with personalized travel history, route management  & secure payments. Includes a robust Admin Control Panel for managing routes, schedules, fares & user accounts. \n Next.js, React, Typescript, Tailwind, Supabase, Vercel",
+      "Comprehensive platform for seamless ticket booking  with real-time seat availability & instant ticket confirmation. Provides users with personalized travel history, route management  & secure payments. Robust Admin Control for managing routes, schedules, fares & users. \n Next.js, React, Typescript, Tailwind, Supabase, NextAuth, ESlint, Vercel",
     link: "/projects/project-5.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/northern-paribahan",
@@ -68,7 +68,7 @@ const projects: Project[] = [
   {
     title: "GO Dhaka",
     description:
-      "Your essential navigator for effortless travel, providing all Dhaka metro, bus routes, and fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient, and stress-free. No logins required. Google Maps for real-time traffic updates \n Next.js, React, TypeScript, Material-UI, Vercel",
+      "Your essential navigator for effortless travel, providing all Dhaka metro, bus routes, and fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient, and stress-free. No logins required. Google Maps for real-time traffic updates.  \n Next.js, React, TypeScript, Material-UI, Vercel",
     link: "/projects/project-4.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/go-dhaka",
