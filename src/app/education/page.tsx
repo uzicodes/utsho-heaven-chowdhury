@@ -357,14 +357,10 @@ const EducationSection: React.FC = () => {
 									   <p className="text-sm flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
 										   {cert.issuer}
 									   </p>
-									   <div className="flex items-center justify-center gap-3 text-gray-400 text-xs">
+									   <div className="flex items-center justify-center text-gray-400 text-xs">
 										   <span className="flex items-center gap-1">
 											   <Calendar className="w-4 h-4" />
 											   {cert.date}
-										   </span>
-										   <span className="flex items-center gap-1">
-											   <FileText className="w-4 h-4" />
-											   ID: {cert.credentialId}
 										   </span>
 									   </div>
 									   <div className="flex flex-wrap justify-center gap-1 mt-1">
