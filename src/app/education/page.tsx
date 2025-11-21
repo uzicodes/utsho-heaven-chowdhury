@@ -221,15 +221,12 @@ const EducationSection: React.FC = () => {
 									   <p className="text-lg flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
 										   {edu.school}
 									   </p>
-									   <p className="text-gray-400 flex items-center justify-center gap-2">
-										   <Calendar className="w-4 h-4" />
-										   {edu.year}
-									   </p>
-								   </div>
-								   <p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">
-									   {edu.description}
+								   <p className="text-gray-400 flex items-center justify-center gap-2">
+									   <Calendar className="w-4 h-4" />
+									   {edu.year}
 								   </p>
-								   <div className="flex flex-wrap justify-center gap-2">
+							   </div>
+							   <div className="flex flex-wrap justify-center gap-2">
 									   {edu.skills.map((skill, i) => (
 										   <span
 											   key={i}
