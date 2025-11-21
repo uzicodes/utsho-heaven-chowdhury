@@ -132,7 +132,7 @@ export default function Projects() {
     <>
   <Navbar />
       <ReactLenis root>
-        <main className="bg-black relative z-10 min-h-screen" ref={container}>
+        <main className="bg-slate-950 relative z-10 min-h-screen pt-12" ref={container}>
           <section className="text-white w-full bg-slate-950">
             {projects.map((project: Project, i: number) => {
               const targetScale: number = 1 - (projects.length - i) * 0.05;
