@@ -47,7 +47,6 @@ const EducationSection: React.FC = () => {
 			title: "Foundations of Coding Full-Stack",
 			issuer: "Microsoft",
 			date: "October 2025",
-			credentialId: "M50AAPBVJFET",
 			skills: ["CI / CD", "Graph Theory", "OOP"],
 			certImage: "/certifications/7.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1Q3x_w_Iwlb0cohXrWVn4tm64VYKczhcn/view?usp=sharing",
@@ -57,7 +56,6 @@ const EducationSection: React.FC = () => {
 			title: "AI ENGINEER FOR DEVELOPERS ASSOCIATE",
 			issuer: "DataCamp",
 			date: "August 2025",
-			credentialId: "AIEDA0014623486342",
 			skills: ["LLMs", "MLOPs", "LangChain"],
 			certImage: "/certifications/1.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1VjhvU30KzGRGuVRpZOBk7v78eyTww7mP/view?usp=sharing",
@@ -66,7 +64,6 @@ const EducationSection: React.FC = () => {
 			title: "Introduction to Software Engineering",
 			issuer: "IBM",
 			date: "October 2025",
-			credentialId: "QM1QKTZTM236",
 			skills: ["SDLC", "JQuery", "Design Patterns"],
 			certImage: "/certifications/8.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1T05lfqIkMfn1nzfz_4oV5uvoS76LBm9q/view?usp=sharing",
@@ -76,8 +73,7 @@ const EducationSection: React.FC = () => {
 			title: "Docker Foundations Professional",
 			issuer: "LinkedIn",
 			date: "November 2025",
-			credentialId: "bae5286ae7168f489ab567d1fe9602e9804f4237369b065c715ad3386f5ac33b",
-			skills: ["OCI", "Vault & Conda", "OCI MLOPs"],
+			skills: ["Containerization", "Docker Compose", "Docker Image"],
 			certImage: "/certifications/10.png",
 			fullViewUrl: "https://drive.google.com/file/d/1yBXVNV6GtR0qoVYNESu5xLgHa0AIhbDu/view?usp=sharing",
 		},
@@ -87,7 +83,6 @@ const EducationSection: React.FC = () => {
 			title: "OCI Data Science Professional",
 			issuer: "Oracle",
 			date: "August 2025",
-			credentialId: "OCI25DSOCP",
 			skills: ["OCI", "Vault & Conda", "OCI MLOPs"],
 			certImage: "/certifications/2.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1xGWSLvbODGYOYfrP4zBcy_KpAt-rdIbc/view?usp=sharing",
@@ -102,7 +97,6 @@ const EducationSection: React.FC = () => {
 			title: "AI Engineer for Data Scientists",
 			issuer: "DataCamp",
 			date: "June 2025",
-			credentialId: "AEDS0018077653709",
 			skills: ["Pytorch", "CNN,RNN", "Llama 3"],
 			certImage: "/certifications/3.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1yJVLWXUgIGJJDrrejNTelkiqS0GaD6a-/view?usp=sharing",
@@ -111,7 +105,6 @@ const EducationSection: React.FC = () => {
 			title: "Neural Networks & Deep Learning",
 			issuer: "Deep Learning",
 			date: "October 2025",
-			credentialId: "TG627PO8LN5T",
 			skills: ["Vectorization", "Shallow NN", "Deep NN"],
 			certImage: "/certifications/9.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1Rg5o2O7opV2ZF9K1-gyLWC9ZVAZE02Pl/view?usp=sharing",
@@ -121,7 +114,6 @@ const EducationSection: React.FC = () => {
 			title: "Machine Learning with Python",
 			issuer: "IBM",
 			date: "Mar 2024",
-			credentialId: "ZVUEWPX28NAL",
 			skills: ["scikit-learn", "KNN, SVM", "Model Evaluation"],
 			certImage: "/certifications/6.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/13ud1g4NgBMpd3a3MFntaQmQ_g96DRvU1/view?usp=sharing",
@@ -131,7 +123,6 @@ const EducationSection: React.FC = () => {
 			title: "HTML 5",
 			issuer: "University of Michigan",
 			date: "Mar 2024",
-			credentialId: "PW72RW7XK7YE",
 			skills: ["Web-page Structure", "Tags & Syntax", "DOM & Hosting "],
 			certImage: "/certifications/5.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/11FIJr7lgpvdk3eK8CgG_w8bf99hmkwL9/view?usp=sharing",
@@ -141,7 +132,6 @@ const EducationSection: React.FC = () => {
 			title: "AI+ Foundation Certificate",
 			issuer: "AI CERTs",
 			date: "June 2025",
-			credentialId: "7d3694dfdedc",
 			skills: ["Prompt Engineering", "Ethics", "GAN AI"],
 			certImage: "/certifications/4.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1pM-5PcxfzGN7QZhcvL4kwxU_IogNjln4/view?usp=sharing",
@@ -181,7 +171,7 @@ const EducationSection: React.FC = () => {
 	};
 
 	return (
-	<section className="min-h-screen relative overflow-hidden py-32 bg-[#04081A]">
+	<section className="min-h-screen relative overflow-hidden py-20 bg-[#04081A]">
 			{/* Grid Background */}
 			<div className="absolute inset-0 z-0">
 				<div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
