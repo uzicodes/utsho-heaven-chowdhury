@@ -47,6 +47,15 @@ const projects: Project[] = [
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
   },
+    {
+    title: "Northern Paribahan",
+    description:
+      "Comprehensive platform for seamless ticket booking  with real-time seat availability & instant ticket confirmation**. Provides users with personalized travel history, route management  & secure payments. Includes a robust Admin Control Panel for managing routes, schedules, fares & user accounts. \n Next.js, React, Typescript, Tailwind, Supabase, Vercel",
+    link: "/projects/project-5.png",
+    color: "#0be890",
+    githubLink: "https://github.com/uzicodes/northern-paribahan",
+    liveLink: "https://northern-paribahan.vercel.app/",
+  },
   {
     title: "SCREEN BOX ",
     description:
