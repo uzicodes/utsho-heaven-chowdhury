@@ -5,7 +5,7 @@ import React from "react";
 export default function About(): React.ReactElement {
   return (
     <>
-  <section id="about" className="text-white" style={{ background: '#04081A', marginBottom: '2rem' }}>
+      <section id="about" className="text-white" style={{ background: '#04081A', marginBottom: '2rem' }}>
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl cairo-font" style={{ color: '#DEB34B' }}>
             Developer, Designer Creator, Innovator
@@ -27,26 +27,29 @@ export default function About(): React.ReactElement {
             <div className="relative space-y-4">
               <p className="text-white lora-font">
                 {`A passionate Full-Stack developer
-                specializing in creating innovative Web solutions &
-                user-friendly interfaces.`}
-                ,{` I'm dedicated to simplifying development workflows.`}
+                specializing in creating innovative Web/Software solutions with a focus on 
+                user-friendly interfaces & scalabilty.`}
+                {` I'm dedicated to simplifying development workflows.`}
               </p>
               <p className="text-white lora-font">
-                {`My focus is on making web development faster, easier, and
+                {`My focus is on making development faster, easier, and
                 accessible to all developers. Currently, I'm focusing into
-                backend development to create
-                seamless & secure web applications.`}
+                backend development a bit more to create
+                seamless & secure web applications. Iam diving more into the DevOps culture more to excel my expertise in the cloud operations.`}
               </p>
 
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white lora-font">
-                   {`I' am a lifelong learner and a dedicated supporter of the developer community, committed to creating new and effective tools and ideas to empower developers. I am championing new technologies to help developers build better & more efficient applications. I want to share this knowledge and experience with my community, so that we can all move forward together.`}
+                    {`I' am a lifelong learner and a dedicated supporter of the developers community, committed to creating new & effective tools & ideas to empower developers. I am championing new technologies to help developers build better & more efficient applications. I want to share this knowledge and experience with my community, so that we can all move forward together.`}
                   </p>
 
                   <div className="mt-6 space-y-3">
                   </div>
                 </blockquote>
+                <p className="text-white lora-font">{`Let's not forget-`}</p>
+
+                <p className="text-white poppins-font">{`It all started with "Hello World"`}</p>
               </div>
             </div>
           </div>
