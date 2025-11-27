@@ -1,6 +1,7 @@
 .navbar-header * {
   cursor: none !important;
 }
+
 /* Navbar Header Styles */
 
 .navbar-header {
@@ -166,6 +167,7 @@
 .navbar-link-icon {
   font-size: 1rem;
   transition: all 0.3s ease;
+  color: white;
 }
 
 .navbar-link-icon-active {
@@ -174,9 +176,12 @@
 
 /* Gradient Animation */
 @keyframes gradient-x {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -187,12 +192,27 @@
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(-2deg); }
-  25% { transform: rotate(2deg); }
-  50% { transform: rotate(-2deg); }
-  75% { transform: rotate(2deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(-2deg);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
+
 .navbar-link:hover::before {
   content: "";
   position: absolute;
@@ -202,5 +222,3 @@
   z-index: -1;
   animation: wiggle 0.5s linear;
 }
-
- 
