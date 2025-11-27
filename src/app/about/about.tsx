@@ -42,14 +42,20 @@ export default function About(): React.ReactElement {
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white lora-font">
                     {`I' am a lifelong learner and a dedicated supporter of the developers community, committed to creating new & effective tools & ideas to empower developers. I am championing new technologies to help developers build better & more efficient applications. I want to share this knowledge and experience with my community, so that we can all move forward together.`}
+
                   </p>
 
                   <div className="mt-6 space-y-3">
                   </div>
                 </blockquote>
-                <p className="text-white lora-font">{`Let's not forget-`}</p>
+                <br></br>
 
-                <p className="text-white poppins-font">{`It all started with "Hello World"`}</p>
+                <p className="text-white lora-font">{`Let's not forget-`}</p>
+                <br></br>
+                <p className="text-xl flipwords-font" style={{ color: '#CF4E5B' }}>
+                  {`it all started with </> `}
+                  <span style={{ color: '#5DCF4E' }}>"Hello World"</span>
+                </p>
               </div>
             </div>
           </div>
