@@ -18,31 +18,31 @@ const EducationSection: React.FC = () => {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
 	const educationData = [
-			{
-				degree: "Higher Secondary Certificate (HSC)",
-				school: "Cantonment Public College, Saidpur",
-				year: "2018 - 2020",
-				achievements: ["CGPA: 5.0 (Out of 5)", "Subject: Science"],
-				skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
-				description:
-					"Acquired a strong foundation in Science and Mathematics, fostering analytical and problem-solving skills.",
-				logo: "/cpscs.png",
-			},
-			{
-				degree: "Bachelors in Computer Science (CS)",
-				school: "BRAC University, Dhaka",
-				year: "2022 - 2026",
-				achievements: ["CGPA: 0.00 (Out of 4)", "Subject: Computer Science"],
-				skills: ["Data Structures", "Algorithms", "DBMS", "OS", "Compiler Design"],
-				description:
-					"Acquired foundational knowledge in computer science, programming languages, and software development principles.",
-				logo: "/brac.png",
-			},
+		{
+			degree: "Higher Secondary Certificate (HSC)",
+			school: "Cantonment Public College, Saidpur",
+			year: "2018 - 2020",
+			achievements: ["CGPA: 5.0 (Out of 5)", "Subject: Science"],
+			skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+			description:
+				"Acquired a strong foundation in Science and Mathematics, fostering analytical and problem-solving skills.",
+			logo: "/cpscs.png",
+		},
+		{
+			degree: "Bachelors in Computer Science (CS)",
+			school: "BRAC University, Dhaka",
+			year: "2022 - 2026",
+			achievements: ["CGPA: 0.00 (Out of 4)", "Subject: Computer Science"],
+			skills: ["Data Structures", "Algorithms", "DBMS", "OS", "Compiler Design"],
+			description:
+				"Acquired foundational knowledge in computer science, programming languages, and software development principles.",
+			logo: "/brac.png",
+		},
 	];
 
 	const certificationData = [
-		
-		
+
+
 		{
 			title: "Foundations of Coding Full-Stack",
 			issuer: "Microsoft",
@@ -51,7 +51,7 @@ const EducationSection: React.FC = () => {
 			certImage: "/certifications/7.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1Q3x_w_Iwlb0cohXrWVn4tm64VYKczhcn/view?usp=sharing",
 		},
-		
+
 		{
 			title: "AI ENGINEER FOR DEVELOPERS ASSOCIATE",
 			issuer: "DataCamp",
@@ -101,7 +101,7 @@ const EducationSection: React.FC = () => {
 			certImage: "/certifications/3.jpg",
 			fullViewUrl: "https://drive.google.com/file/d/1yJVLWXUgIGJJDrrejNTelkiqS0GaD6a-/view?usp=sharing",
 		},
-        {
+		{
 			title: "Neural Networks & Deep Learning",
 			issuer: "Deep Learning",
 			date: "October 2025",
@@ -110,7 +110,7 @@ const EducationSection: React.FC = () => {
 			fullViewUrl: "https://drive.google.com/file/d/1Rg5o2O7opV2ZF9K1-gyLWC9ZVAZE02Pl/view?usp=sharing",
 		},
 
-				{
+		{
 			title: "Machine Learning with Python",
 			issuer: "IBM",
 			date: "Mar 2024",
@@ -128,7 +128,7 @@ const EducationSection: React.FC = () => {
 			fullViewUrl: "https://drive.google.com/file/d/11FIJr7lgpvdk3eK8CgG_w8bf99hmkwL9/view?usp=sharing",
 		},
 
-        {
+		{
 			title: "AI+ Foundation Certificate",
 			issuer: "AI CERTs",
 			date: "June 2025",
@@ -171,7 +171,7 @@ const EducationSection: React.FC = () => {
 	};
 
 	return (
-	<section className="min-h-screen relative overflow-hidden py-20 bg-[#04081A]">
+		<section className="min-h-screen relative overflow-hidden py-20 bg-[#04081A]">
 			{/* Grid Background */}
 			<div className="absolute inset-0 z-0">
 				<div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
@@ -190,113 +190,104 @@ const EducationSection: React.FC = () => {
 				</motion.div>
 
 
-				   <motion.div
-					   variants={containerVariants}
-					   initial="hidden"
-					   animate="visible"
-					   className="grid grid-cols-1 md:grid-cols-2 gap-8"
-				   >
-					   {educationData.map((edu, index) => (
-						   <motion.div
-							   key={index}
-							   variants={cardVariants}
-							   className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${
-								   hoveredIndex === index
-									   ? "border-teal-500 scale-[1.02]"
-									   : "border-blue-400/20"
-							   }`}
-							   onMouseEnter={() => setHoveredIndex(index)}
-							   onMouseLeave={() => setHoveredIndex(null)}
-						   >
-							   <div className="space-y-4">
-								   <div className="space-y-2 text-center">
-									   <div className="flex flex-col items-center gap-2">
-										   <img
-											   src={edu.logo}
-											   alt={edu.school + ' logo'}
-											   className="h-16 w-16 object-contain rounded-full bg-white/80 p-2 shadow"
-											   style={{ maxWidth: '64px', maxHeight: '64px' }}
-										   />
-										   <h3 className="text-xl font-bold colus-font" style={{ color: '#DB5151' }}>
-											   {edu.degree}
-										   </h3>
-									   </div>
-									   <p className="text-base flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
-										   {edu.school}
-									   </p>
-								   <p className="text-gray-400 flex items-center justify-center gap-2">
-									   <Calendar className="w-4 h-4" />
-									   {edu.year}
-								   </p>
-							   </div>
-							   <div className="flex flex-wrap justify-center gap-2">
-									   {edu.skills.map((skill, i) => (
-										   <span
-											   key={i}
-											   className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
-										   >
-											   {skill}
-										   </span>
-									   ))}
-								   </div>
-							   </div>
-						   </motion.div>
-					   ))}
-				   </motion.div>
+				<motion.div
+					variants={containerVariants}
+					initial="hidden"
+					animate="visible"
+					className="grid grid-cols-1 md:grid-cols-2 gap-8"
+				>
+					{educationData.map((edu, index) => (
+						<motion.div
+							key={index}
+							variants={cardVariants}
+							className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${hoveredIndex === index
+								? "border-teal-500 scale-[1.02]"
+								: "border-blue-400/20"
+								}`}
+							onMouseEnter={() => setHoveredIndex(index)}
+							onMouseLeave={() => setHoveredIndex(null)}
+						>
+							<div className="space-y-4">
+								<div className="space-y-2 text-center">
+									<div className="flex flex-col items-center gap-2">
+										<img
+											src={edu.logo}
+											alt={edu.school + ' logo'}
+											className="h-16 w-16 object-contain rounded-full bg-white/80 p-2 shadow"
+											style={{ maxWidth: '64px', maxHeight: '64px' }}
+										/>
+										<h3 className="text-xl font-bold colus-font" style={{ color: '#DB5151' }}>
+											{edu.degree}
+										</h3>
+									</div>
+									<p className="text-base flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
+										{edu.school}
+									</p>
+									<p className="text-gray-400 flex items-center justify-center gap-2">
+										<Calendar className="w-4 h-4" />
+										{edu.year}
+									</p>
+								</div>
+								<div className="flex flex-wrap justify-center gap-2">
+									{edu.skills.map((skill, i) => (
+										<span
+											key={i}
+											className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
+										>
+											{skill}
+										</span>
+									))}
+								</div>
+							</div>
+						</motion.div>
+					))}
+				</motion.div>
 
 
 
-
-
-
-				   {/* Thesis Card Centered Below */}
-				   <div className="flex justify-center mt-8">
-				   <motion.div
-					   variants={cardVariants}
-					   initial="hidden"
-					   animate="visible"
-					   className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-md ${
-						   hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
-					   }`}
-					   onMouseEnter={() => setHoveredIndex(99)}
-					   onMouseLeave={() => setHoveredIndex(null)}
-				   >
-					   <div className="space-y-4">
-						   <div className="space-y-2 text-center">
-							   <div className="flex flex-col items-center gap-2">
-								   <img
-									   src="/thesis.png"
-									   alt="Thesis logo"
-									   className="h-16 w-16 object-contain rounded-full bg-white/80 p-2 shadow"
-									   style={{ maxWidth: '64px', maxHeight: '64px' }}
-								   />
-								   <h3 className="text-xl font-bold colus-font" style={{ color: '#DB5151' }}>
-									   Thesis
-								   </h3>
-							   </div>
-							   <p className="text-base flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
-								   BRAC University
-							   </p>
-								   <p className="text-gray-400 flex items-center justify-center gap-2">
-									   <Calendar className="w-4 h-4" />
-									   2026
-								   </p>
-							   </div>
-							   <p className="text-gray-300 text-sm text-center">
-								   "Multimodal Deep Learning for Medical Image Segmentation"
-							   </p>
-							   <div className="flex flex-wrap justify-center gap-2">
-								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">CNN</span>
-								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Model Optimization</span>
-								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"> Fusion</span>
-								   <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">U-net</span>
-							   </div>
-						   </div>
-					   </motion.div>
-				   </div>
-
-
-
+				{/* Thesis Card Centered Below */}
+				<div className="flex justify-center mt-8">
+					<motion.div
+						variants={cardVariants}
+						initial="hidden"
+						animate="visible"
+						className={`relative border rounded-xl p-5 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-sm ${hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"}`}
+						onMouseEnter={() => setHoveredIndex(99)}
+						onMouseLeave={() => setHoveredIndex(null)}
+					>
+						<div className="space-y-4">
+							<div className="space-y-2 text-center">
+								<div className="flex flex-col items-center gap-2">
+									<img
+										src="/thesis.png"
+										alt="Thesis logo"
+										className="h-14 w-14 object-contain rounded-full bg-white/80 p-2 shadow"
+										style={{ maxWidth: '56px', maxHeight: '56px' }}
+									/>
+									<h3 className="text-lg font-bold colus-font" style={{ color: '#DB5151' }}>
+										Thesis
+									</h3>
+								</div>
+								<p className="text-base flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
+									BRAC University
+								</p>
+								<p className="text-gray-400 flex items-center justify-center gap-2">
+									<Calendar className="w-4 h-4" />
+									2026
+								</p>
+							</div>
+							<p className="text-gray-300 text-sm text-center">
+								"Multimodal Deep Learning for Medical Image Segmentation"
+							</p>
+							<div className="flex flex-wrap justify-center gap-2">
+								<span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">CNN</span>
+								<span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Model Optimization</span>
+								<span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"> Fusion</span>
+								<span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">U-net</span>
+							</div>
+						</div>
+					</motion.div>
+				</div>
 
 				{/* Certifications Section */}
 				<motion.div
@@ -306,81 +297,80 @@ const EducationSection: React.FC = () => {
 					className="mt-20"
 				>
 					<div className="text-center mb-12">
-						   <h2 className="text-4xl font-bold mb-4 colus-font" style={{ color: '#3BE810' }}>
-							   Professional Certifications
-						   </h2>
+						<h2 className="text-4xl font-bold mb-4 colus-font" style={{ color: '#3BE810' }}>
+							Professional Certifications
+						</h2>
 						<p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
 							Professional Development through Industry-Recognized Certifications
 						</p>
 					</div>
 
-					   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-						   {certificationData.map((cert, index) => (
-							   <motion.div
-								   key={index}
-								   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-								   animate={{ opacity: 1, x: 0 }}
-								   transition={{ duration: 0.5, delay: index * 0.1 }}
-								   className={`group relative border rounded-xl overflow-hidden bg-gray-900/50 backdrop-blur-sm transition-all duration-300 ${
-									   hoveredIndex === (100 + index) ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
-								   } p-3`}
-								   onMouseEnter={() => setHoveredIndex(100 + index)}
-								   onMouseLeave={() => setHoveredIndex(null)}
-							   >
-								   {/* Certificate Preview at Top */}
-								   <div className="w-full mb-2">
-									   <div className="relative w-full h-40 bg-white rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-										   <img
-											   src={cert.certImage}
-											   alt={cert.title}
-											   className="w-full h-full object-contain"
-										   />
-										   <div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
-											   <Award className="w-3 h-3" />
-											   Verified
-										   </div>
-									   </div>
-								   </div>
-								   {/* Certificate Details Below */}
-								   <div className="space-y-2 px-1 pb-2 text-center">
-									   <h3 className="text-lg font-bold mb-1 colus-font group-hover:text-teal-400 transition-colors" style={{ color: '#DB5151', fontSize: '1rem' }}>
-										   {cert.title}
-									   </h3>
-									   <p className="text-sm flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
-										   {cert.issuer}
-									   </p>
-									   <div className="flex items-center justify-center text-gray-400 text-xs">
-										   <span className="flex items-center gap-1">
-											   <Calendar className="w-4 h-4" />
-											   {cert.date}
-										   </span>
-									   </div>
-									   <div className="flex flex-wrap justify-center gap-1 mt-1">
-										   {cert.skills.map((skill, i) => (
-											   <span
-												   key={i}
-												   className="px-2 py-0.5 text-[0.7rem] rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
-											   >
-												   {skill}
-											   </span>
-										   ))}
-									   </div>
-									   <a 
-										   href={cert.fullViewUrl} 
-										   target="_blank" 
-										   rel="noopener noreferrer"
-										   className="mt-2 flex items-center justify-center gap-1 text-teal-400 hover:text-teal-300 transition-colors text-xs font-semibold"
-									   >
-										   <ExternalLink className="w-4 h-4" />
-										   View Full Certificate
-									   </a>
-								   </div>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+						{certificationData.map((cert, index) => (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+								animate={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.5, delay: index * 0.1 }}
+								className={`group relative border rounded-xl overflow-hidden bg-gray-900/50 backdrop-blur-sm transition-all duration-300 ${hoveredIndex === (100 + index) ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
+									} p-3`}
+								onMouseEnter={() => setHoveredIndex(100 + index)}
+								onMouseLeave={() => setHoveredIndex(null)}
+							>
+								{/* Certificate Preview at Top */}
+								<div className="w-full mb-2">
+									<div className="relative w-full h-40 bg-white rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+										<img
+											src={cert.certImage}
+											alt={cert.title}
+											className="w-full h-full object-contain"
+										/>
+										<div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
+											<Award className="w-3 h-3" />
+											Verified
+										</div>
+									</div>
+								</div>
+								{/* Certificate Details Below */}
+								<div className="space-y-2 px-1 pb-2 text-center">
+									<h3 className="text-lg font-bold mb-1 colus-font group-hover:text-teal-400 transition-colors" style={{ color: '#DB5151', fontSize: '1rem' }}>
+										{cert.title}
+									</h3>
+									<p className="text-sm flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
+										{cert.issuer}
+									</p>
+									<div className="flex items-center justify-center text-gray-400 text-xs">
+										<span className="flex items-center gap-1">
+											<Calendar className="w-4 h-4" />
+											{cert.date}
+										</span>
+									</div>
+									<div className="flex flex-wrap justify-center gap-1 mt-1">
+										{cert.skills.map((skill, i) => (
+											<span
+												key={i}
+												className="px-2 py-0.5 text-[0.7rem] rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+											>
+												{skill}
+											</span>
+										))}
+									</div>
+									<a
+										href={cert.fullViewUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="mt-2 flex items-center justify-center gap-1 text-teal-400 hover:text-teal-300 transition-colors text-xs font-semibold"
+									>
+										<ExternalLink className="w-4 h-4" />
+										View Full Certificate
+									</a>
+								</div>
 							</motion.div>
 						))}
 					</div>
-				</motion.div>
-			</div>
-		</section>
+				</motion.div >
+			</div >
+		</section >
 	);
 };
 
