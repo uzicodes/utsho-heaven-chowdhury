@@ -14,7 +14,7 @@ export default function Home() {
     "Full-Stack Developer | UI/UX Enthusiast",
     "Python | TypeScript | React | Next.Js ",
     "Hands on Experience on MERN stack ",
-    "Machine Learning  | CV |  Deep Learning",
+    "Machine Learning  |  AI Integration",
     "Let's Build Something Amazing Together !",
   ];
 
