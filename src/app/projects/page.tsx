@@ -9,6 +9,7 @@ import Navbar from "../Navbar";
 interface Project {
   title: string;
   description: string;
+  skills: string; 
   link: string;
   color: string;
   githubLink: string;
@@ -19,6 +20,7 @@ interface CardProps {
   i: number;
   title: string;
   description: string;
+  skills: string; 
   url: string;
   color: string;
   progress: MotionValue<number>;
@@ -30,9 +32,9 @@ interface CardProps {
 
 const projects: Project[] = [
   {
-    title: "LAMB FALCONS - Official Club Site ",
-      description:
-        "This platform serves as the modern, dynamic, & central online hub for our club, providing public visitors with essential club details while offering a secure login & dedicated member portal for private access & deeper community engagement.\n Next.js, React, TypeScript, Tailwind, Firebase, Framer Motion, Vercel.",
+    title: "LAMB FALCONS - Official Club Site",
+    description: "This platform serves as the modern, dynamic, & central online hub for our club, providing public visitors with essential club details while offering a secure login & dedicated member portal for private access & deeper community engagement.",
+    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,firebase,vercel", 
     link: "/projects/project-1.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
@@ -40,26 +42,26 @@ const projects: Project[] = [
   },
   {
     title: "Culinary Canvas",
-    description:
-      "Intuitive web platform that lets you effortlessly discover, customize, and order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking and personalized account features. \n Next.js, React, Typescript, Tailwind, MongoDB, Vercel",
+    description: "Intuitive web platform that lets you effortlessly discover, customize, and order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking and personalized account features.",
+    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-2.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
   },
-    {
+  {
     title: "Northern Paribahan",
-    description:
-      "Comprehensive platform for seamless ticket booking  with real-time seat availability & instant ticket confirmation. Provides users with personalized travel history, route management  & secure payments. Robust Admin Control for managing routes, schedules, fares & users. \n Next.js, React, Typescript, Tailwind, Supabase, NextAuth, ESlint, Vercel",
+    description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation. Provides users with personalized travel history, route management & secure payments. Robust Admin Control for managing routes, schedules, fares & users.",
+    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,vercel",
     link: "/projects/project-5.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/northern-paribahan",
     liveLink: "https://northern-paribahan.vercel.app/",
   },
   {
-    title: "SCREEN BOX ",
-    description:
-      "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. \n Next.js, React, TypeScript, Tailwind, Supabase (PostgreSQL), ESLint, Vercel",
+    title: "SCREEN BOX",
+    description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists.",
+    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,postgres,vercel",
     link: "/projects/project-3.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/screen-box",
@@ -67,14 +69,15 @@ const projects: Project[] = [
   },
   {
     title: "GO Dhaka",
-    description:
-      "Your essential navigator for effortless travel, providing all Dhaka metro, bus routes, and fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient, and stress-free. No logins required. Google Maps for real-time traffic updates.  \n Next.js, React, TypeScript, Material-UI, Vercel",
+    description: "Your essential navigator for effortless travel, providing all Dhaka metro, bus routes, and fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient, and stress-free. No logins required. Google Maps for real-time traffic updates.",
+    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,materialui,vercel",
     link: "/projects/project-4.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/go-dhaka",
     liveLink: "https://go-dhaka.vercel.app/",
   }
 ];
+
 export default function Projects() {
   const container = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -82,6 +85,7 @@ export default function Projects() {
     offset: ["start start", "end end"],
   });
 
+  
   useEffect(() => {
     // Add specific styles for 1366x768 resolution
     const style = document.createElement("style");
@@ -100,7 +104,6 @@ export default function Projects() {
     `;
     document.head.appendChild(style);
 
-    // Resolution check function
     const checkResolution = (): void => {
       const isTargetResolution: boolean =
         window.innerWidth >= 1360 &&
@@ -130,7 +133,7 @@ export default function Projects() {
 
   return (
     <>
-  <Navbar />
+      <Navbar />
       <ReactLenis root>
         <main className="bg-slate-950 relative z-10 min-h-screen pt-12" ref={container}>
           <section className="text-white w-full bg-slate-950">
@@ -144,6 +147,7 @@ export default function Projects() {
                   title={project.title}
                   color={project.color}
                   description={project.description}
+                  skills={project.skills} // Pass the new skills prop
                   progress={scrollYProgress}
                   range={[i * 0.25, 1]}
                   targetScale={targetScale}
@@ -163,6 +167,7 @@ function Card({
   i,
   title,
   description,
+  skills, // Receive the skills prop
   url,
   color,
   progress,
@@ -193,8 +198,8 @@ function Card({
         }}
       >
         {/* Modern split card design */}
-  <div className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl" style={{ backgroundColor: '#574A49' }}>
-          {/* Image section - full width on mobile, 55% on desktop */}
+        <div className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl" style={{ backgroundColor: '#574A49' }}>
+          {/* Image section */}
           <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
             <motion.img
               src={url}
@@ -217,7 +222,8 @@ function Card({
               Project {i + 1}
             </div>
           </div>
-          {/* Content section - full width on mobile, 45% on desktop */}
+
+          {/* Content section */}
           <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-4 md:mb-6">
@@ -230,18 +236,25 @@ function Card({
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
                 {title}
               </h2>
-                <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md lora-font">
-                  {i === 0
-                    ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
-                    : i === 1
-                      ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
-                      : i === 2
-                        ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
-                        : i === 3
-                          ? <>{description.split('\n')[0]}<br /><span style={{ color: '#000' }}>{description.split('\n')[1]}</span></>
-                          : description}
-                </p>
+              
+              {/* Description Text */}
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md lora-font mb-4">
+                {description}
+              </p>
+
+              {/* Skills Icon Strip */}
+              <div className="mt-2">
+                <img 
+                    src={skills} 
+                    alt="Tech Stack" 
+                    className="h-6 md:h-8 w-auto" 
+                    loading="lazy"
+                />
+              </div>
+
             </div>
+            
+            {/* Links Section */}
             <div className="mt-4 md:mt-auto pt-4">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
               <div className="flex items-center gap-4">
@@ -263,7 +276,7 @@ function Card({
                     Code
                   </span>
                 </motion.a>
-               
+                
                 {/* Live Link */}
                 <motion.a
                   title="Live Link"
