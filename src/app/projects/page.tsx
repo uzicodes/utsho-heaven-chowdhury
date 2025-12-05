@@ -238,11 +238,10 @@ function Card({
               </h2>
               
               {/* Description Text */}
-              <div className="overflow-y-auto max-h-[150px] md:max-h-none md:overflow-visible pr-1">
-                <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-md lora-font mb-4">
-                  {description}
-                </p>
-              </div>
+              {/* UPDATED: text-xs on mobile, no line-clamp, no overflow scroll */}
+              <p className="text-xs md:text-base text-gray-400 leading-relaxed max-w-md lora-font mb-4">
+                {description}
+              </p>
 
               {/* Skills Icon Strip */}
               <div className="mt-2">
