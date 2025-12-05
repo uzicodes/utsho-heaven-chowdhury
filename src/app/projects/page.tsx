@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     title: "LAMB FALCONS - Official Club Site",
     description: "This platform serves as the modern, dynamic, & central online hub for our club, providing public visitors with essential club details while offering a secure login & dedicated member portal for private access & deeper community engagement.",
-    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,firebase,vercel", 
+    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,firebase,tailwind,vercel", 
     link: "/projects/project-1.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
@@ -43,7 +43,7 @@ const projects: Project[] = [
   {
     title: "Culinary Canvas",
     description: "Intuitive web platform that lets you effortlessly discover, customize, and order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking and personalized account features.",
-    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,mongodb,vercel",
+    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-2.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
@@ -52,7 +52,7 @@ const projects: Project[] = [
   {
     title: "Northern Paribahan",
     description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation. Provides users with personalized travel history, route management & secure payments. Robust Admin Control for managing routes, schedules, fares & users.",
-    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,vercel",
+    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,redis,supabase,vercel",
     link: "/projects/project-5.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/northern-paribahan",
