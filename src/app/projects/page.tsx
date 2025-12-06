@@ -33,7 +33,7 @@ interface CardProps {
 const projects: Project[] = [
   {
     title: "LAMB FALCONS - Official Club Site",
-    description: "This platform serves as the modern, dynamic, & central online hub for our club, providing public visitors with essential club details while offering a secure login & dedicated member portal for private access & deeper community engagement.",
+    description: "This platform serves as the modern, dynamic & central online hub for our club, providing public visitors with essential club details while offering a secure login & dedicated member portal for private access & deeper community engagement.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,firebase,tailwind,vercel", 
     link: "/projects/project-1.jpg",
     color: "#0be890",
@@ -248,9 +248,7 @@ function Card({
               
               {/* Description Text */}
               {/* UPDATED: text-xs on mobile, no line-clamp, no overflow scroll */}
-              <p className="text-xs md:text-base text-gray-400 leading-relaxed max-w-md lora-font mb-4">
-                {description}
-              </p>
+              <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
               {/* Skills Icon Strip */}
               <div className="mt-2">
