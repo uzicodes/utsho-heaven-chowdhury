@@ -60,12 +60,12 @@ const projects: Project[] = [
   },
   {
     title: "Aura Force",
-    description: "A revolutionary platform designed to empower teams with cutting-edge collaboration tools. Features include real-time task management, AI-driven insights, and seamless integration with existing workflows for maximum productivity and team synergy.",
-    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,prisma,postgres,vercel",
+    description: "Robust fitness platform streamlining gym operations & enhancing member experience. Features real-time class scheduling, automated renewals & trainer booking. Includes a secure portal for tracking workouts, BMI & personalized diet plans.",
+    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-6.png",
     color: "#0be890",
-    githubLink: "https://github.com/uzicodes/aura-force",
-    liveLink: "https://aura-force.vercel.app/",
+    githubLink: "https://github.com/uzicodes/AuraForce",
+    liveLink: "https://auraforce.vercel.app/",
   },
   {
     title: "SCREEN BOX",
