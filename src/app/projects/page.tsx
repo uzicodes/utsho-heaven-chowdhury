@@ -59,6 +59,15 @@ const projects: Project[] = [
     liveLink: "https://northern-paribahan.vercel.app/",
   },
   {
+    title: "Aura Force",
+    description: "A revolutionary platform designed to empower teams with cutting-edge collaboration tools. Features include real-time task management, AI-driven insights, and seamless integration with existing workflows for maximum productivity and team synergy.",
+    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,prisma,postgres,vercel",
+    link: "/projects/project-6.png",
+    color: "#0be890",
+    githubLink: "https://github.com/uzicodes/aura-force",
+    liveLink: "https://aura-force.vercel.app/",
+  },
+  {
     title: "SCREEN BOX",
     description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,postgres,vercel",
