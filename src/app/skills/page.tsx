@@ -3,13 +3,11 @@ import React from "react";
 
 import Navbar from '@/app/Navbar';
 import { Card, CardContent } from "@/app/components/card";
-import { Badge } from "@/app/components/badge";
 import dynamic from "next/dynamic";
 // Import the StarsBackground component
 import { StarsBackground } from "@/app/components/stars";
 
 const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
-import { AiOutlineAntDesign } from "react-icons/ai";
 
 interface Skill {
   name: string;
@@ -123,10 +121,10 @@ const SkillsSection: React.FC = () => {
   ];
 
   return (
-    // Updated: Changed bg-[#04081A] to bg-transparent to show stars
+    // Updated: Removed bg-[#04081A] so stars show through
     <main className="pt-15 lg:pt-0 text-white min-h-screen bg-transparent relative z-10">
-      {/* Grid Background */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+      
+      {/* Removed the 'bg-grid-pattern' div here */}
 
       <section className="container mx-auto px-4 py-11 relative z-10">
         <div className="flex justify-center items-center ">
@@ -155,19 +153,7 @@ const SkillsSection: React.FC = () => {
         .animate-shimmer {
           animation: shimmer 2s infinite;
         }
-        .bg-grid-pattern {
-          background-image: linear-gradient(
-              to right,
-              rgba(100, 100, 255, 0.1) 1px,
-              transparent 1px
-            ),
-            linear-gradient(
-              to bottom,
-              rgba(100, 100, 255, 0.1) 1px,
-              transparent 1px
-            );
-          background-size: 30px 30px;
-        }
+        /* Removed .bg-grid-pattern style block */
       `}</style>
     </main>
   );
