@@ -1,13 +1,13 @@
 "use client";
 
-
 import Navbar from './Navbar';
 import { useIsMobile } from '../lib/useIsMobile';
 import Head from 'next/head';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
 import BookshelfSection from './BookshelfSection';
-
+// Import the StarsBackground component
+import { StarsBackground } from './components/stars';
 
 export default function Home() {
   const words = [
@@ -26,8 +26,22 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
       </Head>
       <div className="relative min-h-screen text-white overflow-hidden bg-black">
+        
+        {/* Floating Stars Background Layer */}
+        {/* We use fixed positioning to ensure it covers the screen and stays in place while scrolling */}
+        <div className="fixed inset-0 z-0">
+          <StarsBackground 
+            className="h-full w-full bg-[#04081A]" // Moved the background color here
+            starColor="#ffffff"
+          />
+        </div>
+
+        {/* Navbar sits on top */}
         <Navbar />
-        <main className="bg-[#04081A] min-h-screen relative z-10 pt-32">
+
+        {/* Main Content */}
+        {/* Removed bg-[#04081A] here so the stars layer behind it is visible */}
+        <main className="min-h-screen relative z-10 pt-32">
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex min-h-[65vh] items-center">
@@ -233,5 +247,5 @@ export default function Home() {
         </main>
       </div>
     </>
-    );
-  }
+  );
+}
