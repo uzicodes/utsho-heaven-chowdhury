@@ -5,7 +5,10 @@ import React from "react";
 export default function About(): React.ReactElement {
   return (
     <>
-      <section id="about" className="text-white" style={{ background: '#04081A', marginBottom: '2rem' }}>
+      {/* Updated style: Changed background to 'transparent' 
+        so the global StarsBackground from page.tsx is visible behind this section.
+      */}
+      <section id="about" className="text-white" style={{ background: 'transparent', marginBottom: '2rem' }}>
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl cairo-font" style={{ color: '#DEB34B' }}>
             Developer, Designer Creator, Innovator

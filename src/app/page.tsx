@@ -31,7 +31,8 @@ export default function Home() {
         {/* We use fixed positioning to ensure it covers the screen and stays in place while scrolling */}
         <div className="fixed inset-0 z-0">
           <StarsBackground 
-            className="h-full w-full bg-[#04081A]" // Moved the background color here
+            // UPDATED: Changed to bg-transparent to remove the blue color
+            className="h-full w-full bg-transparent" 
             starColor="#ffffff"
           />
         </div>
@@ -40,7 +41,7 @@ export default function Home() {
         <Navbar />
 
         {/* Main Content */}
-        {/* Removed bg-[#04081A] here so the stars layer behind it is visible */}
+        {/* Z-index ensures this sits above the stars */}
         <main className="min-h-screen relative z-10 pt-32">
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
@@ -242,7 +243,8 @@ export default function Home() {
           <div className="container mx-auto px-6 lg:px-8 mt-20">
             <BookshelfSection />
             {require('./about/about').default()}
-            <div style={{ background: '#04081A', height: '2rem', width: '100%' }} />
+            {/* UPDATED: Removed background color from this spacer */}
+            <div style={{ height: '2rem', width: '100%' }} />
           </div>
         </main>
       </div>
