@@ -8,8 +8,6 @@ import {
     ExternalLink,
 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
-// Import the StarsBackground component
-import { StarsBackground } from '../components/stars';
 
 const EducationSection: React.FC = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -349,15 +347,9 @@ const EducationSection: React.FC = () => {
 
 export default function Education() {
     return (
-        <div className="relative min-h-screen bg-black">
-            {/* Floating Stars Background Layer */}
-            <div className="fixed inset-0 z-0">
-                <StarsBackground
-                    className="h-full w-full bg-transparent"
-                    starColor="#ffffff"
-                />
-            </div>
-
+        // Updated: Changed bg-black to bg-transparent so global stars show through
+        <div className="relative min-h-screen bg-transparent">
+            
             {/* Content with Navbar */}
             <div className="relative z-10">
                 <Navbar />

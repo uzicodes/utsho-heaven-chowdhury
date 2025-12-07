@@ -4,8 +4,6 @@ import React from "react";
 import Navbar from '@/app/Navbar';
 import { Card, CardContent } from "@/app/components/card";
 import dynamic from "next/dynamic";
-// Import the StarsBackground component
-import { StarsBackground } from "@/app/components/stars";
 
 const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
 
@@ -124,8 +122,6 @@ const SkillsSection: React.FC = () => {
     // Updated: Removed bg-[#04081A] so stars show through
     <main className="pt-15 lg:pt-0 text-white min-h-screen bg-transparent relative z-10">
       
-      {/* Removed the 'bg-grid-pattern' div here */}
-
       <section className="container mx-auto px-4 py-11 relative z-10">
         <div className="flex justify-center items-center ">
           <IconCloudDemo />
@@ -153,7 +149,6 @@ const SkillsSection: React.FC = () => {
         .animate-shimmer {
           animation: shimmer 2s infinite;
         }
-        /* Removed .bg-grid-pattern style block */
       `}</style>
     </main>
   );
@@ -161,15 +156,9 @@ const SkillsSection: React.FC = () => {
 
 // Wrapper page to include Navbar and SkillsSection
 const SkillsPage = () => (
-  <div className="relative min-h-screen text-white overflow-hidden bg-black">
-    {/* Floating Stars Background Layer */}
-    <div className="fixed inset-0 z-0">
-      <StarsBackground
-        className="h-full w-full bg-transparent"
-        starColor="#ffffff"
-      />
-    </div>
-
+  // Updated: Changed bg-black to bg-transparent so global stars show through
+  <div className="relative min-h-screen text-white overflow-hidden bg-transparent">
+    
     {/* Navbar & Content stays on top (z-10) */}
     <div className="relative z-10">
       <Navbar />

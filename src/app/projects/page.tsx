@@ -5,8 +5,6 @@ import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 import { useRef, useEffect } from "react";
 import * as React from "react";
 import Navbar from "../Navbar";
-// Import the StarsBackground component
-import { StarsBackground } from "../components/stars";
 
 interface Project {
   title: string;
@@ -96,7 +94,6 @@ export default function Projects() {
     offset: ["start start", "end end"],
   });
 
-  
   useEffect(() => {
     // Add specific styles for 1366x768 resolution
     const style = document.createElement("style");
@@ -143,22 +140,13 @@ export default function Projects() {
   }, []);
 
   return (
-    // Wrapper div with the original background color
-    <div className="bg-slate-950 relative min-h-screen">
+    // Updated: Changed bg-slate-950 to bg-transparent so global stars show through
+    <div className="bg-transparent relative min-h-screen">
       
-      {/* Floating Stars Background Layer */}
-      <div className="fixed inset-0 z-0">
-        <StarsBackground 
-          className="h-full w-full bg-transparent" 
-          starColor="#ffffff" 
-        />
-      </div>
-
       {/* Main Content Area */}
       <div className="relative z-10">
         <Navbar />
         <ReactLenis root>
-          {/* Changed bg-slate-950 to bg-transparent so stars show through */}
           <main className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
             <section className="text-white w-full bg-transparent">
               {projects.map((project: Project, i: number) => {

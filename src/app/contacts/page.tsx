@@ -8,8 +8,6 @@ import Head from "next/head";
 import { MapPin, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
-// Import the StarsBackground component
-import { StarsBackground } from "../components/stars";
 
 interface ContactItem {
   icon: React.ReactNode;
@@ -20,7 +18,6 @@ interface ContactItem {
 
 export default function Contact() {
   const contactItems: ContactItem[] = [
-
     {
       icon: <Mail className="w-6 h-6 text-purple-400" />,
       label: "Email",
@@ -33,7 +30,6 @@ export default function Contact() {
       link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
       text: "Connect",
     },
-
     {
       icon: <FaGithub className="w-6 h-6" />,
       label: "Github",
@@ -74,8 +70,8 @@ export default function Contact() {
   ];
 
   return (
-    // Wrapper with black background
-    <div className="relative min-h-screen bg-black">
+    // Updated: Changed bg-black to bg-transparent so global stars show through
+    <div className="relative min-h-screen bg-transparent">
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
         <style>{`
@@ -88,18 +84,10 @@ export default function Contact() {
         `}</style>
       </Head>
 
-      {/* Floating Stars Background Layer */}
-      <div className="fixed inset-0 z-0">
-        <StarsBackground 
-          className="h-full w-full bg-transparent" 
-          starColor="#ffffff" 
-        />
-      </div>
-
       {/* Content Layer */}
       <div className="relative z-10">
         <Navbar />
-        {/* Changed bg-[#04081A] to bg-transparent */}
+        {/* Main Content */}
         <main className="pt-20 lg:pt-[0rem] bg-transparent text-white min-h-screen">
           <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto">
