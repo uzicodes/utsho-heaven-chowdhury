@@ -5,9 +5,7 @@ import React from "react";
 export default function About(): React.ReactElement {
   return (
     <>
-      {/* Updated style: Changed background to 'transparent' 
-        so the global StarsBackground from page.tsx is visible behind this section.
-      */}
+      {/* Update: Changed background to 'transparent'*/}
       <section id="about" className="text-white" style={{ background: 'transparent', marginBottom: '2rem' }}>
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl cairo-font" style={{ color: '#DEB34B' }}>

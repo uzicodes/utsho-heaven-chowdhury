@@ -148,7 +148,6 @@ const EducationSection: React.FC = () => {
             {/* Grid Background */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
-                {/* Updated gradient to use black instead of blue #04081A */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
                 <div className="absolute inset-0 border border-white/[0.05] grid grid-cols-2 md:grid-cols-4" />
             </div>

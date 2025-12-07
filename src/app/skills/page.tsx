@@ -170,7 +170,7 @@ const SkillsPage = () => (
       />
     </div>
 
-    {/* Navbar and Content stay on top (z-10) */}
+    {/* Navbar & Content stays on top (z-10) */}
     <div className="relative z-10">
       <Navbar />
       <SkillsSection />

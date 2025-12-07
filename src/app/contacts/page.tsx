@@ -8,6 +8,8 @@ import Head from "next/head";
 import { MapPin, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
+// Import the StarsBackground component
+import { StarsBackground } from "../components/stars";
 
 interface ContactItem {
   icon: React.ReactNode;
@@ -72,7 +74,8 @@ export default function Contact() {
   ];
 
   return (
-    <>
+    // Wrapper with black background
+    <div className="relative min-h-screen bg-black">
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
         <style>{`
@@ -84,64 +87,77 @@ export default function Contact() {
           }
         `}</style>
       </Head>
-      <Navbar />
-      <main className="pt-20 lg:pt-[0rem] bg-[#04081A] text-white min-h-screen">
-        <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto">
-            <div className="grid lg:grid-cols-2 gap-0 items-center">
-              {/* Contact Info */}
-              <div className="space-y-8 flex flex-col justify-center items-center h-full">
-                <div className="space-y-5 lg:pr-0">
-                  <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Lora, serif', marginTop: '48px' }}>Get in Touch</h3>
-                  <div className="mb-7.5"></div>
-                  <div className="space-y-4">
-                    {contactItems.map((item, index) => (
-                      <div key={index} className="flex items-center space-x-4">
-                        {item.link ? (
-                          <a
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="contact-social-icon-link"
-                            style={{ display: 'inline-block' }}
-                          >
-                            <div className="bg-pink-500/10 p-3 rounded-lg contact-social-icon">
-                              {item.icon}
-                            </div>
-                          </a>
-                        ) : (
-                          <div className="bg-pink-500/10 p-3 rounded-lg contact-social-icon">
-                            {item.icon}
-                          </div>
-                        )}
-                        <div>
+
+      {/* Floating Stars Background Layer */}
+      <div className="fixed inset-0 z-0">
+        <StarsBackground 
+          className="h-full w-full bg-transparent" 
+          starColor="#ffffff" 
+        />
+      </div>
+
+      {/* Content Layer */}
+      <div className="relative z-10">
+        <Navbar />
+        {/* Changed bg-[#04081A] to bg-transparent */}
+        <main className="pt-20 lg:pt-[0rem] bg-transparent text-white min-h-screen">
+          <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto">
+              <div className="grid lg:grid-cols-2 gap-0 items-center">
+                {/* Contact Info */}
+                <div className="space-y-8 flex flex-col justify-center items-center h-full">
+                  <div className="space-y-5 lg:pr-0">
+                    <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Lora, serif', marginTop: '48px' }}>Get in Touch</h3>
+                    <div className="mb-7.5"></div>
+                    <div className="space-y-4">
+                      {contactItems.map((item, index) => (
+                        <div key={index} className="flex items-center space-x-4">
                           {item.link ? (
                             <a
                               href={item.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="cursor-pointer hover:text-white duration-500"
-                              style={{ fontFamily: 'Lora, serif', color: '#E3984D' }}
+                              className="contact-social-icon-link"
+                              style={{ display: 'inline-block' }}
                             >
-                              {item.text}
+                              <div className="bg-pink-500/10 p-3 rounded-lg contact-social-icon">
+                                {item.icon}
+                              </div>
                             </a>
                           ) : (
-                            <p className="text-gray-400" style={{ fontFamily: 'Lora, serif' }}>{item.text}</p>
+                            <div className="bg-pink-500/10 p-3 rounded-lg contact-social-icon">
+                              {item.icon}
+                            </div>
                           )}
+                          <div>
+                            {item.link ? (
+                              <a
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cursor-pointer hover:text-white duration-500"
+                                style={{ fontFamily: 'Lora, serif', color: '#E3984D' }}
+                              >
+                                {item.text}
+                              </a>
+                            ) : (
+                              <p className="text-gray-400" style={{ fontFamily: 'Lora, serif' }}>{item.text}</p>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-              {/* Form on the right side */}
-              <div className="flex justify-center items-center w-full lg:justify-center">
-                <Form />
+                {/* Form on the right side */}
+                <div className="flex justify-center items-center w-full lg:justify-center">
+                  <Form />
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
-    </>
+          </section>
+        </main>
+      </div>
+    </div>
   );
 }
