@@ -6,8 +6,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
 import BookshelfSection from './BookshelfSection';
-// Import the StarsBackground component
-import { StarsBackground } from './components/stars';
 
 export default function Home() {
   const words = [
@@ -25,18 +23,9 @@ export default function Home() {
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
       </Head>
-      <div className="relative min-h-screen text-white overflow-hidden bg-black">
+      {/* UPDATED: Changed bg-black to bg-transparent so the global stars show through */}
+      <div className="relative min-h-screen text-white overflow-hidden bg-transparent">
         
-        {/* Floating Stars Background Layer */}
-        {/* We use fixed positioning to ensure it covers the screen and stays in place while scrolling */}
-        <div className="fixed inset-0 z-0">
-          <StarsBackground 
-            // UPDATED: Changed to bg-transparent to remove the blue color
-            className="h-full w-full bg-transparent" 
-            starColor="#ffffff"
-          />
-        </div>
-
         {/* Navbar sits on top */}
         <Navbar />
 
@@ -243,7 +232,6 @@ export default function Home() {
           <div className="container mx-auto px-6 lg:px-8 mt-20">
             <BookshelfSection />
             {require('./about/about').default()}
-            {/* UPDATED: Removed background color from this spacer */}
             <div style={{ height: '2rem', width: '100%' }} />
           </div>
         </main>
