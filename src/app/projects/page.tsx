@@ -5,6 +5,8 @@ import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 import { useRef, useEffect } from "react";
 import * as React from "react";
 import Navbar from "../Navbar";
+// Import the StarsBackground component
+import { StarsBackground } from "../components/stars";
 
 interface Project {
   title: string;
@@ -141,34 +143,48 @@ export default function Projects() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <ReactLenis root>
-        <main className="bg-slate-950 relative z-10 min-h-screen pt-12" ref={container}>
-          <section className="text-white w-full bg-slate-950">
-            {projects.map((project: Project, i: number) => {
-              const targetScale: number = 1 - (projects.length - i) * 0.05;
-              return (
-                <Card
-                  key={`p_${i}`}
-                  i={i}
-                  url={project.link}
-                  title={project.title}
-                  color={project.color}
-                  description={project.description}
-                  skills={project.skills} // Pass the new skills prop
-                  progress={scrollYProgress}
-                  range={[i * 0.25, 1]}
-                  targetScale={targetScale}
-                  githubLink={project.githubLink}
-                  liveLink={project.liveLink}
-                />
-              );
-            })}
-          </section>
-        </main>
-      </ReactLenis>
-    </>
+    // Wrapper div with the original background color
+    <div className="bg-slate-950 relative min-h-screen">
+      
+      {/* Floating Stars Background Layer */}
+      <div className="fixed inset-0 z-0">
+        <StarsBackground 
+          className="h-full w-full bg-transparent" 
+          starColor="#ffffff" 
+        />
+      </div>
+
+      {/* Main Content Area */}
+      <div className="relative z-10">
+        <Navbar />
+        <ReactLenis root>
+          {/* Changed bg-slate-950 to bg-transparent so stars show through */}
+          <main className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
+            <section className="text-white w-full bg-transparent">
+              {projects.map((project: Project, i: number) => {
+                const targetScale: number = 1 - (projects.length - i) * 0.05;
+                return (
+                  <Card
+                    key={`p_${i}`}
+                    i={i}
+                    url={project.link}
+                    title={project.title}
+                    color={project.color}
+                    description={project.description}
+                    skills={project.skills} 
+                    progress={scrollYProgress}
+                    range={[i * 0.25, 1]}
+                    targetScale={targetScale}
+                    githubLink={project.githubLink}
+                    liveLink={project.liveLink}
+                  />
+                );
+              })}
+            </section>
+          </main>
+        </ReactLenis>
+      </div>
+    </div>
   );
 }
 
@@ -176,7 +192,7 @@ function Card({
   i,
   title,
   description,
-  skills, // Receive the skills prop
+  skills, 
   url,
   color,
   progress,
@@ -247,7 +263,6 @@ function Card({
               </h2>
               
               {/* Description Text */}
-              {/* UPDATED: text-xs on mobile, no line-clamp, no overflow scroll */}
               <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
               {/* Skills Icon Strip */}
