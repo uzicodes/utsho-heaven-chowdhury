@@ -1,18 +1,15 @@
-
 "use client";
 import React from "react";
-
 
 import Navbar from '@/app/Navbar';
 import { Card, CardContent } from "@/app/components/card";
 import { Badge } from "@/app/components/badge";
 import dynamic from "next/dynamic";
+// Import the StarsBackground component
+import { StarsBackground } from "@/app/components/stars";
+
 const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
 import { AiOutlineAntDesign } from "react-icons/ai";
-
-
-
-
 
 interface Skill {
   name: string;
@@ -36,12 +33,11 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
     <CardContent className="p-6 relative z-10">
       <div className="flex items-center justify-center gap-4 mb-6 w-full">
-
-  <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center colus-font">
+        <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center colus-font">
           {title}
         </h3>
       </div>
-  <div className="flex flex-wrap gap-2 justify-center w-full">
+      <div className="flex flex-wrap gap-2 justify-center w-full">
         {skills.map((skill, index) => (
           <span key={index + 1}>
             {skill.icon}
@@ -55,84 +51,80 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
 const SkillsSection: React.FC = () => {
   const skillCategories: SkillCategory[] = [
     {
-      
       title: "Frontend",
       color: "text-blue-400",
       skills: [
-  { name: "React", icon: <img src="/icons/frontend/react.png" alt="React" width={48} height={48} /> },
-  { name: "HTML5", icon: <img src="/icons/frontend/html.png" alt="HTML5" width={48} height={48} /> },
-  { name: "CSS3", icon: <img src="/icons/frontend/css.png" alt="CSS3" width={48} height={48} /> },
-  { name: "JavaScript", icon: <img src="/icons/frontend/javascript.png" alt="JavaScript" width={48} height={48} /> },
-  { name: "TypeScript", icon: <img src="/icons/frontend/typescript.png" alt="TypeScript" width={48} height={48} /> },
-  { name: "Tailwind CSS", icon: <img src="/icons/frontend/tailwind.png" alt="Tailwind CSS" width={48} height={48} /> },
+        { name: "React", icon: <img src="/icons/frontend/react.png" alt="React" width={48} height={48} /> },
+        { name: "HTML5", icon: <img src="/icons/frontend/html.png" alt="HTML5" width={48} height={48} /> },
+        { name: "CSS3", icon: <img src="/icons/frontend/css.png" alt="CSS3" width={48} height={48} /> },
+        { name: "JavaScript", icon: <img src="/icons/frontend/javascript.png" alt="JavaScript" width={48} height={48} /> },
+        { name: "TypeScript", icon: <img src="/icons/frontend/typescript.png" alt="TypeScript" width={48} height={48} /> },
+        { name: "Tailwind CSS", icon: <img src="/icons/frontend/tailwind.png" alt="Tailwind CSS" width={48} height={48} /> },
       ],
     },
     {
-      
       title: "Backend",
       color: "text-purple-400",
       skills: [
-  { name: "Node.js", icon: <img src="/icons/backend/node.js.png" alt="Node.js" width={48} height={48} /> },
-  { name: "Express.js", icon: <img src="/icons/backend/express.png" alt="Express.js" width={48} height={48} /> },
-  { name: "Go", icon: <img src="/icons/backend/go.png" alt="Go" width={48} height={48} /> },
-  { name: "Python", icon: <img src="/icons/backend/python.png" alt="Python" width={48} height={48} /> },
-  { name: "Ruby", icon: <img src="/icons/backend/ruby.png" alt="Ruby" width={48} height={48} /> },
-  { name: "FASTapi", icon: <img src="/icons/backend/fastapi.png" alt="FASTapi" width={48} height={48} /> },
+        { name: "Node.js", icon: <img src="/icons/backend/node.js.png" alt="Node.js" width={48} height={48} /> },
+        { name: "Express.js", icon: <img src="/icons/backend/express.png" alt="Express.js" width={48} height={48} /> },
+        { name: "Go", icon: <img src="/icons/backend/go.png" alt="Go" width={48} height={48} /> },
+        { name: "Python", icon: <img src="/icons/backend/python.png" alt="Python" width={48} height={48} /> },
+        { name: "Ruby", icon: <img src="/icons/backend/ruby.png" alt="Ruby" width={48} height={48} /> },
+        { name: "FASTapi", icon: <img src="/icons/backend/fastapi.png" alt="FASTapi" width={48} height={48} /> },
       ],
     },
     {
-  
       title: "Database",
       color: "text-green-400",
       skills: [
-  { name: "Firebase", icon: <img src="/icons/database/firebase.png" alt="Firebase" width={48} height={48} /> },
-  { name: "MongoDB", icon: <img src="/icons/database/mongodb.png" alt="MongoDB" width={48} height={48} /> },
-  { name: "MySQL", icon: <img src="/icons/database/mysql.png" alt="MySQL" width={48} height={48} /> },
-  { name: "Redis", icon: <img src="/icons/database/redis.png" alt="Redis" width={48} height={48} /> },
-  { name: "PostgreSQL", icon: <img src="/icons/database/postgressql.png" alt="PostgreSQL" width={48} height={48} /> },
-  { name: "Supabase", icon: <img src="/icons/database/supabase.png" alt="Supabase" width={48} height={48} /> },
-  
+        { name: "Firebase", icon: <img src="/icons/database/firebase.png" alt="Firebase" width={48} height={48} /> },
+        { name: "MongoDB", icon: <img src="/icons/database/mongodb.png" alt="MongoDB" width={48} height={48} /> },
+        { name: "MySQL", icon: <img src="/icons/database/mysql.png" alt="MySQL" width={48} height={48} /> },
+        { name: "Redis", icon: <img src="/icons/database/redis.png" alt="Redis" width={48} height={48} /> },
+        { name: "PostgreSQL", icon: <img src="/icons/database/postgressql.png" alt="PostgreSQL" width={48} height={48} /> },
+        { name: "Supabase", icon: <img src="/icons/database/supabase.png" alt="Supabase" width={48} height={48} /> },
       ],
     },
     {
-      
       title: "DevOps",
       color: "text-orange-400",
       skills: [
-  { name: "AWS", icon: <img src="/icons/cloud/aws.png" alt="AWS" width={50} height={50} /> },
-  { name: "Docker", icon: <img src="/icons/cloud/docker.png" alt="Docker" width={51} height={51} /> },
-  { name: "GitLab", icon: <img src="/icons/cloud/gitLab.png" alt="GitLab" width={48} height={48} /> },
-  { name: "GitHub", icon: <img src="/icons/cloud/github.png" alt="GitHub" width={50} height={50} /> },
-  { name: "Google Cloud", icon: <img src="/icons/cloud/googlecloud.png" alt="Google Cloud" width={48} height={48} /> },
+        { name: "AWS", icon: <img src="/icons/cloud/aws.png" alt="AWS" width={50} height={50} /> },
+        { name: "Docker", icon: <img src="/icons/cloud/docker.png" alt="Docker" width={51} height={51} /> },
+        { name: "GitLab", icon: <img src="/icons/cloud/gitLab.png" alt="GitLab" width={48} height={48} /> },
+        { name: "GitHub", icon: <img src="/icons/cloud/github.png" alt="GitHub" width={50} height={50} /> },
+        { name: "Google Cloud", icon: <img src="/icons/cloud/googlecloud.png" alt="Google Cloud" width={48} height={48} /> },
       ],
     },
     {
       title: "Tools & Techs",
       color: "text-pink-400",
       skills: [
-  { name: "VS Code", icon: <img src="/icons/tools/vscode.png" alt="VS Code" width={48} height={48} /> },
-  { name: "Git", icon: <img src="/icons/tools/git.png" alt="Git" width={48} height={48} /> },
-  { name: "Jest", icon: <img src="/icons/tools/jest.png" alt="Jest" width={48} height={48} /> },
-  { name: "Vercel", icon: <img src="/icons/tools/vercel.png" alt="Vercel" width={48} height={48} /> },
-  { name: "Postman", icon: <img src="/icons/tools/postman.png" alt="Postman" width={48} height={48} /> },
-  { name: "Arduino", icon: <img src="/icons/tools/arduino.png" alt="Arduino" width={48} height={48} /> },
+        { name: "VS Code", icon: <img src="/icons/tools/vscode.png" alt="VS Code" width={48} height={48} /> },
+        { name: "Git", icon: <img src="/icons/tools/git.png" alt="Git" width={48} height={48} /> },
+        { name: "Jest", icon: <img src="/icons/tools/jest.png" alt="Jest" width={48} height={48} /> },
+        { name: "Vercel", icon: <img src="/icons/tools/vercel.png" alt="Vercel" width={48} height={48} /> },
+        { name: "Postman", icon: <img src="/icons/tools/postman.png" alt="Postman" width={48} height={48} /> },
+        { name: "Arduino", icon: <img src="/icons/tools/arduino.png" alt="Arduino" width={48} height={48} /> },
       ],
     },
     {
       title: "UI/UX",
       color: "text-yellow-400",
       skills: [
-  { name: "Figma", icon: <img src="/icons/ui/figma.png" alt="Figma" width={48} height={48} /> },
-  { name: "Photoshop", icon: <img src="/icons/ui/photoshop.png" alt="Photoshop" width={50} height={50} /> },
-  { name: "WordPress", icon: <img src="/icons/ui/wordpress.png" alt="WordPress" width={48} height={48} /> },
-  { name: "Uizard", icon: <img src="/icons/ui/uizard.png" alt="Uizard" width={48} height={48} /> },
-  { name: "Framer", icon: <img src="/icons/ui/framer.png" alt="Framer" width={48} height={48} /> },
+        { name: "Figma", icon: <img src="/icons/ui/figma.png" alt="Figma" width={48} height={48} /> },
+        { name: "Photoshop", icon: <img src="/icons/ui/photoshop.png" alt="Photoshop" width={50} height={50} /> },
+        { name: "WordPress", icon: <img src="/icons/ui/wordpress.png" alt="WordPress" width={48} height={48} /> },
+        { name: "Uizard", icon: <img src="/icons/ui/uizard.png" alt="Uizard" width={48} height={48} /> },
+        { name: "Framer", icon: <img src="/icons/ui/framer.png" alt="Framer" width={48} height={48} /> },
       ],
     },
   ];
 
   return (
-    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">
+    // Updated: Changed bg-[#04081A] to bg-transparent to show stars
+    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-transparent relative z-10">
       {/* Grid Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
 
@@ -184,8 +176,19 @@ const SkillsSection: React.FC = () => {
 // Wrapper page to include Navbar and SkillsSection
 const SkillsPage = () => (
   <div className="relative min-h-screen text-white overflow-hidden bg-black">
-    <Navbar />
-    <SkillsSection />
+    {/* Floating Stars Background Layer */}
+    <div className="fixed inset-0 z-0">
+      <StarsBackground
+        className="h-full w-full bg-transparent"
+        starColor="#ffffff"
+      />
+    </div>
+
+    {/* Navbar and Content stay on top (z-10) */}
+    <div className="relative z-10">
+      <Navbar />
+      <SkillsSection />
+    </div>
   </div>
 );
 
