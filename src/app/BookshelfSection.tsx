@@ -75,11 +75,9 @@ const BookshelfSection = () => {
 
         {/* Bookshelf */}
         <div className="relative">
-          
-          {/* REMOVED: The Top Shelf div that was causing the background line */}
 
           {/* Books Container */}
-          {/* Adjusted margin-top to 0 since we removed the top shelf space */}
+          {/* Adjusted margin-top to 0 since removed the top shelf space */}
           <div
             className="flex justify-center items-end gap-1 pb-0 perspective-1000" 
             style={{ perspective: "2000px", marginTop: "0" }} 
