@@ -65,23 +65,24 @@ const BookshelfSection = () => {
   const [hoveredBook, setHoveredBook] = useState<number | null>(null);
 
   return (
-  <section className="min-h-screen flex items-center justify-center py-20 px-4">
+    <section className="min-h-screen flex items-center justify-center py-20 px-4">
       <div className="max-w-6xl w-full">
         <div className="text-center mb-16">
-            <p className="text-3xl md:text-4xl fluneta-font" style={{ color: '#DEB34B' }}>
-              handpicked my Favorite Books
-            </p>
+          <p className="text-3xl md:text-4xl fluneta-font" style={{ color: '#DEB34B' }}>
+            handpicked my Favorite Books
+          </p>
         </div>
 
         {/* Bookshelf */}
         <div className="relative">
-          {/* Shelf */}
-          <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/80 h-8 rounded-lg shadow-2xl mb-8">
-          </div>
+          
+          {/* REMOVED: The Top Shelf div that was causing the background line */}
 
           {/* Books Container */}
-          <div 
-            className="flex justify-center items-end gap-1 pb-0 perspective-1000" style={{ perspective: "2000px", marginTop: "-5.2rem" }}
+          {/* Adjusted margin-top to 0 since we removed the top shelf space */}
+          <div
+            className="flex justify-center items-end gap-1 pb-0 perspective-1000" 
+            style={{ perspective: "2000px", marginTop: "0" }} 
           >
             {books.map((book, index) => (
               <div
@@ -107,11 +108,11 @@ const BookshelfSection = () => {
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20 rounded-sm" />
-                  
+
                   {/* Spine Text */}
                   <div className="absolute inset-0 flex items-center justify-center">
                   </div>
-                  
+
                   {/* Spine Details */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent" />
@@ -141,7 +142,7 @@ const BookshelfSection = () => {
                       sizes="(max-width: 600px) 100vw, 240px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/30" />
-                    
+
                     {/* Book Info Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4">
                       <h3 className="text-white font-bold text-lg mb-1">
