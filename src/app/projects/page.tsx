@@ -33,7 +33,7 @@ interface CardProps {
 const projects: Project[] = [
   {
     title: "LAMB FALCONS - Official Club Site",
-    description: "This platform serves as the modern, dynamic & central online hub for our club, providing public visitors with essential club details while offering a secure login & dedicated member portal for private access & deeper community engagement.",
+    description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,firebase,tailwind,vercel", 
     link: "/projects/project-1.jpg",
     color: "#0be890",
