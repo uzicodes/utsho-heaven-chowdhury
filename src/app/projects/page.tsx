@@ -217,19 +217,14 @@ function Card({
             <motion.img
               src={url}
               alt={title}
+              // KEPT: object-contain matches your request
               className="w-full h-full object-contain"
               initial={{ scale: 0.85 }}
               whileHover={{ scale: 0.9 }}
               transition={{ duration: 0.4 }}
             />
-            {/* Colored overlay on hover */}
-            <motion.div
-              className="absolute inset-0"
-              style={{ backgroundColor: color, mixBlendMode: "overlay" }}
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 0.3 }}
-              transition={{ duration: 0.3 }}
-            />
+            {/* REMOVED: The colored overlay motion.div is deleted from here */}
+            
             {/* Project number */}
             <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
               Project {i + 1}
