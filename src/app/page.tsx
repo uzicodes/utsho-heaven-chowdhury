@@ -26,11 +26,11 @@ export default function Home() {
       {/* UPDATED: Changed bg-black to bg-transparent so the global stars show through */}
       <div className="relative min-h-screen text-white overflow-hidden bg-transparent">
         
-        {/* Navbar sits on top */}
+        {/* Navbar on top */}
         <Navbar />
 
         {/* Main Content */}
-        {/* Z-index ensures this sits above the stars */}
+        {/* Z-index makes it above the stars */}
         <main className="min-h-screen relative z-10 pt-32">
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
@@ -160,7 +160,6 @@ export default function Home() {
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.open('https://github.com/uzicodes', '_blank')}
                     >
-                      {/* UPDATED: Changed from png to SkillIcons */}
                       <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="rounded-full ml-1" />
                     </button>
 
@@ -169,7 +168,7 @@ export default function Home() {
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.open('https://www.linkedin.com/in/utsho-heaven-chowdhury/', '_blank')}
                     >
-                      {/* UPDATED: Changed from png to SkillIcons */}
+                      
                       <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="rounded-full ml-1" />
                     </button>
 
@@ -178,7 +177,6 @@ export default function Home() {
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.location.href = 'mailto:utshozi11@gmail.com'}
                     >
-                      {/* UPDATED: Changed from png to SkillIcons */}
                       <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
                     </button>
 
@@ -231,7 +229,7 @@ export default function Home() {
               )}
             </div>
           </div>
-          {/* Additional Content Section 1 - About Me */}
+          {/* Section - About Me */}
           <div className="container mx-auto px-6 lg:px-8 mt-20">
             <BookshelfSection />
             {require('./about/about').default()}
