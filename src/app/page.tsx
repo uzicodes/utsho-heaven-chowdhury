@@ -160,7 +160,8 @@ export default function Home() {
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.open('https://github.com/uzicodes', '_blank')}
                     >
-                      <img src="/socials/github.png" alt="GitHub" width={32} height={32} className="rounded-full ml-1" />
+                      {/* UPDATED: Changed from png to SkillIcons */}
+                      <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="rounded-full ml-1" />
                     </button>
 
                     <button
@@ -168,7 +169,8 @@ export default function Home() {
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.open('https://www.linkedin.com/in/utsho-heaven-chowdhury/', '_blank')}
                     >
-                      <img src="/socials/linkedin.png" alt="LinkedIn" width={32} height={32} className="rounded-full ml-1" />
+                      {/* UPDATED: Changed from png to SkillIcons */}
+                      <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="rounded-full ml-1" />
                     </button>
 
                     <button
@@ -176,7 +178,8 @@ export default function Home() {
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.location.href = 'mailto:utshozi11@gmail.com'}
                     >
-                      <img src="/socials/gmail.png" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
+                      {/* UPDATED: Changed from png to SkillIcons */}
+                      <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
                     </button>
 
 
