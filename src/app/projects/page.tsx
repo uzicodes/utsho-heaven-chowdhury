@@ -268,18 +268,18 @@ function Card({
             {/* Links Section */}
             <div className="mt-4 md:mt-auto pt-4">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
-              <div className="flex items-center gap-4">
-                {/* GitHub Link */}
+              <div className="flex items-center gap-2">
+                {/* GitHub Link Button */}
                 <motion.a
                   title="GitHub Link"
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
+                  className="group flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/15 hover:bg-green-500/20 transition-all cursor-pointer"
                   whileHover={{ y: -3 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <img src="/github.png" alt="GitHub" width={35} height={35} className="inline-block align-middle" />
+                  <img src="/github.svg" alt="GitHub" width={20} height={20} className="inline-block align-middle" />
                   <span
                     className="text-xs md:text-sm font-medium"
                     style={{ color }}
@@ -288,20 +288,20 @@ function Card({
                   </span>
                 </motion.a>
                 
-                {/* Live Link */}
+                {/* Live Link Button */}
                 <motion.a
                   title="Live Link"
                   href={liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2"
+                  className="group flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 hover:bg-blue-500/20 transition-all cursor-pointer"
                   whileHover={{ y: -3 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <img src="/earth.png" alt="Live" width={22} height={22} className="inline-block align-middle" />
+                  <img src="/earth.png" alt="Live" width={20} height={20} className="inline-block align-middle" />
                   <span
                     className="text-xs md:text-sm font-medium"
-                    style={{ color }}
+                    style={{ color }} 
                   >
                     Live
                   </span>
