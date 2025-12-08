@@ -98,12 +98,12 @@ const SkillsSection: React.FC = () => {
       title: "Tools & Techs",
       color: "text-pink-400",
       skills: [
-        { name: "VS Code", icon: <img src="/icons/tools/vscode.svg" alt="VS Code" /> },
         { name: "Git", icon: <img src="/icons/tools/git.svg" alt="Git" width={48} height={48}/> },
+        { name: "Atlassian", icon: <img src="/icons/tools/atlassian.svg" alt="Atlassian" width={42} height={42} /> },
         { name: "Jest", icon: <img src="/icons/tools/jest.svg" alt="Jest" /> },
-        { name: "n8n", icon: <img src="/icons/tools/n8n.svg" alt="n8n" width={48} height={48}/> },
+        { name: "Authjs", icon: <img src="/icons/tools/authjs.svg" alt="Authjs" width={40} height={40}/> },
         { name: "Postman", icon: <img src="/icons/tools/postman.svg" alt="Postman" /> },
-        { name: "Playwright", icon: <img src="/icons/tools/playwright.svg" alt="Playwright" width={48} height={48} /> },
+        { name: "Playwright", icon: <img src="/icons/tools/playwright.svg" alt="Playwright" width={50} height={50} /> },
       ],
     },
     {
@@ -113,8 +113,9 @@ const SkillsSection: React.FC = () => {
         { name: "Figma", icon: <img src="/icons/ui/figma.svg" alt="Figma" /> },
         { name: "Canva", icon: <img src="/icons/ui/canva.svg" alt="Canva" width={40} height={48} /> },
         { name: "Photoshop", icon: <img src="/icons/ui/ps.svg" alt="Photoshop" /> },
+        { name: "Framer", icon: <img src="/icons/ui/framer.svg" alt="Framer" width={27} height={27} /> },
         { name: "Webflow", icon: <img src="/icons/ui/webflow.svg" alt="Webflow" /> },
-        { name: "Framer", icon: <img src="/icons/ui/framer.png" alt="Framer" width={40} height={42} /> },
+        
       ],
     },
   ];
