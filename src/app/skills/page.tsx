@@ -50,12 +50,12 @@ const SkillsSection: React.FC = () => {
       title: "Frontend",
       color: "text-blue-400",
       skills: [
-        { name: "React", icon: <img src="/icons/frontend/react.png" alt="React" width={48} height={48} /> },
-        { name: "HTML5", icon: <img src="/icons/frontend/html.png" alt="HTML5" width={48} height={48} /> },
-        { name: "CSS3", icon: <img src="/icons/frontend/css.png" alt="CSS3" width={48} height={48} /> },
-        { name: "JavaScript", icon: <img src="/icons/frontend/javascript.png" alt="JavaScript" width={48} height={48} /> },
-        { name: "TypeScript", icon: <img src="/icons/frontend/typescript.png" alt="TypeScript" width={48} height={48} /> },
-        { name: "Tailwind CSS", icon: <img src="/icons/frontend/tailwind.png" alt="Tailwind CSS" width={48} height={48} /> },
+        { name: "React", icon: <img src="/icons/frontend/react.svg" alt="React" width={48} height={48} /> },
+        { name: "HTML5", icon: <img src="/icons/frontend/html.svg" alt="HTML5"  /> },
+        { name: "CSS3", icon: <img src="/icons/frontend/css.svg" alt="CSS3"  /> },
+        { name: "JavaScript", icon: <img src="/icons/frontend/javascript.svg" alt="JavaScript"  /> },
+        { name: "TypeScript", icon: <img src="/icons/frontend/typescript.svg" alt="TypeScript"  /> },
+        { name: "Tailwind CSS", icon: <img src="/icons/frontend/tailwind.svg" alt="Tailwind CSS"  /> },
       ],
     },
     {
