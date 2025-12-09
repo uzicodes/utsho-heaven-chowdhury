@@ -38,7 +38,6 @@ export default function Contact() {
       text: "uzicodes",
     },
     {
-      // UPDATED: Changed w-6 h-6 to w-8 h-8
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-blue-600">
           <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z" />
@@ -49,21 +48,18 @@ export default function Contact() {
       text: "Add Friend",
     },
     {
-      // UPDATED: Changed w-6 h-6 to w-8 h-8
       icon: <img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" className="w-8 h-8" />,
       label: "Instagram",
-      link: "https://instagram.com/utsh0x",
+      link: "https://instagram.com/utsh0_",
       text: "Follow Me",
     },
     {
-      // UPDATED: Changed w-6 h-6 to w-8 h-8
       icon: <img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" className="w-8 h-8" />,
       label: "Twitter",
       link: "https://twitter.com/utsh0w",
       text: "Tweet",
     },
     {
-      // UPDATED: Changed w-6 h-6 to w-8 h-8
       icon: <MapPin className="w-8 h-8 text-red-500" />,
       label: "Location",
       text: "Dhaka, Bangladesh",
@@ -108,13 +104,12 @@ export default function Contact() {
                               className="contact-social-icon-link"
                               style={{ display: 'inline-block' }}
                             >
-                              {/* UPDATED: Changed p-3 to p-2 here */}
+
                               <div className="bg-pink-500/10 p-2 rounded-lg contact-social-icon">
                                 {item.icon}
                               </div>
                             </a>
                           ) : (
-                            // UPDATED: Changed p-3 to p-2 here
                             <div className="bg-pink-500/10 p-2 rounded-lg contact-social-icon">
                               {item.icon}
                             </div>
