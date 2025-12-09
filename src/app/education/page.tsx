@@ -326,13 +326,15 @@ const EducationSection: React.FC = () => {
                                             </span>
                                         ))}
                                     </div>
+                                    
+                                    {/* UPDATED: Changed from plain text link to a small light-green button */}
                                     <a
                                         href={cert.fullViewUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="mt-2 flex items-center justify-center gap-1 text-teal-400 hover:text-teal-300 transition-colors text-xs font-semibold"
+                                        className="mt-3 flex items-center justify-center gap-1 text-xs font-semibold bg-green-500/10 hover:bg-green-500/20 text-green-400 hover:text-green-300 px-3 py-1.5 rounded-full transition-all w-fit mx-auto"
                                     >
-                                        <ExternalLink className="w-4 h-4" />
+                                        <ExternalLink className="w-3 h-3" />
                                         View Full Certificate
                                     </a>
                                 </div>
