@@ -37,7 +37,7 @@ const EducationSection: React.FC = () => {
 
     const certificationData = [
         {
-            title: "Foundations of Coding Full-Stack",
+            title: "Foundations Coding Full-Stack",
             issuer: "Microsoft",
             date: "October 2025",
             skills: ["CI / CD", "Graph Theory", "OOP"],
@@ -45,7 +45,7 @@ const EducationSection: React.FC = () => {
             fullViewUrl: "https://drive.google.com/file/d/1Q3x_w_Iwlb0cohXrWVn4tm64VYKczhcn/view?usp=sharing",
         },
         {
-            title: "AI ENGINEER FOR DEVELOPERS ASSOCIATE",
+            title: "AI Engineer For Developers Associate",
             issuer: "DataCamp",
             date: "August 2025",
             skills: ["LLMs", "MLOPs", "LangChain"],
@@ -53,7 +53,7 @@ const EducationSection: React.FC = () => {
             fullViewUrl: "https://drive.google.com/file/d/1VjhvU30KzGRGuVRpZOBk7v78eyTww7mP/view?usp=sharing",
         },
         {
-            title: "Introduction to Software Engineering",
+            title: "Introduction Software Engineering",
             issuer: "IBM",
             date: "October 2025",
             skills: ["SDLC", "JQuery", "Design Patterns"],
@@ -141,8 +141,17 @@ const EducationSection: React.FC = () => {
     };
 
     return (
-        // Changed bg-[#04081A] to bg-transparent
         <section className="min-h-screen relative overflow-hidden py-20 bg-transparent">
+            {/* UPDATED: Registered Aoboshi One font here */}
+            <style>{`
+                @font-face {
+                    font-family: 'It-Valtrisse';
+                    src: url('/fonts/it-valtrisse.otf') format('truetype');
+                    font-weight: normal;
+                    font-style: normal;
+                }
+            `}</style>
+
             {/* Grid Background */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
@@ -157,9 +166,7 @@ const EducationSection: React.FC = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-8 mt-0"
                 >
-
                 </motion.div>
-
 
                 <motion.div
                     variants={containerVariants}
@@ -213,8 +220,6 @@ const EducationSection: React.FC = () => {
                         </motion.div>
                     ))}
                 </motion.div>
-
-
 
                 {/* Thesis Card Centered Below */}
                 <div className="flex justify-center mt-8">
@@ -304,9 +309,15 @@ const EducationSection: React.FC = () => {
                                 </div>
                                 {/* Certificate Details Below */}
                                 <div className="space-y-2 px-1 pb-2 text-center">
-                                    <h3 className="text-lg font-bold mb-1 colus-font group-hover:text-teal-400 transition-colors" style={{ color: '#DB5151', fontSize: '1rem' }}>
+                                    
+                                    {/* UPDATED: Applied Aoboshi One font here */}
+                                    <h3 
+                                        className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors" 
+                                        style={{ fontFamily: 'It-Valtrisse', color: '#DB5151', fontSize: '1rem' }}
+                                    >
                                         {cert.title}
                                     </h3>
+
                                     <p className="text-sm flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
                                         {cert.issuer}
                                     </p>
@@ -327,7 +338,7 @@ const EducationSection: React.FC = () => {
                                         ))}
                                     </div>
                                     
-                                    {/* UPDATED: Changed from plain text link to a small light-green button */}
+                                    {/* Link Button */}
                                     <a
                                         href={cert.fullViewUrl}
                                         target="_blank"
@@ -349,9 +360,7 @@ const EducationSection: React.FC = () => {
 
 export default function Education() {
     return (
-        // Updated: Changed bg-black to bg-transparent so global stars show through
         <div className="relative min-h-screen bg-transparent">
-            
             {/* Content with Navbar */}
             <div className="relative z-10">
                 <Navbar />
