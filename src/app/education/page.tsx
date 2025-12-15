@@ -36,6 +36,31 @@ const EducationSection: React.FC = () => {
     ];
 
     const certificationData = [
+
+        {
+            title: "DevOps Professional Certificate",
+            issuer: "PagerDuty",
+            date: "December 2025",
+            skills: ["CI / CD", "Graph Theory", "OOP"],
+            certImage: "/certifications/11.png",
+            fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
+        },
+        {
+            title: "LambdaTest Software Testing Professional Certificate",
+            issuer: "LAMBDATEST",
+            date: "December 2025",
+            skills: ["CI / CD", "Graph Theory", "OOP"],
+            certImage: "/certifications/12.png",
+            fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
+        },
+        {
+            title: "Machine Learning with Python Professional Certificate",
+            issuer: "Annaconda",
+            date: "December 2025",
+            skills: ["CI / CD", "Graph Theory", "OOP"],
+            certImage: "/certifications/13.png",
+            fullViewUrl: "https://drive.google.com/file/d/15EH6757BzDBdAjuKT_5_RCaLBjcFG9-U/view?usp=sharing",
+        },
         {
             title: "Foundations Coding Full-Stack",
             issuer: "Microsoft",
