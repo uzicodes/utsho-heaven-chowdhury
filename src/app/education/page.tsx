@@ -17,7 +17,6 @@ const EducationSection: React.FC = () => {
             degree: "Higher Secondary Certificate (HSC)",
             school: "Cantonment Public College, Saidpur",
             year: "2018 - 2020",
-            skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
             description:
                 "Acquired a strong foundation in Science and Mathematics, fostering analytical and problem-solving skills.",
             logo: "/cpscs.png",
@@ -26,7 +25,6 @@ const EducationSection: React.FC = () => {
             degree: "Bachelors in Computer Science (CS)",
             school: "BRAC University, Dhaka",
             year: "2022 - 2026",
-            skills: ["Data Structures", "Algorithms", "DBMS", "OS", "Compiler Design"],
             description:
                 "Acquired foundational knowledge in computer science, programming languages, and software development principles.",
             logo: "/brac.png",
@@ -229,16 +227,6 @@ const EducationSection: React.FC = () => {
                                         {edu.year}
                                     </p>
                                 </div>
-                                <div className="flex flex-wrap justify-center gap-2">
-                                    {edu.skills.map((skill, i) => (
-                                        <span
-                                            key={i}
-                                            className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
-                                        >
-                                            {skill}
-                                        </span>
-                                    ))}
-                                </div>
                             </div>
                         </motion.div>
                     ))}
@@ -278,12 +266,6 @@ const EducationSection: React.FC = () => {
                             <p className="text-gray-300 text-sm text-center">
                                 "Multimodal Deep Learning for Medical Image Segmentation"
                             </p>
-                            <div className="flex flex-wrap justify-center gap-2">
-                                <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">CNN</span>
-                                <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">Model Optimization</span>
-                                <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"> Fusion</span>
-                                <span className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300">U-net</span>
-                            </div>
                         </div>
                     </motion.div>
                 </div>
