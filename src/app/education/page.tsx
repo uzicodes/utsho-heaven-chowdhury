@@ -46,7 +46,7 @@ const EducationSection: React.FC = () => {
             fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
         },
         {
-            title: "LambdaTest Software Testing Professional Certificate",
+            title: "Software Testing Professional Certificate",
             issuer: "LAMBDATEST",
             date: "December 2025",
             skills: ["CI / CD", "Graph Theory", "OOP"],
@@ -54,7 +54,7 @@ const EducationSection: React.FC = () => {
             fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
         },
         {
-            title: "Machine Learning with Python Professional Certificate",
+            title: "Machine Learning with Python Professional",
             issuer: "Annaconda",
             date: "December 2025",
             skills: ["CI / CD", "Graph Theory", "OOP"],
