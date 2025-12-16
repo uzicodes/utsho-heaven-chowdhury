@@ -17,16 +17,12 @@ const EducationSection: React.FC = () => {
             degree: "Higher Secondary Certificate (HSC)",
             school: "Cantonment Public College, Saidpur",
             year: "2018 - 2020",
-            description:
-                "Acquired a strong foundation in Science and Mathematics, fostering analytical and problem-solving skills.",
             logo: "/cpscs.png",
         },
         {
             degree: "Bachelors in Computer Science (CS)",
             school: "BRAC University, Dhaka",
             year: "2022 - 2026",
-            description:
-                "Acquired foundational knowledge in computer science, programming languages, and software development principles.",
             logo: "/brac.png",
         },
     ];
@@ -34,7 +30,7 @@ const EducationSection: React.FC = () => {
     const certificationData = [
 
         {
-            title: "Agile Project Management Professional Certificate",
+            title: "Agile Project Management Professional",
             issuer: "Atlassian",
             date: "December 2025",
             skills: ["Agile", "Kanban", "Scrum"],
@@ -59,7 +55,7 @@ const EducationSection: React.FC = () => {
             fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
         },
         {
-            title: "Software Testing Professional Certificate",
+            title: "Software Testing Professional",
             issuer: "LAMBDATEST",
             date: "December 2025",
             skills: ["SQA", "Agile Testing", "SDLC"],
@@ -317,7 +313,7 @@ const EducationSection: React.FC = () => {
                             >
                                 {/* Certificate Preview at Top */}
                                 <div className="w-full mb-2">
-                                    <div className="relative w-full h-40 bg-white rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                                    <div className="relative w-full h-40 bg-black rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
                                         <img
                                             src={cert.certImage}
                                             alt={cert.title}
