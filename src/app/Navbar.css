@@ -75,7 +75,7 @@
     display: none;
   }
 }
-
+    color: #43B819; /* Default state */
 .navbar-logo {
   color: white;
   font-weight: bold;
@@ -152,12 +152,12 @@
 
 .navbar-link:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #43B819;
+    color: #F5BE27; /* Hover state */
 }
 
 .navbar-link-active {
   background: rgba(255, 255, 255, 0.15);
-  color: #F5BE27;
+    color: #F5BE27; /* Active state */
 }
 
 .navbar-link-text {
