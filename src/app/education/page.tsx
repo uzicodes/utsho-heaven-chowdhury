@@ -34,6 +34,23 @@ const EducationSection: React.FC = () => {
     const certificationData = [
 
         {
+            title: "Agile Project Management Professional Certificate",
+            issuer: "Atlassian",
+            date: "December 2025",
+            skills: ["Agile", "Kanban", "Scrum"],
+            certImage: "/certifications/15.png",
+            fullViewUrl: "https://drive.google.com/file/d/1D_e54kJLyycpnQEVHbnrcAL7Fei2tdWR/view?usp=sharing",
+        },
+        {
+            title: "Career Essentials in GitHub Professional",
+            issuer: "Github",
+            date: "December 2025",
+            skills: ["Git Version Control", "Github Actions", "Collaboration"],
+            certImage: "/certifications/14.png",
+            fullViewUrl: "https://drive.google.com/file/d/1_v0_WsCgyhb-IArcvEaeMgbHAF_VrIjD/view?usp=sharing",
+        },
+
+        {
             title: "DevOps Professional Certificate",
             issuer: "PagerDuty",
             date: "December 2025",

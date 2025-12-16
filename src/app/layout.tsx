@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         // 2. Added 'bg-black min-h-screen relative' to ensure background is dark and positioned correctly
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black min-h-screen relative`}
