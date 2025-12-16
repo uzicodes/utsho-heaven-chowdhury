@@ -6,6 +6,23 @@ import { useRef, useEffect } from "react";
 import * as React from "react";
 import Navbar from "../Navbar";
 
+import type { SVGProps } from "react";
+
+const Clerk = (props: SVGProps<SVGSVGElement>) => (
+  <svg {...props} fill="none" viewBox="0 0 128 128">
+    <circle cx="64" cy="64" r="20" fill="#fff" />
+    <path
+      fill="#fff"
+      fillOpacity=".4"
+      d="M99.572 10.788c1.999 1.34 2.17 4.156.468 5.858L85.424 31.262c-1.32 1.32-3.37 1.53-5.033.678A35.846 35.846 0 0 0 64 28c-19.882 0-36 16.118-36 36a35.846 35.846 0 0 0 3.94 16.391c.851 1.663.643 3.712-.678 5.033L16.646 100.04c-1.702 1.702-4.519 1.531-5.858-.468C3.974 89.399 0 77.163 0 64 0 28.654 28.654 0 64 0c13.163 0 25.399 3.974 35.572 10.788Z"
+    />
+    <path
+      fill="#fff"
+      d="M100.04 111.354c1.702 1.702 1.531 4.519-.468 5.858C89.399 124.026 77.164 128 64 128c-13.164 0-25.399-3.974-35.572-10.788-2-1.339-2.17-4.156-.468-5.858l14.615-14.616c1.322-1.32 3.37-1.53 5.033-.678A35.847 35.847 0 0 0 64 100a35.846 35.846 0 0 0 16.392-3.94c1.662-.852 3.712-.643 5.032.678l14.616 14.616Z"
+    />
+  </svg>
+);
+
 interface Project {
   title: string;
   description: string;
@@ -14,6 +31,7 @@ interface Project {
   color: string;
   githubLink: string;
   liveLink: string;
+  hasClerk?: boolean;
 }
 
 interface CardProps {
@@ -28,6 +46,7 @@ interface CardProps {
   targetScale: number;
   githubLink: string;
   liveLink: string;
+  hasClerk?: boolean;
 }
 
 const projects: Project[] = [
@@ -52,7 +71,7 @@ const projects: Project[] = [
   {
     title: "Northern Paribahan",
     description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation. Provides users with personalized travel history, route management & secure payments. Robust Admin Control for managing routes, schedules, fares & users.",
-    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,redis,supabase,vercel",
+    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,prisma,supabase,vercel",
     link: "/projects/project-5.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/northern-paribahan",
@@ -61,12 +80,11 @@ const projects: Project[] = [
   {
     title: "Aura Force",
     description: "Robust fitness platform streamlining gym operations & enhancing member experience. Features real-time class scheduling, automated renewals & trainer booking. Includes a secure portal for tracking workouts, BMI & personalized diet plans.",
-    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,mongodb,vercel",
+    skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,prisma,vercel",
     link: "/projects/project-6.png",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/AuraForce",
-    liveLink: "https://auraforce.vercel.app/",
-  },
+    liveLink: "https://auraforce.vercel.app/",    hasClerk: true,  },
   {
     title: "SCREEN BOX",
     description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists.",
@@ -165,6 +183,7 @@ export default function Projects() {
                     targetScale={targetScale}
                     githubLink={project.githubLink}
                     liveLink={project.liveLink}
+                    hasClerk={project.hasClerk}
                   />
                 );
               })}
@@ -188,6 +207,7 @@ function Card({
   targetScale,
   githubLink,
   liveLink,
+  hasClerk,
 }: CardProps) {
   const container = useRef<HTMLDivElement>(null);
   const scale = useTransform(progress, range, [1, targetScale]);
@@ -249,13 +269,18 @@ function Card({
               <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
               {/* Skills Icon Strip */}
-              <div className="mt-2">
+              <div className="mt-2 flex items-center gap-2">
                 <img 
                     src={skills} 
                     alt="Tech Stack" 
                     className="h-6 md:h-8 w-auto" 
                     loading="lazy"
                 />
+                {hasClerk && (
+                  <div className="h-6 w-6 md:h-8 md:w-8 bg-[#1C1C1E] rounded flex items-center justify-center">
+                    <Clerk className="w-4 h-4 md:w-6 md:h-6" />
+                  </div>
+                )}
               </div>
 
             </div>
