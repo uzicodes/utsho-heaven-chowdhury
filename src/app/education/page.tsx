@@ -32,6 +32,7 @@ const EducationSection: React.FC = () => {
         {
             title: "Agile Project Management Professional",
             issuer: "Atlassian",
+            issuerLogo: "/icons/atlassian.svg",
             date: "December 2025",
             skills: ["Agile", "Kanban", "Scrum"],
             certImage: "/certifications/15.png",
@@ -40,6 +41,7 @@ const EducationSection: React.FC = () => {
         {
             title: "Career Essentials in GitHub Professional",
             issuer: "Github",
+            issuerLogo: "/icons/cloud/github.svg",
             date: "December 2025",
             skills: ["Git Version Control", "Github Actions", "Collaboration"],
             certImage: "/certifications/14.png",
@@ -49,6 +51,7 @@ const EducationSection: React.FC = () => {
         {
             title: "DevOps Professional Certificate",
             issuer: "PagerDuty",
+            issuerLogo: "/icons/pagerduty.svg",
             date: "December 2025",
             skills: ["CI / CD", "DevOps", "IaC"],
             certImage: "/certifications/11.png",
@@ -57,6 +60,7 @@ const EducationSection: React.FC = () => {
         {
             title: "Software Testing Professional",
             issuer: "LAMBDATEST",
+            issuerLogo: "/icons/lamdatest.svg",
             date: "December 2025",
             skills: ["SQA", "Agile Testing", "SDLC"],
             certImage: "/certifications/12.png",
@@ -64,7 +68,8 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Machine Learning with Python",
-            issuer: "Annaconda",
+            issuer: "Anaconda",
+            issuerLogo: "/icons/anaconda.svg",
             date: "December 2025",
             skills: ["Data Prep", "Regression", "Pandas"],
             certImage: "/certifications/13.png",
@@ -73,6 +78,7 @@ const EducationSection: React.FC = () => {
         {
             title: "Foundations Coding Full-Stack",
             issuer: "Microsoft",
+            issuerLogo: "/icons/microsoft.svg",
             date: "October 2025",
             skills: ["CI / CD", "Graph Theory", "OOP"],
             certImage: "/certifications/7.jpg",
@@ -81,6 +87,7 @@ const EducationSection: React.FC = () => {
         {
             title: "AI Engineer For Developers Associate",
             issuer: "DataCamp",
+            issuerLogo: "/icons/datacamp.svg",
             date: "August 2025",
             skills: ["LLMs", "MLOPs", "LangChain"],
             certImage: "/certifications/1.jpg",
@@ -89,6 +96,7 @@ const EducationSection: React.FC = () => {
         {
             title: "Introduction Software Engineering",
             issuer: "IBM",
+            issuerLogo: "/icons/ibm.svg",
             date: "October 2025",
             skills: ["SDLC", "JQuery", "Design Patterns"],
             certImage: "/certifications/8.jpg",
@@ -96,7 +104,8 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Docker Foundations Professional",
-            issuer: "LinkedIn",
+            issuer: "Docker",
+            issuerLogo: "/icons/cloud/docker.svg",
             date: "November 2025",
             skills: ["Containerization", "Docker Compose", "Docker Image"],
             certImage: "/certifications/10.png",
@@ -105,6 +114,7 @@ const EducationSection: React.FC = () => {
         {
             title: "OCI Data Science Professional",
             issuer: "Oracle",
+            issuerLogo: "/icons/oracle.svg",
             date: "August 2025",
             skills: ["OCI", "Vault & Conda", "OCI MLOPs"],
             certImage: "/certifications/2.jpg",
@@ -113,6 +123,7 @@ const EducationSection: React.FC = () => {
         {
             title: "AI Engineer for Data Scientists",
             issuer: "DataCamp",
+            issuerLogo: "/icons/datacamp.svg",
             date: "June 2025",
             skills: ["Pytorch", "CNN,RNN", "Llama 3"],
             certImage: "/certifications/3.jpg",
@@ -121,6 +132,7 @@ const EducationSection: React.FC = () => {
         {
             title: "Neural Networks & Deep Learning",
             issuer: "Deep Learning",
+            issuerLogo: "/icons/deeplearning.svg",
             date: "October 2025",
             skills: ["Vectorization", "Shallow NN", "Deep NN"],
             certImage: "/certifications/9.jpg",
@@ -129,6 +141,7 @@ const EducationSection: React.FC = () => {
         {
             title: "Machine Learning with Python",
             issuer: "IBM",
+            issuerLogo: "/icons/ibm.svg",
             date: "Mar 2024",
             skills: ["scikit-learn", "KNN, SVM", "Model Evaluation"],
             certImage: "/certifications/6.jpg",
@@ -137,6 +150,7 @@ const EducationSection: React.FC = () => {
         {
             title: "HTML 5",
             issuer: "University of Michigan",
+            issuerLogo: "/icons/michigan.svg",
             date: "Mar 2024",
             skills: ["Web-page Structure", "Tags & Syntax", "DOM & Hosting "],
             certImage: "/certifications/5.jpg",
@@ -145,6 +159,7 @@ const EducationSection: React.FC = () => {
         {
             title: "AI+ Foundation Certificate",
             issuer: "AI CERTs",
+            issuerLogo: "/icons/aicerts.svg",
             date: "June 2025",
             skills: ["Prompt Engineering", "Ethics", "GAN AI"],
             certImage: "/certifications/4.jpg",
@@ -335,9 +350,18 @@ const EducationSection: React.FC = () => {
                                         {cert.title}
                                     </h3>
 
-                                    <p className="text-sm flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
-                                        {cert.issuer}
-                                    </p>
+                                    <div className="flex items-center justify-center gap-2">
+                                        {cert.issuerLogo && (
+                                            <img 
+                                                src={cert.issuerLogo} 
+                                                alt={`${cert.issuer} logo`} 
+                                                className="w-5 h-5 object-contain"
+                                            />
+                                        )}
+                                        <p className="text-sm colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
+                                            {cert.issuer}
+                                        </p>
+                                    </div>
                                     <div className="flex items-center justify-center text-gray-400 text-xs">
                                         <span className="flex items-center gap-1">
                                             <Calendar className="w-4 h-4" />
