@@ -63,7 +63,7 @@ const EducationSection: React.FC = () => {
             fullViewUrl: "https://drive.google.com/file/d/11Pu-_Oko9oUFc-NZfrH6LP-xjxCWM_am/view?usp=sharing",
         },
         {
-            title: "Machine Learning with Python Professional",
+            title: "Machine Learning with Python",
             issuer: "Annaconda",
             date: "December 2025",
             skills: ["Data Prep", "Regression", "Pandas"],
@@ -176,11 +176,10 @@ const EducationSection: React.FC = () => {
 
     return (
         <section className="min-h-screen relative overflow-hidden py-20 bg-transparent">
-            {/* UPDATED: Registered Aoboshi One font here */}
             <style>{`
                 @font-face {
-                    font-family: 'It-Valtrisse';
-                    src: url('/fonts/it-valtrisse.otf') format('truetype');
+                    font-family: 'TestTiemposText-Medium';
+                    src: url('/TestTiemposText-Medium.otf') format('truetype');
                     font-weight: normal;
                     font-style: normal;
                 }
@@ -328,10 +327,10 @@ const EducationSection: React.FC = () => {
                                 {/* Certificate Details Below */}
                                 <div className="space-y-2 px-1 pb-2 text-center">
                                     
-                                    {/* UPDATED: Applied Aoboshi One font here */}
+                                    {/* UPDATED: Applied TestTiemposText font here */}
                                     <h3 
-                                        className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors" 
-                                        style={{ fontFamily: 'It-Valtrisse', color: '#DB5151', fontSize: '1rem' }}
+                                        className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors tiempos-font" 
+                                        style={{ color: '#DB5151', fontSize: '1rem' }}
                                     >
                                         {cert.title}
                                     </h3>

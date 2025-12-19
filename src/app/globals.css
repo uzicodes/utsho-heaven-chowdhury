@@ -48,6 +48,17 @@ a, button, [role="button"], input, select, textarea {
 .lora-font {
   font-family: 'Lora', serif;
 }
+
+@font-face {
+  font-family: 'TestTiemposText';
+  src: url('/fonts/TestTiemposText-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.tiempos-font {
+  font-family: 'TestTiemposText', serif;
+}
 @font-face {
   font-family: 'Colus';
   src: url('/fonts/colus.otf') format('opentype');
