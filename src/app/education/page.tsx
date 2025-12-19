@@ -15,13 +15,13 @@ const EducationSection: React.FC = () => {
     const educationData = [
         {
             degree: "Higher Secondary Certificate (HSC)",
-            school: "Cantonment Public College, Saidpur",
+            school: "CANTONEMENT PUBLIC COLLEGE, SAIDPUR",
             year: "2018 - 2020",
             logo: "/cpscs.png",
         },
         {
-            degree: "Bachelors in Computer Science (CS)",
-            school: "BRAC University, Dhaka",
+            degree: "Bachelor's in Computer Science (CS)",
+            school: "BRAC UNIVERSITY,  DHAKA",
             year: "2022 - 2026",
             logo: "/brac.png",
         },
@@ -227,11 +227,11 @@ const EducationSection: React.FC = () => {
                                             className="h-16 w-16 object-contain rounded-full bg-white/80 p-2 shadow"
                                             style={{ maxWidth: '64px', maxHeight: '64px' }}
                                         />
-                                        <h3 className="text-xl font-bold colus-font" style={{ color: '#DB5151' }}>
+                                        <h3 className="text-xl font-bold tiempos-font" style={{ color: '#DB5151' }}>
                                             {edu.degree}
                                         </h3>
                                     </div>
-                                    <p className="text-base flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
+                                    <p className="text-base flex items-center justify-center gap-2 tiempos-font" style={{ color: '#73F527' }}>
                                         {edu.school}
                                     </p>
                                     <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -263,20 +263,20 @@ const EducationSection: React.FC = () => {
                                         className="h-14 w-14 object-contain rounded-full bg-white/80 p-2 shadow"
                                         style={{ maxWidth: '56px', maxHeight: '56px' }}
                                     />
-                                    <h3 className="text-lg font-bold colus-font" style={{ color: '#DB5151' }}>
-                                        Thesis
+                                    <h3 className="text-lg font-bold tiempos-font" style={{ color: '#DB5151' }}>
+                                        THESIS
                                     </h3>
                                 </div>
-                                <p className="text-base flex items-center justify-center gap-2 colus-font" style={{ color: '#73F527' }}>
-                                    BRAC University
+                                <p className="text-base flex items-center justify-center gap-2 tiempos-font" style={{ color: '#73F527' }}>
+                                    BRAC UNIVERSITY
                                 </p>
                                 <p className="text-gray-400 flex items-center justify-center gap-2">
                                     <Calendar className="w-4 h-4" />
                                     2026
                                 </p>
                             </div>
-                            <p className="text-gray-300 text-sm text-center">
-                                "Multimodal Deep Learning for Medical Image Segmentation"
+                            <p className="text-gray-300 text-[12.5px] text-center">
+                                Multimodal Deep Learning for Medical Image Segmentation
                             </p>
                         </div>
                     </motion.div>
