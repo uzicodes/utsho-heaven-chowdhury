@@ -28,7 +28,6 @@ const EducationSection: React.FC = () => {
     ];
 
     const certificationData = [
-
         {
             title: "Agile Project Management Professional",
             issuer: "Atlassian",
@@ -164,7 +163,7 @@ const EducationSection: React.FC = () => {
             skills: ["Prompt Engineering", "Ethics", "GAN AI"],
             certImage: "/certifications/4.jpg",
             fullViewUrl: "https://drive.google.com/file/d/1pM-5PcxfzGN7QZhcvL4kwxU_IogNjln4/view?usp=sharing",
-        }
+        },
     ];
 
     const containerVariants: Variants = {
@@ -172,18 +171,18 @@ const EducationSection: React.FC = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
+                staggerChildren: 0.1,
             },
         },
     };
 
     const cardVariants: Variants = {
-        hidden: { y: 50, opacity: 0 },
+        hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 0.6,
+                duration: 0.4,
                 ease: "easeOut",
             },
         },
@@ -208,25 +207,15 @@ const EducationSection: React.FC = () => {
             </div>
 
             <div className="max-w-6xl mx-auto px-4 relative z-10 capitalize">
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-8 mt-0"
-                >
-                </motion.div>
+                <div className="text-center mb-8 mt-0" />
 
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8"
-                >
+                {/* 1. Education Section */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {educationData.map((edu, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            variants={cardVariants}
-                            className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm ${hoveredIndex === index
+                            // FIXED: Changed 'cursor-pointer' to 'cursor-none'
+                            className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm cursor-none ${hoveredIndex === index
                                 ? "border-teal-500 scale-[1.02]"
                                 : "border-blue-400/20"
                                 }`}
@@ -239,7 +228,8 @@ const EducationSection: React.FC = () => {
                                         <img
                                             src={edu.logo}
                                             alt={edu.school + ' logo'}
-                                            className="h-16 w-16 object-contain rounded-full bg-white/80 p-2 shadow"
+                                            // KEPT: Glow effect without frame
+                                            className="h-16 w-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.25)]"
                                             style={{ maxWidth: '64px', maxHeight: '64px' }}
                                         />
                                         <h3 className="text-xl font-bold tiempos-font" style={{ color: '#DB5151' }}>
@@ -255,17 +245,15 @@ const EducationSection: React.FC = () => {
                                     </p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
-                </motion.div>
+                </div>
 
-                {/* Thesis Card Centered Below */}
+                {/* 2. Thesis Card */}
                 <div className="flex justify-center mt-8">
-                    <motion.div
-                        variants={cardVariants}
-                        initial="hidden"
-                        animate="visible"
-                        className={`relative border rounded-xl p-5 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-sm ${hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"}`}
+                    <div
+                        // FIXED: Changed 'cursor-pointer' to 'cursor-none'
+                        className={`relative border rounded-xl p-5 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-sm cursor-none ${hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"}`}
                         onMouseEnter={() => setHoveredIndex(99)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
@@ -275,7 +263,8 @@ const EducationSection: React.FC = () => {
                                     <img
                                         src="/thesis.png"
                                         alt="Thesis logo"
-                                        className="h-14 w-14 object-contain rounded-full bg-white/80 p-2 shadow"
+                                        // KEPT: Glow effect without frame
+                                        className="h-14 w-14 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.25)]"
                                         style={{ maxWidth: '56px', maxHeight: '56px' }}
                                     />
                                     <h3 className="text-lg font-bold tiempos-font" style={{ color: '#DB5151' }}>
@@ -294,10 +283,10 @@ const EducationSection: React.FC = () => {
                                 Multimodal Deep Learning for Medical Image Segmentation
                             </p>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
 
-                {/* Certifications Section */}
+                {/* 3. Certifications Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -313,86 +302,96 @@ const EducationSection: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <motion.div 
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
                         {certificationData.map((cert, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className={`group relative border rounded-xl overflow-hidden bg-gray-900/50 backdrop-blur-sm transition-all duration-300 ${hoveredIndex === (100 + index) ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"
-                                    } p-3`}
+                                variants={cardVariants}
+                                className="group relative"
                                 onMouseEnter={() => setHoveredIndex(100 + index)}
                                 onMouseLeave={() => setHoveredIndex(null)}
                             >
-                                {/* Certificate Preview at Top */}
-                                <div className="w-full mb-2">
-                                    <div className="relative w-full h-40 bg-black rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                                        <img
-                                            src={cert.certImage}
-                                            alt={cert.title}
-                                            className="w-full h-full object-contain"
-                                        />
-                                        <div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
-                                            <Award className="w-3 h-3" />
-                                            Verified
+                                {/* THE GLOWING EFFECT BEHIND THE CARD */}
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur"></div>
+
+                                {/* Main Card Content */}
+                                <div className={`relative h-full border rounded-xl overflow-hidden bg-gray-900 border-gray-800 p-3 flex flex-col`}>
+                                    
+                                    {/* Certificate Preview */}
+                                    <div className="w-full mb-2">
+                                        <div className="relative w-full h-40 bg-black rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                                            <img
+                                                src={cert.certImage}
+                                                alt={cert.title}
+                                                className="w-full h-full object-contain"
+                                            />
+                                            <div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
+                                                <Award className="w-3 h-3" />
+                                                Verified
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                {/* Certificate Details Below */}
-                                <div className="space-y-2 px-1 pb-2 text-center">
-                                    
-                                    {/* UPDATED: Applied TestTiemposText font here */}
-                                    <h3 
-                                        className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors tiempos-font" 
-                                        style={{ color: '#DB5151', fontSize: '1rem' }}
-                                    >
-                                        {cert.title}
-                                    </h3>
 
-                                    <div className="flex items-center justify-center gap-2">
-                                        {cert.issuerLogo && (
-                                            <img 
-                                                src={cert.issuerLogo} 
-                                                alt={`${cert.issuer} logo`} 
-                                                className="w-5 h-5 object-contain"
-                                            />
-                                        )}
-                                        <p className="text-sm colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
-                                            {cert.issuer}
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center justify-center text-gray-400 text-xs">
-                                        <span className="flex items-center gap-1">
-                                            <Calendar className="w-4 h-4" />
-                                            {cert.date}
-                                        </span>
-                                    </div>
-                                    <div className="flex flex-wrap justify-center gap-1 mt-1">
-                                        {cert.skills.map((skill, i) => (
-                                            <span
-                                                key={i}
-                                                className="px-2 py-0.5 text-[0.7rem] rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                                    {/* Text Content */}
+                                    <div className="space-y-2 px-1 pb-2 text-center flex-grow flex flex-col justify-between">
+                                        <div>
+                                            <h3
+                                                className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors tiempos-font"
+                                                style={{ color: '#DB5151', fontSize: '1rem' }}
                                             >
-                                                {skill}
-                                            </span>
-                                        ))}
+                                                {cert.title}
+                                            </h3>
+
+                                            <div className="flex items-center justify-center gap-2">
+                                                {cert.issuerLogo && (
+                                                    <img
+                                                        src={cert.issuerLogo}
+                                                        alt={`${cert.issuer} logo`}
+                                                        className="w-5 h-5 object-contain"
+                                                    />
+                                                )}
+                                                <p className="text-sm colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
+                                                    {cert.issuer}
+                                                </p>
+                                            </div>
+                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-2">
+                                                <span className="flex items-center gap-1">
+                                                    <Calendar className="w-4 h-4" />
+                                                    {cert.date}
+                                                </span>
+                                            </div>
+                                            <div className="flex flex-wrap justify-center gap-1 mt-2">
+                                                {cert.skills.map((skill, i) => (
+                                                    <span
+                                                        key={i}
+                                                        className="px-2 py-0.5 text-[0.7rem] rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                                                    >
+                                                        {skill}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        <a
+                                            href={cert.fullViewUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="mt-3 flex items-center justify-center gap-1 text-xs font-semibold bg-green-500/10 hover:bg-green-500/20 text-green-400 hover:text-green-300 px-3 py-1.5 rounded-full transition-all w-fit mx-auto"
+                                        >
+                                            <ExternalLink className="w-3 h-3" />
+                                            View Full Certificate
+                                        </a>
                                     </div>
-                                    
-                                    {/* Link Button */}
-                                    <a
-                                        href={cert.fullViewUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="mt-3 flex items-center justify-center gap-1 text-xs font-semibold bg-green-500/10 hover:bg-green-500/20 text-green-400 hover:text-green-300 px-3 py-1.5 rounded-full transition-all w-fit mx-auto"
-                                    >
-                                        <ExternalLink className="w-3 h-3" />
-                                        View Full Certificate
-                                    </a>
                                 </div>
                             </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </motion.div >
             </div >
         </section >
