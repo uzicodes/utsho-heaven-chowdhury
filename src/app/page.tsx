@@ -6,6 +6,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
 import BookshelfSection from './BookshelfSection';
+// FIX 1: Import 'Variants' type to solve the red error lines
+import { motion, Variants } from 'framer-motion';
 
 export default function Home() {
   const words = [
@@ -18,37 +20,63 @@ export default function Home() {
 
   const isMobile = useIsMobile(640);
 
+  // --- Animation Settings ---
+  
+  // FIX 2: Added ': Variants' type annotation here
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+    },
+  };
+
+  // FIX 3: Added ': Variants' type annotation here
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { type: "spring", stiffness: 50, damping: 20 } 
+    },
+  };
+
   return (
     <>
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
       </Head>
-      {/* UPDATED: Changed bg-black to bg-transparent so the global stars show through */}
+      
       <div className="relative min-h-screen text-white overflow-hidden bg-transparent">
-        
-        {/* Navbar on top */}
         <Navbar />
 
-        {/* Main Content */}
-        {/* Z-index makes it above the stars */}
         <main className="min-h-screen relative z-10 pt-32">
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex min-h-[65vh] items-center">
+              
               {/* Left Side - Hero Text */}
-              <div className="w-full lg:w-1/2">
+              <motion.div 
+                className="w-full lg:w-1/2"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <div className="space-y-6" style={{marginTop: '-0.20rem'}}>
+                  
                   {/* Welcome badge */}
-                  <div className={`flex ${isMobile ? 'justify-center' : ''}`}>
-                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2 animate__animated animate__fadeInDown animate__delay-1s">
+                  <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
+                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2">
                       <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
                       <span className="text-gray-300 text-xs sm:text-sm font-medium">
-                        Avaiable to Work
+                        Available to Work
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
+
+                  {/* Name Heading */}
                   {isMobile ? (
-                    <h1 className="hero-text font-bold leading-tight text-center mb-2">
+                    <motion.h1 variants={itemVariants} className="hero-text font-bold leading-tight text-center mb-2">
                       <span className="text-white block mb-1 mt-0" style={{ fontSize: '1.25rem' }}>Hello I&apos;m,</span>
                       <span
                         className="hero-name hogers-font"
@@ -68,9 +96,9 @@ export default function Home() {
                       >
                         UTSHO HEAVEN CHOWDHURY
                       </span>
-                    </h1>
+                    </motion.h1>
                   ) : (
-                    <h1 className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                    <motion.h1 variants={itemVariants} className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                       <span
                         className="text-white"
                         style={{
@@ -97,11 +125,12 @@ export default function Home() {
                       >
                         UTSHO HEAVEN CHOWDHURY
                       </span>
-                    </h1>
+                    </motion.h1>
                   )}
+
                   {/* Role badge */}
-                  <div className={`flex ${isMobile ? 'justify-center' : ''}`}>
-                    <div className={`inline-flex items-center gap-2 sm:gap-3 ${isMobile ? 'px-3 py-2' : 'px-4 sm:px-8 py-3 sm:py-5'} rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 ${isMobile ? 'mb-6 sm:mb-8' : 'mb-2'} backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s ${isMobile ? 'min-w-[280px] min-h-[48px]' : 'min-w-[320px] min-h-[64px]'}`} style={!isMobile ? { marginLeft: '-5px' } : {}}>
+                  <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
+                    <div className={`inline-flex items-center gap-2 sm:gap-3 ${isMobile ? 'px-3 py-2' : 'px-4 sm:px-8 py-3 sm:py-5'} rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 ${isMobile ? 'mb-6 sm:mb-8' : 'mb-2'} backdrop-blur-sm ${isMobile ? 'min-w-[280px] min-h-[48px]' : 'min-w-[320px] min-h-[64px]'}`} style={!isMobile ? { marginLeft: '-5px' } : {}}>
                       <i className={`fas fa-rocket text-blue-400 animate-bounce ${isMobile ? 'text-xs' : 'text-sm sm:text-base'}`}></i>
                       <span>
                         <FlipWords
@@ -110,25 +139,47 @@ export default function Home() {
                         />
                       </span>
                     </div>
-                  </div>
-                  {/* Mobile Image - only shown on mobile screens */}
+                  </motion.div>
+
+                  {/* FIX 4: Mobile Image - Force visibility */}
                   {isMobile && (
-                    <div className="flex justify-center -mt-20">
-                      <img src="/DP_removed_BG.png" alt="Profile" width={200} height={200} style={{ maxWidth: '80vw', height: 'auto', borderRadius: '1rem', objectFit: 'cover' }} />
-                    </div>
+                    <motion.div 
+                      // We removed 'variants={itemVariants}' to give it a forced, independent animation
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
+                      className="flex justify-center mt-4 mb-4" // REMOVED -mt-20, added spacing
+                    >
+                      <img 
+                        src="/DP_removed_BG.png" 
+                        alt="Profile" 
+                        width={200} 
+                        height={200} 
+                        style={{ 
+                          maxWidth: '80vw', 
+                          height: 'auto', 
+                          borderRadius: '1rem', 
+                          objectFit: 'cover',
+                          boxShadow: '0 4px 20px rgba(0,0,0,0.5)' // Added shadow so it pops against background
+                        }} 
+                      />
+                    </motion.div>
                   )}
-                  {/* Description under flipping words */}
-                  <div className="mt-4 text-xl text-gray-300 max-w-xl ml-auto lora-font" style={{ marginLeft: '5px' }}>
+
+                  {/* Description */}
+                  <motion.div variants={itemVariants} className="mt-4 text-xl text-gray-300 max-w-xl ml-auto lora-font" style={{ marginLeft: '5px' }}>
                     Full-Stack Developer actively seeking opportunities to integrate intelligent systems into Real-world solutions.
-                  </div>
+                  </motion.div>
+
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 animate__animated animate__fadeInUp animate__delay-2s mt-4">
-                    {/* CV Button */}
-                    <a
+                  <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-2 mt-4">
+                    <motion.a
                       href="https://drive.google.com/file/d/1UiITMC1UhNa9bMl_sRLiXJxsgS8TDPqE/view?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-red-500 to-orange-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#F87171]"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-red-500 to-orange-400 p-0.5 rounded-xl transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#F87171]"
                     >
                       <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-red-400">
                         <span className="relative flex items-center justify-center gap-2 text-white font-medium">
@@ -137,13 +188,14 @@ export default function Home() {
                           <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                         </span>
                       </span>
-                    </a>
+                    </motion.a>
 
-                    {/* Contact Button */}
-                    <a
+                    <motion.a
                       href="https://calendly.com/utsho/30min"
                       target="_blank"
-                      className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                     >
                       <span className="block px-1 sm:px-2 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                         <span className="relative flex items-center justify-end gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
@@ -151,66 +203,81 @@ export default function Home() {
                           <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
                         </span>
                       </span>
-                    </a>
-                  </div>
-                  {/* Social Icons Row */}
-                  <div className="flex gap-2.5 mt-6 items-center">
-                    <button
+                    </motion.a>
+                  </motion.div>
+
+                  {/* Social Icons */}
+                  <motion.div variants={itemVariants} className="flex gap-2.5 mt-6 items-center">
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
                       aria-label="GitHub"
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.open('https://github.com/uzicodes', '_blank')}
                     >
                       <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="rounded-full ml-1" />
-                    </button>
+                    </motion.button>
 
-                    <button
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
                       aria-label="LinkedIn"
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.open('https://www.linkedin.com/in/utsho-heaven-chowdhury/', '_blank')}
                     >
-                      
                       <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="rounded-full ml-1" />
-                    </button>
+                    </motion.button>
 
-                    <button
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
                       aria-label="Email"
                       className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
                       onClick={() => window.location.href = 'mailto:utshozi11@gmail.com'}
                     >
                       <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
-                    </button>
+                    </motion.button>
 
-
-                    {/* Gmail address */}
-                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 animate__animated animate__fadeInDown animate__delay-1s ml-3.9">
+                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-3.9">
                       <span className="text-gray-300 text-xs sm:text-sm font-medium">
                         utshozi11@gmail.com
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
-              {/* Right Side - Glowing Card (hidden on mobile) */}
+              </motion.div>
+
+              {/* Right Side - Glowing Card */}
               {!isMobile && (
                 <div className="w-full lg:w-1/2 relative">
-                  <div 
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.8, x: "-50%", y: 0 }}
+                    animate={{ 
+                      opacity: 1, 
+                      scale: 1, 
+                      x: "-50%",
+                      y: [0, -15, 0],
+                      boxShadow: [
+                        "0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff",
+                        "0 0 25px #7df9ff, 0 0 45px #00bfff, inset 0 0 0 1px #7df9ff",
+                        "0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff"
+                      ]
+                    }}
+                    transition={{ 
+                      duration: 0.8, 
+                      delay: 0.5,
+                      y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                      boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                    }}
                     className="rounded-2xl p-1 absolute"
                     style={{
                       width: '320px', 
                       height: '400px',
                       background: '#7df9ff',
-                      boxShadow: '0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff',
-                      animation: 'glow-pulse 2s ease-in-out infinite alternate',
                       top: '-150px',
                       left: '50%',
-                      transform: 'translateX(-50%)'
                     }}
                   >
                     <div 
                       className="bg-gray-900 rounded-xl h-full flex items-start justify-center pt-1 pb-1 px-1"
-                      style={{
-                        backgroundColor: 'rgba(17, 24, 39, 0.95)'
-                      }}
+                      style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)' }}
                     >
                       <Image 
                         src="/DP_removed_BG.png" 
@@ -224,17 +291,24 @@ export default function Home() {
                         }}
                       />
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               )}
             </div>
           </div>
-          {/* Section - About Me */}
-          <div className="container mx-auto px-6 lg:px-8 mt-20">
+
+          {/* Section - About Me (Scroll Reveal) */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="container mx-auto px-6 lg:px-8 mt-20"
+          >
             <BookshelfSection />
             {require('./about/about').default()}
             <div style={{ height: '2rem', width: '100%' }} />
-          </div>
+          </motion.div>
         </main>
       </div>
     </>
