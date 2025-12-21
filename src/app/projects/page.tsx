@@ -55,7 +55,7 @@ const projects: Project[] = [
     description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,firebase,tailwind,vercel", 
     link: "/projects/project-1.jpg",
-    color: "#0be890",
+    color: "#0be890", // Green
     githubLink: "https://github.com/uzicodes/lamb-falcons",
     liveLink: "https://lamb-falcons.vercel.app/",
   },
@@ -64,7 +64,7 @@ const projects: Project[] = [
     description: "Intuitive web platform that lets you effortlessly discover, customize, and order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking and personalized account features.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-2.jpg",
-    color: "#0be890",
+    color: "#ff6b35", // Orange
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
   },
@@ -73,7 +73,7 @@ const projects: Project[] = [
     description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation. Provides users with personalized travel history, route management & secure payments. Robust Admin Control for managing routes, schedules, fares & users.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,prisma,supabase,vercel",
     link: "/projects/project-5.png",
-    color: "#0be890",
+    color: "#3b82f6", // Blue
     githubLink: "https://github.com/uzicodes/northern-paribahan",
     liveLink: "https://northern-paribahan.vercel.app/",
   },
@@ -82,7 +82,7 @@ const projects: Project[] = [
     description: "Robust fitness platform streamlining gym operations & enhancing member experience. Features real-time class scheduling, automated renewals & trainer booking. Includes a secure portal for tracking workouts, BMI & personalized diet plans.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,prisma,vercel",
     link: "/projects/project-6.png",
-    color: "#0be890",
+    color: "#ef4444", // Red
     githubLink: "https://github.com/uzicodes/AuraForce",
     liveLink: "https://auraforce.vercel.app/",    hasClerk: true,  },
   {
@@ -90,7 +90,7 @@ const projects: Project[] = [
     description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,postgres,vercel",
     link: "/projects/project-3.jpg",
-    color: "#0be890",
+    color: "#a855f7", // Purple
     githubLink: "https://github.com/uzicodes/screen-box",
     liveLink: "https://screen-box.vercel.app/",
   },
@@ -99,7 +99,7 @@ const projects: Project[] = [
     description: "Your essential navigator for effortless travel, providing all Dhaka metro, bus routes, and fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient, and stress-free. No logins required. Google Maps for real-time traffic updates.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,materialui,vercel",
     link: "/projects/project-4.jpg",
-    color: "#0be890",
+    color: "#10b981", // Green
     githubLink: "https://github.com/uzicodes/go-dhaka",
     liveLink: "https://go-dhaka.vercel.app/",
   }
@@ -113,7 +113,6 @@ export default function Projects() {
   });
 
   useEffect(() => {
-    // Add specific styles for 1366x768 resolution
     const style = document.createElement("style");
     style.textContent = `
       @media screen and (width: 1366px) and (height: 768px),
@@ -158,10 +157,7 @@ export default function Projects() {
   }, []);
 
   return (
-    // Updated: Changed bg-slate-950 to bg-transparent so global stars show through
     <div className="bg-transparent relative min-h-screen">
-      
-      {/* Main Content Area */}
       <div className="relative z-10">
         <Navbar />
         <ReactLenis root>
@@ -231,19 +227,24 @@ function Card({
         }}
       >
         {/* Split card design */}
-        <div className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl" style={{ backgroundColor: '#574A49' }}>
+        <motion.div 
+          className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl" 
+          style={{ backgroundColor: '#574A49' }}
+          whileHover={{ 
+            boxShadow: `0 0 30px -5px ${color}40`, 
+            transition: { duration: 0.4 }
+          }}
+        >
           {/* Image section */}
           <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
             <motion.img
               src={url}
               alt={title}
-              // KEPT: object-contain matches your request
               className="w-full h-full object-contain"
               initial={{ scale: 0.85 }}
               whileHover={{ scale: 0.9 }}
               transition={{ duration: 0.4 }}
             />
-            {/* REMOVED: The colored overlay motion.div is deleted from here */}
             
             {/* Project number */}
             <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
@@ -252,8 +253,15 @@ function Card({
           </div>
 
           {/* Content section */}
-          <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between">
-            <div>
+          <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between relative">
+            
+            {/* The Subtle Gradient Overlay in Top Right */}
+            <div 
+              className="absolute inset-0 pointer-events-none opacity-20"
+              style={{ background: `radial-gradient(circle at top right, ${color}, transparent 60%)` }}
+            />
+
+            <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4 md:mb-6">
                 <div
                   className="w-2 h-2 md:w-3 md:h-3 rounded-full"
@@ -265,7 +273,7 @@ function Card({
                 {title}
               </h2>
               
-              {/* Description Text */}
+              {/* Description Text - Black */}
               <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
               {/* Skills Icon Strip */}
@@ -286,10 +294,10 @@ function Card({
             </div>
             
             {/* Links Section */}
-            <div className="mt-4 md:mt-auto pt-4">
+            <div className="mt-4 md:mt-auto pt-4 relative z-10">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
               <div className="flex items-center gap-2">
-                {/* GitHub Link Button */}
+                {/* GitHub Link Button - Green Tint Background */}
                 <motion.a
                   title="GitHub Link"
                   href={githubLink}
@@ -300,15 +308,15 @@ function Card({
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <img src="/github.svg" alt="GitHub" width={20} height={20} className="inline-block align-middle" />
+                  {/* UPDATED: Text is now Light Green for all */}
                   <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color }}
+                    className="text-xs md:text-sm font-medium text-[#0be890]"
                   >
                     Code
                   </span>
                 </motion.a>
                 
-                {/* Live Link Button */}
+                {/* Live Link Button - Blue Tint Background */}
                 <motion.a
                   title="Live Link"
                   href={liveLink}
@@ -319,9 +327,9 @@ function Card({
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <img src="/earth.png" alt="Live" width={20} height={20} className="inline-block align-middle" />
+                  {/* UPDATED: Text is now Light Green for all */}
                   <span
-                    className="text-xs md:text-sm font-medium"
-                    style={{ color }} 
+                    className="text-xs md:text-sm font-medium text-[#0be890]"
                   >
                     Live
                   </span>
@@ -329,7 +337,7 @@ function Card({
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );
