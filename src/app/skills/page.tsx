@@ -4,6 +4,8 @@ import React from "react";
 import Navbar from '@/app/Navbar';
 import { Card, CardContent } from "@/app/components/card";
 import dynamic from "next/dynamic";
+// 1. Import motion and Variants
+import { motion, Variants } from "framer-motion";
 
 const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
 
@@ -24,24 +26,64 @@ interface SkillCategory {
   skills: Skill[];
 }
 
+// --- NEW ANIMATION VARIANTS ---
+
+// 2. Container: Manages the stagger timing
+const containerVariants: Variants = {
+  hidden: { opacity: 1 }, // Keep container visible so perspective works
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15, // Delay between each card flipping
+      delayChildren: 0.3,    // Wait a moment after globe appears
+    },
+  },
+};
+
+// 3. Card: The 3D Flip Down Animation
+const cardVariants: Variants = {
+  hidden: { 
+    opacity: 0,
+    rotateX: -90, // Start rotated 90 degrees backward (flat against "ceiling")
+    y: -50,       // Start slightly above final position
+    scale: 0.9
+  },
+  visible: { 
+    opacity: 1, 
+    rotateX: 0,   // Rotate down to face forward (0 degrees)
+    y: 0,
+    scale: 1,
+    // Use a spring transition for a physical "swinging" feel
+    transition: { 
+      type: "spring", 
+      stiffness: 120, 
+      damping: 15,
+      mass: 1.1 
+    } 
+  },
+};
+
 const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
-  <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
-    <CardContent className="p-6 relative z-10">
-      <div className="flex items-center justify-center gap-4 mb-6 w-full">
-        <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center colus-font">
-          {title}
-        </h3>
-      </div>
-      <div className="flex flex-wrap gap-2 justify-center w-full">
-        {skills.map((skill, index) => (
-          <span key={index + 1}>
-            {skill.icon}
-          </span>
-        ))}
-      </div>
-    </CardContent>
-  </Card>
+  // The card itself gets the 3D flip variant
+  <motion.div variants={cardVariants} className="h-full" style={{ transformStyle: 'preserve-3d' }}>
+    <Card className="group h-full relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+      <CardContent className="p-6 relative z-10">
+        <div className="flex items-center justify-center gap-4 mb-6 w-full">
+          <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center colus-font">
+            {title}
+          </h3>
+        </div>
+        <div className="flex flex-wrap gap-2 justify-center w-full">
+          {skills.map((skill, index) => (
+            <span key={index + 1}>
+              {skill.icon}
+            </span>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  </motion.div>
 );
 
 const SkillsSection: React.FC = () => {
@@ -121,14 +163,40 @@ const SkillsSection: React.FC = () => {
   ];
 
   return (
-    // Updated: Removed bg-[#04081A] so stars show through
     <main className="pt-15 lg:pt-0 text-white min-h-screen bg-transparent relative z-10">
       
       <section className="container mx-auto px-4 py-11 relative z-10">
-        <div className="flex justify-center items-center ">
+        
+        {/* Animated Globe Container: Slow rotation and float */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+          animate={{ 
+            opacity: 1, 
+            scale: 1, 
+            rotate: 0,
+            y: [0, -10, 0] // Gentle floating effect
+          }}
+          transition={{ 
+            opacity: { duration: 1.2 },
+            scale: { duration: 1.2, type: "spring" },
+            rotate: { duration: 1.2, type: "spring" },
+            y: { duration: 5, repeat: Infinity, ease: "easeInOut" } // Continuous float
+          }}
+          className="flex justify-center items-center"
+        >
           <IconCloudDemo />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </motion.div>
+
+        {/* Animated Grid Container */}
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          // IMPORTANT: Add perspective to the parent so the 3D rotation looks real
+          style={{ perspective: "1000px" }} 
+        >
           {skillCategories.map((category, index) => (
             <SkillCard
               key={index}
@@ -137,7 +205,7 @@ const SkillsSection: React.FC = () => {
               color={category.color}
             />
           ))}
-        </div>
+        </motion.div>
       </section>
       <style jsx>{`
         @keyframes shimmer {
@@ -156,12 +224,8 @@ const SkillsSection: React.FC = () => {
   );
 };
 
-// Wrapper page to include Navbar and SkillsSection
 const SkillsPage = () => (
-  // Updated: Changed bg-black to bg-transparent so global stars show through
   <div className="relative min-h-screen text-white overflow-hidden bg-transparent">
-    
-    {/* Navbar & Content stays on top (z-10) */}
     <div className="relative z-10">
       <Navbar />
       <SkillsSection />
