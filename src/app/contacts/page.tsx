@@ -6,6 +6,7 @@ const Form = dynamic(() => import("./Form"), { ssr: false });
 import Navbar from "../Navbar";
 import Head from "next/head";
 import { MapPin } from "lucide-react";
+import { motion, Variants } from "framer-motion";
 
 interface ContactItem {
   icon: React.ReactNode;
@@ -17,21 +18,18 @@ interface ContactItem {
 export default function Contact() {
   const contactItems: ContactItem[] = [
     {
-      // UPDATED: Changed w-6 h-6 to w-8 h-8
       icon: <img src="https://skillicons.dev/icons?i=gmail" alt="Email" className="w-8 h-8" />,
       label: "Email",
       link: "mailto:utshozi11@gmail.com",
       text: "utshozi11@gmail.com",
     },
     {
-      // UPDATED: Changed w-6 h-6 to w-8 h-8
       icon: <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" className="w-8 h-8" />,
       label: "Linkedin",
       link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
       text: "Connect",
     },
     {
-      // UPDATED: Changed w-6 h-6 to w-8 h-8
       icon: <img src="https://skillicons.dev/icons?i=github" alt="GitHub" className="w-8 h-8" />,
       label: "Github",
       link: "https://github.com/uzicodes",
@@ -66,6 +64,24 @@ export default function Contact() {
     },
   ];
 
+  const leftVariant: Variants = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { 
+      x: 0, 
+      opacity: 1, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
+  };
+
+  const rightVariant: Variants = {
+    hidden: { x: 100, opacity: 0 },
+    visible: { 
+      x: 0, 
+      opacity: 1, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
+  };
+
   return (
     <div className="relative min-h-screen bg-transparent">
       <Head>
@@ -88,8 +104,15 @@ export default function Contact() {
           <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
-                {/* Contact Info */}
-                <div className="space-y-8 flex flex-col justify-center items-center h-full">
+                
+                {/* Contact Info (Left Animation) */}
+                <motion.div 
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={leftVariant}
+                  className="space-y-8 flex flex-col justify-center items-center h-full"
+                >
                   <div className="space-y-5 lg:pr-0">
                     <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Lora, serif', marginTop: '48px' }}>Get in Touch</h3>
                     <div className="mb-7.5"></div>
@@ -104,7 +127,6 @@ export default function Contact() {
                               className="contact-social-icon-link"
                               style={{ display: 'inline-block' }}
                             >
-
                               <div className="bg-pink-500/10 p-2 rounded-lg contact-social-icon">
                                 {item.icon}
                               </div>
@@ -133,11 +155,19 @@ export default function Contact() {
                       ))}
                     </div>
                   </div>
-                </div>
-                {/* Form on the right side */}
-                <div className="flex justify-center items-center w-full lg:justify-center">
+                </motion.div>
+
+                {/* Form on the right side (Right Animation) */}
+                <motion.div 
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={rightVariant}
+                  className="flex justify-center items-center w-full lg:justify-center"
+                >
                   <Form />
-                </div>
+                </motion.div>
+
               </div>
             </div>
           </section>
