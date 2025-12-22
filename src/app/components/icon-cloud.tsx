@@ -39,7 +39,7 @@ export const cloudProps: CloudProps = {
     depth: 1,
     wheelZoom: false,
     imageScale: 2,
-    activeCursor: "default",
+    activeCursor: "none",
     tooltip: "native",
     initial: [0.1, -0.1],
     clickToFront: 500,
