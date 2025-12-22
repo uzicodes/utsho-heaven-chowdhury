@@ -3,32 +3,29 @@
 import Image from "next/image";
 const HeroImg = "/about.png";
 import React from "react";
-// 1. IMPORT VARIANTS
 import { motion, Variants } from "framer-motion";
 
 export default function About(): React.ReactElement {
   
-  // --- Animation Variants (Typed Correctly) ---
-
-  // 1. Image Animation: Blur & Scale (No Cropping)
+  // Image Animation: Blur & Scale 
   const imageRevealVariant: Variants = {
     hidden: { 
       opacity: 0, 
       scale: 0.95, 
-      filter: "blur(10px)" // Starts blurry
+      filter: "blur(10px)" // starts blurry
     },
     visible: { 
       opacity: 1, 
       scale: 1, 
-      filter: "blur(0px)", // Becomes clear
+      filter: "blur(0px)", // becomes clear
       transition: { 
         duration: 1, 
-        ease: "easeOut" // Standard easing to fix TS error
+        ease: "easeOut"
       } 
     }
   };
 
-  // 2. Text Container
+  // Text Container
   const textContainerVariant: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,7 +34,7 @@ export default function About(): React.ReactElement {
     }
   };
 
-  // 3. Text Item
+  // Text Item
   const textItemVariant: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -47,7 +44,7 @@ export default function About(): React.ReactElement {
     }
   };
 
-  // 4. Border Animation
+  // Border Animation
   const borderVariant: Variants = {
     hidden: { height: 0, opacity: 0 },
     visible: { 

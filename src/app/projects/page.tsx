@@ -254,9 +254,6 @@ function Card({
 
           {/* Content section */}
           <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between relative">
-            
-            {/* Top Right Gradient Overlay REMOVED HERE */}
-
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4 md:mb-6">
                 <div
@@ -293,7 +290,7 @@ function Card({
             <div className="mt-4 md:mt-auto pt-4 relative z-10">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
               <div className="flex items-center gap-2">
-                {/* GitHub Link Button - Green Tint Background */}
+                {/* GitHub Button - Green Tint Background */}
                 <motion.a
                   title="GitHub Link"
                   href={githubLink}
@@ -304,7 +301,6 @@ function Card({
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <img src="/github.svg" alt="GitHub" width={20} height={20} className="inline-block align-middle" />
-                  {/* UPDATED: Text is now Light Green for all */}
                   <span
                     className="text-xs md:text-sm font-medium text-[#0be890]"
                   >
@@ -312,7 +308,7 @@ function Card({
                   </span>
                 </motion.a>
                 
-                {/* Live Link Button - Blue Tint Background */}
+                {/* Live Button - Blue Tint Background */}
                 <motion.a
                   title="Live Link"
                   href={liveLink}
@@ -323,7 +319,6 @@ function Card({
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <img src="/earth.png" alt="Live" width={20} height={20} className="inline-block align-middle" />
-                  {/* UPDATED: Text is now Light Green for all */}
                   <span
                     className="text-xs md:text-sm font-medium text-[#0be890]"
                   >

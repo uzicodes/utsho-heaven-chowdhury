@@ -4,7 +4,6 @@ import React from "react";
 import Navbar from '@/app/Navbar';
 import { Card, CardContent } from "@/app/components/card";
 import dynamic from "next/dynamic";
-// 1. Import motion and Variants
 import { motion, Variants } from "framer-motion";
 
 const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
@@ -26,34 +25,31 @@ interface SkillCategory {
   skills: Skill[];
 }
 
-// --- NEW ANIMATION VARIANTS ---
-
-// 2. Container: Manages the stagger timing
+// Globe Animation
 const containerVariants: Variants = {
-  hidden: { opacity: 1 }, // Keep container visible so perspective works
+  hidden: { opacity: 1 }, 
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15, // Delay between each card flipping
-      delayChildren: 0.3,    // Wait a moment after globe appears
+      staggerChildren: 0.15, 
+      delayChildren: 0.3,    
     },
   },
 };
 
-// 3. Card: The 3D Flip Down Animation
+// Card: 3D Flip Down Animation
 const cardVariants: Variants = {
   hidden: { 
     opacity: 0,
-    rotateX: -90, // Start rotated 90 degrees backward (flat against "ceiling")
-    y: -50,       // Start slightly above final position
+    rotateX: -90, 
+    y: -50,       
     scale: 0.9
   },
   visible: { 
     opacity: 1, 
-    rotateX: 0,   // Rotate down to face forward (0 degrees)
+    rotateX: 0,   
     y: 0,
     scale: 1,
-    // Use a spring transition for a physical "swinging" feel
     transition: { 
       type: "spring", 
       stiffness: 120, 
@@ -64,7 +60,6 @@ const cardVariants: Variants = {
 };
 
 const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
-  // The card itself gets the 3D flip variant
   <motion.div variants={cardVariants} className="h-full" style={{ transformStyle: 'preserve-3d' }}>
     <Card className="group h-full relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
@@ -167,14 +162,13 @@ const SkillsSection: React.FC = () => {
       
       <section className="container mx-auto px-4 py-11 relative z-10">
         
-        {/* Animated Globe Container: Slow rotation and float */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
           animate={{ 
             opacity: 1, 
             scale: 1, 
             rotate: 0,
-            y: [0, -10, 0] // Gentle floating effect
+            y: [0, -10, 0] 
           }}
           transition={{ 
             opacity: { duration: 1.2 },
@@ -194,7 +188,6 @@ const SkillsSection: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          // IMPORTANT: Add perspective to the parent so the 3D rotation looks real
           style={{ perspective: "1000px" }} 
         >
           {skillCategories.map((category, index) => (

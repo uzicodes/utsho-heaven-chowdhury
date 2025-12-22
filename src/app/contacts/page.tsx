@@ -105,7 +105,7 @@ export default function Contact() {
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 
-                {/* Contact Info (Left Animation) */}
+                {/* Contact Info (Left) */}
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
@@ -157,7 +157,7 @@ export default function Contact() {
                   </div>
                 </motion.div>
 
-                {/* Form on the right side (Right Animation) */}
+                {/* Form on the right side (Right) */}
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
@@ -167,7 +167,6 @@ export default function Contact() {
                 >
                   <Form />
                 </motion.div>
-
               </div>
             </div>
           </section>

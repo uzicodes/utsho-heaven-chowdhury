@@ -209,12 +209,11 @@ const EducationSection: React.FC = () => {
             <div className="max-w-6xl mx-auto px-4 relative z-10 capitalize">
                 <div className="text-center mb-8 mt-0" />
 
-                {/* 1. Education Section */}
+                {/* Education Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {educationData.map((edu, index) => (
                         <div
                             key={index}
-                            // FIXED: Changed 'cursor-pointer' to 'cursor-none'
                             className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm cursor-none ${hoveredIndex === index
                                 ? "border-teal-500 scale-[1.02]"
                                 : "border-blue-400/20"
@@ -228,7 +227,6 @@ const EducationSection: React.FC = () => {
                                         <img
                                             src={edu.logo}
                                             alt={edu.school + ' logo'}
-                                            // KEPT: Glow effect without frame
                                             className="h-16 w-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.25)]"
                                             style={{ maxWidth: '64px', maxHeight: '64px' }}
                                         />
@@ -249,10 +247,9 @@ const EducationSection: React.FC = () => {
                     ))}
                 </div>
 
-                {/* 2. Thesis Card */}
+                {/* Thesis Card */}
                 <div className="flex justify-center mt-8">
                     <div
-                        // FIXED: Changed 'cursor-pointer' to 'cursor-none'
                         className={`relative border rounded-xl p-5 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-sm cursor-none ${hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"}`}
                         onMouseEnter={() => setHoveredIndex(99)}
                         onMouseLeave={() => setHoveredIndex(null)}
@@ -263,7 +260,6 @@ const EducationSection: React.FC = () => {
                                     <img
                                         src="/thesis.png"
                                         alt="Thesis logo"
-                                        // KEPT: Glow effect without frame
                                         className="h-14 w-14 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.25)]"
                                         style={{ maxWidth: '56px', maxHeight: '56px' }}
                                     />
@@ -286,7 +282,7 @@ const EducationSection: React.FC = () => {
                     </div>
                 </div>
 
-                {/* 3. Certifications Section */}
+                {/* Certifications Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -6,7 +6,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
 import BookshelfSection from './BookshelfSection';
-// FIX 1: Import 'Variants' type to solve the red error lines
 import { motion, Variants } from 'framer-motion';
 
 export default function Home() {
@@ -20,9 +19,7 @@ export default function Home() {
 
   const isMobile = useIsMobile(640);
 
-  // --- Animation Settings ---
-  
-  // FIX 2: Added ': Variants' type annotation here
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -31,7 +28,7 @@ export default function Home() {
     },
   };
 
-  // FIX 3: Added ': Variants' type annotation here
+
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -141,10 +138,9 @@ export default function Home() {
                     </div>
                   </motion.div>
 
-                  {/* FIX 4: Mobile Image - Force visibility */}
+                  {/* Mobile Image - visibility */}
                   {isMobile && (
                     <motion.div 
-                      // We removed 'variants={itemVariants}' to give it a forced, independent animation
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
@@ -160,7 +156,7 @@ export default function Home() {
                           height: 'auto', 
                           borderRadius: '1rem', 
                           objectFit: 'cover',
-                          boxShadow: '0 4px 20px rgba(0,0,0,0.5)' // Added shadow so it pops against background
+                          boxShadow: '0 4px 20px rgba(0,0,0,0.5)' 
                         }} 
                       />
                     </motion.div>
@@ -297,7 +293,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Section - About Me (Scroll Reveal) */}
+          {/* Section - About Me (Scroll Reveal Animation) */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
