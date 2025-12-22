@@ -255,11 +255,7 @@ function Card({
           {/* Content section */}
           <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between relative">
             
-            {/* The Subtle Gradient Overlay in Top Right */}
-            <div 
-              className="absolute inset-0 pointer-events-none opacity-20"
-              style={{ background: `radial-gradient(circle at top right, ${color}, transparent 60%)` }}
-            />
+            {/* Top Right Gradient Overlay REMOVED HERE */}
 
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4 md:mb-6">
