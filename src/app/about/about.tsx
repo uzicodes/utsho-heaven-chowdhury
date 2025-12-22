@@ -135,13 +135,13 @@ export default function About(): React.ReactElement {
                 </blockquote>
                 <br></br>
 
-                <motion.p variants={textItemVariant} className="text-white lora-font">{`Let's not forget-`}</motion.p>
+                <motion.p variants={textItemVariant} className="text-white cairo-font">{`Let's not forget-`}</motion.p>
                 <br></br>
                 
                 {/* Pop-in animation for the code text */}
                 <motion.p 
                   variants={textItemVariant}
-                  className="text-xl flipwords-font" 
+                  className="text-xl cairo-font" 
                   style={{ color: '#CF4E5B' }}
                 >
                   {`it all started with </> `}
@@ -150,6 +150,7 @@ export default function About(): React.ReactElement {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ type: "spring", stiffness: 200, delay: 1.0 }}
                     style={{ color: '#5DCF4E', display: 'inline-block' }}
+                    className="cairo-font"
                   >
                     "Hello World"
                   </motion.span>

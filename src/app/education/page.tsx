@@ -333,7 +333,7 @@ const EducationSection: React.FC = () => {
                                             />
                                             <div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
                                                 <Award className="w-3 h-3" />
-                                                Verified
+                                                
                                             </div>
                                         </div>
                                     </div>
