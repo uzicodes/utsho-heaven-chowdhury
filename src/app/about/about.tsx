@@ -145,7 +145,7 @@ export default function About(): React.ReactElement {
                   <motion.span 
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ type: "spring", stiffness: 200, delay: 1.0 }}
+                    transition={{ type: "spring", stiffness: 200, delay: 0.5 }}
                     style={{ color: '#5DCF4E', display: 'inline-block' }}
                     className="cairo-font"
                   >

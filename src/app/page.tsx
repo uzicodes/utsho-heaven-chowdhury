@@ -203,7 +203,7 @@ export default function Home() {
                   </motion.div>
 
                   {/* Social Icons */}
-                  <motion.div variants={itemVariants} className="flex gap-2.5 mt-6 items-center">
+                  <motion.div variants={itemVariants} className="flex gap-1.1 mt-6 items-center">
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       aria-label="GitHub"
@@ -231,7 +231,7 @@ export default function Home() {
                       <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
                     </motion.button>
 
-                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-3.9">
+                    <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-4.45">
                       <span className="text-gray-300 text-xs sm:text-sm font-medium">
                         utshozi11@gmail.com
                       </span>
