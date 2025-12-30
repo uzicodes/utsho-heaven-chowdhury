@@ -253,20 +253,13 @@ function Card({
           </div>
 
           {/* Content section */}
-          <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between relative">
+          <div className="w-full md:w-[45%] p-6 pt-2 md:p-8 md:pt-4 lg:p-10 lg:pt-6 flex flex-col justify-between relative">
             <div className="relative z-10">
-              <div className="flex items-center gap-3 mb-4 md:mb-6">
-                <div
-                  className="w-2 h-2 md:w-3 md:h-3 rounded-full"
-                  style={{ backgroundColor: color }}
-                />
-                <div className="h-[1px] w-12 md:w-20 bg-gray-600" />
-              </div>
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
                 {title}
               </h2>
               
-              {/* Description Text - Black */}
+              {/* Description Text */}
               <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
               {/* Skills Icon Strip */}
@@ -290,7 +283,7 @@ function Card({
             <div className="mt-4 md:mt-auto pt-4 relative z-10">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
               <div className="flex items-center gap-2">
-                {/* GitHub Button - Green Tint Background */}
+                {/* GitHub Button - Green BG */}
                 <motion.a
                   title="GitHub Link"
                   href={githubLink}

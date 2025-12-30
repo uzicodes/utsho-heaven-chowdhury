@@ -9,22 +9,11 @@
 
 
 
-@font-face {
-  font-family: 'Fluneta';
-  src: url('/fonts/fluneta.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.fluneta-font {
-  font-family: 'Fluneta', sans-serif;
-}
-
 /* Hide default cursor on all interactive elements so only custom cursor shows */
 a, button, [role="button"], input, select, textarea {
   cursor: none !important;
 }
-/* Social icon hover animation (migrated from contacts-socials.css) */
+/* Social icon hover animation */
 .contact-social-icon {
   transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
 }
