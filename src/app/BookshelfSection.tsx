@@ -68,7 +68,7 @@ const BookshelfSection = () => {
     <section className="min-h-screen flex items-center justify-center py-20 px-4">
       <div className="max-w-6xl w-full">
         <div className="text-center mb-16">
-          <p className="text-3xl md:text-4xl fluneta-font" style={{ color: '#DEB34B' }}>
+          <p className="text-3xl md:text-4xl cairo-font" style={{ color: '#DEB34B' }}>
             handpicked my Favorite Books
           </p>
         </div>
