@@ -71,9 +71,11 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
         </div>
         <div className="flex flex-wrap gap-2 justify-center w-full [&_img]:h-8 [&_img]:w-auto md:[&_img]:h-12">
           {skills.map((skill, index) => (
-            <span key={index + 1}>
-              {skill.icon}
-            </span>
+            <div key={index} className="relative group/skill flex items-center justify-center">
+              <div className="transition-transform duration-300 group-hover/skill:-translate-y-1 cursor-none">
+                {skill.icon}
+              </div>
+            </div>
           ))}
         </div>
       </CardContent>
