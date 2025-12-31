@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface Book {
   id: number;
@@ -67,96 +68,137 @@ const BookshelfSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center py-20 px-4">
       <div className="max-w-6xl w-full">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center mb-16"
+        >
           <p className="text-3xl md:text-4xl cairo-font" style={{ color: '#DEB34B' }}>
             handpicked my Favorite Books
           </p>
-        </div>
+        </motion.div>
 
         {/* Bookshelf */}
         <div className="relative">
 
           {/* Books Container */}
           {/* Adjusted margin-top to 0 since removed the top shelf space */}
-          <div
+          <motion.div
             className="flex justify-center items-end gap-1 pb-0 perspective-1000" 
             style={{ perspective: "2000px", marginTop: "0" }} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.1,
+                  delayChildren: 0.2
+                }
+              }
+            }}
           >
             {books.map((book, index) => (
-              <div
+              <motion.div
                 key={book.id}
-                className="relative transition-all duration-500 ease-out"
-                style={{
-                  transformStyle: "preserve-3d",
-                  transform:
-                    hoveredBook === book.id
-                      ? "translateZ(100px) translateY(-40px) rotateY(-25deg)"
-                      : "translateZ(0) translateY(0) rotateY(0)",
-                  zIndex: hoveredBook === book.id ? 50 : 10 - index,
+                variants={{
+                  hidden: { y: -100, opacity: 0 },
+                  visible: { 
+                    y: 0, 
+                    opacity: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 120,
+                      damping: 14
+                    }
+                  }
                 }}
-                onMouseEnter={() => setHoveredBook(book.id)}
-                onMouseLeave={() => setHoveredBook(null)}
+                style={{
+                  zIndex: hoveredBook === book.id ? 50 : 10 - index,
+                  transformStyle: "preserve-3d",
+                }}
               >
-                {/* Book Spine (initial view) */}
                 <div
-                  className={`relative w-12 h-80 bg-gradient-to-r ${book.spineColor} rounded-sm shadow-xl cursor-pointer transition-all duration-500`}
+                  className="relative transition-all duration-500 ease-out"
                   style={{
-                    opacity: hoveredBook === book.id ? 0 : 1,
-                    transform: hoveredBook === book.id ? "rotateY(90deg)" : "rotateY(0)",
-                  }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20 rounded-sm" />
-
-                  {/* Spine Text */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                  </div>
-
-                  {/* Spine Details */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent" />
-                </div>
-
-                {/* Book Cover (hover view) */}
-                <div
-                  className="absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-500"
-                  style={{
-                    width: "240px",
-                    height: "360px",
-                    opacity: hoveredBook === book.id ? 1 : 0,
+                    transformStyle: "preserve-3d",
                     transform:
                       hoveredBook === book.id
-                        ? "translateZ(0px) rotateY(0deg) scale(1)"
-                        : "translateZ(-50px) rotateY(-90deg) scale(0.8)",
-                    transformStyle: "preserve-3d",
-                    pointerEvents: hoveredBook === book.id ? "auto" : "none",
+                        ? "translateZ(100px) translateY(-40px) rotateY(-25deg)"
+                        : "translateZ(0) translateY(0) rotateY(0)",
                   }}
+                  onMouseEnter={() => setHoveredBook(book.id)}
+                  onMouseLeave={() => setHoveredBook(null)}
                 >
-                  <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl">
-                    <Image
-                      src={book.cover}
-                      alt={`${book.title} by ${book.author}`}
-                      className="w-full h-full object-cover"
-                      fill
-                      sizes="(max-width: 600px) 100vw, 240px"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/30" />
+                  {/* Book Spine (initial view) */}
+                  <div
+                    className={`relative w-12 h-80 bg-gradient-to-r ${book.spineColor} rounded-sm shadow-xl cursor-pointer transition-all duration-500`}
+                    style={{
+                      opacity: hoveredBook === book.id ? 0 : 1,
+                      transform: hoveredBook === book.id ? "rotateY(90deg)" : "rotateY(0)",
+                    }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20 rounded-sm" />
 
-                    {/* Book Info Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4">
-                      <h3 className="text-white font-bold text-lg mb-1">
-                        {book.title}
-                      </h3>
-                      <p className="text-white/80 text-sm">{book.author}</p>
+                    {/* Spine Text */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                    </div>
+
+                    {/* Spine Details */}
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent" />
+                  </div>
+
+                  {/* Book Cover (hover view) */}
+                  <div
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-500"
+                    style={{
+                      width: "240px",
+                      height: "360px",
+                      opacity: hoveredBook === book.id ? 1 : 0,
+                      transform:
+                        hoveredBook === book.id
+                          ? "translateZ(0px) rotateY(0deg) scale(1)"
+                          : "translateZ(-50px) rotateY(-90deg) scale(0.8)",
+                      transformStyle: "preserve-3d",
+                      pointerEvents: hoveredBook === book.id ? "auto" : "none",
+                    }}
+                  >
+                    <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl">
+                      <Image
+                        src={book.cover}
+                        alt={`${book.title} by ${book.author}`}
+                        className="w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 600px) 100vw, 240px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/30" />
+
+                      {/* Book Info Overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4">
+                        <h3 className="text-white font-bold text-lg mb-1">
+                          {book.title}
+                        </h3>
+                        <p className="text-white/80 text-sm">{book.author}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Bottom Shelf */}
-          <div className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl">
-          </div>
+          <motion.div 
+            className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl"
+            initial={{ scaleX: 0, opacity: 0 }}
+            whileInView={{ scaleX: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+          >
+          </motion.div>
         </div>
 
 
