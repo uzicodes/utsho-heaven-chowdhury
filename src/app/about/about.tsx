@@ -102,17 +102,12 @@ export default function About(): React.ReactElement {
               viewport={{ once: true, margin: "-50px" }}
             >
               <motion.p variants={textItemVariant} className="text-white lora-font">
-                {`A passionate Full-Stack developer
-                specializing in creating innovative Web/Software solutions with a focus on 
-                user-friendly interfaces & scalabilty.`}
-                {` I'm dedicated to simplifying development workflows.`}
+                {`A passionate developer dedicated to building innovative, scalable web solutions that prioritize the user experience. I aim to bridge the gap between complex software architecture & intuitive design, always with a focus on simplifying development workflows.`}
+                {` My journey began with a fascination for how things work under the hood, leading me to explore various programming languages, architectures & frameworks over the years.`}
               </motion.p>
               
               <motion.p variants={textItemVariant} className="text-white lora-font">
-                {`My focus is on making development faster, easier, and
-                accessible to all developers. Currently, I'm focusing into
-                backend development a bit more to create
-                seamless & secure web applications. Iam diving more into the DevOps culture more to excel my expertise in the cloud operations.`}
+                {`To broaden my impact, I am currently deepening my expertise in Backend development and DevOps. I am diving into cloud operations and secure architecture to master the full application lifecycle, ensuring every project I build is seamless, secure, and optimized for the modern web.`}
               </motion.p>
 
               <div className="pt-6">
@@ -124,7 +119,7 @@ export default function About(): React.ReactElement {
                   />
                   
                   <motion.p variants={textItemVariant} className="text-white lora-font">
-                    {`I' am a lifelong learner and a dedicated supporter of the developers community, committed to creating new & effective tools & ideas to empower developers. I am championing new technologies to help developers build better & more efficient applications. I want to share this knowledge and experience with my community, so that we can all move forward together.`}
+                    {`Beyond code, I am a lifelong learner and an active supporter of the developer community. I am committed to sharing knowledge and building tools that empower others to innovate, believing that the best way to move the industry forward is by growing together.`}
                   </motion.p>
 
                   <div className="mt-6 space-y-3">
@@ -133,7 +128,6 @@ export default function About(): React.ReactElement {
                 <br></br>
 
                 <motion.p variants={textItemVariant} className="text-white cairo-font">{`Let's not forget-`}</motion.p>
-                <br></br>
                 
                 {/* Pop-in animation for the code text */}
                 <motion.p 
