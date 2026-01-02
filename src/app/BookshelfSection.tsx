@@ -84,7 +84,6 @@ const BookshelfSection = () => {
         <div className="relative">
 
           {/* Books Container */}
-          {/* Adjusted margin-top to 0 since removed the top shelf space */}
           <motion.div
             className="flex justify-center items-end gap-1 pb-0 perspective-1000" 
             style={{ perspective: "2000px", marginTop: "0" }} 
@@ -132,7 +131,7 @@ const BookshelfSection = () => {
                   onMouseEnter={() => setHoveredBook(book.id)}
                   onMouseLeave={() => setHoveredBook(null)}
                 >
-                  {/* Book Spine (initial view) */}
+                  {/* Book Spine */}
                   <div
                     className={`relative w-12 h-80 bg-gradient-to-r ${book.spineColor} rounded-sm shadow-xl cursor-pointer transition-all duration-500`}
                     style={{
@@ -151,7 +150,7 @@ const BookshelfSection = () => {
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-black/40 to-transparent" />
                   </div>
 
-                  {/* Book Cover (hover view) */}
+                  {/* Book Cover Hover View */}
                   <div
                     className="absolute bottom-0 left-1/2 -translate-x-1/2 transition-all duration-500"
                     style={{
