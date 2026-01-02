@@ -134,7 +134,7 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      title: "Tools & Techs",
+      title: "Tools",
       color: "text-pink-400",
       skills: [
         { name: "Git", icon: <img src="/icons/tools/git.svg" alt="Git" width={45} height={45}/> },
@@ -146,7 +146,7 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      title: "UI/UX",
+      title: "UI / UX",
       color: "text-yellow-400",
       skills: [
         { name: "Figma", icon: <img src="/icons/ui/figma.svg" alt="Figma" width={46} height={46} /> },
