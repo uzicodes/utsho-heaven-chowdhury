@@ -150,9 +150,9 @@ const SkillsSection: React.FC = () => {
       color: "text-yellow-400",
       skills: [
         { name: "Figma", icon: <img src="/icons/ui/figma.svg" alt="Figma" width={46} height={46} /> },
-        { name: "Canva", icon: <img src="/icons/ui/canva.svg" alt="Canva" width={38} height={46} /> },
+        { name: "Canva", icon: <img src="/icons/ui/canva.svg" alt="Canva" width={35} height={43} /> },
         { name: "Photoshop", icon: <img src="/icons/ui/ps.svg" alt="Photoshop" /> },
-        { name: "Framer", icon: <img src="/icons/ui/framer.svg" alt="Framer" width={21} height={21} /> },
+        { name: "Framer", icon: <img src="/icons/ui/framer.svg" alt="Framer" /> },
         { name: "Webflow", icon: <img src="/icons/ui/webflow.svg" alt="Webflow" width={41} height={41}/> },
         
       ],
