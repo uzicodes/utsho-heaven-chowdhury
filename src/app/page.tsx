@@ -76,7 +76,7 @@ export default function Home() {
                     <motion.h1 variants={itemVariants} className="hero-text font-bold leading-tight text-center mb-2">
                       <span className="text-white block mb-1 mt-0" style={{ fontSize: '1.25rem' }}>Hello I&apos;m,</span>
                       <span
-                        className="hero-name hogers-font"
+                        className="hero-name cairo-font"
                         style={{
                           backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
                           backgroundClip: 'text',
@@ -108,7 +108,7 @@ export default function Home() {
                         Hello I&apos;m,
                       </span>
                       <span
-                        className="hero-name whitespace-nowrap hogers-font"
+                        className="hero-name whitespace-nowrap cairo-font"
                         style={{
                           backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
                           backgroundClip: 'text',
