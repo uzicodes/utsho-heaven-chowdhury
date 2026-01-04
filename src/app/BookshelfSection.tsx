@@ -133,7 +133,7 @@ const BookshelfSection = () => {
                 >
                   {/* Book Spine */}
                   <div
-                    className={`relative w-12 h-80 bg-gradient-to-r ${book.spineColor} rounded-sm shadow-xl cursor-pointer transition-all duration-500`}
+                    className={`relative w-12 h-80 bg-gradient-to-r ${book.spineColor} rounded-sm shadow-xl cursor-none transition-all duration-500`}
                     style={{
                       opacity: hoveredBook === book.id ? 0 : 1,
                       transform: hoveredBook === book.id ? "rotateY(90deg)" : "rotateY(0)",
