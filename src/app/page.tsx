@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from 'react';
 import Navbar from './Navbar';
 import { useIsMobile } from '../lib/useIsMobile';
 import Head from 'next/head';
@@ -23,6 +24,16 @@ export default function Home() {
   ];
 
   const isMobile = useIsMobile(640);
+
+  useEffect(() => {
+    // Force scroll to top on page load/refresh
+    window.scrollTo(0, 0);
+    
+    // Optional: Disable browser's default scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  }, []);
 
 
   const containerVariants: Variants = {
@@ -49,11 +60,11 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
       </Head>
       
-      <div className="relative min-h-screen text-white bg-transparent">
+      <div id="home" className="relative min-h-screen text-white bg-transparent">
         <Navbar />
 
         <main className="min-h-screen relative z-10 pt-32">
-          <section id="home">
+          <section>
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex min-h-[65vh] items-center">
