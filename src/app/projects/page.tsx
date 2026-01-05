@@ -88,7 +88,7 @@ const projects: Project[] = [
 ];
 
 export default function Projects() {
-  const container = useRef<HTMLElement>(null);
+  const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
@@ -144,6 +144,14 @@ export default function Projects() {
         <ReactLenis root>
           <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
             <div className="text-white w-full bg-transparent">
+              <div className="text-center mb-0 pt-2">
+                  <h2 className="text-4xl font-bold mb-1 colus-font" style={{ color: '#F5BE27' }}>
+                      Featured Projects
+                  </h2>
+                  <p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
+                      A showcase of my technical projects and creative solutions
+                  </p>
+              </div>
               {projects.map((project: Project, i: number) => {
                 const targetScale: number = 1 - (projects.length - i) * 0.05;
                 return (
