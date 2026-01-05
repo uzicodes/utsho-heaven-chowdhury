@@ -1,5 +1,6 @@
 "use client";
 
+import Navbar from '../Navbar';
 import { useState } from "react";
 import {
     Award,
@@ -165,24 +166,31 @@ const EducationSection: React.FC = () => {
         },
     ];
 
+    // Variants for the Certifications section
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
+                staggerChildren: 0.15,
             },
         },
     };
 
     const cardVariants: Variants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
+        hidden: (index: number) => ({
+            opacity: 0,
+            x: index % 2 === 0 ? -100 : 100, // Left for even, Right for odd
             y: 0,
+        }),
+        visible: {
             opacity: 1,
+            x: 0,
+            y: 0,
             transition: {
-                duration: 0.4,
-                ease: "easeOut",
+                type: "spring",
+                stiffness: 50,
+                damping: 20
             },
         },
     };
@@ -284,7 +292,8 @@ const EducationSection: React.FC = () => {
                 {/* Certifications Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.1 }} // UPDATED: Animation replays every time
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="mt-20"
                 >
@@ -301,12 +310,13 @@ const EducationSection: React.FC = () => {
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true }}
+                        viewport={{ once: false, amount: 0.1 }} // UPDATED: Animation replays every time
                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
                         {certificationData.map((cert, index) => (
                             <motion.div
                                 key={index}
+                                custom={index}
                                 variants={cardVariants}
                                 className="group relative"
                                 onMouseEnter={() => setHoveredIndex(100 + index)}
@@ -328,7 +338,7 @@ const EducationSection: React.FC = () => {
                                             />
                                             <div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
                                                 <Award className="w-3 h-3" />
-                                                
+                                                Verified
                                             </div>
                                         </div>
                                     </div>
@@ -355,7 +365,7 @@ const EducationSection: React.FC = () => {
                                                     {cert.issuer}
                                                 </p>
                                             </div>
-                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-2">
+                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-3"> {/* Margin added for spacing */}
                                                 <span className="flex items-center gap-1">
                                                     <Calendar className="w-4 h-4" />
                                                     {cert.date}
@@ -398,6 +408,7 @@ export default function Education() {
         <div className="relative min-h-screen bg-transparent">
             {/* Content with Navbar */}
             <div className="relative z-10">
+                <Navbar />
                 <EducationSection />
             </div>
         </div>
