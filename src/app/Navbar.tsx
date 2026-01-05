@@ -2,7 +2,6 @@
 
 
 import React, { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import {
   FaHome,
@@ -14,25 +13,18 @@ import {
 } from "react-icons/fa";
 import './Navbar.css';
 
+const navLinks = [
+  { id: "home", icon: FaHome, text: "Home", href: "#home" },
+  { id: "skills", icon: FaCode, text: "Skills", href: "#skills" },
+  { id: "projects", icon: FaLaptopCode, text: "Projects", href: "#projects" },
+  { id: "education", icon: FaGraduationCap, text: "Education", href: "#education" },
+  { id: "contacts", icon: FaEnvelope, text: "Contacts", href: "#contacts" },
+];
+
 const Navbar = () => {
   // const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
-  
-  // Determine active link based on current pathname
-  /*
-  const getActiveLink = () => {
-    if (pathname === '/') return 'home';
-    if (pathname === '/skills') return 'skills';
-    if (pathname === '/projects') return 'project';
-    if (pathname === '/education') return 'education';
-    if (pathname === '/contacts') return 'contacts';
-    return 'home';
-  };
-  
-  const activeLink = getActiveLink();
-  */
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -43,13 +35,29 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const navLinks = [
-    { id: "home", icon: FaHome, text: "Home", href: "#home" },
-  { id: "skills", icon: FaCode, text: "Skills", href: "#skills" },
-  { id: "project", icon: FaLaptopCode, text: "Projects", href: "#projects" },
-  { id: "education", icon: FaGraduationCap, text: "Education", href: "#education" },
-  { id: "contacts", icon: FaEnvelope, text: "Contacts", href: "#contacts" },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 300; // Offset to trigger earlier
+
+      for (const link of navLinks) {
+        const section = document.getElementById(link.id);
+        if (section) {
+          const offsetTop = section.offsetTop;
+          const offsetHeight = section.offsetHeight;
+
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveLink(link.id);
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header className="navbar-header">
