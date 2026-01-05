@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from '../Navbar';
 import { useState } from "react";
 import {
     Award,
@@ -399,7 +398,6 @@ export default function Education() {
         <div className="relative min-h-screen bg-transparent">
             {/* Content with Navbar */}
             <div className="relative z-10">
-                <Navbar />
                 <EducationSection />
             </div>
         </div>

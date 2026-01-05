@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 
-import Navbar from '@/app/Navbar';
 import { Card, CardContent } from "@/app/components/card";
 import dynamic from "next/dynamic";
 import { motion, Variants } from "framer-motion";
@@ -222,7 +221,6 @@ const SkillsSection: React.FC = () => {
 const SkillsPage = () => (
   <div className="relative min-h-screen text-white overflow-hidden bg-transparent">
     <div className="relative z-10">
-      <Navbar />
       <SkillsSection />
     </div>
   </div>

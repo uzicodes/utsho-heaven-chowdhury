@@ -3,7 +3,6 @@
 import * as React from "react";
 import dynamic from "next/dynamic";
 const Form = dynamic(() => import("./Form"), { ssr: false });
-import Navbar from "../Navbar";
 import Head from "next/head";
 import { MapPin } from "lucide-react";
 import { motion, Variants } from "framer-motion";
@@ -98,7 +97,6 @@ export default function Contact() {
 
       {/* Content Layer */}
       <div className="relative z-10">
-        <Navbar />
         {/* Main Content */}
         <main className="pt-20 lg:pt-[0rem] bg-transparent text-white min-h-screen">
           <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">

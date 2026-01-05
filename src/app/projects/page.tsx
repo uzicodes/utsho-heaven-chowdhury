@@ -4,7 +4,6 @@ import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 import { useRef, useEffect } from "react";
 import * as React from "react";
-import Navbar from "../Navbar";
 
 interface Project {
   title: string;
@@ -142,10 +141,9 @@ export default function Projects() {
   return (
     <div className="bg-transparent relative min-h-screen">
       <div className="relative z-10">
-        <Navbar />
         <ReactLenis root>
-          <main className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
-            <section className="text-white w-full bg-transparent">
+          <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
+            <div className="text-white w-full bg-transparent">
               {projects.map((project: Project, i: number) => {
                 const targetScale: number = 1 - (projects.length - i) * 0.05;
                 return (
@@ -166,8 +164,8 @@ export default function Projects() {
                   />
                 );
               })}
-            </section>
-          </main>
+            </div>
+          </div>
         </ReactLenis>
       </div>
     </div>

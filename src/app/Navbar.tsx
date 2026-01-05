@@ -15,10 +15,12 @@ import {
 import './Navbar.css';
 
 const Navbar = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('home');
   
   // Determine active link based on current pathname
+  /*
   const getActiveLink = () => {
     if (pathname === '/') return 'home';
     if (pathname === '/skills') return 'skills';
@@ -29,6 +31,7 @@ const Navbar = () => {
   };
   
   const activeLink = getActiveLink();
+  */
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,11 +44,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { id: "home", icon: FaHome, text: "Home", href: "/" },
-  { id: "skills", icon: FaCode, text: "Skills", href: "/skills" },
-  { id: "project", icon: FaLaptopCode, text: "Projects", href: "/projects" },
-  { id: "education", icon: FaGraduationCap, text: "Education", href: "/education" },
-  { id: "contacts", icon: FaEnvelope, text: "Contacts", href: "/contacts" },
+    { id: "home", icon: FaHome, text: "Home", href: "#home" },
+  { id: "skills", icon: FaCode, text: "Skills", href: "#skills" },
+  { id: "project", icon: FaLaptopCode, text: "Projects", href: "#projects" },
+  { id: "education", icon: FaGraduationCap, text: "Education", href: "#education" },
+  { id: "contacts", icon: FaEnvelope, text: "Contacts", href: "#contacts" },
   ];
 
   return (
@@ -73,6 +76,7 @@ const Navbar = () => {
                     href={href}
                     onClick={() => {
                       setIsMenuOpen(false);
+                      setActiveLink(id);
                     }}
                   >
                     <div className={`navbar-link ${activeLink === id ? 'navbar-link-active' : ''}`}>

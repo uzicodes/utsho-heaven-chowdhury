@@ -7,6 +7,11 @@ import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
 import BookshelfSection from './BookshelfSection';
 import { motion, Variants } from 'framer-motion';
+import About from './about/about';
+import SkillsPage from './skills/page';
+import Projects from './projects/page';
+import Education from './education/page';
+import Contact from './contacts/page';
 
 export default function Home() {
   const words = [
@@ -44,10 +49,11 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
       </Head>
       
-      <div className="relative min-h-screen text-white overflow-hidden bg-transparent">
+      <div className="relative min-h-screen text-white bg-transparent">
         <Navbar />
 
         <main className="min-h-screen relative z-10 pt-32">
+          <section id="home">
           {/* Hero Section */}
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex min-h-[65vh] items-center">
@@ -292,7 +298,9 @@ export default function Home() {
               )}
             </div>
           </div>
+          </section>
 
+          <section id="about">
           {/* Section - About Me (Scroll Reveal Animation) */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
@@ -302,9 +310,26 @@ export default function Home() {
             className="container mx-auto px-6 lg:px-8 mt-20"
           >
             <BookshelfSection />
-            {require('./about/about').default()}
+            <About />
             <div style={{ height: '2rem', width: '100%' }} />
           </motion.div>
+          </section>
+
+          <section id="skills">
+            <SkillsPage />
+          </section>
+
+          <section id="projects">
+            <Projects />
+          </section>
+
+          <section id="education">
+            <Education />
+          </section>
+
+          <section id="contacts">
+            <Contact />
+          </section>
         </main>
       </div>
     </>
