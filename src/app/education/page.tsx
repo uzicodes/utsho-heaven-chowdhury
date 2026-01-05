@@ -18,12 +18,16 @@ const EducationSection: React.FC = () => {
             school: "CANTONEMENT PUBLIC COLLEGE, SAIDPUR",
             year: "2018 - 2020",
             logo: "/cpscs.png",
+            className: "h-21 w-21",
+            style: { maxWidth: '85px', maxHeight: '85px' }
         },
         {
             degree: "Bachelor's in Computer Science (CS)",
             school: "BRAC UNIVERSITY,  DHAKA",
             year: "2022 - 2026",
-            logo: "/brac.png",
+            logo: "/bracu.png",
+            className: "h-24 w-24",
+            style: { maxWidth: '96px', maxHeight: '96px' }
         },
     ];
 
@@ -206,8 +210,8 @@ const EducationSection: React.FC = () => {
                                         <img
                                             src={edu.logo}
                                             alt={edu.school + ' logo'}
-                                            className="h-16 w-16 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.25)]"
-                                            style={{ maxWidth: '64px', maxHeight: '64px' }}
+                                            className={`${edu.className} object-contain`}
+                                            style={edu.style}
                                         />
                                         <h3 className="text-xl font-bold tiempos-font" style={{ color: '#DB5151' }}>
                                             {edu.degree}
@@ -239,7 +243,7 @@ const EducationSection: React.FC = () => {
                                     <img
                                         src="/thesis.png"
                                         alt="Thesis logo"
-                                        className="h-14 w-14 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.25)]"
+                                        className="h-14 w-14 object-contain"
                                         style={{ maxWidth: '56px', maxHeight: '56px' }}
                                     />
                                     <h3 className="text-lg font-bold tiempos-font" style={{ color: '#DB5151' }}>
