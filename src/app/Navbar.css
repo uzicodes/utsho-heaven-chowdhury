@@ -239,5 +239,4 @@
   height: 100%;
   background: linear-gradient(to right, #ef4444, #dc2626, #b91c1c);
   width: 0%;
-  transition: width 0.1s ease-out;
 }

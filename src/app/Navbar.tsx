@@ -28,8 +28,10 @@ const Navbar = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScrollProgress = () => {
-      const totalScroll = document.documentElement.scrollTop;
+      const totalScroll = window.scrollY;
       const windowHeight =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
@@ -38,10 +40,18 @@ const Navbar = () => {
 
       const scroll = (totalScroll / windowHeight) * 100;
       setScrollProgress(scroll);
+      ticking = false;
     };
 
-    window.addEventListener("scroll", handleScrollProgress);
-    return () => window.removeEventListener("scroll", handleScrollProgress);
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(handleScrollProgress);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
