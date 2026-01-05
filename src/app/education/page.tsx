@@ -172,7 +172,7 @@ const EducationSection: React.FC = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.15,
+                staggerChildren: 0.05,
             },
         },
     };
@@ -294,7 +294,7 @@ const EducationSection: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.1 }} // UPDATED: Animation replays every time
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.4, delay: 0.1 }}
                     className="mt-20"
                 >
                     <div className="text-center mb-12">
