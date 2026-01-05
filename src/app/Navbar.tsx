@@ -25,6 +25,25 @@ const Navbar = () => {
   // const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScrollProgress = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (windowHeight === 0) return;
+
+      const scroll = (totalScroll / windowHeight) * 100;
+      setScrollProgress(scroll);
+    };
+
+    window.addEventListener("scroll", handleScrollProgress);
+    return () => window.removeEventListener("scroll", handleScrollProgress);
+  }, []);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -98,6 +117,12 @@ const Navbar = () => {
                   </Link>
                 ))}
               </div>
+            </div>
+            <div className="navbar-progress-container">
+              <div
+                className="navbar-progress-bar"
+                style={{ width: `${scrollProgress}%` }}
+              />
             </div>
           </nav>
         </div>
