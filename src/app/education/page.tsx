@@ -152,7 +152,7 @@ const EducationSection: React.FC = () => {
     const cardVariants: Variants = {
         hidden: (index: number) => ({
             opacity: 0,
-            x: index % 2 === 0 ? -100 : 100, // Left for even, Right for odd
+            x: index % 2 === 0 ? -100 : 100, 
             y: 0,
         }),
         visible: {
@@ -265,7 +265,7 @@ const EducationSection: React.FC = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false, amount: 0.1 }} // UPDATED: Animation replays every time
+                    viewport={{ once: false, amount: 0.1 }} 
                     transition={{ duration: 0.4, delay: 0.1 }}
                     className="mt-20"
                 >
@@ -282,7 +282,7 @@ const EducationSection: React.FC = () => {
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: false, amount: 0.1 }} // UPDATED: Animation replays every time
+                        viewport={{ once: false, amount: 0.1 }} 
                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
                         {certificationData.map((cert, index) => (
@@ -310,7 +310,6 @@ const EducationSection: React.FC = () => {
                                             />
                                             <div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
                                                 <Award className="w-3 h-3" />
-                                                Verified
                                             </div>
                                         </div>
                                     </div>

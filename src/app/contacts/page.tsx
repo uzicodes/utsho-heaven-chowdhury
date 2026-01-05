@@ -4,7 +4,7 @@ import * as React from "react";
 import dynamic from "next/dynamic";
 const Form = dynamic(() => import("./Form"), { ssr: false });
 import Head from "next/head";
-import { MapPin } from "lucide-react";
+import { MapPin, ArrowUp } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
 interface ContactItem {
@@ -79,6 +79,13 @@ export default function Contact() {
       opacity: 1, 
       transition: { duration: 0.8, ease: "easeOut" } 
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -169,6 +176,15 @@ export default function Contact() {
             </div>
           </section>
         </main>
+
+        {/* Scroll to Top Button */}
+        <button
+          onClick={scrollToTop}
+          className="absolute bottom-10 right-10 p-4 bg-transparent border border-white rounded-full text-white hover:scale-110 transition-all duration-300 z-50"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="w-6 h-6" />
+        </button>
       </div>
     </div>
   );
