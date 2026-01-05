@@ -16,10 +16,9 @@ import Contact from './contacts/page';
 
 export default function Home() {
   const words = [
-    "Full-Stack Developer | UI/UX Enthusiast",
-    "Python | TypeScript | React | Next.Js ",
-    "Hands on Experience on MERN stack ",
-    "Machine Learning  |  AI Integration",
+    "Full-Stack Developer | Ui/Ux | MERN Stack",
+    "Python | TypeScript | React | Supabase", 
+    "CI / CD | Software Architecture | DevOps",
     "Let's Build Something Amazing Together !",
   ];
 
