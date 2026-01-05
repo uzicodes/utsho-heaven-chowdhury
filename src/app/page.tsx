@@ -28,7 +28,7 @@ export default function Home() {
     // Force scroll to top on page load/refresh
     window.scrollTo(0, 0);
     
-    // Optional: Disable browser's default scroll restoration
+    // Disable browser's default scroll restoration
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
@@ -160,7 +160,7 @@ export default function Home() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: 0.2 }}
-                      className="flex justify-center mt-4 mb-4" // REMOVED -mt-20, added spacing
+                      className="flex justify-center mt-4 mb-4" 
                     >
                       <img 
                         src="/DP_removed_BG.png" 

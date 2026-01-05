@@ -111,9 +111,17 @@ const Navbar = () => {
                   <Link
                     key={id}
                     href={href}
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
                       setIsMenuOpen(false);
                       setActiveLink(id);
+                      
+                      const element = document.getElementById(id);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                        const newPath = id === 'home' ? '/' : `/${id}`;
+                        window.history.pushState(null, '', newPath);
+                      }
                     }}
                   >
                     <div className={`navbar-link ${activeLink === id ? 'navbar-link-active' : ''}`}>
