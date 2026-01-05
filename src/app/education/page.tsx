@@ -198,13 +198,6 @@ const EducationSection: React.FC = () => {
                 }
             `}</style>
 
-            {/* Grid Background */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
-                <div className="absolute inset-0 border border-white/[0.05] grid grid-cols-2 md:grid-cols-4" />
-            </div>
-
             <div className="max-w-6xl mx-auto px-4 relative z-10 capitalize">
                 <div className="text-center mb-12 pt-32">
                     <h2 className="text-4xl font-bold mb-4 colus-font" style={{ color: '#F5BE27' }}>
