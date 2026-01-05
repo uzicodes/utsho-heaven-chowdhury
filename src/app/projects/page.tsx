@@ -144,12 +144,12 @@ export default function Projects() {
         <ReactLenis root>
           <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
             <div className="text-white w-full bg-transparent">
-              <div className="text-center mb-0 pt-2">
+              <div className="text-center mb-0 pt-32">
                   <h2 className="text-4xl font-bold mb-1 colus-font" style={{ color: '#F5BE27' }}>
-                      Featured Projects
+                      Projects
                   </h2>
                   <p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
-                      A showcase of my technical projects and creative solutions
+                       Showcase of my Technical Projects & Creative Solutions
                   </p>
               </div>
               {projects.map((project: Project, i: number) => {
