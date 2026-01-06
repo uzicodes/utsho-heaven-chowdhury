@@ -350,7 +350,7 @@ const EducationSection: React.FC = () => {
                                         <div>
                                             <h3
                                                 className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors tiempos-font"
-                                                style={{ color: '#DB5151', fontSize: '1rem' }}
+                                                style={{ color: '#A8325A', fontSize: '1rem' }}
                                             >
                                                 {cert.title}
                                             </h3>
