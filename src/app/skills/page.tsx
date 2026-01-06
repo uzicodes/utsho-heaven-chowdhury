@@ -64,7 +64,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
       <CardContent className="p-6 relative z-10">
         <div className="flex items-center justify-center gap-4 mb-6 w-full">
-          <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 text-center colus-font">
+          <h3 className="text-2xl font-bold text-center colus-font" style={{ color: '#A8325A' }}>
             {title}
           </h3>
         </div>
