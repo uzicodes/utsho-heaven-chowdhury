@@ -165,12 +165,13 @@ const SkillsSection: React.FC = () => {
         
         <motion.div 
           initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-          animate={{ 
+          whileInView={{ 
             opacity: 1, 
             scale: 1, 
             rotate: 0,
             y: [0, -10, 0] 
           }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ 
             opacity: { duration: 1.2 },
             scale: { duration: 1.2, type: "spring" },
@@ -188,7 +189,7 @@ const SkillsSection: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, amount: 0.2 }}
           style={{ perspective: "1000px" }} 
         >
           {skillCategories.map((category, index) => (
