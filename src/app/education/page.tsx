@@ -171,6 +171,25 @@ const EducationSection: React.FC = () => {
         },
     };
 
+    const educationCardVariants: Variants = {
+        hidden: { 
+            opacity: 0, 
+            scale: 0.5, 
+            rotateX: -90 
+        },
+        visible: { 
+            opacity: 1, 
+            scale: 1, 
+            rotateX: 0,
+            transition: { 
+                type: "spring", 
+                stiffness: 600, 
+                damping: 18,
+                mass: 0.5
+            } 
+        }
+    };
+
     return (
         <section className="min-h-screen relative overflow-hidden py-20 bg-transparent">
             <style>{`
@@ -195,8 +214,12 @@ const EducationSection: React.FC = () => {
                 {/* Education Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {educationData.map((edu, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.1 }}
+                            variants={educationCardVariants}
                             className={`relative border rounded-xl p-6 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm cursor-none ${hoveredIndex === index
                                 ? "border-teal-500 scale-[1.02]"
                                 : "border-blue-400/20"
@@ -226,13 +249,17 @@ const EducationSection: React.FC = () => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 
                 {/* Thesis Card */}
                 <div className="flex justify-center mt-8">
-                    <div
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.1 }}
+                        variants={educationCardVariants}
                         className={`relative border rounded-xl p-5 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-sm cursor-none ${hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"}`}
                         onMouseEnter={() => setHoveredIndex(99)}
                         onMouseLeave={() => setHoveredIndex(null)}
@@ -262,7 +289,7 @@ const EducationSection: React.FC = () => {
                                 Multimodal Deep Learning for Medical Image Segmentation
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Certifications Section */}
