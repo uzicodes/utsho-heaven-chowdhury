@@ -236,7 +236,7 @@ const EducationSection: React.FC = () => {
                                             className={`${edu.className} object-contain`}
                                             style={edu.style}
                                         />
-                                        <h3 className="text-xl font-bold tiempos-font" style={{ color: '#DB5151' }}>
+                                        <h3 className="text-xl font-bold tiempos-font" style={{ color: '#A8325A' }}>
                                             {edu.degree}
                                         </h3>
                                     </div>
@@ -273,7 +273,7 @@ const EducationSection: React.FC = () => {
                                         className="h-14 w-14 object-contain"
                                         style={{ maxWidth: '56px', maxHeight: '56px' }}
                                     />
-                                    <h3 className="text-lg font-bold tiempos-font" style={{ color: '#DB5151' }}>
+                                    <h3 className="text-lg font-bold tiempos-font" style={{ color: '#A8325A' }}>
                                         THESIS
                                     </h3>
                                 </div>
