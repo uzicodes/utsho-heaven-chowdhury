@@ -114,7 +114,7 @@ export default function Contact() {
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
+                  viewport={{ once: false, amount: 0.1 }}
                   variants={leftVariant}
                   className="space-y-8 flex flex-col justify-center items-center h-full"
                 >
@@ -166,7 +166,7 @@ export default function Contact() {
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
+                  viewport={{ once: false, amount: 0.1 }}
                   variants={rightVariant}
                   className="flex justify-center items-center w-full lg:justify-center"
                 >
