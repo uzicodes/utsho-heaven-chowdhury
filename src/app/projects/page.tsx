@@ -34,7 +34,7 @@ interface CardProps {
 const projects: Project[] = [
   {
     title: "LAMB FALCONS - Official Club Site",
-    description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement.",
+    description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement. Used Animated libraries, interactive UI elements for a smooth user experience. Production ready with CI/CD pipelines for seamless updates & maintenance.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,firebase,tailwind,vercel", 
     link: "/projects/project-1.jpg",
     color: "#0be890", // Green
@@ -43,7 +43,7 @@ const projects: Project[] = [
   },
   {
     title: "Culinary Canvas",
-    description: "Intuitive web platform that lets you effortlessly discover, customize, and order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking and personalized account features.",
+    description: "Intuitive web platform that lets you effortlessly discover, customize & order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking & personalized account features. Has Admin Dashborad for the CRUD operations to add, edit, delete, manage menu, orders & customer interactions efficiently. Persistent shopping cart with secure payment integration (SSLcommerz)",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-2.jpg",
     color: "#ff6b35", // Orange
@@ -52,7 +52,7 @@ const projects: Project[] = [
   },
   {
     title: "Northern Paribahan",
-    description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation. Provides users with personalized travel history, route management & secure payments. Robust Admin Control for managing routes, schedules, fares & users.",
+    description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation. It removes the hassle of standing in long queues, Provides users with personalized travel history, route management & secure payments. Providing wide range of buses with a flexible timetable. Robust Admin Control for managing routes, schedules, fares & users. SSLCommerz checkout for secure transactions. SMS & PDF ticket delivery.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,prisma,supabase,vercel",
     link: "/projects/project-5.png",
     color: "#3b82f6", // Blue
@@ -61,7 +61,7 @@ const projects: Project[] = [
   },
   {
     title: "Aura Force",
-    description: "Robust fitness platform streamlining gym operations & enhancing member experience. Features real-time class scheduling, automated renewals & trainer booking. Includes a secure portal for tracking workouts, BMI & personalized diet plans.",
+    description: "Robust Fitness platform streamlining Gym operations & enhancing member experience. Features real-time class scheduling, automated renewals & trainer booking. Includes a secure portal for tracking workouts, BMI & personalized diet plans. Real-time forums for community engagement. Admin dashboard for managing user memberships, trainers & classes efficiently. Used Animated UI & responsiveness for engaging user experience.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,prisma,vercel",
     link: "/projects/project-6.png",
     color: "#ef4444", // Red
@@ -69,7 +69,7 @@ const projects: Project[] = [
     liveLink: "https://auraforce.vercel.app/",    hasClerk: true,  },
   {
     title: "SCREEN BOX",
-    description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists.",
+    description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. It features adaptive bitrate streaming (HLS) to ensure smooth playback on slow networks, a robust content management system for admins, and a personalized watchlist for users.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,postgres,vercel",
     link: "/projects/project-3.jpg",
     color: "#a855f7", // Purple
@@ -78,7 +78,7 @@ const projects: Project[] = [
   },
   {
     title: "GO Dhaka",
-    description: "Your essential navigator for effortless travel, providing all Dhaka metro, bus routes, and fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient, and stress-free. No logins required. Google Maps for real-time traffic updates.",
+    description: "Your essential navigator for effortless travel designed to digitize the commuting experience in Dhaka City. Provides all Dhaka metro, bus routes & fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient & stress-free. No logins required. Google Maps for real-time traffic updates. Included all local buses in the city with route maps & fare details.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,materialui,vercel",
     link: "/projects/project-4.jpg",
     color: "#10b981", // Green
