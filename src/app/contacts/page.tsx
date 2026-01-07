@@ -105,7 +105,8 @@ export default function Contact() {
       {/* Content Layer */}
       <div className="relative z-10">
         {/* Main Content */}
-        <main className="pt-20 lg:pt-[0rem] bg-transparent text-white min-h-screen">
+        {/* UPDATED: Added overflow-x-clip here */}
+        <main className="pt-20 lg:pt-[0rem] bg-transparent text-white min-h-screen overflow-x-clip">
           <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-2 gap-0 items-center">

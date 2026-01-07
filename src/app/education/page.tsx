@@ -191,7 +191,8 @@ const EducationSection: React.FC = () => {
     };
 
     return (
-        <section className="min-h-screen relative overflow-hidden py-20 bg-transparent">
+        // UPDATED: Added overflow-x-clip to prevent horizontal widening
+        <section className="min-h-screen relative overflow-hidden overflow-x-clip py-20 bg-transparent">
             <style>{`
                 @font-face {
                     font-family: 'TestTiemposText-Medium';

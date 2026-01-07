@@ -56,14 +56,14 @@ export default function About(): React.ReactElement {
 
   return (
     <>
-      <section id="about" className="text-white" style={{ background: 'transparent', marginBottom: '2rem' }}>
+      <section id="about" className="text-white overflow-x-clip" style={{ background: 'transparent', marginBottom: '2rem' }}>
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
           
           {/* Animated Header */}
           <motion.h2 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.2 }} 
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl cairo-font" 
             style={{ color: '#DEB34B' }}
@@ -79,7 +79,8 @@ export default function About(): React.ReactElement {
                 className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
+                /* UPDATED: Removed negative margin so it resets easier when scrolling */
+                viewport={{ once: false, amount: 0.3 }} 
                 variants={imageRevealVariant}
               >
                 <Image
@@ -99,7 +100,8 @@ export default function About(): React.ReactElement {
               variants={textContainerVariant}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
+              /* UPDATED: Removed negative margin here too */
+              viewport={{ once: false, amount: 0.3 }}
             >
               <motion.p variants={textItemVariant} className="text-white lora-font">
                 {`A passionate developer dedicated to building innovative, scalable web solutions that prioritize the user experience. I aim to bridge the gap between complex software architecture & intuitive design, always with a focus on simplifying development workflows.`}
@@ -139,6 +141,7 @@ export default function About(): React.ReactElement {
                   <motion.span 
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: false }}
                     transition={{ type: "spring", stiffness: 200 }}
                     style={{ color: '#5DCF4E', display: 'inline-block' }}
                     className="cairo-font"

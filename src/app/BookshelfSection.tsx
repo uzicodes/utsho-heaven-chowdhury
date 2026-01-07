@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -66,12 +68,15 @@ const BookshelfSection = () => {
   const [hoveredBook, setHoveredBook] = useState<number | null>(null);
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-20 px-4">
+    // UPDATED: Added overflow-x-clip to prevent horizontal scroll issues on mobile
+    <section className="min-h-screen flex items-center justify-center py-20 px-4 overflow-x-clip">
       <div className="max-w-6xl w-full">
+        
+        {/* Header Text */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }} /* UPDATED: Runs every time */
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
@@ -89,7 +94,7 @@ const BookshelfSection = () => {
             style={{ perspective: "2000px", marginTop: "0" }} 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }} /* UPDATED: Runs every time */
             variants={{
               visible: {
                 transition: {
@@ -194,12 +199,11 @@ const BookshelfSection = () => {
             className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl"
             initial={{ scaleX: 0, opacity: 0 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }} /* UPDATED: Runs every time */
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
           >
           </motion.div>
         </div>
-
 
       </div>
     </section>
