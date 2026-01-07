@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import dynamic from "next/dynamic";
-const Form = dynamic(() => import("./Form"), { ssr: false });
+const Form = dynamic(() => import("../components/Form"), { ssr: false });
 import { MapPin, ArrowUp } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 

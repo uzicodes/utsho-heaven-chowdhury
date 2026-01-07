@@ -9,12 +9,12 @@ import { FlipWords } from './components/flip-words';
 import { motion, Variants } from 'framer-motion';
 
 // IMPORTING SECTIONS
-import BookshelfSection from './BookshelfSection'; 
-import About from './about/about';
-import SkillsPage from './components/Skills';     
-import Projects from './components/Projects';     
-import Education from './components/Education';   
-import Contact from './components/Contacts';      
+import BookshelfSection from './components/BookshelfSection'; 
+import About from './sections/About';
+import SkillsPage from './sections/Skills';     
+import Projects from './sections/Projects';     
+import Education from './sections/Education';   
+import Contact from './sections/Contacts';      
 
 export default function Home() {
   const words = [
@@ -57,7 +57,7 @@ export default function Home() {
 
         <main className="min-h-screen relative z-10 pt-32">
           
-          {/* 1. HERO SECTION (ID: home) */}
+          {/* HERO SECTION (ID: home) */}
           <section id="home">
             <div className="container mx-auto px-6 lg:px-8">
               <div className="flex min-h-[65vh] items-center">
@@ -304,14 +304,14 @@ export default function Home() {
             </div>
           </section>
 
-          {/* 2. BOOKSHELF SECTION */}
+          {/* BOOKSHELF SECTION */}
           <section id="bookshelf">
              <div className="container mx-auto px-6 lg:px-8 mt-20">
                <BookshelfSection />
              </div>
           </section>
 
-          {/* 3. ABOUT SECTION (ID: about) */}
+          {/* ABOUT SECTION */}
           <section id="about">
             <motion.div 
               initial={{ opacity: 0, y: 50 }}
@@ -325,22 +325,22 @@ export default function Home() {
             </motion.div>
           </section>
 
-          {/* 4. SKILLS SECTION (ID: skills) */}
+          {/* SKILLS SECTION */}
           <section id="skills">
             <SkillsPage />
           </section>
 
-          {/* 5. PROJECTS SECTION (ID: projects) */}
+          {/* PROJECTS SECTION */}
           <section id="projects">
             <Projects />
           </section>
 
-          {/* 6. EDUCATION SECTION (ID: education) */}
+          {/* EDUCATION SECTION */}
           <section id="education">
             <Education />
           </section>
 
-          {/* 7. CONTACTS SECTION (ID: contacts) */}
+          {/* CONTACTS SECTION */}
           <section id="contacts">
             <Contact />
           </section>
