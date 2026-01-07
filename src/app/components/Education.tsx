@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from '../Navbar';
 import { useState } from "react";
 import {
     Award,
@@ -142,7 +141,6 @@ const EducationSection: React.FC = () => {
         },
     ];
 
-    // Variants for the Certifications section
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -191,7 +189,6 @@ const EducationSection: React.FC = () => {
     };
 
     return (
-        // UPDATED: Added overflow-x-clip to prevent horizontal widening
         <section className="min-h-screen relative overflow-hidden overflow-x-clip py-20 bg-transparent">
             <style>{`
                 @font-face {
@@ -212,7 +209,6 @@ const EducationSection: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Education Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {educationData.map((edu, index) => (
                         <motion.div
@@ -254,7 +250,6 @@ const EducationSection: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Thesis Card */}
                 <div className="flex justify-center mt-8">
                     <motion.div
                         initial="hidden"
@@ -293,7 +288,6 @@ const EducationSection: React.FC = () => {
                     </motion.div>
                 </div>
 
-                {/* Certifications Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -326,13 +320,10 @@ const EducationSection: React.FC = () => {
                                 onMouseEnter={() => setHoveredIndex(100 + index)}
                                 onMouseLeave={() => setHoveredIndex(null)}
                             >
-                                {/* THE GLOWING EFFECT BEHIND THE CARD */}
                                 <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur"></div>
 
-                                {/* Main Card Content */}
                                 <div className={`relative h-full border rounded-xl overflow-hidden bg-gray-900 border-gray-800 p-3 flex flex-col`}>
                                     
-                                    {/* Certificate Preview */}
                                     <div className="w-full mb-2">
                                         <div className="relative w-full h-40 bg-black rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
                                             <img
@@ -346,7 +337,6 @@ const EducationSection: React.FC = () => {
                                         </div>
                                     </div>
 
-                                    {/* Text Content */}
                                     <div className="space-y-2 px-1 pb-2 text-center flex-grow flex flex-col justify-between">
                                         <div>
                                             <h3
@@ -368,7 +358,7 @@ const EducationSection: React.FC = () => {
                                                     {cert.issuer}
                                                 </p>
                                             </div>
-                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-3"> {/* Margin added for spacing */}
+                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-3">
                                                 <span className="flex items-center gap-1">
                                                     <Calendar className="w-4 h-4" />
                                                     {cert.date}
@@ -406,14 +396,4 @@ const EducationSection: React.FC = () => {
     );
 };
 
-export default function Education() {
-    return (
-        <div className="relative min-h-screen bg-transparent">
-            {/* Content with Navbar */}
-            <div className="relative z-10">
-                <Navbar />
-                <EducationSection />
-            </div>
-        </div>
-    );
-}
+export default EducationSection;

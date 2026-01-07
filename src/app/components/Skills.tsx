@@ -24,7 +24,6 @@ interface SkillCategory {
   skills: Skill[];
 }
 
-// Globe Animation
 const containerVariants: Variants = {
   hidden: { opacity: 1 }, 
   visible: {
@@ -36,7 +35,6 @@ const containerVariants: Variants = {
   },
 };
 
-// Card: 3D Flip Down Animation
 const cardVariants: Variants = {
   hidden: { 
     opacity: 0,
@@ -153,7 +151,6 @@ const SkillsSection: React.FC = () => {
         { name: "Photoshop", icon: <img src="/icons/ui/ps.svg" alt="Photoshop" /> },
         { name: "Framer", icon: <img src="/icons/ui/framer.svg" alt="Framer" /> },
         { name: "Webflow", icon: <img src="/icons/ui/webflow.svg" alt="Webflow" width={41} height={41}/> },
-        
       ],
     },
   ];
@@ -176,14 +173,13 @@ const SkillsSection: React.FC = () => {
             opacity: { duration: 1.2 },
             scale: { duration: 1.2, type: "spring" },
             rotate: { duration: 1.2, type: "spring" },
-            y: { duration: 5, repeat: Infinity, ease: "easeInOut" } // Continuous float
+            y: { duration: 5, repeat: Infinity, ease: "easeInOut" } 
           }}
           className="flex justify-center items-center"
         >
           <IconCloudDemo />
         </motion.div>
 
-        {/* Animated Grid Container */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -219,12 +215,4 @@ const SkillsSection: React.FC = () => {
   );
 };
 
-const SkillsPage = () => (
-  <div className="relative min-h-screen text-white overflow-hidden bg-transparent">
-    <div className="relative z-10">
-      <SkillsSection />
-    </div>
-  </div>
-);
-
-export default SkillsPage;
+export default SkillsSection;

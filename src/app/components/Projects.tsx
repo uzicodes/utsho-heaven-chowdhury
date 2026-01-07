@@ -37,7 +37,7 @@ const projects: Project[] = [
     description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement. Used Animated libraries, interactive UI elements for a smooth user experience. Production ready with CI/CD pipelines for seamless updates & maintenance.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,firebase,tailwind,vercel", 
     link: "/projects/project-1.jpg",
-    color: "#0be890", // Green
+    color: "#0be890", 
     githubLink: "https://github.com/uzicodes/lamb-falcons",
     liveLink: "https://lamb-falcons.vercel.app/",
   },
@@ -46,7 +46,7 @@ const projects: Project[] = [
     description: "Intuitive web platform that lets you effortlessly discover, customize & order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking & personalized account features. Has Admin Dashborad for the CRUD operations to add, edit, delete, manage menu, orders & customer interactions efficiently. Persistent shopping cart with secure payment integration (SSLcommerz)",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-2.jpg",
-    color: "#ff6b35", // Orange
+    color: "#ff6b35", 
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
   },
@@ -55,7 +55,7 @@ const projects: Project[] = [
     description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation. It removes the hassle of standing in long queues, Provides users with personalized travel history, route management & secure payments. Providing wide range of buses with a flexible timetable. Robust Admin Control for managing routes, schedules, fares & users. SSLCommerz checkout for secure transactions. SMS & PDF ticket delivery.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,prisma,supabase,vercel",
     link: "/projects/project-5.png",
-    color: "#3b82f6", // Blue
+    color: "#3b82f6", 
     githubLink: "https://github.com/uzicodes/northern-paribahan",
     liveLink: "https://northern-paribahan.vercel.app/",
   },
@@ -64,7 +64,7 @@ const projects: Project[] = [
     description: "Robust Fitness platform streamlining Gym operations & enhancing member experience. Features real-time class scheduling, automated renewals & trainer booking. Includes a secure portal for tracking workouts, BMI & personalized diet plans. Real-time forums for community engagement. Admin dashboard for managing user memberships, trainers & classes efficiently. Used Animated UI & responsiveness for engaging user experience.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,prisma,vercel",
     link: "/projects/project-6.png",
-    color: "#ef4444", // Red
+    color: "#ef4444", 
     githubLink: "https://github.com/uzicodes/AuraForce",
     liveLink: "https://auraforce.vercel.app/",    hasClerk: true,  },
   {
@@ -72,7 +72,7 @@ const projects: Project[] = [
     description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. It features adaptive bitrate streaming (HLS) to ensure smooth playback on slow networks, a robust content management system for admins, and a personalized watchlist for users.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,postgres,vercel",
     link: "/projects/project-3.jpg",
-    color: "#a855f7", // Purple
+    color: "#a855f7", 
     githubLink: "https://github.com/uzicodes/screen-box",
     liveLink: "https://screen-box.vercel.app/",
   },
@@ -81,7 +81,7 @@ const projects: Project[] = [
     description: "Your essential navigator for effortless travel designed to digitize the commuting experience in Dhaka City. Provides all Dhaka metro, bus routes & fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient & stress-free. No logins required. Google Maps for real-time traffic updates. Included all local buses in the city with route maps & fare details.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,materialui,vercel",
     link: "/projects/project-4.jpg",
-    color: "#10b981", // Green
+    color: "#10b981", 
     githubLink: "https://github.com/uzicodes/go-dhaka",
     liveLink: "https://go-dhaka.vercel.app/",
   }
@@ -215,7 +215,6 @@ function Card({
           transition: { duration: 0.3 },
         }}
       >
-        {/* Split card design */}
         <motion.div 
           className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl" 
           style={{ backgroundColor: '#574A49' }}
@@ -224,7 +223,6 @@ function Card({
             transition: { duration: 0.4 }
           }}
         >
-          {/* Image section */}
           <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
             <motion.img
               src={url}
@@ -235,23 +233,19 @@ function Card({
               transition={{ duration: 0.4 }}
             />
             
-            {/* Project number */}
             <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
               Project {i + 1}
             </div>
           </div>
 
-          {/* Content section */}
           <div className="w-full md:w-[45%] p-6 pt-2 md:p-8 md:pt-4 lg:p-10 lg:pt-6 flex flex-col justify-between relative">
             <div className="relative z-10">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
                 {title}
               </h2>
               
-              {/* Description Text */}
               <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
-              {/* Skills Icon Strip */}
               <div className="mt-2 flex items-center gap-2">
                 <img 
                     src={skills} 
@@ -268,11 +262,9 @@ function Card({
 
             </div>
             
-            {/* Links Section */}
             <div className="mt-4 md:mt-auto pt-4 relative z-10">
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
               <div className="flex items-center gap-2">
-                {/* GitHub Button - Green BG */}
                 <motion.a
                   title="GitHub Link"
                   href={githubLink}
@@ -290,7 +282,6 @@ function Card({
                   </span>
                 </motion.a>
                 
-                {/* Live Button - Blue Tint Background */}
                 <motion.a
                   title="Live Link"
                   href={liveLink}

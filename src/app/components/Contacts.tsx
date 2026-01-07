@@ -3,7 +3,6 @@
 import * as React from "react";
 import dynamic from "next/dynamic";
 const Form = dynamic(() => import("./Form"), { ssr: false });
-import Head from "next/head";
 import { MapPin, ArrowUp } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
@@ -90,28 +89,12 @@ export default function Contact() {
 
   return (
     <div className="relative min-h-screen bg-transparent">
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet" />
-        <style>{`
-          @font-face {
-            font-family: 'Colus';
-            src: url('/fonts/colus.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-          }
-        `}</style>
-      </Head>
-
-      {/* Content Layer */}
       <div className="relative z-10">
-        {/* Main Content */}
-        {/* UPDATED: Added overflow-x-clip here */}
-        <main className="pt-20 lg:pt-[0rem] bg-transparent text-white min-h-screen overflow-x-clip">
-          <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
+        <div className="pt-20 lg:pt-[0rem] bg-transparent text-white min-h-[90vh] flex items-center overflow-x-clip">
+          <section className="hero w-full flex items-center justify-center relative px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 
-                {/* Contact Info (Left) */}
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
@@ -163,7 +146,6 @@ export default function Contact() {
                   </div>
                 </motion.div>
 
-                {/* Form on the right side (Right) */}
                 <motion.div 
                   initial="hidden"
                   whileInView="visible"
@@ -176,12 +158,11 @@ export default function Contact() {
               </div>
             </div>
           </section>
-        </main>
+        </div>
 
-        {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
-          className="absolute bottom-10 right-10 p-4 bg-transparent border border-white rounded-full text-white hover:scale-110 transition-all duration-300 z-50"
+          className="absolute bottom-5 right-10 p-4 bg-transparent border border-white rounded-full text-white hover:scale-110 transition-all duration-300 z-50"
           aria-label="Scroll to top"
         >
           <motion.div
