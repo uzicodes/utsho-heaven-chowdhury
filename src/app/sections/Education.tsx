@@ -233,11 +233,11 @@ const EducationSection: React.FC = () => {
                                             className={`${edu.className} object-contain`}
                                             style={edu.style}
                                         />
-                                        <h3 className="text-xl font-bold tiempos-font" style={{ color: '#A8325A' }}>
+                                        <h3 className="text-xl font-bold tiempos-font" style={{ color: '#C94B76' }}>
                                             {edu.degree}
                                         </h3>
                                     </div>
-                                    <p className="text-base flex items-center justify-center gap-2 tiempos-font" style={{ color: '#73F527' }}>
+                                    <p className="text-base flex items-center justify-center gap-2 tiempos-font" style={{ color: '#0CA81F' }}>
                                         {edu.school}
                                     </p>
                                     <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -269,11 +269,11 @@ const EducationSection: React.FC = () => {
                                         className="h-14 w-14 object-contain"
                                         style={{ maxWidth: '56px', maxHeight: '56px' }}
                                     />
-                                    <h3 className="text-lg font-bold tiempos-font" style={{ color: '#A8325A' }}>
+                                    <h3 className="text-lg font-bold tiempos-font" style={{ color: '#c94b76' }}>
                                         THESIS
                                     </h3>
                                 </div>
-                                <p className="text-base flex items-center justify-center gap-2 tiempos-font" style={{ color: '#73F527' }}>
+                                <p className="text-base flex items-center justify-center gap-2 tiempos-font" style={{ color: '#0ca81f' }}>
                                     BRAC UNIVERSITY
                                 </p>
                                 <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -341,7 +341,7 @@ const EducationSection: React.FC = () => {
                                         <div>
                                             <h3
                                                 className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors tiempos-font"
-                                                style={{ color: '#A8325A', fontSize: '1rem' }}
+                                                style={{ color: '#c94b76', fontSize: '1rem' }}
                                             >
                                                 {cert.title}
                                             </h3>
@@ -354,7 +354,7 @@ const EducationSection: React.FC = () => {
                                                         className="w-5 h-5 object-contain"
                                                     />
                                                 )}
-                                                <p className="text-sm colus-font" style={{ color: '#73F527', fontSize: '0.95rem' }}>
+                                                <p className="text-sm colus-font" style={{ color: '#0ca81f', fontSize: '0.95rem' }}>
                                                     {cert.issuer}
                                                 </p>
                                             </div>
