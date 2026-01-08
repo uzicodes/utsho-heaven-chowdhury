@@ -181,9 +181,9 @@ const EducationSection: React.FC = () => {
             rotateX: 0,
             transition: { 
                 type: "spring", 
-                stiffness: 600, 
-                damping: 18,
-                mass: 0.5
+                stiffness: 900, 
+                damping: 10,
+                mass: 0.3
             } 
         }
     };
