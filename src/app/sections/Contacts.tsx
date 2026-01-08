@@ -88,9 +88,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative min-h-screen bg-transparent">
+    <div className="relative bg-transparent">
       <div className="relative z-10">
-        <div className="pt-20 lg:pt-[0rem] bg-transparent text-white min-h-[90vh] flex items-center overflow-x-clip">
+        <div className="pt-20 lg:pt-[0rem] bg-transparent text-white pb-5 flex items-center overflow-x-clip">
           <section className="hero w-full flex items-center justify-center relative px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
@@ -162,7 +162,7 @@ export default function Contact() {
 
         <button
           onClick={scrollToTop}
-          className="absolute bottom-5 right-10 p-4 bg-transparent border border-white rounded-full text-white hover:scale-110 transition-all duration-300 z-50"
+          className="absolute bottom-10 right-10 p-4 bg-transparent border border-white rounded-full text-white hover:scale-110 transition-all duration-300 z-50"
           aria-label="Scroll to top"
         >
           <motion.div
