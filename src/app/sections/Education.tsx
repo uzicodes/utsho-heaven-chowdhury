@@ -380,7 +380,7 @@ const EducationSection: React.FC = () => {
                                             href={cert.fullViewUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="mt-3 flex items-center justify-center gap-1 text-xs font-semibold bg-green-500/10 hover:bg-green-500/20 text-green-400 hover:text-green-300 px-3 py-1.5 rounded-full transition-all w-fit mx-auto"
+                                            className="mt-3 flex items-center justify-center gap-1 text-xs font-semibold bg-transparent hover:bg-green-500/20 text-green-400 hover:text-green-300 px-3 py-1.5 rounded-full transition-all w-fit mx-auto border border-green-400/40 hover:border-green-500"
                                         >
                                             <ExternalLink className="w-3 h-3" />
                                             View Full Certificate
