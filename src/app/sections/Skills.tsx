@@ -25,7 +25,7 @@ interface SkillCategory {
 }
 
 const containerVariants: Variants = {
-  hidden: { opacity: 1 }, 
+  hidden: { opacity: 1 },               //cascade cards animation
   visible: {
     opacity: 1,
     transition: {
@@ -35,7 +35,7 @@ const containerVariants: Variants = {
   },
 };
 
-const cardVariants: Variants = {
+const cardVariants: Variants = {         //Flip-effect
   hidden: { 
     opacity: 0,
     rotateX: -90, 
@@ -56,6 +56,8 @@ const cardVariants: Variants = {
   },
 };
 
+
+//Single Card Component
 const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
   <motion.div variants={cardVariants} className="h-full" style={{ transformStyle: 'preserve-3d' }}>
     <Card className="group h-full relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
@@ -73,7 +75,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
                 {skill.icon}
               </div>
             </div>
-          ))}
+          ))}                  {/* Skill Icons Grid*/}
         </div>
       </CardContent>
     </Card>
@@ -196,10 +198,10 @@ const SkillsSection: React.FC = () => {
               color={category.color}
             />
           ))}
-        </motion.div>
+        </motion.div>                  {/* keyframe animation */}
       </section>
-      <style jsx>{`
-        @keyframes shimmer {
+      <style jsx>{`          
+        @keyframes shimmer {                           
           0% {
             transform: translateX(-100%);
           }

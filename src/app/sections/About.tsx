@@ -5,9 +5,11 @@ const HeroImg = "/about.png";
 import React from "react";
 import { motion, Variants } from "framer-motion";
 
+
+
 export default function About(): React.ReactElement {
   
-  // Image Animation: Blur & Scale 
+  // Image Animation: Starts slightly smaller & blurry, then becomes clear 
   const imageRevealVariant: Variants = {
     hidden: { 
       opacity: 0, 

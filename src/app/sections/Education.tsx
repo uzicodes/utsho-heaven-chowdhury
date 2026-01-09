@@ -141,17 +141,21 @@ const EducationSection: React.FC = () => {
         },
     ];
 
+
+
+
+    // Container Animation:
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.05,
+                staggerChildren: 0.05,   //delay between each card pop in one by one
             },
         },
     };
 
-    const cardVariants: Variants = {
+    const cardVariants: Variants = {   //certs slid in effect
         hidden: (index: number) => ({
             opacity: 0,
             x: index % 2 === 0 ? -100 : 100, 
@@ -169,7 +173,7 @@ const EducationSection: React.FC = () => {
         },
     };
 
-    const educationCardVariants: Variants = {
+    const educationCardVariants: Variants = {    // 3D "flip up" effect for Edu cards
         hidden: { 
             opacity: 0, 
             scale: 0.5, 
@@ -209,7 +213,9 @@ const EducationSection: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                {/* Education Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">  
                     {educationData.map((edu, index) => (
                         <motion.div
                             key={index}
@@ -250,7 +256,8 @@ const EducationSection: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="flex justify-center mt-8">
+
+                <div className="flex justify-center mt-8">   {/* Thesis Card */}
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -288,7 +295,10 @@ const EducationSection: React.FC = () => {
                     </motion.div>
                 </div>
 
-                <motion.div
+
+
+
+                <motion.div        // Certifications Section
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.1 }} 

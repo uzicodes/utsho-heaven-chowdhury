@@ -87,7 +87,7 @@ const projects: Project[] = [
   }
 ];
 
-export default function Projects() {
+export default function Projects() {                // scroll-progress 
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -95,7 +95,7 @@ export default function Projects() {
   });
 
   useEffect(() => {
-    const style = document.createElement("style");
+    const style = document.createElement("style");    // different viewports 
     style.textContent = `
       @media screen and (width: 1366px) and (height: 768px),
              screen and (width: 1367px) and (height: 768px),
@@ -155,7 +155,7 @@ export default function Projects() {
               {projects.map((project: Project, i: number) => {
                 const targetScale: number = 1 - (projects.length - i) * 0.05;
                 return (
-                  <Card
+                  <Card                            // render cards
                     key={`p_${i}`}
                     i={i}
                     url={project.link}
@@ -199,7 +199,7 @@ function Card({
 
   return (
     <div
-      ref={container}
+      ref={container}      // card stick to the viewport top
       className={`h-screen flex items-center justify-center sticky top-0 project-container ${i === 0 ? 'mt-0' : ''}`}
     >
       <motion.div
@@ -219,14 +219,14 @@ function Card({
           className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl" 
           style={{ backgroundColor: '#574A49' }}
           whileHover={{ 
-            boxShadow: `0 0 30px -5px ${color}40`, 
+            boxShadow: `0 0 30px -5px ${color}40`,   // glow effect
             transition: { duration: 0.4 }
           }}
         >
           <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
             <motion.img
-              src={url}
-              alt={title}
+              src={url}                              // Project Image
+              alt={title}         
               className="w-full h-full object-contain"
               initial={{ scale: 0.85 }}
               whileHover={{ scale: 0.9 }}
@@ -234,7 +234,7 @@ function Card({
             />
             
             <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
-              Project {i + 1}
+              Project {i + 1}              {/* Project no: Badge */}
             </div>
           </div>
 
@@ -246,7 +246,7 @@ function Card({
               
               <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
-              <div className="mt-2 flex items-center gap-2">
+              <div className="mt-2 flex items-center gap-2">      {/* Tech Stack Icons */}
                 <img 
                     src={skills} 
                     alt="Tech Stack" 
@@ -266,7 +266,7 @@ function Card({
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
               <div className="flex items-center gap-2">
                 <motion.a
-                  title="GitHub Link"
+                  title="GitHub Link"        // Github Button 
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -283,7 +283,7 @@ function Card({
                 </motion.a>
                 
                 <motion.a
-                  title="Live Link"
+                  title="Live Link"           // Live Link Button
                   href={liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
