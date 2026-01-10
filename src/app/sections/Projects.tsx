@@ -149,7 +149,7 @@ export default function Projects() {                // scroll-progress
                       Projects
                   </h2>
                   <p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
-                       Showcase of my Technical Projects & Creative Solutions
+                       Showcasing my Technical Projects & Creative Solutions
                   </p>
               </div>
               {projects.map((project: Project, i: number) => {

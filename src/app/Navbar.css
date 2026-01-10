@@ -8,9 +8,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  /* CRITICAL FIX: Forces width to viewport width, preventing drift */
+  /* Forces width to viewport width, preventing drift */
   width: 100vw; 
-  /* CRITICAL FIX: Ensures it stays on top of everything */
+  /* Ensures stays on top of everything */
   z-index: 99999;
   background: rgba(17, 24, 39, 0.95);
   backdrop-filter: blur(12px);
@@ -75,7 +75,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* CRITICAL FIX: Increased padding pushes the button inwards */
+  /* Increased padding pushes the button inwards */
   padding: 0 1.5rem; 
   width: 100%;
   box-sizing: border-box;

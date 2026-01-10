@@ -25,7 +25,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // 1. Progress Bar Logic (Restored)
+  // 1. Progress Bar 
   useEffect(() => {
     let ticking = false;
 
@@ -53,7 +53,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // 2. Mobile Menu Resize Logic
+  // Mobile Menu Resize 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -64,7 +64,7 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // 3. Active Link Highlighter (Scroll Spy)
+  // Active Link Highlighter 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 300; // Offset to trigger earlier
@@ -89,7 +89,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 4. Smooth Scroll Handler (Clean URL version)
+  // Smooth Scroll Handler 
   const handleScrollTo = (e: React.MouseEvent, id: string) => {
     e.preventDefault(); // STOP the URL from changing
     setIsMenuOpen(false);
@@ -100,7 +100,7 @@ const Navbar = () => {
     } else {
         const element = document.getElementById(id);
         if (element) {
-            // Calculate offset for fixed navbar (approx 80px)
+            // Calculate offset for fixed navbar 
             const headerOffset = 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
