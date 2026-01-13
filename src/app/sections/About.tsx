@@ -148,7 +148,7 @@ export default function About(): React.ReactElement {
                     style={{ color: '#5DCF4E', display: 'inline-block' }}
                     className="cairo-font"
                   >
-                         <code>"hello world"</code> {'</>'}
+                       {'<'} hello world {'>'} 
                   </motion.span>
                 </motion.p>
               </div>
