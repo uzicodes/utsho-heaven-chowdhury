@@ -139,7 +139,7 @@ export default function About(): React.ReactElement {
                   className="text-xl cairo-font" 
                   style={{ color: '#CF4E5B' }}
                 >
-                  {`it all started with </> `}
+                  {`it all started with a   `}
                   <motion.span 
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -148,7 +148,7 @@ export default function About(): React.ReactElement {
                     style={{ color: '#5DCF4E', display: 'inline-block' }}
                     className="cairo-font"
                   >
-                    "Hello World"
+                         <code>"hello world"</code> {'</>'}
                   </motion.span>
                 </motion.p>
               </div>
