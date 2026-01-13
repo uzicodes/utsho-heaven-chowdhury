@@ -58,7 +58,7 @@ export const CursorPointer = ({ className, ...props }: CursorPointerProps) => (
   >
     <path
       d="M19.438 6.716 1.115.05A.832.832 0 0 0 .05 1.116L6.712 19.45a.834.834 0 0 0 1.557.025l3.198-8 7.995-3.2a.833.833 0 0 0 0-1.559h-.024Z"
-      fill="#9BE30B"
+      fill="#5CFF3B"
     />
   </svg>
 );
