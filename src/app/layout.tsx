@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Cursor, CursorPointer } from "@/app/components/cursor";
 import { StarsBackground } from "@/app/components/stars";
+import { Preloader } from "@/app/components/Preloader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black min-h-screen relative`}
       >
+        <Preloader />
         <div className="fixed inset-0 z-0 pointer-events-none">
           <StarsBackground 
             className="h-full w-full bg-transparent" 
