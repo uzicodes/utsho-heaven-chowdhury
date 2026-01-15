@@ -3,24 +3,49 @@ import styled from 'styled-components';
 
 const Form = () => {
   const [result, setResult] = React.useState("");
+  const [errors, setErrors] = React.useState<{ [key: string]: string }>({});
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending....");
-    const form = event.target as HTMLFormElement;
-    const email = form.email.value;
-    const phone = form.phone.value;
-    // Email must contain '@'
-    if (!email.includes('@')) {
-      window.alert("Please add a valid E-mail");
-      return;
-    }
-    // Phone must be digits and special characters only, max 15 chars
-    if (!/^[\d\s\-\+\(\)\.]{1,15}$/.test(phone)) {
-      window.alert("Please add a valid number");
-      return;
-    }
+    setErrors({});
+
+    const form = event.currentTarget;
     const formData = new FormData(form);
+    
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const message = formData.get("message") as string;
+
+    const newErrors: { [key: string]: string } = {};
+
+    if (name.length > 100) {
+      newErrors.name = "Name must not exceed 100 characters";
+    }
+
+    if (!email.includes('@')) {
+      newErrors.email = "Email must contain '@'";
+    }
+
+    if (phone.length > 15) {
+      newErrors.phone = "Phone number must not exceed 15 digits";
+    } // Validate phone characters
+    else if (!/^[\d\s\-\+\(\)\.]+$/.test(phone)) {
+      newErrors.phone = "Phone number contains invalid characters";
+    }
+
+    const wordCount = message.trim().length === 0 ? 0 : message.trim().split(/\s+/).length;
+    if (wordCount > 500) {
+        newErrors.message = `Message must not exceed 500 words (Current: ${wordCount})`;
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+        setErrors(newErrors);
+        setResult("");
+        return;
+    }
+
     formData.append("access_key", "25e65c88-7b8e-4e47-95f0-c289b90213e5");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -45,10 +70,17 @@ const Form = () => {
         <form className="form" onSubmit={onSubmit}>
           <span className="heading">Contact me</span>
           <span className="c1">Please fill out the details</span>
-          <input className="input" type="text" name="name" placeholder="Name" required />
-          <input className="input" type="email" name="email" placeholder="E-mail" required pattern=".*@.*" />
-          <input className="input" type="tel" name="phone" placeholder="Phone" required pattern="\d{1,15}" maxLength={15} />
+          <input className="input" type="text" name="name" placeholder="Name" required maxLength={100} />
+          {errors.name && <span className="error-message">{errors.name}</span>}
+          
+          <input className="input" type="email" name="email" placeholder="E-mail" required />
+          {errors.email && <span className="error-message">{errors.email}</span>}
+          
+          <input className="input" type="tel" name="phone" placeholder="Phone" required maxLength={15} />
+          {errors.phone && <span className="error-message">{errors.phone}</span>}
+          
           <textarea className="input" name="message" placeholder="Message" rows={4} required />
+          {errors.message && <span className="error-message">{errors.message}</span>}
           <div className="button-container">
             <button type="submit" className="send-button">Send Message</button>
             <div className="reset-button-container"></div>
@@ -63,6 +95,15 @@ const Form = () => {
 const StyledWrapper = styled.div`
   .orange {
     color: #caf438;
+  }
+
+  .error-message {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: block;
   }
 
   .form-container {

@@ -9,7 +9,7 @@
 
 
 
-/* Hide default cursor on all interactive elements so only custom cursor shows */
+/* only custom cursor shows */
 a, button, [role="button"], input, select, textarea {
   cursor: none !important;
 }
@@ -136,7 +136,7 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
 }
 
-/* From Uiverse.io by PriyanshuGupta28 */ 
+/* pre-loader From Uiverse.io */ 
 .ai-matrix-loader {
   width: 120px;
   height: 160px;
@@ -201,7 +201,7 @@ html { scroll-behavior: smooth; }
     transparent 70%
   );
   animation: matrix-pulse 2s infinite;
-  pointer-events: none; /* Good practice for overlays */
+  pointer-events: none; 
 }
 
 @keyframes matrix-fall {
