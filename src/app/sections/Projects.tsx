@@ -45,7 +45,7 @@ const projects: Project[] = [
     title: "Culinary Canvas",
     description: "Intuitive web platform that lets you effortlessly discover, customize & order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking & personalized account features. Has Admin Dashborad for the CRUD operations to add, edit, delete, manage menu, orders & customer interactions efficiently. Persistent shopping cart with secure payment integration (SSLcommerz)",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,mongodb,vercel",
-    link: "/projects/project-2.jpg",
+    link: "/projects/project-2.png",
     color: "#ff6b35", 
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
