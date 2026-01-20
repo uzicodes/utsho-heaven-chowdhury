@@ -103,7 +103,6 @@ const SkillsSection: React.FC = () => {
         { name: "Node.js", icon: <img src="/icons/backend/nodejs.svg" alt="Node.js" /> },
         { name: "Express.js", icon: <img src="/icons/backend/express.svg" alt="Express.js" /> },
         { name: "Python", icon: <img src="/icons/backend/python.svg" alt="Python" /> },
-        { name: "Ruby", icon: <img src="/icons/backend/ruby.svg" alt="Ruby" /> },
         { name: "FASTapi", icon: <img src="/icons/backend/fastapi.svg" alt="FASTapi" /> },
       ],
     },
