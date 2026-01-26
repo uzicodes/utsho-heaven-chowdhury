@@ -14,6 +14,7 @@ interface Project {
   githubLink: string;
   liveLink: string;
   hasClerk?: boolean;
+  hasSSL?: boolean;
 }
 
 interface CardProps {
@@ -29,6 +30,7 @@ interface CardProps {
   githubLink: string;
   liveLink: string;
   hasClerk?: boolean;
+  hasSSL?: boolean;
 }
 
 const projects: Project[] = [
@@ -49,6 +51,7 @@ const projects: Project[] = [
     color: "#ff6b35", 
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
+    hasSSL: true,
   },
   {
     title: "Northern Paribahan",
@@ -58,6 +61,7 @@ const projects: Project[] = [
     color: "#3b82f6", 
     githubLink: "https://github.com/uzicodes/northern-paribahan",
     liveLink: "https://northern-paribahan.vercel.app/",
+    hasSSL: true,
   },
   {
     title: "Aura Force",
@@ -66,7 +70,9 @@ const projects: Project[] = [
     link: "/projects/project-6.png",
     color: "#ef4444", 
     githubLink: "https://github.com/uzicodes/AuraForce",
-    liveLink: "https://auraforce.vercel.app/",    hasClerk: true,  },
+    liveLink: "https://auraforce.vercel.app/",
+    hasClerk: true,
+  },
   {
     title: "SCREEN BOX",
     description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. It features adaptive bitrate streaming (HLS) to ensure smooth playback on slow networks, a robust content management system for admins, and a personalized watchlist for users.",
@@ -87,7 +93,7 @@ const projects: Project[] = [
   }
 ];
 
-export default function Projects() {                // scroll-progress 
+export default function Projects() {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -95,7 +101,7 @@ export default function Projects() {                // scroll-progress
   });
 
   useEffect(() => {
-    const style = document.createElement("style");    // different viewports 
+    const style = document.createElement("style");
     style.textContent = `
       @media screen and (width: 1366px) and (height: 768px),
              screen and (width: 1367px) and (height: 768px),
@@ -155,7 +161,7 @@ export default function Projects() {                // scroll-progress
               {projects.map((project: Project, i: number) => {
                 const targetScale: number = 1 - (projects.length - i) * 0.05;
                 return (
-                  <Card                            // render cards
+                  <Card 
                     key={`p_${i}`}
                     i={i}
                     url={project.link}
@@ -169,6 +175,7 @@ export default function Projects() {                // scroll-progress
                     githubLink={project.githubLink}
                     liveLink={project.liveLink}
                     hasClerk={project.hasClerk}
+                    hasSSL={project.hasSSL}
                   />
                 );
               })}
@@ -193,13 +200,14 @@ function Card({
   githubLink,
   liveLink,
   hasClerk,
+  hasSSL,
 }: CardProps) {
   const container = useRef<HTMLDivElement>(null);
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div
-      ref={container}      // card stick to the viewport top
+      ref={container}
       className={`h-screen flex items-center justify-center sticky top-0 project-container ${i === 0 ? 'mt-0' : ''}`}
     >
       <motion.div
@@ -219,14 +227,14 @@ function Card({
           className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl" 
           style={{ backgroundColor: '#574A49' }}
           whileHover={{ 
-            boxShadow: `0 0 30px -5px ${color}40`,   // glow effect
+            boxShadow: `0 0 30px -5px ${color}40`,
             transition: { duration: 0.4 }
           }}
         >
           <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
             <motion.img
-              src={url}                              // Project Image
-              alt={title}         
+              src={url}
+              alt={title}
               className="w-full h-full object-contain"
               initial={{ scale: 0.85 }}
               whileHover={{ scale: 0.9 }}
@@ -234,7 +242,7 @@ function Card({
             />
             
             <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
-              Project {i + 1}              {/* Project no: Badge */}
+              Project {i + 1}
             </div>
           </div>
 
@@ -246,7 +254,7 @@ function Card({
               
               <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
-              <div className="mt-2 flex items-center gap-2">      {/* Tech Stack Icons */}
+              <div className="mt-2 flex items-center gap-2">
                 <img 
                     src={skills} 
                     alt="Tech Stack" 
@@ -258,6 +266,12 @@ function Card({
                     <img src="/icons/tools/clerk.svg" alt="Clerk" className="w-4 h-4 md:w-6 md:h-6" />
                   </div>
                 )}
+                {hasSSL && (
+                  <div className="h-6 w-6 md:h-8 md:w-8 bg-white rounded flex items-center justify-center p-1">
+                    {/* FIXED PATH: Correctly pointing to /icons/ssl.png */}
+                    <img src="/icons/ssl.jpg" alt="SSLCommerz" className="w-full h-full object-contain" />
+                  </div>
+                )}
               </div>
 
             </div>
@@ -266,7 +280,7 @@ function Card({
               <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
               <div className="flex items-center gap-2">
                 <motion.a
-                  title="GitHub Link"        // Github Button 
+                  title="GitHub Link"
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -275,15 +289,11 @@ function Card({
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <img src="/github.svg" alt="GitHub" width={20} height={20} className="inline-block align-middle" />
-                  <span
-                    className="text-xs md:text-sm font-medium text-[#0be890]"
-                  >
-                    Code
-                  </span>
+                  <span className="text-xs md:text-sm font-medium text-[#0be890]">Code</span>
                 </motion.a>
                 
                 <motion.a
-                  title="Live Link"           // Live Link Button
+                  title="Live Link"
                   href={liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -292,11 +302,7 @@ function Card({
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <img src="/earth.png" alt="Live" width={20} height={20} className="inline-block align-middle" />
-                  <span
-                    className="text-xs md:text-sm font-medium text-[#0be890]"
-                  >
-                    Live
-                  </span>
+                  <span className="text-xs md:text-sm font-medium text-[#0be890]">Live</span>
                 </motion.a>
               </div>
             </div>
