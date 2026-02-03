@@ -8,7 +8,7 @@ import * as React from "react";
 interface Project {
   title: string;
   description: string;
-  skills: string; 
+  skills: string;
   link: string;
   color: string;
   githubLink: string;
@@ -21,7 +21,7 @@ interface CardProps {
   i: number;
   title: string;
   description: string;
-  skills: string; 
+  skills: string;
   url: string;
   color: string;
   progress: MotionValue<number>;
@@ -37,38 +37,38 @@ const projects: Project[] = [
   {
     title: "LAMB FALCONS - Official Club Site",
     description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement. Used Animated libraries, interactive UI elements for a smooth user experience. Production ready with CI/CD pipelines for seamless updates & maintenance.",
-    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,firebase,tailwind,vercel", 
+    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,firebase,tailwind,vercel",
     link: "/projects/project-1.jpg",
-    color: "#0be890", 
+    color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
     liveLink: "https://lamb-falcons.vercel.app/",
   },
   {
     title: "Culinary Canvas",
-    description: "Intuitive web platform that lets you effortlessly discover, customize & order from diverse local cuisines. This site provides a seamless food delivery experience complete with real-time order tracking & personalized account features. Has Admin Dashborad for the CRUD operations to add, edit, delete, manage menu, orders & customer interactions efficiently. Persistent shopping cart with secure payment integration (SSLcommerz)",
+    description: "Production ready modern web platform for food delivery, providing seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, real-time items fetch from MongoDB\n• Profile management, images stored in Cloudinary\n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, monthly revenue & inventory\n• Real-time feedback system & SSLcommerz for payment integration, invoice generation",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-2.png",
-    color: "#ff6b35", 
+    color: "#ff6b35",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
     hasSSL: true,
   },
   {
     title: "Northern Paribahan",
-    description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation. It removes the hassle of standing in long queues, Provides users with personalized travel history, route management & secure payments. Providing wide range of buses with a flexible timetable. Robust Admin Control for managing routes, schedules, fares & users. SSLCommerz checkout for secure transactions. SMS & PDF ticket delivery.",
+    description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation\n• Users with personalized travel history, route & account management\n• Bus & timetable seeding realtime from prisma.\n• Supabase for authentication & user management \n• Robust Admin Control for managing routes, schedules, fares & users.\n• SSLCommerz checkout for secure transactions, Mail & PDF ticket delivery.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,prisma,supabase,vercel",
     link: "/projects/project-5.png",
-    color: "#3b82f6", 
+    color: "#3b82f6",
     githubLink: "https://github.com/uzicodes/northern-paribahan",
     liveLink: "https://northern-paribahan.vercel.app/",
     hasSSL: true,
   },
   {
     title: "Aura Force",
-    description: "Robust Fitness platform streamlining Gym operations & enhancing member experience. Features real-time class scheduling, automated renewals & trainer booking. Includes a secure portal for tracking workouts, BMI & personalized diet plans. Real-time forums for community engagement. Admin dashboard for managing user memberships, trainers & classes efficiently. Used Animated UI & responsiveness for engaging user experience.",
+    description: "Robust Fitness platform streamlining Gym operations & enhancing member experience.\n• Features real-time Class scheduling, Class & Trainer booking. Prisma fetching from Supabase\n• User BMI & personalized diet plan. Real-time forums for community engagement.\n• Clerk for authentication & user management. \n• Admin dashboard for managing memberships, trainers & classes efficiently.\n• Animated UI & responsiveness for engaging user experience & SSLCommerz for safe transactions.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,prisma,vercel",
     link: "/projects/project-6.png",
-    color: "#ef4444", 
+    color: "#ef4444",
     githubLink: "https://github.com/uzicodes/AuraForce",
     liveLink: "https://auraforce.vercel.app/",
     hasClerk: true,
@@ -78,7 +78,7 @@ const projects: Project[] = [
     description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. It features adaptive bitrate streaming (HLS) to ensure smooth playback on slow networks, a robust content management system for admins, and a personalized watchlist for users.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,postgres,vercel",
     link: "/projects/project-3.png",
-    color: "#a855f7", 
+    color: "#a855f7",
     githubLink: "https://github.com/uzicodes/screen-box",
     liveLink: "https://screen-box.vercel.app/",
   },
@@ -87,7 +87,7 @@ const projects: Project[] = [
     description: "Your essential navigator for effortless travel designed to digitize the commuting experience in Dhaka City. Provides all Dhaka metro, bus routes & fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient & stress-free. No logins required. Google Maps for real-time traffic updates. Included all local buses in the city with route maps & fare details.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,materialui,vercel",
     link: "/projects/project-4.png",
-    color: "#10b981", 
+    color: "#10b981",
     githubLink: "https://github.com/uzicodes/go-dhaka",
     liveLink: "https://go-dhaka.vercel.app/",
   }
@@ -151,24 +151,24 @@ export default function Projects() {
           <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
             <div className="text-white w-full bg-transparent">
               <div className="text-center mb-0 pt-32">
-                  <h2 className="text-4xl font-bold mb-1 colus-font" style={{ color: '#F5BE27' }}>
-                      Projects
-                  </h2>
-                  <p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
-                       Showcasing my Technical Projects & Creative Solutions
-                  </p>
+                <h2 className="text-4xl font-bold mb-1 colus-font" style={{ color: '#F5BE27' }}>
+                  Projects
+                </h2>
+                <p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
+                  Showcasing my Technical Projects & Creative Solutions
+                </p>
               </div>
               {projects.map((project: Project, i: number) => {
                 const targetScale: number = 1 - (projects.length - i) * 0.05;
                 return (
-                  <Card 
+                  <Card
                     key={`p_${i}`}
                     i={i}
                     url={project.link}
                     title={project.title}
                     color={project.color}
                     description={project.description}
-                    skills={project.skills} 
+                    skills={project.skills}
                     progress={scrollYProgress}
                     range={[i * 0.25, 1]}
                     targetScale={targetScale}
@@ -191,7 +191,7 @@ function Card({
   i,
   title,
   description,
-  skills, 
+  skills,
   url,
   color,
   progress,
@@ -223,10 +223,10 @@ function Card({
           transition: { duration: 0.3 },
         }}
       >
-        <motion.div 
-          className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl" 
+        <motion.div
+          className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl"
           style={{ backgroundColor: '#574A49' }}
-          whileHover={{ 
+          whileHover={{
             boxShadow: `0 0 30px -5px ${color}40`,
             transition: { duration: 0.4 }
           }}
@@ -240,26 +240,26 @@ function Card({
               whileHover={{ scale: 0.9 }}
               transition={{ duration: 0.4 }}
             />
-            
+
             <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
               Project {i + 1}
             </div>
           </div>
 
-          <div className="w-full md:w-[45%] p-6 pt-2 md:p-8 md:pt-4 lg:p-10 lg:pt-6 flex flex-col justify-between relative">
+          <div className="w-full md:w-[45%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative">
             <div className="relative z-10">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
                 {title}
               </h2>
-              
-              <p className="text-xs md:text-base text-[#000000] leading-relaxed max-w-md lora-font mb-4">{description}</p>
 
-              <div className="mt-2 flex items-center gap-2">
-                <img 
-                    src={skills} 
-                    alt="Tech Stack" 
-                    className="h-6 md:h-8 w-auto" 
-                    loading="lazy"
+              <p className="text-xs md:text-base text-[#000000] leading-snug lora-font mb-3 whitespace-pre-line">{description}</p>
+
+              <div className="mt-1 flex items-center gap-2">
+                <img
+                  src={skills}
+                  alt="Tech Stack"
+                  className="h-6 md:h-8 w-auto"
+                  loading="lazy"
                 />
                 {hasClerk && (
                   <div className="h-6 w-6 md:h-8 md:w-8 bg-[#1C1C1E] rounded flex items-center justify-center">
@@ -275,9 +275,9 @@ function Card({
               </div>
 
             </div>
-            
-            <div className="mt-4 md:mt-auto pt-4 relative z-10">
-              <div className="w-full h-[1px] bg-gray-800 mb-4 md:mb-6" />
+
+            <div className="mt-2 md:mt-auto pt-2 relative z-10">
+              <div className="w-full h-[1px] bg-gray-800 mb-3 md:mb-4" />
               <div className="flex items-center gap-2">
                 <motion.a
                   title="GitHub Link"
@@ -291,7 +291,7 @@ function Card({
                   <img src="/github.svg" alt="GitHub" width={20} height={20} className="inline-block align-middle" />
                   <span className="text-xs md:text-sm font-medium text-[#0be890]">Code</span>
                 </motion.a>
-                
+
                 <motion.a
                   title="Live Link"
                   href={liveLink}
