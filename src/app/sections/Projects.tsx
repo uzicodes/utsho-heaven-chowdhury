@@ -45,7 +45,7 @@ const projects: Project[] = [
   },
   {
     title: "Culinary Canvas",
-    description: "Production ready modern web platform for food delivery, providing seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, real-time items fetch from MongoDB\n• Profile management, images stored in Cloudinary\n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, monthly revenue & inventory\n• Real-time feedback system & SSLcommerz for payment integration, invoice generation",
+    description: "Production ready modern web platform with seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, real-time items fetch from MongoDB\n• Profile management, images stored in Cloudinary\n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, monthly revenue \n• Real-time feedback system & SSLcommerz for payment integration, invoice generation",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-2.png",
     color: "#ff6b35",
@@ -55,7 +55,7 @@ const projects: Project[] = [
   },
   {
     title: "Northern Paribahan",
-    description: "Comprehensive platform for seamless ticket booking with real-time seat availability & instant ticket confirmation\n• Users with personalized travel history, route & account management\n• Bus & timetable seeding realtime from prisma.\n• Supabase for authentication & user management \n• Robust Admin Control for managing routes, schedules, fares & users.\n• SSLCommerz checkout for secure transactions, Mail & PDF ticket delivery.",
+    description: "Seamless ticket booking with real-time seat availability & instant ticket confirmation\n• Users with personalized travel history, route & account management\n• Bus & timetable seeding realtime from prisma.\n• Supabase for authentication & user management \n• Robust Admin Control for managing routes, schedules, fares & users.\n• SSLCommerz checkout for secure transactions, Mail & PDF ticket delivery.",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,prisma,supabase,vercel",
     link: "/projects/project-5.png",
     color: "#3b82f6",
@@ -75,7 +75,7 @@ const projects: Project[] = [
   },
   {
     title: "SCREEN BOX",
-    description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series. It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists. It features adaptive bitrate streaming (HLS) to ensure smooth playback on slow networks, a robust content management system for admins, and a personalized watchlist for users.",
+    description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series.\n• It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists.\n• It features adaptive bitrate streaming (HLS) to ensure smooth playback on slow networks \n• Robust content management system for admins, and a personalized watchlist for users.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,postgres,vercel",
     link: "/projects/project-3.png",
     color: "#a855f7",
@@ -84,7 +84,7 @@ const projects: Project[] = [
   },
   {
     title: "GO Dhaka",
-    description: "Your essential navigator for effortless travel designed to digitize the commuting experience in Dhaka City. Provides all Dhaka metro, bus routes & fares in one continuously updated platform. Find the fastest routes instantly, making city travel easy, efficient & stress-free. No logins required. Google Maps for real-time traffic updates. Included all local buses in the city with route maps & fare details.",
+    description: "Your essential navigator for effortless travel designed to digitize the commuting experience in Dhaka City.\n• Provides all Dhaka metro, bus routes & fares in one continuously updated platform.\n• Find the fastest routes instantly, making city travel easy, efficient & stress-free.\n• No logins required.\n• Google Maps for real-time traffic updates.\n• Included all local buses in the city with route maps & fare details.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,materialui,vercel",
     link: "/projects/project-4.png",
     color: "#10b981",
@@ -231,18 +231,49 @@ function Card({
             transition: { duration: 0.4 }
           }}
         >
-          <div className="w-full md:w-[55%] h-[250px] md:h-[400px] lg:h-[450px] relative overflow-hidden">
-            <motion.img
-              src={url}
-              alt={title}
-              className="w-full h-full object-contain"
-              initial={{ scale: 0.85 }}
-              whileHover={{ scale: 0.9 }}
-              transition={{ duration: 0.4 }}
-            />
+          <div className="w-full md:w-[55%] flex flex-col">
+            <div className="h-[200px] md:h-[340px] lg:h-[390px] relative overflow-hidden">
+              <motion.img
+                src={url}
+                alt={title}
+                className="w-full h-full object-contain"
+                initial={{ scale: 0.85 }}
+                whileHover={{ scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              />
 
-            <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
-              Project {i + 1}
+              <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
+                Project {i + 1}
+              </div>
+            </div>
+
+            {/* GitHub and Live Links */}
+            <div className="flex items-center justify-center gap-3 py-2 md:py-3 bg-[#574A49]">
+              <motion.a
+                title="GitHub Link"
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-green-500/15 hover:bg-green-500/25 transition-all cursor-pointer"
+                whileHover={{ y: -2, scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <img src="/github.svg" alt="GitHub" width={18} height={18} className="inline-block align-middle" />
+                <span className="text-xs md:text-sm font-medium text-[#0be890]">Code</span>
+              </motion.a>
+
+              <motion.a
+                title="Live Link"
+                href={liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all cursor-pointer"
+                whileHover={{ y: -2, scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <img src="/earth.png" alt="Live" width={18} height={18} className="inline-block align-middle" />
+                <span className="text-xs md:text-sm font-medium text-[#0be890]">Live</span>
+              </motion.a>
             </div>
           </div>
 
@@ -274,37 +305,6 @@ function Card({
                 )}
               </div>
 
-            </div>
-
-            <div className="mt-2 md:mt-auto pt-2 relative z-10">
-              <div className="w-full h-[1px] bg-gray-800 mb-3 md:mb-4" />
-              <div className="flex items-center gap-2">
-                <motion.a
-                  title="GitHub Link"
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/15 hover:bg-green-500/20 transition-all cursor-pointer"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <img src="/github.svg" alt="GitHub" width={20} height={20} className="inline-block align-middle" />
-                  <span className="text-xs md:text-sm font-medium text-[#0be890]">Code</span>
-                </motion.a>
-
-                <motion.a
-                  title="Live Link"
-                  href={liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 hover:bg-blue-500/20 transition-all cursor-pointer"
-                  whileHover={{ y: -3 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <img src="/earth.png" alt="Live" width={20} height={20} className="inline-block align-middle" />
-                  <span className="text-xs md:text-sm font-medium text-[#0be890]">Live</span>
-                </motion.a>
-              </div>
             </div>
           </div>
         </motion.div>
