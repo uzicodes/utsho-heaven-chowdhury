@@ -45,7 +45,7 @@ const projects: Project[] = [
   },
   {
     title: "Culinary Canvas",
-    description: "Production ready modern web platform with seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, real-time items fetch from MongoDB\n• Profile management, images stored in Cloudinary\n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, monthly revenue \n• Real-time feedback system & SSLcommerz for payment integration, invoice generation",
+    description: "Production ready modern web platform with seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, Catogorized food items \n• Real-time items fetched from MongoDB \n• Profile management, can see previous orders \n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, daily/monthly revenue, resturant metrics & user feedbacks \n• Real-time user feedback system & SSLcommerz for payment integration, invoice generation",
     skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,mongodb,vercel",
     link: "/projects/project-2.png",
     color: "#ff6b35",
@@ -65,7 +65,7 @@ const projects: Project[] = [
   },
   {
     title: "Aura Force",
-    description: "Robust Fitness platform streamlining Gym operations & enhancing member experience.\n• Features real-time Class scheduling, Class & Trainer booking. Prisma fetching from Supabase\n• User BMI & personalized diet plan. Real-time forums for community engagement.\n• Clerk for authentication & user management. \n• Admin dashboard for managing memberships, trainers & classes efficiently.\n• Animated UI & responsiveness for engaging user experience & SSLCommerz for safe transactions.",
+    description: "Robust Fitness platform streamlining Gym operations & enhancing member experience.\n• Features real-time Class scheduling, Class & Trainer booking.\n• Prisma fetching from Supabase & user feedback realtime from DB \n• Clerk for authentication & user management.\n• User BMI & personalized diet plan.\n• Admin dashboard for managing memberships, trainers & classes efficiently.\n• Animated UI & Responsiveness for engaging user experience \n• SSLCommerz for safe transactions.",
     skills: "https://skillicons.dev/icons?i=nextjs,react,ts,tailwind,supabase,prisma,vercel",
     link: "/projects/project-6.png",
     color: "#ef4444",
