@@ -56,11 +56,11 @@ const projects: Project[] = [
   {
     title: "Northern Paribahan",
     description: "Seamless ticket booking with real-time seat availability & instant ticket confirmation\n• Users with personalized travel history, route & account management\n• Bus & timetable seeding realtime from prisma.\n• Supabase for authentication & user management \n• Robust Admin Control for managing routes, schedules, fares & users.\n• SSLCommerz checkout for secure transactions, Mail & PDF ticket delivery.",
-    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,prisma,supabase,vercel",
+    skills: "https://skillicons.dev/icons?i=nextjs,nodejs,react,ts,tailwind,prisma,supabase",
     link: "/projects/northern-paribahan.png",
     color: "#3b82f6",
     githubLink: "https://github.com/uzicodes/northern-paribahan",
-    liveLink: "https://northern-paribahan.vercel.app/",
+    liveLink: "https://northern-paribahan.onrender.com",
     hasSSL: true,
   },
   {
