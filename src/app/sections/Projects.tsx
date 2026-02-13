@@ -272,7 +272,7 @@ function Card({
                 {title}
               </h2>
 
-              <p className="text-xs md:text-base text-[#000000] leading-snug lora-font mb-3 whitespace-pre-line">{description}</p>
+              <p className="text-xs md:text-base text-[#000000] leading-snug lora-font mb-3 whitespace-pre-line min-h-[120px] md:min-h-[200px] lg:min-h-[240px]">{description}</p>
 
               <div className="mt-1 flex items-center gap-2">
                 {(() => {
