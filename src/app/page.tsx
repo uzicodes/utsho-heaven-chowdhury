@@ -203,8 +203,8 @@ export default function Home() {
                         whileTap={{ scale: 0.95 }}
                         className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                       >
-                        <span className="block px-1 sm:px-2 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
-                          <span className="relative flex items-center justify-end gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
+                        <span className="block w-full px-6 sm:px-2 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
+                          <span className="relative flex items-center justify-center sm:justify-end gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
                             <span className="colus-font"> Consultations</span>
                             <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
                           </span>
