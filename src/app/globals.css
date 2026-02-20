@@ -1,25 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 .cairo-font {
   font-family: 'Cairo', sans-serif;
   font-weight: 700;
 }
 
+.satoshi-font {
+  font-family: 'Satoshi', sans-serif;
+}
+
 
 
 /* only custom cursor shows */
-a, button, [role="button"], input, select, textarea {
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
   cursor: none !important;
 }
+
 /* Social icon hover animation */
 .contact-social-icon {
-  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contact-social-icon:hover {
   transform: scale(1.18) rotate(-8deg);
-  box-shadow: 0 4px 18px 0 rgba(0, 255, 163, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+  box-shadow: 0 4px 18px 0 rgba(0, 255, 163, 0.18), 0 1.5px 6px 0 rgba(0, 0, 0, 0.10);
   z-index: 2;
 }
 
@@ -48,6 +66,7 @@ a, button, [role="button"], input, select, textarea {
 .tiempos-font {
   font-family: 'TestTiemposText', serif;
 }
+
 @font-face {
   font-family: 'Colus';
   src: url('/fonts/colus.otf') format('opentype');
@@ -58,6 +77,7 @@ a, button, [role="button"], input, select, textarea {
 .colus-font {
   font-family: 'Colus', sans-serif;
 }
+
 @font-face {
   font-family: 'Hogers';
   src: url('/fonts/hogers.ttf') format('truetype');
@@ -87,6 +107,7 @@ a, button, [role="button"], input, select, textarea {
 .lilitaone-font {
   font-family: 'Lilita One', cursive;
 }
+
 @import "tailwindcss";
 
 :root {
@@ -116,7 +137,9 @@ body {
 
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Preloader */
 .preloader-overlay {
@@ -136,7 +159,7 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
 }
 
-/* pre-loader From Uiverse.io */ 
+/* pre-loader From Uiverse.io */
 .ai-matrix-loader {
   width: 120px;
   height: 160px;
@@ -163,27 +186,35 @@ html { scroll-behavior: smooth; }
 .digit:nth-child(1) {
   animation-delay: 0.1s;
 }
+
 .digit:nth-child(2) {
   animation-delay: 0.3s;
 }
+
 .digit:nth-child(3) {
   animation-delay: 0.5s;
 }
+
 .digit:nth-child(4) {
   animation-delay: 0.7s;
 }
+
 .digit:nth-child(5) {
   animation-delay: 0.9s;
 }
+
 .digit:nth-child(6) {
   animation-delay: 1.1s;
 }
+
 .digit:nth-child(7) {
   animation-delay: 1.3s;
 }
+
 .digit:nth-child(8) {
   animation-delay: 1.5s;
 }
+
 /* Adding a 9th just in case since grid is 3 columns */
 .digit:nth-child(9) {
   animation-delay: 1.7s;
@@ -195,13 +226,11 @@ html { scroll-behavior: smooth; }
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    circle,
-    rgba(0, 255, 136, 0.1) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle,
+      rgba(0, 255, 136, 0.1) 0%,
+      transparent 70%);
   animation: matrix-pulse 2s infinite;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 @keyframes matrix-fall {
@@ -209,11 +238,13 @@ html { scroll-behavior: smooth; }
     transform: translateY(-50px) rotateX(90deg);
     opacity: 0;
   }
+
   20%,
   80% {
     transform: translateY(0) rotateX(0deg);
     opacity: 0.8;
   }
+
   100% {
     transform: translateY(50px) rotateX(-90deg);
     opacity: 0;
@@ -221,24 +252,27 @@ html { scroll-behavior: smooth; }
 }
 
 @keyframes matrix-flicker {
+
   0%,
   19%,
   21%,
   100% {
     opacity: 0.8;
   }
+
   20% {
     opacity: 0.2;
   }
 }
 
 @keyframes matrix-pulse {
+
   0%,
   100% {
     opacity: 0.3;
   }
+
   50% {
     opacity: 0.7;
   }
 }
-

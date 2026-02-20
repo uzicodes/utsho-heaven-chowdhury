@@ -8,22 +8,22 @@ import { motion, Variants } from "framer-motion";
 
 
 export default function About(): React.ReactElement {
-  
+
   // Image Animation: Starts slightly smaller & blurry, then becomes clear 
   const imageRevealVariant: Variants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.95, 
+    hidden: {
+      opacity: 0,
+      scale: 0.95,
       filter: "blur(10px)" // starts blurry
     },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
+    visible: {
+      opacity: 1,
+      scale: 1,
       filter: "blur(0px)", // becomes clear
-      transition: { 
-        duration: 1, 
+      transition: {
+        duration: 1,
         ease: "easeOut"
-      } 
+      }
     }
   };
 
@@ -39,8 +39,8 @@ export default function About(): React.ReactElement {
   // Text Item
   const textItemVariant: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -49,10 +49,10 @@ export default function About(): React.ReactElement {
   // Border Animation
   const borderVariant: Variants = {
     hidden: { height: 0, opacity: 0 },
-    visible: { 
-      height: "100%", 
+    visible: {
+      height: "100%",
       opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.6 } 
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.6 }
     }
   };
 
@@ -60,29 +60,28 @@ export default function About(): React.ReactElement {
     <>
       <section id="about" className="text-white overflow-x-clip" style={{ background: 'transparent', marginBottom: '2rem' }}>
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-          
+
           {/* Animated Header */}
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }} 
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl cairo-font" 
+            className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl cairo-font"
             style={{ color: '#DEB34B' }}
           >
             Developer, Designer Creator, Innovator
           </motion.h2>
 
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
-            
+
             {/* Image Side */}
             <div className="relative mb-6 sm:mb-0">
-              <motion.div 
+              <motion.div
                 className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent"
                 initial="hidden"
                 whileInView="visible"
-                /* UPDATED: Removed negative margin so it resets easier when scrolling */
-                viewport={{ once: false, amount: 0.3 }} 
+                viewport={{ once: false, amount: 0.3 }}
                 variants={imageRevealVariant}
               >
                 <Image
@@ -97,32 +96,29 @@ export default function About(): React.ReactElement {
             </div>
 
             {/* Text Side */}
-            <motion.div 
+            <motion.div
               className="relative space-y-4"
               variants={textContainerVariant}
               initial="hidden"
               whileInView="visible"
-              /* UPDATED: Removed negative margin here too */
               viewport={{ once: false, amount: 0.3 }}
             >
-              <motion.p variants={textItemVariant} className="text-white lora-font">
-                {`A passionate developer dedicated to building innovative, scalable web solutions that prioritize the user experience. I aim to bridge the gap between complex software architecture & intuitive design, always with a focus on simplifying development workflows.`}
-                {` My journey began with a fascination for how things work under the hood, leading me to explore various programming languages, architectures & frameworks over the years.`}
+              <motion.p variants={textItemVariant} className="text-white satoshi-font text-lg text-justify">
+                {`I build innovative, scalable web solutions that prioritize user experience. I love diving into the mechanics of different languages and frameworks to bridge the gap between complex architecture and clean design. Right now, I'm deepening my skills in backend development and modern infrastructure exploring cloud operations and DevOps to ensure everything I build is optimized from the ground up. Expanding my skills in Backend and DevOps to master the full application lifecycle and architect secure, modern web solutions.`}
+
               </motion.p>
-              
-              <motion.p variants={textItemVariant} className="text-white lora-font">
-                {`To broaden my impact, I am currently deepening my expertise in Backend development and DevOps. I am diving into cloud operations and secure architecture to master the full application lifecycle, ensuring every project I build is seamless, secure, and optimized for the modern web.`}
-              </motion.p>
+
+
 
               <div className="pt-6">
                 <blockquote className="relative pl-4">
                   {/* Animated Border Line */}
-                  <motion.span 
+                  <motion.span
                     variants={borderVariant}
                     className="absolute left-0 top-0 w-1 bg-gray-300"
                   />
-                  
-                  <motion.p variants={textItemVariant} className="text-white lora-font">
+
+                  <motion.p variants={textItemVariant} className="text-white satoshi-font text-lg text-justify">
                     {`Beyond code, I am a lifelong learner and an active supporter of the developer community. I am committed to sharing knowledge and building tools that empower others to innovate, believing that the best way to move the industry forward is by growing together.`}
                   </motion.p>
 
@@ -132,15 +128,15 @@ export default function About(): React.ReactElement {
                 <br></br>
 
                 <motion.p variants={textItemVariant} className="text-white cairo-font">{`Let's not forget-`}</motion.p>
-                
+
                 {/* Pop-in animation for the code text */}
-                <motion.p 
+                <motion.p
                   variants={textItemVariant}
-                  className="text-xl cairo-font" 
+                  className="text-xl cairo-font"
                   style={{ color: '#CF4E5B' }}
                 >
                   {`it all started with a   `}
-                  <motion.span 
+                  <motion.span
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: false }}
@@ -148,7 +144,7 @@ export default function About(): React.ReactElement {
                     style={{ color: '#5DCF4E', display: 'inline-block' }}
                     className="cairo-font"
                   >
-                       {'<'} hello world {'>'} 
+                    {'<'} hello world {'>'}
                   </motion.span>
                 </motion.p>
               </div>

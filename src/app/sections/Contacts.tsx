@@ -67,19 +67,19 @@ export default function Contact() {
 
   const leftVariant: Variants = {
     hidden: { x: -100, opacity: 0 },
-    visible: { 
-      x: 0, 
-      opacity: 1, 
+    visible: {
+      x: 0,
+      opacity: 1,
       transition: { duration: 0.8, ease: "easeOut" } //animation duration & easing
     }
   };
 
   const rightVariant: Variants = {
     hidden: { x: 100, opacity: 0 },
-    visible: { 
-      x: 0, 
-      opacity: 1, 
-      transition: { duration: 0.8, ease: "easeOut" } 
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" }
     }
   };
 
@@ -99,8 +99,8 @@ export default function Contact() {
           <section className="hero w-full flex items-center justify-center relative px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
-                
-                <motion.div 
+
+                <motion.div
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.1 }}
@@ -108,7 +108,7 @@ export default function Contact() {
                   className="space-y-8 flex flex-col justify-center items-center h-full"
                 >
                   <div className="space-y-5 lg:pr-0">
-                    <h3 className="text-4xl font-bold mb-2 text-green-400 text-center" style={{ fontFamily: 'Lora, serif', marginTop: '48px' }}>Get in Touch</h3>
+                    <h3 className="text-4xl font-bold mb-2 text-green-400 text-center satoshi-font" style={{ marginTop: '48px' }}>Get in Touch</h3>
                     <div className="mb-7.5"></div>
                     <div className="space-y-4">
                       {contactItems.map((item, index) => (
@@ -136,13 +136,13 @@ export default function Contact() {
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="cursor-pointer hover:text-white duration-500"
-                                style={{ fontFamily: 'Lora, serif', color: '#E3984D' }}
+                                className="cursor-pointer hover:text-white duration-500 satoshi-font"
+                                style={{ color: '#E3984D' }}
                               >
                                 {item.text}
                               </a>
                             ) : (
-                              <p className="text-gray-400" style={{ fontFamily: 'Lora, serif' }}>{item.text}</p>
+                              <p className="text-gray-400 satoshi-font">{item.text}</p>
                             )}
                           </div>
                         </div>
