@@ -243,7 +243,7 @@ function Card({
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-green-500/15 hover:bg-green-500/25 transition-all cursor-pointer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-green-500/15 hover:bg-green-500/25 transition-all cursor-pointer"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
@@ -256,7 +256,7 @@ function Card({
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-blue-500/20 hover:bg-blue-500/30 transition-all cursor-pointer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-blue-500/20 hover:bg-blue-500/30 transition-all cursor-pointer"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >

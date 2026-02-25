@@ -185,9 +185,9 @@ export default function Home() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-red-500 to-orange-400 p-0.5 rounded-xl transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#F87171]"
+                        className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-red-500 to-orange-400 p-0.5 rounded-none transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#F87171]"
                       >
-                        <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-red-400">
+                        <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-none bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-red-400">
                           <span className="relative flex items-center justify-center gap-2 text-white font-medium">
                             <img src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-2 align-middle" />
                             <span className="colus-font">CV</span>
@@ -201,13 +201,13 @@ export default function Home() {
                         target="_blank"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                        className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-none bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                       >
-                        <span className="block w-full px-6 sm:px-2 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
-                          <span className="relative flex items-center justify-center sm:justify-end gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
-                            <span className="colus-font"> Consultations</span>
-                            <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
+                        <span className="block w-full px-6 sm:px-2 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700 relative">
+                          <span className="flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
+                            <span className="colus-font">Consultations</span>
                           </span>
+                          <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12 absolute right-3 top-1/2 -translate-y-1/2"></i>
                         </span>
                       </motion.a>
                     </motion.div>
