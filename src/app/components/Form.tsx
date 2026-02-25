@@ -4,6 +4,114 @@ import styled from 'styled-components';
 const Form = () => {
   const [result, setResult] = React.useState("");
   const [errors, setErrors] = React.useState<{ [key: string]: string }>({});
+  const nameRef = React.useRef<HTMLInputElement | null>(null);
+  const emailRef = React.useRef<HTMLInputElement | null>(null);
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const allowedControlKeys = [
+      'Backspace',
+      'Delete',
+      'ArrowLeft',
+      'ArrowRight',
+      'ArrowUp',
+      'ArrowDown',
+      'Home',
+      'End',
+      'Tab',
+      'Enter'
+    ];
+
+    if (allowedControlKeys.includes(e.key)) return;
+    if (e.ctrlKey || e.metaKey) return; // allow copy/paste/select all shortcuts
+
+    // only allow Unicode letters and space
+    if (e.key.length === 1) {
+      const isLetter = /\p{L}/u.test(e.key);
+      const isSpace = e.key === ' ';
+      if (!isLetter && !isSpace) {
+        e.preventDefault();
+      }
+    }
+  };
+
+  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const paste = e.clipboardData.getData('text') || '';
+    const sanitized = paste.replace(/[^\p{L}\s]/gu, '');
+    const input = nameRef.current;
+    if (!input) return;
+    const start = input.selectionStart ?? input.value.length;
+    const end = input.selectionEnd ?? start;
+    const newValue = input.value.slice(0, start) + sanitized + input.value.slice(end);
+    input.value = newValue;
+    const pos = start + sanitized.length;
+    input.setSelectionRange(pos, pos);
+  };
+
+  const handleInput = () => {
+    const input = nameRef.current;
+    if (!input) return;
+    const sanitized = input.value.replace(/[^\p{L}\s]/gu, '');
+    if (input.value !== sanitized) input.value = sanitized;
+  };
+
+  const handleEmailKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const allowedControlKeys = [
+      'Backspace',
+      'Delete',
+      'ArrowLeft',
+      'ArrowRight',
+      'ArrowUp',
+      'ArrowDown',
+      'Home',
+      'End',
+      'Tab',
+      'Enter'
+    ];
+    if (allowedControlKeys.includes(e.key)) return;
+    if (e.ctrlKey || e.metaKey) return;
+
+    if (e.key === '@') {
+      const input = emailRef.current;
+      if (!input) return;
+      // if there's already an @ in the current value, prevent typing another
+      if ((input.value.match(/@/g) || []).length >= 1) {
+        e.preventDefault();
+      }
+    }
+  };
+
+  const handleEmailPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const paste = e.clipboardData.getData('text') || '';
+    const input = emailRef.current;
+    if (!input) return;
+    const start = input.selectionStart ?? input.value.length;
+    const end = input.selectionEnd ?? start;
+    const combined = input.value.slice(0, start) + paste + input.value.slice(end);
+    // find first @ in the combined string (if any)
+    const firstAt = combined.indexOf('@');
+    // remove all @ and then reinsert a single @ at firstAt if present
+    let noAts = combined.replace(/@/g, '');
+    let final = noAts;
+    if (firstAt !== -1) {
+      final = noAts.slice(0, firstAt) + '@' + noAts.slice(firstAt);
+    }
+    input.value = final;
+    const pos = firstAt !== -1 ? firstAt + 1 : start + paste.length;
+    input.setSelectionRange(pos, pos);
+  };
+
+  const handleEmailInput = () => {
+    const input = emailRef.current;
+    if (!input) return;
+    // remove any extra @ beyond the first
+    const parts = input.value.split('@');
+    if (parts.length <= 2) return; // 0 or 1 @ -> fine
+    const first = parts.shift() || '';
+    const rest = parts.join('');
+    input.value = first + '@' + rest;
+  };
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -20,12 +128,19 @@ const Form = () => {
 
     const newErrors: { [key: string]: string } = {};
 
-    if (name.length > 100) {
-      newErrors.name = "Name must not exceed 100 characters";
+    const trimmedName = name.trim();
+    // Allow only letters (Unicode) and spaces — no numbers or special characters
+    const nameValid = /^[\p{L}\s]+$/u.test(trimmedName);
+    if (!nameValid) {
+      newErrors.name = "Name can only contain letters and spaces";
+    } else if (trimmedName.length > 50) {
+      newErrors.name = "Name must not exceed 50 characters";
     }
 
-    if (!email.includes('@')) {
-      newErrors.email = "Email must contain '@'";
+    const emailTrimmed = email.trim();
+    const atCount = (emailTrimmed.match(/@/g) || []).length;
+    if (atCount !== 1) {
+      newErrors.email = "Email must contain exactly one '@' character";
     }
 
     if (phone.length > 15) {
@@ -70,10 +185,31 @@ const Form = () => {
         <form className="form" onSubmit={onSubmit}>
           <span className="heading">Contact me</span>
           <span className="c1">Please fill out the details</span>
-          <input className="input" type="text" name="name" placeholder="Name" required maxLength={100} />
+          <input
+            ref={nameRef}
+            onKeyDown={handleKeyDown}
+            onPaste={handlePaste}
+            onInput={handleInput}
+            className="input"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            maxLength={100}
+          />
           {errors.name && <span className="error-message">{errors.name}</span>}
           
-          <input className="input" type="email" name="email" placeholder="E-mail" required />
+          <input
+            ref={emailRef}
+            onKeyDown={handleEmailKeyDown}
+            onPaste={handleEmailPaste}
+            onInput={handleEmailInput}
+            className="input"
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            required
+          />
           {errors.email && <span className="error-message">{errors.email}</span>}
           
           <input className="input" type="tel" name="phone" placeholder="Phone" required maxLength={15} />
