@@ -103,8 +103,8 @@ export default function About(): React.ReactElement {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
             >
-              <motion.p variants={textItemVariant} className="text-white satoshi-font text-lg text-justify">
-                {`I build innovative, scalable web solutions that prioritize user experience. I love diving into the mechanics of different languages and frameworks to bridge the gap between complex architecture and clean design. Right now, I'm deepening my skills in backend development and modern infrastructure exploring cloud operations and DevOps to ensure everything I build is optimized from the ground up. Expanding my skills in Backend and DevOps to master the full application lifecycle and architect secure, modern web solutions.`}
+              <motion.p variants={textItemVariant} className="text-white ubuntu-font text-lg text-justify">
+                {`I build innovative, scalable web solutions that prioritize user experience. I love diving into the mechanics of different languages and frameworks to bridge the gap between complex architecture & clean design. Right now, I'm deepening my skills in backend development & Modern Infrastructure exploring Cloud operations & DevOps to ensure things I build is optimized from the ground up. Exploring system designs learning how to architect scalable, high-availability systems and manage the trade-offs.`}
 
               </motion.p>
 
@@ -118,7 +118,7 @@ export default function About(): React.ReactElement {
                     className="absolute left-0 top-0 w-1 bg-gray-300"
                   />
 
-                  <motion.p variants={textItemVariant} className="text-white satoshi-font text-lg text-justify">
+                  <motion.p variants={textItemVariant} className="text-white ubuntu-font text-lg text-justify">
                     {`Beyond code, I am a lifelong learner and an active supporter of the developer community. I am committed to sharing knowledge and building tools that empower others to innovate, believing that the best way to move the industry forward is by growing together.`}
                   </motion.p>
 

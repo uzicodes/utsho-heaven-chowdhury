@@ -183,12 +183,12 @@ const EducationSection: React.FC = () => {
             opacity: 1, 
             scale: 1, 
             rotateX: 0,
-            transition: { 
-                type: "spring", 
-                stiffness: 900, 
-                damping: 10,
-                mass: 0.3
-            } 
+            transition: {
+                type: "spring",
+                stiffness: 1600,
+                damping: 18,
+                mass: 0.18
+            }
         }
     };
 
