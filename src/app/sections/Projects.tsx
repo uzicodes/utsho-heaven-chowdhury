@@ -37,7 +37,7 @@ const projects: Project[] = [
     link: "/projects/lamb-falcons.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
-    liveLink: "https://lamb-falcons.vercel.app/",
+    liveLink: "https://lambfalcons.vercel.app/",
   },
   {
     title: "Culinary Canvas",
