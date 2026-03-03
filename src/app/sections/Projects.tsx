@@ -295,12 +295,12 @@ function Card({
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-blue-500/20 hover:bg-blue-500/55 border border-black transition-all cursor-pointer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-blue-500/25 hover:bg-blue-500/55 border border-black transition-all cursor-pointer"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "all" }}
               >
-                <img src="/earth.png" alt="Live" width={18} height={18} className="inline-block align-middle" />
+                <img src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={19.5} height={19.5} className="inline-block align-middle" />
                 <span className="text-xs md:text-sm font-medium text-[#7fe525] reckless-font">Live</span>
               </motion.a>
             </div>
