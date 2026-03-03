@@ -33,7 +33,7 @@ const projects: Project[] = [
   {
     title: "LAMB FALCONS - Official Club Site",
     description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement. Used Animated libraries, interactive UI elements for a smooth user experience. Production ready with CI/CD pipelines for seamless updates & maintenance.",
-    skills: ["nextjs", "nodejs", "react", "ts", "firebase", "tailwind", "vercel"],
+    skills: ["nextjs", "nodejs", "react", "ts", "clerk", "tailwind", "vercel"],
     link: "/projects/lamb-falcons.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
