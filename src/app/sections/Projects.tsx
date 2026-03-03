@@ -42,7 +42,7 @@ const projects: Project[] = [
   {
     title: "Culinary Canvas",
     description: "Production ready modern web platform with seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, Catogorized food items \n• Real-time items fetched from MongoDB \n• Profile management, can see previous orders \n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, daily/monthly revenue, resturant metrics & user feedbacks \n• Real-time user feedback system & SSLcommerz for payment integration, invoice generation",
-    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "mongodb","redis", "vercel", "ssl"],
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "mongodb", "redis", "vercel", "ssl"],
     link: "/projects/culinary-canvas.png",
     color: "#ff6b35",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
@@ -60,7 +60,7 @@ const projects: Project[] = [
   {
     title: "Aura Force",
     description: "Robust Fitness platform streamlining Gym operations & enhancing member experience.\n• Features real-time Class scheduling, Class & Trainer booking.\n• Prisma fetching from Supabase & user feedback realtime from DB \n• Clerk for authentication & user management.\n• User BMI & personalized diet plan.\n• Admin dashboard for managing memberships, trainers & classes efficiently.\n• Animated UI & Responsiveness for engaging user experience \n• SSLCommerz for safe transactions.",
-    skills: ["nextjs", "react", "ts", "tailwind", "supabase", "prisma","redis", "vercel", "clerk"],
+    skills: ["nextjs", "react", "ts", "tailwind", "supabase", "prisma", "redis", "vercel", "clerk"],
     link: "/projects/aura-force.png",
     color: "#ef4444",
     githubLink: "https://github.com/uzicodes/AuraForce",
@@ -221,7 +221,7 @@ function Card({
           }}
         >
           <div className="w-full md:w-[55%] flex flex-col">
-            <div className="h-[200px] md:h-[340px] lg:h-[390px] relative overflow-hidden">
+            <div className="h-[200px] md:h-[300px] lg:h-[340px] relative overflow-hidden">
               <motion.img
                 src={url}
                 alt={title}
@@ -231,9 +231,47 @@ function Card({
                 transition={{ duration: 0.4 }}
               />
 
-              <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-black/50 backdrop-blur-md text-white px-3 py-1 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
+              <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-black/50 backdrop-blur-md text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium">
                 Project {i + 1}
               </div>
+            </div>
+
+            {/* Tech Stack Icons */}
+            <div className="flex items-center justify-center flex-wrap gap-1.5 px-3 py-1 bg-[#574A49]">
+              {(() => {
+                const customIcons: Record<string, { src: string; alt: string; bg: string; cls: string }> = {
+                  socket: { src: "/icons/socket.svg", alt: "Socket", bg: "bg-white", cls: "w-full h-full object-contain" },
+                  ssl: { src: "/icons/ssl.jpg", alt: "SSLCommerz", bg: "bg-white", cls: "w-full h-full object-contain" },
+                  render: { src: "/icons/render.svg", alt: "Render", bg: "bg-white", cls: "w-full h-full object-contain" },
+                  clerk: { src: "/icons/tools/clerk.svg", alt: "Clerk", bg: "bg-[#1C1C1E]", cls: "w-4 h-4 md:w-6 md:h-6" },
+                };
+                const elements: React.ReactNode[] = [];
+                let batch: string[] = [];
+                const flushBatch = (key: string) => {
+                  if (batch.length > 0) {
+                    elements.push(
+                      <img key={key} src={`https://skillicons.dev/icons?i=${batch.join(',')}`} alt="Tech Stack" className="h-6 md:h-8 w-auto" loading="lazy" />
+                    );
+                    batch = [];
+                  }
+                };
+                skills.forEach((skill, idx) => {
+                  const s = skill.toLowerCase();
+                  const icon = customIcons[s];
+                  if (icon) {
+                    flushBatch(`batch-${idx}`);
+                    elements.push(
+                      <div key={idx} className={`h-6 w-6 md:h-8 md:w-8 ${icon.bg} rounded flex items-center justify-center ${s !== 'clerk' ? 'p-1' : ''}`}>
+                        <img src={icon.src} alt={icon.alt} className={icon.cls} />
+                      </div>
+                    );
+                  } else {
+                    batch.push(skill);
+                  }
+                });
+                flushBatch('batch-end');
+                return elements;
+              })()}
             </div>
 
             {/* GitHub and Live Links */}
@@ -243,7 +281,7 @@ function Card({
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-green-500/15 hover:bg-green-500/50 transition-all cursor-pointer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-green-500/15 hover:bg-green-500/50 border border-black transition-all cursor-pointer"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "all" }}
@@ -257,7 +295,7 @@ function Card({
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-blue-500/20 hover:bg-blue-500/55 transition-all cursor-pointer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-blue-500/20 hover:bg-blue-500/55 border border-black transition-all cursor-pointer"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "all" }}
@@ -276,42 +314,7 @@ function Card({
 
               <p className="text-xs md:text-base text-[#000000] leading-snug lora-font mb-3 whitespace-pre-line min-h-[120px] md:min-h-[200px] lg:min-h-[240px]">{description}</p>
 
-              <div className="mt-1 flex items-center gap-2">
-                {(() => {
-                  const customIcons: Record<string, { src: string; alt: string; bg: string; cls: string }> = {
-                    socket: { src: "/icons/socket.svg", alt: "Socket", bg: "bg-white", cls: "w-full h-full object-contain" },
-                    ssl: { src: "/icons/ssl.jpg", alt: "SSLCommerz", bg: "bg-white", cls: "w-full h-full object-contain" },
-                    render: { src: "/icons/render.svg", alt: "Render", bg: "bg-white", cls: "w-full h-full object-contain" },
-                    clerk: { src: "/icons/tools/clerk.svg", alt: "Clerk", bg: "bg-[#1C1C1E]", cls: "w-4 h-4 md:w-6 md:h-6" },
-                  };
-                  const elements: React.ReactNode[] = [];
-                  let batch: string[] = [];
-                  const flushBatch = (key: string) => {
-                    if (batch.length > 0) {
-                      elements.push(
-                        <img key={key} src={`https://skillicons.dev/icons?i=${batch.join(',')}`} alt="Tech Stack" className="h-6 md:h-8 w-auto" loading="lazy" />
-                      );
-                      batch = [];
-                    }
-                  };
-                  skills.forEach((skill, idx) => {
-                    const s = skill.toLowerCase();
-                    const icon = customIcons[s];
-                    if (icon) {
-                      flushBatch(`batch-${idx}`);
-                      elements.push(
-                        <div key={idx} className={`h-6 w-6 md:h-8 md:w-8 ${icon.bg} rounded flex items-center justify-center ${s !== 'clerk' ? 'p-1' : ''}`}>
-                          <img src={icon.src} alt={icon.alt} className={icon.cls} />
-                        </div>
-                      );
-                    } else {
-                      batch.push(skill);
-                    }
-                  });
-                  flushBatch('batch-end');
-                  return elements;
-                })()}
-              </div>
+
 
             </div>
           </div>
