@@ -33,7 +33,7 @@ const projects: Project[] = [
   {
     title: "LAMB FALCONS - Official Club Site",
     description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement. Used Animated libraries, interactive UI elements for a smooth user experience. Production ready with CI/CD pipelines for seamless updates & maintenance.",
-    skills: ["nextjs", "nodejs", "react", "ts", "clerk", "tailwind", "vercel"],
+    skills: ["nextjs", "nodejs", "react", "ts", "clerk","gsap","tailwind", "vercel"],
     link: "/projects/lamb-falcons.jpg",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
@@ -257,6 +257,15 @@ function Card({
                 };
                 skills.forEach((skill, idx) => {
                   const s = skill.toLowerCase();
+                  if (s === 'gsap') {
+                    flushBatch(`batch-${idx}`);
+                    elements.push(
+                      <div key={idx} className="h-8 w-auto md:h-10.5 md:w-auto flex items-center justify-center mx-1">
+                        <img src="/icons/gsap.png" alt="GSAP" className="h-full w-auto object-contain scale-[1.2] md:scale-[1.3]" />
+                      </div>
+                    );
+                    return;
+                  }
                   const icon = customIcons[s];
                   if (icon) {
                     flushBatch(`batch-${idx}`);
