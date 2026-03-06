@@ -108,7 +108,7 @@ export default function Contact() {
                   className="space-y-8 flex flex-col justify-center items-center h-full"
                 >
                   <div className="space-y-5 lg:pr-0">
-                    <h3 className="text-4xl font-bold mb-2 text-green-400 text-center satoshi-font" style={{ marginTop: '48px' }}>Get in Touch</h3>
+                    <h3 className="text-4xl font-bold mb-2 text-green-400 text-left cairo-font pr-4 lg:pr-12" style={{ marginTop: '48px' }}>Get in Touch</h3>
                     <div className="mb-7.5"></div>
                     <div className="space-y-4">
                       {contactItems.map((item, index) => (
@@ -136,13 +136,13 @@ export default function Contact() {
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="cursor-pointer hover:text-white duration-500 satoshi-font"
+                                className="cursor-pointer hover:text-white duration-500 cairo-font"
                                 style={{ color: '#E3984D' }}
                               >
                                 {item.text}
                               </a>
                             ) : (
-                              <p className="text-gray-400 satoshi-font">{item.text}</p>
+                              <p className="text-gray-400 cairo-font">{item.text}</p>
                             )}
                           </div>
                         </div>
