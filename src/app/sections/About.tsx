@@ -103,10 +103,7 @@ export default function About(): React.ReactElement {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
             >
-              <motion.p variants={textItemVariant} className="text-white ubuntu-font text-lg text-justify">
-                {`I build innovative, scalable web solutions that prioritize user experience. I love diving into the mechanics of different languages and frameworks to bridge the gap between complex architecture & clean design. Right now, I'm deepening my skills in backend development & Modern Infrastructure exploring Cloud operations & DevOps to ensure things I build is optimized from the ground up. Exploring system designs learning how to architect scalable, high-availability systems and manage the trade-offs.`}
 
-              </motion.p>
 
 
 
@@ -119,7 +116,7 @@ export default function About(): React.ReactElement {
                   />
 
                   <motion.p variants={textItemVariant} className="text-white ubuntu-font text-lg text-justify">
-                    {`Beyond code, I am a lifelong learner and an active supporter of the developer community. I am committed to sharing knowledge and building tools that empower others to innovate, believing that the best way to move the industry forward is by growing together.`}
+                    {`I build scalable, user-centric web applications, bridging the gap between complex architecture and clean design. Right now, I'm deepening my expertise in modern backend infrastructure, DevOps, and system design to build high-availability solutions from the ground up. My passion lies in crafting seamless user experiences always eager to learn new technologies and methodologies to stay at the forefront of the industry. Beyond code, I am a lifelong learner and an active supporter of the developer community. I am committed to sharing knowledge and building tools that empower others to innovate, believing that the best way to move the industry forward is by growing together.`}
                   </motion.p>
 
                   <div className="mt-6 space-y-3">
@@ -132,7 +129,7 @@ export default function About(): React.ReactElement {
                 {/* Pop-in animation for the code text */}
                 <motion.p
                   variants={textItemVariant}
-                  className="text-xl cairo-font"
+                  className="text-xl cairo-font italic"
                   style={{ color: '#CF4E5B' }}
                 >
                   {`it all started with a   `}
@@ -142,11 +139,33 @@ export default function About(): React.ReactElement {
                     viewport={{ once: false }}
                     transition={{ type: "spring", stiffness: 200 }}
                     style={{ color: '#5DCF4E', display: 'inline-block' }}
-                    className="cairo-font"
+                    className="cairo-font italic"
                   >
                     {'<'} hello world {'>'}
                   </motion.span>
                 </motion.p>
+                <motion.div variants={textItemVariant} className="mt-8">
+                  <a 
+                    href="https://www.supportkori.com/utsho" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-2 py-2 rounded-lg font-bold hover:scale-105 transition-transform shadow-lg cursor-pointer"
+                    style={{ 
+                      backgroundColor: '#04b82a', 
+                      color: '#000000',
+                      border: '1px solid #11111111',
+                      fontFamily: '"ubuntu", sans-serif'
+                    }}
+                  >
+                    <Image 
+                      src="/icons/buymecoffee.svg" 
+                      alt="Buy me a coffee" 
+                      width={28} 
+                      height={28} 
+                    />
+                    <span className="text-lg">Buy me Koffee ?</span>
+                  </a>
+                </motion.div>
               </div>
             </motion.div>
           </div>
