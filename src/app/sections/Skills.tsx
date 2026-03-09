@@ -29,30 +29,30 @@ const containerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15, 
-      delayChildren: 0.3,    
+      staggerChildren: 0.08,
+      delayChildren: 0.1,
     },
   },
 };
 
 const cardVariants: Variants = {         //Flip-effect
-  hidden: { 
+  hidden: {
     opacity: 0,
-    rotateX: -90, 
-    y: -50,       
+    rotateX: -90,
+    y: -50,
     scale: 0.9
   },
-  visible: { 
-    opacity: 1, 
-    rotateX: 0,   
+  visible: {
+    opacity: 1,
+    rotateX: 0,
     y: 0,
     scale: 1,
-    transition: { 
-      type: "spring", 
-      stiffness: 120, 
-      damping: 15,
-      mass: 1.1 
-    } 
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+      mass: 1
+    }
   },
 };
 
@@ -89,11 +89,11 @@ const SkillsSection: React.FC = () => {
       color: "text-blue-400",
       skills: [
         { name: "React", icon: <img src="/icons/frontend/react.svg" alt="React" /> },
-        { name: "HTML5", icon: <img src="/icons/frontend/html.svg" alt="HTML5"/> },
-        { name: "CSS3", icon: <img src="/icons/frontend/css.svg" alt="CSS3"/> },
-        { name: "JavaScript", icon: <img src="/icons/frontend/javascript.svg" alt="JavaScript"/> },
-        { name: "TypeScript", icon: <img src="/icons/frontend/typescript.svg" alt="TypeScript"/> },
-        { name: "Tailwind CSS", icon: <img src="/icons/frontend/tailwind.svg" alt="Tailwind CSS"/> },
+        { name: "HTML5", icon: <img src="/icons/frontend/html.svg" alt="HTML5" /> },
+        { name: "CSS3", icon: <img src="/icons/frontend/css.svg" alt="CSS3" /> },
+        { name: "JavaScript", icon: <img src="/icons/frontend/javascript.svg" alt="JavaScript" /> },
+        { name: "TypeScript", icon: <img src="/icons/frontend/typescript.svg" alt="TypeScript" /> },
+        { name: "Tailwind CSS", icon: <img src="/icons/frontend/tailwind.svg" alt="Tailwind CSS" /> },
       ],
     },
     {
@@ -110,7 +110,7 @@ const SkillsSection: React.FC = () => {
       title: "Database",
       color: "text-green-400",
       skills: [
-        { name: "Firebase", icon: <img src="/icons/database/firebase.svg" alt="Firebase"/> },
+        { name: "Firebase", icon: <img src="/icons/database/firebase.svg" alt="Firebase" /> },
         { name: "MongoDB", icon: <img src="/icons/database/mongodb.svg" alt="MongoDB" /> },
         { name: "Prisma", icon: <img src="/icons/database/prisma.svg" alt="Prisma" /> },
         { name: "Redis", icon: <img src="/icons/database/redis.svg" alt="Redis" /> },
@@ -151,43 +151,43 @@ const SkillsSection: React.FC = () => {
         { name: "Canva", icon: <img src="/icons/ui/canva.svg" alt="Canva" width={35} height={43} /> },
         { name: "Photoshop", icon: <img src="/icons/ui/ps.svg" alt="Photoshop" /> },
         { name: "Framer", icon: <img src="/icons/ui/framer.svg" alt="Framer" /> },
-        { name: "Webflow", icon: <img src="/icons/ui/webflow.svg" alt="Webflow" width={41} height={41}/> },
+        { name: "Webflow", icon: <img src="/icons/ui/webflow.svg" alt="Webflow" width={41} height={41} /> },
       ],
     },
   ];
 
   return (
     <main className="pt-15 lg:pt-0 text-white min-h-screen bg-transparent relative z-10">
-      
+
       <section className="container mx-auto px-4 py-11 relative z-10">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-          whileInView={{ 
-            opacity: 1, 
-            scale: 1, 
+          whileInView={{
+            opacity: 1,
+            scale: 1,
             rotate: 0,
-            y: [0, -10, 0] 
+            y: [0, -10, 0]
           }}
           viewport={{ once: false, amount: 0.2 }}
-          transition={{ 
-            opacity: { duration: 1.2 },
-            scale: { duration: 1.2, type: "spring" },
-            rotate: { duration: 1.2, type: "spring" },
-            y: { duration: 5, repeat: Infinity, ease: "easeInOut" } 
+          transition={{
+            opacity: { duration: 0.6 },
+            scale: { duration: 0.6, type: "spring", stiffness: 200 },
+            rotate: { duration: 0.6, type: "spring", stiffness: 200 },
+            y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
           }}
           className="flex justify-center items-center"
         >
           <IconCloudDemo />
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
-          style={{ perspective: "1000px" }} 
+          style={{ perspective: "1000px" }}
         >
           {skillCategories.map((category, index) => (
             <SkillCard
