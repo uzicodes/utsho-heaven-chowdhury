@@ -31,6 +31,17 @@ const EducationSection: React.FC = () => {
     ];
 
     const certificationData = [
+
+
+        {
+            title: "Software Engineering",
+            issuer: "HackerRank",
+            issuerLogo: "/icons/hacker.svg",
+            date: "March 2026",
+            skills: ["Clean Code", "API", "SDLC"],
+            certImage: "/certifications/5.png",
+            fullViewUrl: "https://drive.google.com/file/d/1KO2fQrT4YBGHRwztapDMARmyiQEwvPbv/view?usp=drive_link",
+        },
         {
             title: "Agile Project Management Professional",
             issuer: "Atlassian",
@@ -50,13 +61,13 @@ const EducationSection: React.FC = () => {
             fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
         },
         {
-            title: "Introduction Software Engineering",
-            issuer: "IBM",
-            issuerLogo: "/icons/ibm.svg",
-            date: "October 2025",
-            skills: ["SDLC", "JQuery", "Design Patterns"],
-            certImage: "/certifications/8.jpg",
-            fullViewUrl: "https://drive.google.com/file/d/1T05lfqIkMfn1nzfz_4oV5uvoS76LBm9q/view?usp=sharing",
+            title: "Software Product Management",
+            issuer: "University of Alberta",
+            issuerLogo: "/icons/alberta.svg",
+            date: "March 2026",
+            skills: ["Agile", "Client ", "Product Lifecycle"],
+            certImage: "/certifications/2.png",
+            fullViewUrl: "https://drive.google.com/file/d/1wRRbrow160c8ZBntPQWMCLAgaFGKOt09/view?usp=sharing",
         },
         {
             title: "Software Testing Professional",
@@ -75,6 +86,15 @@ const EducationSection: React.FC = () => {
             skills: ["Containerization", "Docker Compose", "Docker Image"],
             certImage: "/certifications/10.png",
             fullViewUrl: "https://drive.google.com/file/d/1yBXVNV6GtR0qoVYNESu5xLgHa0AIhbDu/view?usp=sharing",
+        },
+        {
+            title: "Introduction Software Engineering",
+            issuer: "IBM",
+            issuerLogo: "/icons/ibm.svg",
+            date: "October 2025",
+            skills: ["SDLC", "JQuery", "Design Patterns"],
+            certImage: "/certifications/8.jpg",
+            fullViewUrl: "https://drive.google.com/file/d/1T05lfqIkMfn1nzfz_4oV5uvoS76LBm9q/view?usp=sharing",
         },
         {
             title: "Foundations Coding Full-Stack",
@@ -113,15 +133,6 @@ const EducationSection: React.FC = () => {
             fullViewUrl: "https://drive.google.com/file/d/15EH6757BzDBdAjuKT_5_RCaLBjcFG9-U/view?usp=sharing",
         },
         {
-            title: "OCI Data Science Professional",
-            issuer: "Oracle",
-            issuerLogo: "/icons/oracle.svg",
-            date: "August 2025",
-            skills: ["OCI", "Vault & Conda", "OCI MLOPs"],
-            certImage: "/certifications/2.jpg",
-            fullViewUrl: "https://drive.google.com/file/d/1xGWSLvbODGYOYfrP4zBcy_KpAt-rdIbc/view?usp=sharing",
-        },
-        {
             title: "Neural Networks & Deep Learning",
             issuer: "Deep Learning",
             issuerLogo: "/icons/deeplearning.svg",
@@ -129,15 +140,6 @@ const EducationSection: React.FC = () => {
             skills: ["Vectorization", "Shallow NN", "Deep NN"],
             certImage: "/certifications/9.jpg",
             fullViewUrl: "https://drive.google.com/file/d/1Rg5o2O7opV2ZF9K1-gyLWC9ZVAZE02Pl/view?usp=sharing",
-        },
-        {
-            title: "HTML 5",
-            issuer: "University of Michigan",
-            issuerLogo: "/icons/michigan.svg",
-            date: "Mar 2024",
-            skills: ["Web-page Structure", "Tags & Syntax", "DOM & Hosting "],
-            certImage: "/certifications/5.jpg",
-            fullViewUrl: "https://drive.google.com/file/d/11FIJr7lgpvdk3eK8CgG_w8bf99hmkwL9/view?usp=sharing",
         },
     ];
 
@@ -158,7 +160,7 @@ const EducationSection: React.FC = () => {
     const cardVariants: Variants = {   //certs slid in effect
         hidden: (index: number) => ({
             opacity: 0,
-            x: index % 2 === 0 ? -100 : 100, 
+            x: index % 2 === 0 ? -100 : 100,
             y: 0,
         }),
         visible: {
@@ -174,14 +176,14 @@ const EducationSection: React.FC = () => {
     };
 
     const educationCardVariants: Variants = {    // 3D "flip up" effect for Edu cards
-        hidden: { 
-            opacity: 0, 
-            scale: 0.5, 
-            rotateX: -90 
+        hidden: {
+            opacity: 0,
+            scale: 0.5,
+            rotateX: -90
         },
-        visible: { 
-            opacity: 1, 
-            scale: 1, 
+        visible: {
+            opacity: 1,
+            scale: 1,
             rotateX: 0,
             transition: {
                 type: "spring",
@@ -215,7 +217,7 @@ const EducationSection: React.FC = () => {
 
 
                 {/* Education Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">  
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {educationData.map((edu, index) => (
                         <motion.div
                             key={index}
@@ -301,7 +303,7 @@ const EducationSection: React.FC = () => {
                 <motion.div        // Certifications Section
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false, amount: 0.1 }} 
+                    viewport={{ once: false, amount: 0.1 }}
                     transition={{ duration: 0.4, delay: 0.1 }}
                     className="mt-20"
                 >
@@ -314,11 +316,11 @@ const EducationSection: React.FC = () => {
                         </p>
                     </div>
 
-                    <motion.div 
+                    <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: false, amount: 0.1 }} 
+                        viewport={{ once: false, amount: 0.1 }}
                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
                         {certificationData.map((cert, index) => (
@@ -333,7 +335,7 @@ const EducationSection: React.FC = () => {
                                 <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur"></div>
 
                                 <div className={`relative h-full border rounded-xl overflow-hidden bg-gray-900 border-gray-800 p-3 flex flex-col`}>
-                                    
+
                                     <div className="w-full mb-2">
                                         <div className="relative w-full h-40 bg-black rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
                                             <img
@@ -390,10 +392,10 @@ const EducationSection: React.FC = () => {
                                             href={cert.fullViewUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="mt-3 flex items-center justify-center gap-1 text-xs font-semibold bg-transparent hover:bg-green-500/20 text-green-400 hover:text-green-300 px-3 py-1.5 rounded-none transition-all w-fit mx-auto border border-green-400/40 hover:border-green-500"
+                                            className="mt-3 flex items-center justify-center gap-1 text-xs font-semibold bg-transparent hover:bg-yellow-500/20 text-yellow-400/70 hover:text-blue-400 px-3 py-1.5 rounded-none transition-all w-fit mx-auto border border-cyan-400/40 hover:border-yellow-500"
                                         >
                                             <ExternalLink className="w-3 h-3" />
-                                            View Full Certificate
+                                            View Certificate
                                         </a>
                                     </div>
                                 </div>
