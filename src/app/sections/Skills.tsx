@@ -110,12 +110,12 @@ const SkillsSection: React.FC = () => {
       title: "Database",
       color: "text-green-400",
       skills: [
+        { name: "Supabase", icon: <img src="/icons/database/supabase.svg" alt="Supabase" /> },
         { name: "Firebase", icon: <img src="/icons/database/firebase.svg" alt="Firebase" /> },
         { name: "MongoDB", icon: <img src="/icons/database/mongodb.svg" alt="MongoDB" /> },
         { name: "Prisma", icon: <img src="/icons/database/prisma.svg" alt="Prisma" /> },
+        { name: "Neon", icon: <img src="/icons/database/neon.svg" alt="Neon" /> },
         { name: "Redis", icon: <img src="/icons/database/redis.svg" alt="Redis" /> },
-        { name: "PostgreSQL", icon: <img src="/icons/database/postgresql.svg" alt="PostgreSQL" /> },
-        { name: "Supabase", icon: <img src="/icons/database/supabase.svg" alt="Supabase" /> },
       ],
     },
     {
