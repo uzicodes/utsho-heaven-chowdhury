@@ -187,8 +187,8 @@ export default function Home() {
                         whileTap={{ scale: 0.95 }}
                         className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-red-500 to-orange-400 p-0.5 rounded-none transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#F87171]"
                       >
-                        <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-none bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-red-400">
-                          <span className="relative flex items-center justify-center gap-2 text-white font-medium">
+                        <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-none bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
+                          <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
                             <img src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-2 align-middle" />
                             <span className="colus-font">CV</span>
                             <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
