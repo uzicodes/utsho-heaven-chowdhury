@@ -174,7 +174,7 @@ export default function Home() {
 
                     {/* Description */}
                     <motion.div variants={itemVariants} className="mt-4 text-xl text-gray-300 max-w-xl ml-auto lora-font" style={{ marginLeft: '5px' }}>
-                      Full-Stack Developer actively seeking opportunities to integrate intelligent systems into Real-world solutions.
+                      Full-Stack Developer actively seeking opportunities to integrate Intelligent systems into Real-world solutions.
                     </motion.div>
 
                     {/* CTA Buttons */}
@@ -241,7 +241,7 @@ export default function Home() {
                         <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
                       </motion.button>
 
-                      <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-4.45">
+                      <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-2">
                         <span className="text-gray-300 text-xs sm:text-sm font-medium satoshi-font">
                           utshozi11@gmail.com
                         </span>
