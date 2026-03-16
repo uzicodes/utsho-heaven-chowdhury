@@ -57,7 +57,7 @@ export default function Home() {
 
         <main className="min-h-screen relative z-10 pt-32">
           
-          {/* HERO SECTION (ID: home) */}
+          {/* HERO SECTION */}
           <section id="home">
             <div className="container mx-auto px-6 lg:px-8">
               <div className="flex min-h-[65vh] items-center">
@@ -75,8 +75,8 @@ export default function Home() {
                     <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
                       <div className="inline-flex items-center gap-2 px-2 sm:px-3 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2">
                         <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                        <span className="text-gray-300 text-xs sm:text-xs font-medium">
-                          Available to Work
+                        <span className="text-gray-300 text-xs sm:text-xs font-medium satoshi-font">
+                          AVAILABLE TO WORK
                         </span>
                       </div>
                     </motion.div>
@@ -242,7 +242,7 @@ export default function Home() {
                       </motion.button>
 
                       <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-4.45">
-                        <span className="text-gray-300 text-xs sm:text-sm font-medium">
+                        <span className="text-gray-300 text-xs sm:text-sm font-medium satoshi-font">
                           utshozi11@gmail.com
                         </span>
                       </div>
