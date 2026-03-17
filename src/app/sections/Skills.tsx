@@ -126,7 +126,6 @@ const SkillsSection: React.FC = () => {
         { name: "Docker", icon: <img src="/icons/cloud/docker.svg" alt="Docker" /> },
         { name: "Cloudflare", icon: <img src="/icons/cloud/cloudflare.svg" alt="Cloudflare" /> },
         { name: "GitHub", icon: <img src="/icons/cloud/github.svg" alt="GitHub" /> },
-        { name: "Jenkins", icon: <img src="/icons/cloud/jenkins.svg" alt="Jenkins" /> },
         { name: "Google Cloud", icon: <img src="/icons/cloud/gcp.svg" alt="Google Cloud" /> },
       ],
     },
