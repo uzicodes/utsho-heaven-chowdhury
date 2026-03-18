@@ -68,7 +68,6 @@ const BookshelfSection = () => {
   const [hoveredBook, setHoveredBook] = useState<number | null>(null);
 
   return (
-    // UPDATED: Added overflow-x-clip to prevent horizontal scroll issues on mobile
     <section className="min-h-screen flex items-center justify-center py-20 px-4 overflow-x-clip">
       <div className="max-w-6xl w-full">
         
@@ -76,7 +75,7 @@ const BookshelfSection = () => {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }} /* UPDATED: Runs every time */
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
@@ -94,7 +93,7 @@ const BookshelfSection = () => {
             style={{ perspective: "2000px", marginTop: "0" }} 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, margin: "-100px" }} /* UPDATED: Runs every time */
+            viewport={{ once: false, margin: "-100px" }} 
             variants={{
               visible: {
                 transition: {
@@ -199,7 +198,7 @@ const BookshelfSection = () => {
             className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl"
             initial={{ scaleX: 0, opacity: 0 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
-            viewport={{ once: false }} /* UPDATED: Runs every time */
+            viewport={{ once: false }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
           >
           </motion.div>

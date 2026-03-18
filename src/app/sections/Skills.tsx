@@ -25,7 +25,7 @@ interface SkillCategory {
 }
 
 const containerVariants: Variants = {
-  hidden: { opacity: 1 },               //cascade cards animation
+  hidden: { opacity: 1 },              //cascade cards animation
   visible: {
     opacity: 1,
     transition: {
@@ -35,7 +35,7 @@ const containerVariants: Variants = {
   },
 };
 
-const cardVariants: Variants = {         //Flip-effect
+const cardVariants: Variants = {    //Flip-effect
   hidden: {
     opacity: 0,
     rotateX: -90,
@@ -75,7 +75,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
                 {skill.icon}
               </div>
             </div>
-          ))}                  {/* Skill Icons Grid*/}
+          ))}            {/* Skill Icons Grid*/}
         </div>
       </CardContent>
     </Card>
@@ -195,7 +195,7 @@ const SkillsSection: React.FC = () => {
               color={category.color}
             />
           ))}
-        </motion.div>                  {/* keyframe animation */}
+        </motion.div>      {/* keyframe animation */}
       </section>
       <style jsx>{`          
         @keyframes shimmer {                           

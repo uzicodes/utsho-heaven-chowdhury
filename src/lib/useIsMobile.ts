@@ -1,10 +1,5 @@
 import { useEffect, useState } from 'react';
 
-/**
- * useIsMobile - returns true when viewport width <= breakpoint
- * SSR-safe: uses window.matchMedia inside useEffect so it only runs on client.
- * @param breakpoint number in px (default 768)
- */
 export function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 

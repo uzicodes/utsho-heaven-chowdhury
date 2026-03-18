@@ -67,7 +67,7 @@ const Navbar = () => {
   // Active Link Highlighter 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 300; // Offset to trigger earlier
+      const scrollPosition = window.scrollY + 300;
 
       for (const link of navLinks) {
         const section = document.getElementById(link.id);

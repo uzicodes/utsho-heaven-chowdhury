@@ -283,7 +283,7 @@ function Card({
               })()}
             </div>
 
-            {/* GitHub and Live Links */}
+            {/* GitHub & Live Link */}
             <div className="flex items-center justify-center gap-3 py-2 md:py-3 bg-[#574A49]">
               <motion.a
                 title="GitHub Link"
@@ -320,11 +320,7 @@ function Card({
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
                 {title}
               </h2>
-
               <p className="text-xs md:text-base text-[#000000] leading-snug lora-font mb-3 whitespace-pre-line min-h-[120px] md:min-h-[200px] lg:min-h-[240px]">{description}</p>
-
-
-
             </div>
           </div>
         </motion.div>

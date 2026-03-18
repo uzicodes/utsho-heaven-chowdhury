@@ -9,7 +9,7 @@ import { motion, Variants } from "framer-motion";
 
 export default function About(): React.ReactElement {
 
-  // Image Animation: Starts slightly smaller & blurry, then becomes clear 
+  // Image Animation
   const imageRevealVariant: Variants = {
     hidden: {
       opacity: 0,
@@ -126,7 +126,7 @@ export default function About(): React.ReactElement {
 
                 <motion.p variants={textItemVariant} className="text-white cairo-font">{`Let's not forget-`}</motion.p>
 
-                {/* Pop-in animation for the code text */}
+                {/* Pop-in animation Code Text */}
                 <motion.p
                   variants={textItemVariant}
                   className="text-xl cairo-font italic"

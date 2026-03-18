@@ -7,7 +7,6 @@ export const Preloader = () => {
 
     useEffect(() => {
         const handleLoad = () => {
-            // small delay to ensure smoother transition
             setTimeout(() => {
                 setIsLoading(false);
             }, 500); 
@@ -30,7 +29,7 @@ export const Preloader = () => {
         if (!isLoading) {
             const timeout = setTimeout(() => {
                 setShouldRender(false);
-            }, 800); // CSS transition (0.8s)
+            }, 800); 
             return () => clearTimeout(timeout);
         }
     }, [isLoading]);

@@ -2,20 +2,17 @@
   cursor: none !important;
 }
 
-/* Navbar Header Styles */
+/* Header Styles */
 
 .navbar-header {
   position: fixed;
   top: 0;
   left: 0;
-  /* Forces width to viewport width, preventing drift */
   width: 100vw; 
-  /* Ensures stays on top of everything */
   z-index: 99999;
   background: rgba(17, 24, 39, 0.95);
   backdrop-filter: blur(12px);
   cursor: none;
-  /* Ensures padding doesn't add to width */
   box-sizing: border-box; 
 }
 
@@ -75,7 +72,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Increased padding pushes the button inwards */
   padding: 0 1.5rem; 
   width: 100%;
   box-sizing: border-box;
@@ -98,7 +94,6 @@
   background: none;
   border: none;
   cursor: none;
-  /* Ensures button is clickable above other layers */
   position: relative;
   z-index: 100000;
 }

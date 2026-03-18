@@ -31,8 +31,6 @@ const EducationSection: React.FC = () => {
     ];
 
     const certificationData = [
-
-
         {
             title: "Software Engineering",
             issuer: "HackerRank",
@@ -145,19 +143,18 @@ const EducationSection: React.FC = () => {
 
 
 
-
     // Container Animation:
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.05,   //delay between each card pop in one by one
+                staggerChildren: 0.05,   
             },
         },
     };
 
-    const cardVariants: Variants = {   //certs slid in effect
+    const cardVariants: Variants = {   //certs slide-in effect
         hidden: (index: number) => ({
             opacity: 0,
             x: index % 2 === 0 ? -100 : 100,
@@ -175,7 +172,7 @@ const EducationSection: React.FC = () => {
         },
     };
 
-    const educationCardVariants: Variants = {    // 3D "flip up" effect for Edu cards
+    const educationCardVariants: Variants = {    // 3D "flip up" effect for Edu Cards
         hidden: {
             opacity: 0,
             scale: 0.5,

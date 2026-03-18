@@ -15,7 +15,7 @@ interface ContactItem {
 
 
 
-// Social Contact (left)
+// Social Contact
 export default function Contact() {
   const contactItems: ContactItem[] = [
     {
@@ -70,7 +70,7 @@ export default function Contact() {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" } //animation duration & easing
+      transition: { duration: 0.8, ease: "easeOut" }
     }
   };
 
@@ -84,7 +84,7 @@ export default function Contact() {
   };
 
 
-  // Scroll to Top Function
+  // Scroll to Top
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -151,7 +151,7 @@ export default function Contact() {
                   </div>
                 </motion.div>
 
-                <motion.div   // Contact Form (right)
+                <motion.div   // Contact Form 
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.1 }}
@@ -166,7 +166,7 @@ export default function Contact() {
         </div>
 
         <button
-          onClick={scrollToTop} //Floating Scroll to Top Button
+          onClick={scrollToTop} //Floating Scroll-Top Button
           className="absolute bottom-10 right-10 p-4 bg-transparent border border-white rounded-full text-white hover:scale-110 transition-all duration-300 z-50"
           aria-label="Scroll to top"
         >

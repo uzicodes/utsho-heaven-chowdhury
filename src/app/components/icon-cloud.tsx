@@ -20,7 +20,6 @@ interface CloudProps {
     outlineColour: string;
     maxSpeed: number;
     minSpeed: number;
-    // dragControl?: boolean;
   };
 }
 
@@ -47,7 +46,6 @@ export const cloudProps: CloudProps = {
     outlineColour: "#000",
     maxSpeed: 0.04,
     minSpeed: 0.02,
-    // dragControl: false,
   },
 };
 
@@ -100,7 +98,6 @@ export default function IconCloud({
     <Cloud {...cloudProps}>
       <>
         <>{renderedIcons}</>
-        {/* Removed imageArray rendering */}
       </>
     </Cloud>
   );

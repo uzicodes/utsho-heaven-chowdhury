@@ -22,9 +22,7 @@ const Form = () => {
     ];
 
     if (allowedControlKeys.includes(e.key)) return;
-    if (e.ctrlKey || e.metaKey) return; // allow copy/paste/select all shortcuts
-
-    // only allow Unicode letters and space
+    if (e.ctrlKey || e.metaKey) return; 
     if (e.key.length === 1) {
       const isLetter = /\p{L}/u.test(e.key);
       const isSpace = e.key === ' ';
@@ -74,8 +72,7 @@ const Form = () => {
     if (e.key === '@') {
       const input = emailRef.current;
       if (!input) return;
-      // if there's already an @ in the current value, prevent typing another
-      if ((input.value.match(/@/g) || []).length >= 1) {
+      if ((input.value.match(/@/g) || []).length >= 1) {   // if one @ prevent typing another
         e.preventDefault();
       }
     }
@@ -89,9 +86,7 @@ const Form = () => {
     const start = input.selectionStart ?? input.value.length;
     const end = input.selectionEnd ?? start;
     const combined = input.value.slice(0, start) + paste + input.value.slice(end);
-    // find first @ in the combined string (if any)
     const firstAt = combined.indexOf('@');
-    // remove all @ and then reinsert a single @ at firstAt if present
     let noAts = combined.replace(/@/g, '');
     let final = noAts;
     if (firstAt !== -1) {
@@ -105,9 +100,8 @@ const Form = () => {
   const handleEmailInput = () => {
     const input = emailRef.current;
     if (!input) return;
-    // remove any extra @ beyond the first
     const parts = input.value.split('@');
-    if (parts.length <= 2) return; // 0 or 1 @ -> fine
+    if (parts.length <= 2) return; 
     const first = parts.shift() || '';
     const rest = parts.join('');
     input.value = first + '@' + rest;
@@ -129,7 +123,6 @@ const Form = () => {
     const newErrors: { [key: string]: string } = {};
 
     const trimmedName = name.trim();
-    // Allow only letters (Unicode) and spaces — no numbers or special characters
     const nameValid = /^[\p{L}\s]+$/u.test(trimmedName);
     if (!nameValid) {
       newErrors.name = "Name can only contain letters and spaces";

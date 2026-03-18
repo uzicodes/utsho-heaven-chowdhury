@@ -50,8 +50,6 @@ export default function Home() {
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
       </Head>
-      
-      {/* GLOBAL OVERFLOW FIX: Prevents "Hamburger Drift" */}
       <div className="relative min-h-screen text-white bg-transparent overflow-x-clip">
         <Navbar />
 
@@ -62,7 +60,7 @@ export default function Home() {
             <div className="container mx-auto px-6 lg:px-8">
               <div className="flex min-h-[65vh] items-center">
                 
-                {/* Left Side - Hero Text */}
+                {/* Hero Text */}
                 <motion.div 
                   className="w-full lg:w-1/2"
                   variants={containerVariants}
@@ -148,7 +146,7 @@ export default function Home() {
                       </div>
                     </motion.div>
 
-                    {/* Mobile Image - visibility */}
+                    {/* Mobile Image */}
                     {isMobile && (
                       <motion.div 
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -250,7 +248,7 @@ export default function Home() {
                   </div>
                 </motion.div>
 
-                {/* Right Side - Glowing Card */}
+                {/* Glowing Card */}
                 {!isMobile && (
                   <div className="w-full lg:w-1/2 relative">
                     <motion.div 
