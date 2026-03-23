@@ -73,7 +73,7 @@ export default function Home() {
                     <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
                       <div className="inline-flex items-center gap-2 px-2 sm:px-3 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2">
                         <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                        <span className="text-gray-300 text-xs sm:text-xs font-medium satoshi-font">
+                        <span className="text-gray-300 text-xs sm:text-xs font-medium" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                           AVAILABLE TO WORK
                         </span>
                       </div>
@@ -84,8 +84,9 @@ export default function Home() {
                       <motion.h1 variants={itemVariants} className="hero-text font-bold leading-tight text-center mb-2">
                         <span className="text-white block mb-1 mt-0" style={{ fontSize: '1.25rem' }}>Hello I&apos;m,</span>
                         <span
-                          className="hero-name cairo-font"
+                          className="hero-name"
                           style={{
+                            fontFamily: 'var(--font-space-grotesk), sans-serif',
                             backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
                             backgroundClip: 'text',
                             WebkitBackgroundClip: 'text',
@@ -116,8 +117,9 @@ export default function Home() {
                           Hello I&apos;m,
                         </span>
                         <span
-                          className="hero-name whitespace-nowrap cairo-font"
+                          className="hero-name whitespace-nowrap"
                           style={{
+                            fontFamily: 'var(--font-space-grotesk), sans-serif',
                             backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
                             backgroundClip: 'text',
                             WebkitBackgroundClip: 'text',
@@ -199,7 +201,7 @@ export default function Home() {
                         target="_blank"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-none bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                        className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-none bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA] sm:ml-2 ml-0"
                       >
                         <span className="block w-full px-6 sm:px-2 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700 relative">
                           <span className="flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
@@ -239,8 +241,8 @@ export default function Home() {
                         <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
                       </motion.button>
 
-                      <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-2">
-                        <span className="text-gray-300 text-xs sm:text-sm font-medium satoshi-font">
+                      <div className="inline-flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-2">
+                        <span className="text-gray-300 text-[10px] sm:text-xs font-medium" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                           utshozi11@gmail.com
                         </span>
                       </div>

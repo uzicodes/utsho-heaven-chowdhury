@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, JetBrains_Mono, Ubuntu, Bricolage_Grotesque } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono, Ubuntu, Bricolage_Grotesque, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Cursor, CursorPointer } from "@/app/components/cursor";
 import { StarsBackground } from "@/app/components/stars";
@@ -31,6 +31,11 @@ const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Utsho Heaven Chowdhury",
   description: "",
@@ -44,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${ubuntu.variable} ${bricolageGrotesque.variable} antialiased bg-black min-h-screen relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${ubuntu.variable} ${bricolageGrotesque.variable} ${spaceGrotesk.variable} antialiased bg-black min-h-screen relative`}
       >
         <Preloader />
         <div className="fixed inset-0 z-0 pointer-events-none">

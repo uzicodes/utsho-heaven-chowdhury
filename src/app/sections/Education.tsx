@@ -204,10 +204,10 @@ const EducationSection: React.FC = () => {
 
             <div className="max-w-6xl mx-auto px-4 relative z-10 capitalize">
                 <div className="text-center mb-12 pt-32">
-                    <h2 className="text-5xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-ubuntu), sans-serif' }}>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                         EDUCATIONAL JOURNEY
                     </h2>
-                    <p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
+                    <p className="text-gray-300 max-w-2xl mx-auto text-lg" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                         My academic background & achievements
                     </p>
                 </div>
@@ -242,7 +242,7 @@ const EducationSection: React.FC = () => {
                                             {edu.degree}
                                         </h3>
                                     </div>
-                                    <p className="text-base flex items-center justify-center gap-2 font-semibold font-jetbrains-mono" style={{ color: '#0CA81F', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                                    <p className="text-base flex items-center justify-center gap-2 font-semibold" style={{ color: '#0CA81F', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                                         {edu.school}
                                     </p>
                                     <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -279,7 +279,7 @@ const EducationSection: React.FC = () => {
                                         THESIS
                                     </h3>
                                 </div>
-                                <p className="text-base flex items-center justify-center gap-2 font-semibold font-jetbrains-mono" style={{ color: '#0ca81f', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                                <p className="text-base flex items-center justify-center gap-2 font-semibold" style={{ color: '#0ca81f', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                                     BRAC UNIVERSITY
                                 </p>
                                 <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -305,11 +305,11 @@ const EducationSection: React.FC = () => {
                     className="mt-20"
                 >
                     <div className="text-center mb-12">
-                        <h2 className="text-5xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-ubuntu), sans-serif' }}>
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                             PROFESSIONAL CERTIFICATIONS
                         </h2>
-                        <p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
-                            Professional Development through Industry-Recognized Certifications
+                        <p className="text-gray-300 max-w-2xl mx-auto text-lg" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                            Self-development through Industry Recognized Certifications
                         </p>
                     </div>
 
@@ -350,7 +350,7 @@ const EducationSection: React.FC = () => {
                                         <div>
                                             <h3
                                                 className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors"
-                                                style={{ color: '#c94b76', fontSize: '1rem', fontFamily: 'var(--font-ubuntu), sans-serif' }}
+                                                style={{ color: '#c94b76', fontSize: '1rem', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                             >
                                                 {cert.title}
                                             </h3>

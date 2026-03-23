@@ -144,10 +144,10 @@ export default function Projects() {
           <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
             <div className="text-white w-full bg-transparent">
               <div className="text-center mb-0 pt-32">
-                <h2 className="text-5xl font-bold mb-1" style={{ color: '#F5BE27', fontFamily: 'var(--font-ubuntu), sans-serif' }}>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                   PROJECTS
                 </h2>
-                <p className="text-gray-300 max-w-2xl mx-auto text-lg lora-font">
+                <p className="text-gray-300 max-w-2xl mx-auto text-lg" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                   Showcasing my Technical Projects & Creative Solutions
                 </p>
               </div>

@@ -67,8 +67,8 @@ export default function About(): React.ReactElement {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl cairo-font"
-            style={{ color: '#DEB34B' }}
+            className="relative z-10 max-w-xl text-4xl font-semibold lg:text-5xl"
+            style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
           >
             Developer, Designer Creator, Innovator
           </motion.h2>
@@ -124,13 +124,13 @@ export default function About(): React.ReactElement {
                 </blockquote>
                 <br></br>
 
-                <motion.p variants={textItemVariant} className="text-white cairo-font">{`Let's not forget-`}</motion.p>
+                <motion.p variants={textItemVariant} className="text-white mb-2" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>{`Let's not forget-`}</motion.p>
 
                 {/* Pop-in animation Code Text */}
                 <motion.p
                   variants={textItemVariant}
-                  className="text-xl cairo-font italic"
-                  style={{ color: '#CF4E5B' }}
+                  className="text-xl"
+                  style={{ color: '#CF4E5B', fontFamily: 'var(--font-ubuntu), sans-serif', fontStyle: 'italic' }}
                 >
                   {`it all started with a   `}
                   <motion.span
@@ -138,8 +138,7 @@ export default function About(): React.ReactElement {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: false }}
                     transition={{ type: "spring", stiffness: 200 }}
-                    style={{ color: '#5DCF4E', display: 'inline-block' }}
-                    className="cairo-font italic"
+                    style={{ color: '#5DCF4E', display: 'inline-block', fontFamily: 'var(--font-ubuntu), sans-serif', fontStyle: 'italic' }}
                   >
                     {'<'} hello world {'>'}
                   </motion.span>
