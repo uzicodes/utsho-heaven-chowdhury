@@ -171,7 +171,7 @@ export default function Home() {
                     )}
 
                     {/* Description */}
-                    <motion.div variants={itemVariants} className="mt-4 text-xl text-gray-300 max-w-xl ml-auto lora-font" style={{ marginLeft: '5px' }}>
+                    <motion.div variants={itemVariants} className="mt-4 text-xl text-gray-300 max-w-xl ml-auto" style={{ marginLeft: '5px', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                       Full-Stack Developer actively seeking opportunities to integrate Intelligent systems into Real-world solutions.
                     </motion.div>
 

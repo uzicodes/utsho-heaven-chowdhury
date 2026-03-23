@@ -31,7 +31,7 @@ interface CardProps {
 
 const projects: Project[] = [
   {
-    title: "LAMB FALCONS - Official Club Site",
+    title: "LAMB FALCONS ",
     description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement. Used Animated libraries, interactive UI elements for a smooth user experience. Production ready with CI/CD pipelines for seamless updates & maintenance.",
     skills: ["nextjs", "nodejs", "react", "ts", "clerk","gsap","tailwind", "vercel"],
     link: "/projects/lamb-falcons.png",
@@ -317,7 +317,7 @@ function Card({
 
           <div className="w-full md:w-[45%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative">
             <div className="relative z-10">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4 reckless-font">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
                 {title}
               </h2>
               <p className="text-xs md:text-base text-[#000000] leading-snug lora-font mb-3 whitespace-pre-line min-h-[120px] md:min-h-[200px] lg:min-h-[240px]">{description}</p>
