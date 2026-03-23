@@ -20,7 +20,7 @@ export default function Home() {
   const words = [
     "Full-Stack Developer | MERN | DevOps",
     "Python | TypeScript | React | Supabase", 
-    "CI/CD  |  System Design Architecture",
+    "CI/CD | System Design Architecture",
     "Let's Build Something Amazing Together !",
   ];
 
