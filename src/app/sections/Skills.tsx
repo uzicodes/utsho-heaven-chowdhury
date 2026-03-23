@@ -64,7 +64,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
       <CardContent className="p-6 relative z-10">
         <div className="flex items-center justify-center gap-4 mb-6 w-full">
-          <h3 className="text-2xl font-bold text-center colus-font" style={{ color: '#A8325A' }}>
+          <h3 className="text-2xl font-extrabold tracking-tight text-center" style={{ color: '#A8325A', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
             {title}
           </h3>
         </div>
@@ -85,7 +85,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
 const SkillsSection: React.FC = () => {
   const skillCategories: SkillCategory[] = [
     {
-      title: "Frontend",
+      title: "FRONTEND",
       color: "text-blue-400",
       skills: [
         { name: "React", icon: <img src="/icons/frontend/react.svg" alt="React" /> },
@@ -97,7 +97,7 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      title: "Backend",
+      title: "BACKEND",
       color: "text-purple-400",
       skills: [
         { name: "Node.js", icon: <img src="/icons/backend/nodejs.svg" alt="Node.js" /> },
@@ -107,7 +107,7 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      title: "Database",
+      title: "DATABASE",
       color: "text-green-400",
       skills: [
         { name: "Supabase", icon: <img src="/icons/database/supabase.svg" alt="Supabase" /> },
@@ -119,7 +119,7 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      title: "DevOps",
+      title: "DEVOPS",
       color: "text-orange-400",
       skills: [
         { name: "AWS", icon: <img src="/icons/cloud/aws.svg" alt="AWS" /> },
@@ -130,7 +130,7 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      title: "Tools",
+      title: "TOOLS",
       color: "text-pink-400",
       skills: [
         { name: "Git", icon: <img src="/icons/tools/git.svg" alt="Git" /> },
@@ -142,7 +142,7 @@ const SkillsSection: React.FC = () => {
       ],
     },
     {
-      title: "UI / UX",
+      title: "UI/UX",
       color: "text-yellow-400",
       skills: [
         { name: "Figma", icon: <img src="/icons/ui/figma.svg" alt="Figma" width={46} height={46} /> },

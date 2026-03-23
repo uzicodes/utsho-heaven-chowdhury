@@ -25,7 +25,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // 1. Progress Bar 
+  // Progress Bar 
   useEffect(() => {
     let ticking = false;
 
