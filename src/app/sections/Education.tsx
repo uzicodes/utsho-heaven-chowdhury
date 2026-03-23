@@ -22,7 +22,7 @@ const EducationSection: React.FC = () => {
         },
         {
             degree: "Bachelor's in Computer Science (CS)",
-            school: "BRAC UNIVERSITY, DHAKA",
+            school: "BRAC UNIVERSITY - DHAKA",
             year: "2022 - 2026",
             logo: "/bracu.png",
             className: "h-24 w-24",
@@ -238,11 +238,11 @@ const EducationSection: React.FC = () => {
                                             className={`${edu.className} object-contain`}
                                             style={edu.style}
                                         />
-                                        <h3 className="text-xl font-bold tiempos-font" style={{ color: '#C94B76' }}>
+                                        <h3 className="text-xl font-bold" style={{ color: '#C94B76', fontFamily: 'var(--font-ubuntu), sans-serif' }}>
                                             {edu.degree}
                                         </h3>
                                     </div>
-                                    <p className="text-base flex items-center justify-center gap-2 font-semibold" style={{ color: '#0CA81F', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                                    <p className="text-base flex items-center justify-center gap-2 font-semibold font-jetbrains-mono" style={{ color: '#0CA81F', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                                         {edu.school}
                                     </p>
                                     <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -275,11 +275,11 @@ const EducationSection: React.FC = () => {
                                         className="h-14 w-14 object-contain"
                                         style={{ maxWidth: '56px', maxHeight: '56px' }}
                                     />
-                                    <h3 className="text-lg font-bold tiempos-font" style={{ color: '#c94b76' }}>
+                                    <h3 className="text-lg font-bold" style={{ color: '#c94b76', fontFamily: 'var(--font-ubuntu), sans-serif' }}>
                                         THESIS
                                     </h3>
                                 </div>
-                                <p className="text-base flex items-center justify-center gap-2 font-semibold" style={{ color: '#0ca81f', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                                <p className="text-base flex items-center justify-center gap-2 font-semibold font-jetbrains-mono" style={{ color: '#0ca81f', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                                     BRAC UNIVERSITY
                                 </p>
                                 <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -349,8 +349,8 @@ const EducationSection: React.FC = () => {
                                     <div className="space-y-2 px-1 pb-2 text-center flex-grow flex flex-col justify-between">
                                         <div>
                                             <h3
-                                                className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors tiempos-font"
-                                                style={{ color: '#c94b76', fontSize: '1rem' }}
+                                                className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors"
+                                                style={{ color: '#c94b76', fontSize: '1rem', fontFamily: 'var(--font-ubuntu), sans-serif' }}
                                             >
                                                 {cert.title}
                                             </h3>

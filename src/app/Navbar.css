@@ -171,6 +171,7 @@
 
 .navbar-link-text {
   display: inline;
+  font-weight: bold;
 }
 
 .navbar-link-icon {

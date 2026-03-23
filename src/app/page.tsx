@@ -188,7 +188,7 @@ export default function Home() {
                         <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-none bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                           <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
                             <img src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-2 align-middle" />
-                            <span className="colus-font">CV</span>
+                            <span style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>CV</span>
                             <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                           </span>
                         </span>
@@ -203,7 +203,7 @@ export default function Home() {
                       >
                         <span className="block w-full px-6 sm:px-2 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700 relative">
                           <span className="flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
-                            <span className="colus-font">Consultations</span>
+                            <span style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>CONSULTATIONS</span>
                           </span>
                           <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12 absolute right-3 top-1/2 -translate-y-1/2"></i>
                         </span>
