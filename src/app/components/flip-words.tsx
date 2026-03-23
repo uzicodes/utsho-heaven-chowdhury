@@ -38,7 +38,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
       }}
     >
       <motion.div
-        style={{ color: '#0B74E3' }}
+        style={{ color: '#0B74E3', fontFamily: 'var(--font-jetbrains-mono), monospace' }}
         initial={{
           opacity: 0,
           y: 10,

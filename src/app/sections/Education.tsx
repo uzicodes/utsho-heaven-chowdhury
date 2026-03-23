@@ -14,7 +14,7 @@ const EducationSection: React.FC = () => {
     const educationData = [
         {
             degree: "Higher Secondary Certificate (HSC)",
-            school: "CANTONEMENT PUBLIC COLLEGE, SAIDPUR",
+            school: "CANTONEMENT PUBLIC COLLEGE SAIDPUR",
             year: "2018 - 2020",
             logo: "/cpscs.png",
             className: "h-21 w-21",
@@ -22,7 +22,7 @@ const EducationSection: React.FC = () => {
         },
         {
             degree: "Bachelor's in Computer Science (CS)",
-            school: "BRAC UNIVERSITY,  DHAKA",
+            school: "BRAC UNIVERSITY, DHAKA",
             year: "2022 - 2026",
             logo: "/bracu.png",
             className: "h-24 w-24",
@@ -33,7 +33,7 @@ const EducationSection: React.FC = () => {
     const certificationData = [
         {
             title: "Software Engineering",
-            issuer: "HackerRank",
+            issuer: "HACKERRANK",
             issuerLogo: "/icons/hacker.svg",
             date: "March 2026",
             skills: ["Clean Code", "API", "SDLC"],
@@ -42,7 +42,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Agile Project Management Professional",
-            issuer: "Atlassian",
+            issuer: "ATLASSIAN",
             issuerLogo: "/icons/atlassian.svg",
             date: "December 2025",
             skills: ["Agile", "Kanban", "Scrum"],
@@ -51,7 +51,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "DevOps Professional Certificate",
-            issuer: "PagerDuty",
+            issuer: "PAGERDUTY",
             issuerLogo: "/icons/pagerduty.svg",
             date: "December 2025",
             skills: ["CI / CD", "DevOps", "IaC"],
@@ -60,7 +60,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Software Product Management",
-            issuer: "University of Alberta",
+            issuer: "UNIVERSITY OF ALBERTA",
             issuerLogo: "/icons/alberta.svg",
             date: "March 2026",
             skills: ["Agile", "Client ", "Product Lifecycle"],
@@ -78,7 +78,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Docker Foundations Professional",
-            issuer: "Docker",
+            issuer: "DOCKER",
             issuerLogo: "/icons/cloud/docker.svg",
             date: "November 2025",
             skills: ["Containerization", "Docker Compose", "Docker Image"],
@@ -96,7 +96,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Foundations Coding Full-Stack",
-            issuer: "Microsoft",
+            issuer: "MICROSOFT",
             issuerLogo: "/icons/microsoft.svg",
             date: "October 2025",
             skills: ["CI / CD", "Graph Theory", "OOP"],
@@ -105,7 +105,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "AI Engineer For Developers Associate",
-            issuer: "DataCamp",
+            issuer: "DATACAMP",
             issuerLogo: "/icons/datacamp.svg",
             date: "August 2025",
             skills: ["LLMs", "MLOPs", "LangChain"],
@@ -114,7 +114,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Career Essentials in GitHub Professional",
-            issuer: "Github",
+            issuer: "GITHUB",
             issuerLogo: "/icons/cloud/github.svg",
             date: "December 2025",
             skills: ["Git Version Control", "Github Actions", "Collaboration"],
@@ -123,7 +123,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Machine Learning with Python",
-            issuer: "Anaconda",
+            issuer: "ANACONDA",
             issuerLogo: "/icons/anaconda.svg",
             date: "December 2025",
             skills: ["Data Prep", "Regression", "Pandas"],
@@ -132,7 +132,7 @@ const EducationSection: React.FC = () => {
         },
         {
             title: "Neural Networks & Deep Learning",
-            issuer: "Deep Learning",
+            issuer: "DEEPLEARNING",
             issuerLogo: "/icons/deeplearning.svg",
             date: "October 2025",
             skills: ["Vectorization", "Shallow NN", "Deep NN"],
@@ -242,7 +242,7 @@ const EducationSection: React.FC = () => {
                                             {edu.degree}
                                         </h3>
                                     </div>
-                                    <p className="text-base flex items-center justify-center gap-2 tiempos-font" style={{ color: '#0CA81F' }}>
+                                    <p className="text-base flex items-center justify-center gap-2 font-semibold" style={{ color: '#0CA81F', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                                         {edu.school}
                                     </p>
                                     <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -279,7 +279,7 @@ const EducationSection: React.FC = () => {
                                         THESIS
                                     </h3>
                                 </div>
-                                <p className="text-base flex items-center justify-center gap-2 tiempos-font" style={{ color: '#0ca81f' }}>
+                                <p className="text-base flex items-center justify-center gap-2 font-semibold" style={{ color: '#0ca81f', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                                     BRAC UNIVERSITY
                                 </p>
                                 <p className="text-gray-400 flex items-center justify-center gap-2">
@@ -363,7 +363,7 @@ const EducationSection: React.FC = () => {
                                                         className="w-5 h-5 object-contain"
                                                     />
                                                 )}
-                                                <p className="text-sm colus-font" style={{ color: '#0ca81f', fontSize: '0.95rem' }}>
+                                                <p className="text-sm font-semibold" style={{ color: '#0ca81f', fontSize: '0.95rem', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                                                     {cert.issuer}
                                                 </p>
                                             </div>
