@@ -13,11 +13,11 @@ import {
 import './Navbar.css';
 
 const navLinks = [
-  { id: "home", icon: FaHome, text: "Home", href: "#home" },
-  { id: "skills", icon: FaCode, text: "Skills", href: "#skills" },
-  { id: "projects", icon: FaLaptopCode, text: "Projects", href: "#projects" },
-  { id: "education", icon: FaGraduationCap, text: "Education", href: "#education" },
-  { id: "contacts", icon: FaEnvelope, text: "Contacts", href: "#contacts" },
+  { id: "home", icon: FaHome, text: "HOME", href: "#home" },
+  { id: "skills", icon: FaCode, text: "SKILLS", href: "#skills" },
+  { id: "projects", icon: FaLaptopCode, text: "PROJECTS", href: "#projects" },
+  { id: "education", icon: FaGraduationCap, text: "EDUCATION", href: "#education" },
+  { id: "contacts", icon: FaEnvelope, text: "CONTACTS", href: "#contacts" },
 ];
 
 const Navbar = () => {
