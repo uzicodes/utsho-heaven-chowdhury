@@ -296,7 +296,7 @@ function Card({
                 style={{ pointerEvents: "all" }}
               >
                 <img src="/github.svg" alt="GitHub" width={18} height={18} className="inline-block align-middle" />
-                <span className="text-xs md:text-sm font-medium text-[#7fe525] reckless-font">Code</span>
+                <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Code</span>
               </motion.a>
 
               <motion.a
@@ -310,7 +310,7 @@ function Card({
                 style={{ pointerEvents: "all" }}
               >
                 <img src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={19.5} height={19.5} className="inline-block align-middle" />
-                <span className="text-xs md:text-sm font-medium text-[#7fe525] reckless-font">Live</span>
+                <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Live</span>
               </motion.a>
             </div>
           </div>
@@ -320,7 +320,7 @@ function Card({
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
                 {title}
               </h2>
-              <p className="text-xs md:text-base text-[#000000] leading-snug lora-font mb-3 whitespace-pre-line min-h-[120px] md:min-h-[200px] lg:min-h-[240px]">{description}</p>
+              <p className="text-xs md:text-base text-[#121111] font-semibold leading-snug mb-3 whitespace-pre-line min-h-[120px] md:min-h-[200px] lg:min-h-[240px]" style={{ fontFamily: 'var(--font-bricolage-grotesque), sans-serif' }}>{description}</p>
             </div>
           </div>
         </motion.div>
