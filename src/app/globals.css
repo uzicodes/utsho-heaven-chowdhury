@@ -1,26 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.cairo-font {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 700;
-}
-
-.satoshi-font {
-  font-family: 'Satoshi', sans-serif;
-}
-
-
-
 /* only custom cursor shows */
 a,
 button,
@@ -42,35 +19,9 @@ textarea {
   z-index: 2;
 }
 
-@font-face {
-  font-family: 'RecklessNeue';
-  src: url('/fonts/RecklessNeue-Book.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.reckless-font {
-  font-family: 'RecklessNeue', serif;
-}
-
-.lora-font {
-  font-family: 'Lora', serif;
-}
-
 .ubuntu-font {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: var(--font-ubuntu), sans-serif;
   font-weight: 400;
-}
-
-@font-face {
-  font-family: 'TestTiemposText';
-  src: url('/fonts/TestTiemposText-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-.tiempos-font {
-  font-family: 'TestTiemposText', serif;
 }
 
 @font-face {
@@ -85,20 +36,6 @@ textarea {
 }
 
 @font-face {
-  font-family: 'Hogers';
-  src: url('/fonts/hogers.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.hogers-font {
-  font-family: 'Hogers', sans-serif;
-}
-
-
-
-
-@font-face {
   font-family: 'SkyNews';
   src: url('/fonts/skynews.ttf') format('truetype');
   font-weight: normal;
@@ -107,11 +44,6 @@ textarea {
 
 .flipwords-font {
   font-family: 'SkyNews', sans-serif;
-}
-
-
-.lilitaone-font {
-  font-family: 'Lilita One', cursive;
 }
 
 @import "tailwindcss";
