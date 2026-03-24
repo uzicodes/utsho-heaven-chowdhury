@@ -149,7 +149,7 @@ const EducationSection: React.FC = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.05,   
+                staggerChildren: 0.05,
             },
         },
     };
@@ -208,7 +208,7 @@ const EducationSection: React.FC = () => {
                         EDUCATIONAL JOURNEY
                     </h2>
                     <p className="text-gray-300 max-w-2xl mx-auto text-lg" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
-                        My academic background & achievements
+                        Academic background & achievements
                     </p>
                 </div>
 
