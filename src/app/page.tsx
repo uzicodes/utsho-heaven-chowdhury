@@ -213,35 +213,35 @@ export default function Home() {
                     </motion.div>
 
                     {/* Social Icons */}
-                    <motion.div variants={itemVariants} className="flex gap-1.1 mt-6 items-center">
+                    <motion.div variants={itemVariants} className="flex gap-4 mt-6 items-center">
                       <motion.button
                         whileHover={{ scale: 1.1 }}
                         aria-label="GitHub"
-                        className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
+                        className="rounded-lg contact-social-icon  transition-colors"
                         onClick={() => window.open('https://github.com/uzicodes', '_blank')}
                       >
-                        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="rounded-full ml-1" />
+                        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" />
                       </motion.button>
 
                       <motion.button
                         whileHover={{ scale: 1.1 }}
                         aria-label="LinkedIn"
-                        className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
+                        className="rounded-lg contact-social-icon transition-colors"
                         onClick={() => window.open('https://www.linkedin.com/in/utsho-heaven-chowdhury/', '_blank')}
                       >
-                        <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="rounded-full ml-1" />
+                        <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" />
                       </motion.button>
 
                       <motion.button
                         whileHover={{ scale: 1.1 }}
                         aria-label="Email"
-                        className="contact-social-icon rounded-full p-1 bg-gray-900/30 hover:bg-gray-800/60"
+                        className=" rounded-lg contact-social-icon transition-colors"
                         onClick={() => window.location.href = 'mailto:utshozi11@gmail.com'}
                       >
-                        <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="rounded-full ml-1" />
+                        <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="w-8 h-8" />
                       </motion.button>
 
-                      <div className="inline-flex items-center gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 ml-2">
+                      <div className="inline-flex items-center gap-2 px-2 sm:px-2 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50">
                         <span className="text-gray-300 text-[10px] sm:text-xs font-medium" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                           utshozi11@gmail.com
                         </span>
