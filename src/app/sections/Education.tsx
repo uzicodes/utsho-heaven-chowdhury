@@ -193,15 +193,6 @@ const EducationSection: React.FC = () => {
 
     return (
         <section className="min-h-screen relative overflow-hidden overflow-x-clip py-20 bg-transparent">
-            <style>{`
-                @font-face {
-                    font-family: 'TestTiemposText-Medium';
-                    src: url('/TestTiemposText-Medium.otf') format('truetype');
-                    font-weight: normal;
-                    font-style: normal;
-                }
-            `}</style>
-
             <div className="max-w-6xl mx-auto px-4 relative z-10 capitalize">
                 <div className="text-center mb-12 pt-32">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
