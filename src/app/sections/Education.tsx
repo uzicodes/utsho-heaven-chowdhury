@@ -331,10 +331,10 @@ const EducationSection: React.FC = () => {
                             >
                                 <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur"></div>
 
-                                <div className={`relative h-full border rounded-xl overflow-hidden bg-gray-900 border-gray-800 p-3 flex flex-col`}>
+                                <div className={`relative h-full border rounded-xl overflow-hidden bg-gray-900 border-gray-800 p-2 sm:p-3 flex flex-col`}>
 
-                                    <div className="w-full mb-2">
-                                        <div className="relative w-full h-40 bg-black rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                                    <div className="w-full mb-1 sm:mb-2">
+                                        <div className="relative w-full h-28 sm:h-40 bg-black rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
                                             <img
                                                 src={cert.certImage}
                                                 alt={cert.title}
@@ -346,10 +346,10 @@ const EducationSection: React.FC = () => {
                                         </div>
                                     </div>
 
-                                    <div className="space-y-2 px-1 pb-2 text-center flex-grow flex flex-col justify-between">
+                                    <div className="space-y-1 sm:space-y-2 px-1 pb-1 sm:pb-2 text-center flex-grow flex flex-col justify-between">
                                         <div>
                                             <h3
-                                                className="text-lg font-bold mb-1 group-hover:text-teal-400 transition-colors"
+                                                className="text-sm sm:text-lg font-bold mb-0.5 sm:mb-1 group-hover:text-teal-400 transition-colors"
                                                 style={{ color: '#c94b76', fontSize: '1rem', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                             >
                                                 {cert.title}
@@ -367,13 +367,13 @@ const EducationSection: React.FC = () => {
                                                     {cert.issuer}
                                                 </p>
                                             </div>
-                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-3">
+                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-1 sm:mt-3">
                                                 <span className="flex items-center gap-1">
-                                                    <Calendar className="w-4 h-4" />
+                                                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                                                     {cert.date}
                                                 </span>
                                             </div>
-                                            <div className="flex flex-wrap justify-center gap-1 mt-2">
+                                            <div className="flex flex-wrap justify-center gap-1 mt-1 sm:mt-2">
                                                 {cert.skills.map((skill, i) => (
                                                     <span
                                                         key={i}
@@ -389,7 +389,7 @@ const EducationSection: React.FC = () => {
                                             href={cert.fullViewUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="mt-3 flex items-center justify-center gap-1 text-xs font-semibold bg-transparent hover:bg-yellow-500/20 text-yellow-400/70 hover:text-blue-400 px-3 py-1.5 rounded-none transition-all w-fit mx-auto border border-cyan-400/40 hover:border-yellow-500"
+                                            className="mt-2 sm:mt-3 flex items-center justify-center gap-1 text-[10px] sm:text-xs font-semibold bg-transparent hover:bg-yellow-500/20 text-yellow-400/70 hover:text-blue-400 px-2 py-1 sm:px-3 sm:py-1.5 rounded-none transition-all w-fit mx-auto border border-cyan-400/40 hover:border-yellow-500"
                                         >
                                             <ExternalLink className="w-3 h-3" />
                                             View Certificate

@@ -71,9 +71,9 @@ export default function Home() {
                     
                     {/* Welcome badge */}
                     <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
-                      <div className="inline-flex items-center gap-2 px-2 sm:px-3 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2">
-                        <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
-                        <span className="text-gray-300 text-xs sm:text-xs font-medium" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                      <div className={`inline-flex items-center ${isMobile ? 'gap-1.5 px-2 py-1' : 'gap-2 px-2 sm:px-3 py-2'} rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2`}>
+                        <div className={`${isMobile ? 'w-1.5 h-1.5' : 'w-2 h-2'} rounded-full bg-green-400 animate-pulse`}></div>
+                        <span className={`text-gray-300 font-medium ${isMobile ? 'text-[10px]' : 'text-xs'}`} style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                           AVAILABLE TO WORK
                         </span>
                       </div>

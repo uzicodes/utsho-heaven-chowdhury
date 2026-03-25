@@ -96,20 +96,20 @@ const Navbar = () => {
     setActiveLink(id);
 
     if (id === 'home') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-        const element = document.getElementById(id);
-        if (element) {
-            // Calculate offset for fixed navbar 
-            const headerOffset = 80;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        }
+      const element = document.getElementById(id);
+      if (element) {
+        // Calculate offset for fixed navbar 
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     }
   };
 
@@ -117,18 +117,18 @@ const Navbar = () => {
     <header className="navbar-header">
       <div className="navbar-wrapper">
         <div className="navbar-gradient-border">
-          <nav className="navbar-content colus-font">
-            
+          <nav className="navbar-content" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+
             {/* Mobile Header */}
             <div className="navbar-mobile-header">
-              <a 
-                href="#" 
-                onClick={(e) => handleScrollTo(e, 'home')} 
+              <a
+                href="#"
+                onClick={(e) => handleScrollTo(e, 'home')}
                 className="navbar-logo"
               >
-                Utsho Heaven Chowdhury
+                UTSHO HEAVEN CHOWDHURY
               </a>
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="navbar-menu-button"
               >
@@ -147,9 +147,8 @@ const Navbar = () => {
                   >
                     <div className={`navbar-link ${activeLink === id ? 'navbar-link-active' : ''}`}>
                       <Icon
-                        className={`navbar-link-icon ${
-                          activeLink === id ? "navbar-link-icon-active" : ""
-                        }`}
+                        className={`navbar-link-icon ${activeLink === id ? "navbar-link-icon-active" : ""
+                          }`}
                       />
                       <span className="navbar-link-text">{text}</span>
                     </div>
