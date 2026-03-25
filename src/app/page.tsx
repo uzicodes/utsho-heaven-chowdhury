@@ -137,11 +137,11 @@ export default function Home() {
 
                     {/* Role badge */}
                     <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
-                      <div className={`inline-flex items-center gap-2 sm:gap-3 ${isMobile ? 'px-3 py-2' : 'px-4 sm:px-8 py-3 sm:py-5'} rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 ${isMobile ? 'mb-6 sm:mb-8' : 'mb-2'} backdrop-blur-sm ${isMobile ? 'min-w-[280px] min-h-[48px]' : 'min-w-[320px] min-h-[64px]'}`} style={!isMobile ? { marginLeft: '-5px' } : {}}>
-                        <i className={`fas fa-rocket text-blue-400 animate-bounce ${isMobile ? 'text-xs' : 'text-sm sm:text-base'}`}></i>
+                      <div className={`inline-flex items-center gap-2 sm:gap-3 ${isMobile ? 'px-2 py-1.5' : 'px-4 sm:px-8 py-3 sm:py-5'} rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 ${isMobile ? 'mb-6 sm:mb-8' : 'mb-2'} backdrop-blur-sm ${isMobile ? 'min-w-[240px] min-h-[40px]' : 'min-w-[320px] min-h-[64px]'}`} style={!isMobile ? { marginLeft: '-5px' } : {}}>
+                        <i className={`fas fa-rocket text-blue-400 animate-bounce ${isMobile ? 'text-[10px]' : 'text-sm sm:text-base'}`}></i>
                         <span>
                           <FlipWords
-                            className={isMobile ? "flipwords-font text-sm text-blue-400 font-medium" : "flipwords-font text-lg sm:text-xl text-blue-400 font-medium"}
+                            className={isMobile ? "flipwords-font text-xs text-blue-400 font-medium" : "flipwords-font text-lg sm:text-xl text-blue-400 font-medium"}
                             words={words}
                           />
                         </span>
@@ -173,7 +173,7 @@ export default function Home() {
                     )}
 
                     {/* Description */}
-                    <motion.div variants={itemVariants} className="mt-4 text-xl text-gray-300 max-w-xl ml-auto" style={{ marginLeft: '5px', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                    <motion.div variants={itemVariants} className={`mt-4 text-xl text-gray-300 max-w-xl ${isMobile ? 'text-center mx-auto' : 'ml-auto'}`} style={{ marginLeft: isMobile ? undefined : '5px', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                       Full-Stack Developer actively seeking opportunities to integrate Intelligent systems into Real-world solutions.
                     </motion.div>
 
@@ -213,7 +213,7 @@ export default function Home() {
                     </motion.div>
 
                     {/* Social Icons */}
-                    <motion.div variants={itemVariants} className="flex gap-4 mt-6 items-center">
+                    <motion.div variants={itemVariants} className={`flex gap-4 mt-6 items-center ${isMobile ? 'justify-center flex-wrap' : ''}`}>
                       <motion.button
                         whileHover={{ scale: 1.1 }}
                         aria-label="GitHub"

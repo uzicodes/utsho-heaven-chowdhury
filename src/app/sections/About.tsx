@@ -115,7 +115,7 @@ export default function About(): React.ReactElement {
                     className="absolute left-0 top-0 w-1 bg-gray-300"
                   />
 
-                  <motion.p variants={textItemVariant} className="text-white ubuntu-font text-lg text-justify">
+                  <motion.p variants={textItemVariant} className="text-white ubuntu-font text-sm md:text-lg text-justify">
                     {`I build scalable, user-centric web applications, bridging the gap between complex architecture and clean design. Right now, I'm deepening my expertise in modern backend infrastructure, DevOps, and system design to build high-availability solutions from the ground up. My passion lies in crafting seamless user experiences always eager to learn new technologies and methodologies to stay at the forefront of the industry. Beyond code, I am a lifelong learner and an active supporter of the developer community. I am committed to sharing knowledge and building tools that empower others to innovate, believing that the best way to move the industry forward is by growing together.`}
                   </motion.p>
 
@@ -124,12 +124,12 @@ export default function About(): React.ReactElement {
                 </blockquote>
                 <br></br>
 
-                <motion.p variants={textItemVariant} className="text-white mb-2" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>{`Let's not forget-`}</motion.p>
+                <motion.p variants={textItemVariant} className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>{`Let's not forget-`}</motion.p>
 
                 {/* Pop-in animation Code Text */}
                 <motion.p
                   variants={textItemVariant}
-                  className="text-xl"
+                  className="text-base md:text-xl"
                   style={{ color: '#CF4E5B', fontFamily: 'var(--font-ubuntu), sans-serif', fontStyle: 'italic' }}
                 >
                   {`it all started with a   `}
