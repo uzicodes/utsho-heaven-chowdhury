@@ -24,12 +24,6 @@ textarea {
   font-weight: 400;
 }
 
-@font-face {
-  font-family: 'SkyNews';
-  src: url('/fonts/skynews.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 .flipwords-font {
   font-family: 'SkyNews', sans-serif;
