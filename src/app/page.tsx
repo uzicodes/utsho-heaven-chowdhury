@@ -9,17 +9,17 @@ import { FlipWords } from './components/flip-words';
 import { motion, Variants } from 'framer-motion';
 
 // IMPORTING SECTIONS
-import BookshelfSection from './components/BookshelfSection'; 
+import BookshelfSection from './components/BookshelfSection';
 import About from './sections/About';
-import SkillsPage from './sections/Skills';     
-import Projects from './sections/Projects';     
-import Education from './sections/Education';   
-import Contact from './sections/Contacts';      
+import SkillsPage from './sections/Skills';
+import Projects from './sections/Projects';
+import Education from './sections/Education';
+import Contact from './sections/Contacts';
 
 export default function Home() {
   const words = [
     "Full-Stack Developer | MERN | DevOps",
-    "Python | TypeScript | React | Supabase", 
+    "Python | TypeScript | React | Supabase",
     "CI/CD | System Design Architecture",
     "Let's Build Something Amazing Together !",
   ];
@@ -47,28 +47,26 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
-      </Head>
+
       <div className="relative min-h-screen text-white bg-transparent overflow-x-clip">
         <Navbar />
 
         <main className="min-h-screen relative z-10 pt-32">
-          
+
           {/* HERO SECTION */}
           <section id="home">
             <div className="container mx-auto px-6 lg:px-8">
               <div className="flex min-h-[65vh] items-center">
-                
+
                 {/* Hero Text */}
-                <motion.div 
+                <motion.div
                   className="w-full lg:w-1/2"
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"
                 >
-                  <div className="space-y-6" style={{marginTop: '-0.20rem'}}>
-                    
+                  <div className="space-y-6" style={{ marginTop: '-0.20rem' }}>
+
                     {/* Welcome badge */}
                     <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
                       <div className={`inline-flex items-center ${isMobile ? 'gap-1.5 px-2 py-1' : 'gap-2 px-2 sm:px-3 py-2'} rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2`}>
@@ -150,24 +148,24 @@ export default function Home() {
 
                     {/* Mobile Image */}
                     {isMobile && (
-                      <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="flex justify-center mt-4 mb-4" 
+                        className="flex justify-center mt-4 mb-4"
                       >
-                        <img 
-                          src="/DP_removed_BG.png" 
-                          alt="Profile" 
-                          width={200} 
-                          height={200} 
-                          style={{ 
-                            maxWidth: '80vw', 
-                            height: 'auto', 
-                            borderRadius: '1rem', 
+                        <img
+                          src="/DP_removed_BG.png"
+                          alt="Profile"
+                          width={200}
+                          height={200}
+                          style={{
+                            maxWidth: '80vw',
+                            height: 'auto',
+                            borderRadius: '1rem',
                             objectFit: 'cover',
-                            boxShadow: '0 4px 20px rgba(0,0,0,0.5)' 
-                          }} 
+                            boxShadow: '0 4px 20px rgba(0,0,0,0.5)'
+                          }}
                         />
                       </motion.div>
                     )}
@@ -253,11 +251,11 @@ export default function Home() {
                 {/* Glowing Card */}
                 {!isMobile && (
                   <div className="w-full lg:w-1/2 relative">
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, scale: 0.8, x: "-50%", y: 0 }}
-                      animate={{ 
-                        opacity: 1, 
-                        scale: 1, 
+                      animate={{
+                        opacity: 1,
+                        scale: 1,
                         x: "-50%",
                         y: [0, -15, 0],
                         boxShadow: [
@@ -266,28 +264,28 @@ export default function Home() {
                           "0 0 15px #7df9ff, 0 0 25px #00bfff, inset 0 0 0 1px #7df9ff"
                         ]
                       }}
-                      transition={{ 
-                        duration: 0.8, 
+                      transition={{
+                        duration: 0.8,
                         delay: 0.5,
                         y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
                         boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                       }}
                       className="rounded-2xl p-1 absolute"
                       style={{
-                        width: '320px', 
+                        width: '320px',
                         height: '400px',
                         background: '#7df9ff',
                         top: '-150px',
                         left: '50%',
                       }}
                     >
-                      <div 
+                      <div
                         className="bg-gray-900 rounded-xl h-full flex items-start justify-center pt-1 pb-1 px-1"
                         style={{ backgroundColor: 'rgba(17, 24, 39, 0.95)' }}
                       >
-                        <Image 
-                          src="/DP_removed_BG.png" 
-                          alt="Profile" 
+                        <Image
+                          src="/DP_removed_BG.png"
+                          alt="Profile"
                           width={320}
                           height={400}
                           className="w-full h-full object-cover rounded-lg"
@@ -306,14 +304,14 @@ export default function Home() {
 
           {/* BOOKSHELF SECTION */}
           <section id="bookshelf">
-             <div className="container mx-auto px-6 lg:px-8 mt-20">
-               <BookshelfSection />
-             </div>
+            <div className="container mx-auto px-6 lg:px-8 mt-20">
+              <BookshelfSection />
+            </div>
           </section>
 
           {/* ABOUT SECTION */}
           <section id="about">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

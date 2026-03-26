@@ -38,7 +38,6 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Utsho Heaven Chowdhury",
-  description: "",
 };
 
 export default function RootLayout({
@@ -53,13 +52,13 @@ export default function RootLayout({
       >
         <Preloader />
         <div className="fixed inset-0 z-0 pointer-events-none">
-          <StarsBackground 
-            className="h-full w-full bg-transparent" 
-            starColor="#ffffff" 
+          <StarsBackground
+            className="h-full w-full bg-transparent"
+            starColor="#ffffff"
           />
         </div>
         <div className="relative z-50">
-           <Cursor />
+          <Cursor />
         </div>
         <div className="relative z-10">
           {children}
