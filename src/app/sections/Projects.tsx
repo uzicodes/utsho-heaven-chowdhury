@@ -67,15 +67,6 @@ const projects: Project[] = [
     liveLink: "https://auraforce.vercel.app/",
   },
   {
-    title: "SCREEN BOX",
-    description: "Comprehensive streaming platform designed to offer users free, on-demand access to a vast library of online movies and web-series.\n• It incorporates a personalized experience through an optional login profile feature, allowing users to track viewing history and manage watchlists.\n• It features adaptive bitrate streaming (HLS) to ensure smooth playback on slow networks \n• Robust content management system for admins, and a personalized watchlist for users.",
-    skills: ["nextjs", "react", "ts", "tailwind", "supabase", "postgres", "vercel"],
-    link: "/projects/screen-box.png",
-    color: "#a855f7",
-    githubLink: "https://github.com/uzicodes/screen-box",
-    liveLink: "https://screen-box.vercel.app/",
-  },
-  {
     title: "GO Dhaka",
     description: "Your essential navigator for effortless travel designed to digitize the commuting experience in Dhaka City.\n• Provides all Dhaka metro, bus routes & fares in one continuously updated platform.\n• Find the fastest routes instantly, making city travel easy, efficient & stress-free.\n• No logins required.\n• Google Maps for real-time traffic updates.\n• Included all local buses in the city with route maps & fare details.",
     skills: ["nextjs", "react", "ts", "materialui", "vercel"],
