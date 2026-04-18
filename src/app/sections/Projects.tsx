@@ -67,6 +67,15 @@ const projects: Project[] = [
     liveLink: "https://auraforce.vercel.app/",
   },
   {
+    title: "ALORA",
+    description: "A luxurious perfume platform offering an exquisite collection of fragrances.\n• Elegant and dynamic UI for a premium shopping experience.\n• Real-time stock and product categorizations.\n• Secure and smooth checkout process.\n• Seamless user profile and order tracking.",
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon", "redis", "vercel", "ssl"],
+    link: "/projects/alora.png",
+    color: "#9333ea",
+    githubLink: "https://github.com/uzicodes/Alora",
+    liveLink: "https://aloraa.vercel.app/",
+  },
+  {
     title: "GO Dhaka",
     description: "Your essential navigator for effortless travel designed to digitize the commuting experience in Dhaka City.\n• Provides all Dhaka metro, bus routes & fares in one continuously updated platform.\n• Find the fastest routes instantly, making city travel easy, efficient & stress-free.\n• No logins required.\n• Google Maps for real-time traffic updates.\n• Included all local buses in the city with route maps & fare details.",
     skills: ["nextjs", "react", "ts", "materialui", "vercel"],
@@ -227,7 +236,7 @@ function Card({
               </div>
             </div>
 
-            {/* Tech Stack Icons */}
+            {/* Custom Tech Stack Icons */}
             <div className="flex items-center justify-center flex-wrap gap-1.5 px-3 py-1 bg-[#574A49]">
               {(() => {
                 const customIcons: Record<string, { src: string; alt: string; bg: string; cls: string }> = {
@@ -235,6 +244,7 @@ function Card({
                   ssl: { src: "/icons/ssl.jpg", alt: "SSLCommerz", bg: "bg-white", cls: "w-full h-full object-contain" },
                   render: { src: "/icons/render.svg", alt: "Render", bg: "bg-white", cls: "w-full h-full object-contain" },
                   clerk: { src: "/icons/tools/clerk.svg", alt: "Clerk", bg: "bg-[#1C1C1E]", cls: "w-4 h-4 md:w-6 md:h-6" },
+                  neon: { src: "/icons/database/neon.svg", alt: "Neon DB", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
                 };
                 const elements: React.ReactNode[] = [];
                 let batch: string[] = [];
