@@ -122,7 +122,7 @@ export default function Home() {
                             backgroundClip: 'text',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
-                            fontSize: '50px',
+                            fontSize: '45px',
                             display: 'block',
                             marginTop: '0',
                             lineHeight: '1'
