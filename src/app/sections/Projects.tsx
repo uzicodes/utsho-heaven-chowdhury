@@ -69,7 +69,7 @@ const projects: Project[] = [
   {
     title: "ALORA",
     description: "A luxurious perfume platform offering an exquisite collection of fragrances.\n• Elegant and dynamic UI for a premium shopping experience.\n• Real-time stock and product categorizations.\n• Secure and smooth checkout process.\n• Seamless user profile and order tracking.",
-    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon", "redis", "vercel", "ssl"],
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind","clerk", "neon", "redis", "ssl"],
     link: "/projects/alora.png",
     color: "#9333ea",
     githubLink: "https://github.com/uzicodes/Alora",
@@ -77,12 +77,12 @@ const projects: Project[] = [
   },
   {
     title: "GO Dhaka",
-    description: "Your essential navigator for effortless travel designed to digitize the commuting experience in Dhaka City.\n• Provides all Dhaka metro, bus routes & fares in one continuously updated platform.\n• Find the fastest routes instantly, making city travel easy, efficient & stress-free.\n• No logins required.\n• Google Maps for real-time traffic updates.\n• Included all local buses in the city with route maps & fare details.",
-    skills: ["nextjs", "react", "ts", "materialui", "vercel"],
-    link: "/projects/go-dhaka.png",
+    description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secure authentication, Google SSO, and automated database syncing via Webhooks.\n• Robust posting forms with strict validations using React Hook Form & Zod.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive, modern UI with native Bengali language support for an accessible user experience.",
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon","redis", "prisma", "clerk" ],
+    link: "/projects/dhaka-basha.png",
     color: "#10b981",
-    githubLink: "https://github.com/uzicodes/go-dhaka",
-    liveLink: "https://go-dhaka.vercel.app/",
+    githubLink: "https://github.com/uzicodes/Dhaka-Basha",
+    liveLink: "https://dhaka-basha.vercel.app/",
   }
 ];
 
