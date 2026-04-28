@@ -78,7 +78,7 @@ const projects: Project[] = [
   {
     title: "GO Dhaka",
     description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secure authentication, Google SSO, and automated database syncing via Webhooks.\n• Robust posting forms with strict validations using React Hook Form & Zod.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive, modern UI with native Bengali language support for an accessible user experience.",
-    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon","redis", "prisma", "clerk" ],
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon","redis","cloudflare", "prisma", "clerk" ],
     link: "/projects/dhaka-basha.png",
     color: "#10b981",
     githubLink: "https://github.com/uzicodes/Dhaka-Basha",
