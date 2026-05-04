@@ -68,7 +68,7 @@ const projects: Project[] = [
   },
   {
     title: "ALORA",
-    description: "A luxurious perfume platform offering an exquisite collection of fragrances.\n• Elegant and dynamic UI for a premium shopping experience.\n• Real-time stock and product categorizations.\n• Secure and smooth checkout process.\n• Seamless user profile and order tracking.",
+    description: "Luxurious full-stack e-commerce platform offering an exquisite collection of premium fragrances.\n• Dynamic storefront with real-time stock updates, product categorizations, and an automated image sanitization pipeline via Cloudinary.\n• Custom real-time admin dashboard bypassing static caching for instant inventory management and product editing.\n• Prisma ORM integrated with Neon PostgreSQL for efficient, scalable data fetching and database management.\n• Clerk for secure authentication, seamless user profiles, and automated database syncing via Webhooks.\n• Edge-level API protection utilizing Upstash Redis rate-limiting to secure critical routes and prevent abuse.\n• Secure and smooth checkout process integrated with SSLCommerz, featuring robust order tracking and automated communication.",
     skills: ["nextjs", "nodejs", "react", "ts", "tailwind","clerk", "neon", "redis", "ssl"],
     link: "/projects/alora.png",
     color: "#9333ea",
