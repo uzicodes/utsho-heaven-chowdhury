@@ -77,7 +77,7 @@ const projects: Project[] = [
   },
   {
     title: "ঢাকা-বাসা",
-    description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secure authentication, Google SSO, and automated database syncing via Webhooks.\n• Robust posting forms with strict validations using React Hook Form & Zod.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive, modern UI with native Bengali language support for an accessible user experience.",
+    description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secured auth (Google SSO) with Redis rate-limiting & caching.\n• React Hook Form & Zod with Cloudfare R2 storage for image hosting.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive UI with native Bengali language support for an accessible user experience.",
     skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon","redis","socket","cloudflare", "prisma", "clerk" ],
     link: "/projects/dhaka-basha.png",
     color: "#10b981",
@@ -318,10 +318,27 @@ function Card({
 
           <div className="w-full md:w-[45%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative">
             <div className="relative z-10">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
                 {title}
               </h2>
-              <p className="text-xs md:text-base text-[#121111] font-semibold leading-snug mb-3 whitespace-pre-line min-h-[120px] md:min-h-[200px] lg:min-h-[240px]" style={{ fontFamily: 'var(--font-bricolage-grotesque), sans-serif' }}>{description}</p>
+              {(() => {
+                const parts = description.split('\n');
+                const firstLine = parts[0];
+                const bulletPoints = parts.slice(1).join('\n');
+                
+                return (
+                  <>
+                    <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug mb-2 md:mb-3" style={{ fontFamily: 'var(--font-bricolage-grotesque), sans-serif' }}>
+                      {firstLine}
+                    </p>
+                    {bulletPoints && (
+                      <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug whitespace-pre-line" style={{ fontFamily: 'var(--font-bricolage-grotesque), sans-serif' }}>
+                        {bulletPoints}
+                      </p>
+                    )}
+                  </>
+                );
+              })()}
             </div>
           </div>
         </motion.div>
