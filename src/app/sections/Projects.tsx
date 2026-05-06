@@ -68,7 +68,7 @@ const projects: Project[] = [
   },
   {
     title: "ALORA",
-    description: "A luxurious perfume platform offering an exquisite collection of fragrances.\n• Elegant and dynamic UI for a premium shopping experience.\n• Real-time stock and product categorizations.\n• Secure and smooth checkout process.\n• Seamless user profile and order tracking.",
+    description: "Luxurious full-stack e-commerce platform offering an exquisite collection of premium fragrances.\n• Dynamic real-time stock updates, product categorizations, and automated image sanitization pipeline via Cloudinary.\n• Real-time Admin dashboard with static caching for instant inventory management and product editing.\n• Prisma ORM integrated with Neon PostgreSQL for efficient, scalable database management.\n• Clerk for Auth, seamless user profiles & automated database syncing via Webhooks.\n• API protection with Upstash Redis rate-limiting to secure critical.\n• Secured smooth checkout process integrated with SSLCommerz",
     skills: ["nextjs", "nodejs", "react", "ts", "tailwind","clerk", "neon", "redis", "ssl"],
     link: "/projects/alora.png",
     color: "#9333ea",
@@ -77,7 +77,7 @@ const projects: Project[] = [
   },
   {
     title: "ঢাকা-বাসা",
-    description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secured auth (Google SSO) with Redis rate-limiting & caching.\n• React Hook Form & Zod with Cloudfare R2 storage for image hosting.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive UI with native Bengali language support for an accessible user experience.",
+    description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secure authentication, Google SSO, and automated database syncing via Webhooks.\n• Robust posting forms with strict validations using React Hook Form & Zod.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive, modern UI with native Bengali language support for an accessible user experience.",
     skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon","redis","socket","cloudflare", "prisma", "clerk" ],
     link: "/projects/dhaka-basha.png",
     color: "#10b981",
