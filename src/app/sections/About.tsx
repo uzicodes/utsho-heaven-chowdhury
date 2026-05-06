@@ -4,6 +4,7 @@ import Image from "next/image";
 const HeroImg = "/about.png";
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import { GithubActivity } from "@/app/components/github-activity";
 
 
 
@@ -168,6 +169,9 @@ export default function About(): React.ReactElement {
               </div>
             </motion.div>
           </div>
+
+          {/* GitHub Activity Calendar */}
+          <GithubActivity username="uzicodes" />
         </div>
       </section>
     </>
