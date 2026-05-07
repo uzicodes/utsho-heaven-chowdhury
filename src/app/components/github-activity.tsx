@@ -35,10 +35,10 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
     // Solve for pitch: pitch <= (availableWidth + margin) / weeks
     // Try margin ratios: margin ≈ pitch * 0.25
     // pitch = blockSize + margin, margin = pitch * 0.25 => blockSize = pitch * 0.75
-    const maxPitch = (containerWidth + 2) / weeks;
+    const maxPitch = (containerWidth) / weeks;
     const pitch = Math.floor(maxPitch * 100) / 100; // floor to avoid overflow
-    const margin = Math.max(1, Math.round(pitch * 0.22));
-    const blockSize = Math.max(6, Math.floor(pitch - margin));
+    const margin = Math.max(1, Math.round(pitch * 0.2));
+    const blockSize = Math.max(4, Math.floor(pitch - margin));
     setCalendarConfig({ blockSize, blockMargin: margin });
   }, []);
 
@@ -217,7 +217,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         }}
       >
         {/* Header */}
-        <div className="flex items-center justify-start mb-6">
+        <div className="flex items-center justify-center mb-6">
           <a
             href={`https://github.com/${username}`}
             target="_blank"
@@ -225,12 +225,6 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
             className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
             aria-label={`View ${username}'s GitHub profile`}
           >
-            <div
-              className="p-2 rounded-lg"
-              style={{ background: "rgba(0,255,136,0.08)" }}
-            >
-              <GithubIcon />
-            </div>
             <span
               className="text-xl sm:text-2xl font-bold tracking-tight text-white"
               style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
@@ -242,28 +236,42 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         </div>
 
         {/* Calendar */}
-        <div className="w-full flex justify-center min-h-[100px] hide-calendar-scrollbar">
-          <ActivityCalendar
-            data={data}
-            blockMargin={calendarConfig.blockMargin}
-            blockSize={calendarConfig.blockSize}
-            fontSize={12}
-            colorScheme="dark"
-            theme={{
-              dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-            }}
-            labels={{
-              totalCount: "{{count}} contributions in the last year",
-            }}
-          />
+        <div className="flex justify-center min-h-[100px] overflow-hidden">
+            <ActivityCalendar
+              data={data}
+              blockMargin={calendarConfig.blockMargin}
+              blockSize={calendarConfig.blockSize}
+              fontSize={12}
+              colorScheme="dark"
+              theme={{
+                dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+              }}
+              labels={{
+                totalCount: "{{count}} contributions in the last year",
+              }}
+            />
         </div>
 
         <style jsx>{`
-          .hide-calendar-scrollbar :global(*) {
-            scrollbar-width: none !important;
-            -ms-overflow-style: none !important;
+          .hide-calendar-scrollbar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
           }
-          .hide-calendar-scrollbar :global(*::-webkit-scrollbar) {
+          .hide-calendar-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          :global(.react-activity-calendar) {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+          }
+          :global(.react-activity-calendar::-webkit-scrollbar) {
+            display: none !important;
+          }
+          :global(.react-activity-calendar *) {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+          }
+          :global(.react-activity-calendar *::-webkit-scrollbar) {
             display: none !important;
           }
         `}</style>
