@@ -151,7 +151,7 @@ export default function About(): React.ReactElement {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-2 py-2 rounded-lg font-bold hover:scale-105 transition-transform shadow-lg cursor-pointer"
                     style={{ 
-                      backgroundColor: '#04b82a', 
+                      backgroundColor: '#FFDD00', 
                       color: '#000000',
                       border: '1px solid #11111111',
                       fontFamily: '"ubuntu", sans-serif'
@@ -163,7 +163,7 @@ export default function About(): React.ReactElement {
                       width={28} 
                       height={28} 
                     />
-                    <span className="text-lg">Buy me Koffee ?</span>
+                    <span className="text-lg">Buy me Coffee ?</span>
                   </a>
                 </motion.div>
               </div>
