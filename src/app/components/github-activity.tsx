@@ -21,6 +21,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
   const [error, setError] = useState(false);
   const [calendarConfig, setCalendarConfig] = useState({ blockSize: 12, blockMargin: 3 });
   const containerRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Auto-calculate block size to fit all 53 weeks without scrolling
   const updateCalendarConfig = useCallback(() => {
@@ -35,10 +36,10 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
     // Solve for pitch: pitch <= (availableWidth + margin) / weeks
     // Try margin ratios: margin ≈ pitch * 0.25
     // pitch = blockSize + margin, margin = pitch * 0.25 => blockSize = pitch * 0.75
-    const maxPitch = (containerWidth) / weeks;
+    const maxPitch = (containerWidth + 2) / weeks;
     const pitch = Math.floor(maxPitch * 100) / 100; // floor to avoid overflow
-    const margin = Math.max(1, Math.round(pitch * 0.2));
-    const blockSize = Math.max(4, Math.floor(pitch - margin));
+    const margin = Math.max(1, Math.round(pitch * 0.22));
+    const blockSize = Math.max(6, Math.floor(pitch - margin));
     setCalendarConfig({ blockSize, blockMargin: margin });
   }, []);
 
@@ -56,6 +57,18 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
       return () => clearTimeout(timer);
     }
   }, [loading, updateCalendarConfig]);
+
+  // Scroll to the right when data loads
+  useEffect(() => {
+    if (!loading && data.length > 0 && scrollContainerRef.current) {
+      const timer = setTimeout(() => {
+        if (scrollContainerRef.current) {
+          scrollContainerRef.current.scrollLeft = scrollContainerRef.current.scrollWidth;
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [loading, data.length]);
 
   // Fetch GitHub contribution data
   useEffect(() => {
@@ -151,12 +164,6 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
             </p>
           </div>
         </div>
-        <style jsx>{`
-          @keyframes pulse {
-            0%, 100% { opacity: 0.2; transform: scale(0.8); }
-            50% { opacity: 0.8; transform: scale(1.1); }
-          }
-        `}</style>
       </div>
     );
   }
@@ -236,7 +243,8 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         </div>
 
         {/* Calendar */}
-        <div className="flex justify-center min-h-[100px] overflow-hidden">
+        <div ref={scrollContainerRef} className="w-full overflow-x-auto pb-4 github-calendar-scroll" style={{ scrollbarColor: "rgba(0, 255, 136, 0.3) rgba(255, 255, 255, 0.05)" }}>
+          <div className="flex flex-col items-center justify-center min-h-[100px] min-w-min">
             <ActivityCalendar
               data={data}
               blockMargin={calendarConfig.blockMargin}
@@ -250,31 +258,9 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
                 totalCount: "{{count}} contributions in the last year",
               }}
             />
+          </div>
         </div>
 
-        <style jsx>{`
-          .hide-calendar-scrollbar {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-          }
-          .hide-calendar-scrollbar::-webkit-scrollbar {
-            display: none;
-          }
-          :global(.react-activity-calendar) {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-          }
-          :global(.react-activity-calendar::-webkit-scrollbar) {
-            display: none !important;
-          }
-          :global(.react-activity-calendar *) {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-          }
-          :global(.react-activity-calendar *::-webkit-scrollbar) {
-            display: none !important;
-          }
-        `}</style>
 
         {/* Decorative Glow */}
         <div

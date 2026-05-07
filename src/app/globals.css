@@ -24,6 +24,36 @@ textarea {
   font-weight: 400;
 }
 
+/* GitHub Activity Component */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+.github-calendar-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.github-calendar-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.github-calendar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 136, 0.3);
+  border-radius: 10px;
+}
+
+.github-calendar-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 136, 0.5);
+}
+
 
 
 @import "tailwindcss";
