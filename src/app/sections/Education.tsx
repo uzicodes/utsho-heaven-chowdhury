@@ -247,53 +247,12 @@ const EducationSection: React.FC = () => {
                 </div>
 
 
-                <div className="flex justify-center mt-8">   {/* Thesis Card */}
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.1 }}
-                        variants={educationCardVariants}
-                        className={`relative border rounded-xl p-5 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm w-full max-w-sm cursor-none ${hoveredIndex === 99 ? "border-teal-500 scale-[1.02]" : "border-blue-400/20"}`}
-                        onMouseEnter={() => setHoveredIndex(99)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                        <div className="space-y-4">
-                            <div className="space-y-2 text-center">
-                                <div className="flex flex-col items-center gap-2">
-                                    <img
-                                        src="/thesis.png"
-                                        alt="Thesis logo"
-                                        className="h-14 w-14 object-contain"
-                                        style={{ maxWidth: '56px', maxHeight: '56px' }}
-                                    />
-                                    <h3 className="text-lg font-bold" style={{ color: '#c94b76', fontFamily: 'var(--font-ubuntu), sans-serif' }}>
-                                        THESIS
-                                    </h3>
-                                </div>
-                                <p className="text-base flex items-center justify-center gap-2 font-semibold" style={{ color: '#0ca81f', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                                    BRAC UNIVERSITY
-                                </p>
-                                <p className="text-gray-400 flex items-center justify-center gap-2">
-                                    <Calendar className="w-4 h-4" />
-                                    2026
-                                </p>
-                            </div>
-                            <p className="text-gray-300 text-[12.5px] text-center">
-                                Multimodal Deep Learning for Medical Image Segmentation
-                            </p>
-                        </div>
-                    </motion.div>
-                </div>
-
-
-
-
                 <motion.div        // Certifications Section
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.1 }}
                     transition={{ duration: 0.4, delay: 0.1 }}
-                    className="mt-20"
+                    className="mt-70"
                 >
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
