@@ -18,9 +18,8 @@ import Contact from './sections/Contacts';
 
 export default function Home() {
   const words = [
-    "Full-Stack Developer | MERN | DevOps",
-    "Python | TypeScript | React | Supabase",
-    "CI/CD | System Design Architecture",
+    "Full-Stack Software Dev | System Design",
+    "React | TypeScript | Node.js | PostgreSQL ",
     "Let's Build Something Amazing Together !",
   ];
 
