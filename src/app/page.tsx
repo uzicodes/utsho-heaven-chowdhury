@@ -171,7 +171,7 @@ export default function Home() {
 
                     {/* Description */}
                     <motion.div variants={itemVariants} className={`mt-4 text-xl text-gray-300 max-w-xl ${isMobile ? 'text-center mx-auto' : 'ml-auto'}`} style={{ marginLeft: isMobile ? undefined : '5px', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
-                      Full-Stack Developer actively seeking opportunities to integrate Intelligent systems into Real-world solutions.
+                      Full-Stack Software Developer actively seeking opportunities to integrate Intelligent systems into Real-world solutions.
                     </motion.div>
 
                     {/* CTA Buttons */}
