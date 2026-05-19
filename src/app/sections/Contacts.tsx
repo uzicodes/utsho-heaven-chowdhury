@@ -53,9 +53,9 @@ export default function Contact() {
       text: "Follow Me",
     },
     {
-      icon: <img src="https://skillicons.dev/icons?i=twitter" alt="Twitter" className="w-8 h-8" />,
-      label: "Twitter",
-      link: "https://twitter.com/utsh0w",
+      icon: <img src="/icons/X-logo.svg" alt="X" className="w-8 h-8" />,
+      label: "X",
+      link: "https://x.com/utsh0w",
       text: "Tweet",
     },
     {
