@@ -135,10 +135,10 @@ const SkillsSection: React.FC = () => {
       skills: [
         { name: "Git", icon: <img src="/icons/tools/git.svg" alt="Git" /> },
         { name: "Atlassian", icon: <img src="/icons/tools/atlassian.svg" alt="Atlassian" /> },
-        { name: "Authjs", icon: <img src="/icons/tools/authjs.svg" alt="Authjs" /> },
+        { name: "Nginx", icon: <img src="/icons/tools/nginx.svg" alt="Nginx" /> },
         { name: "Clerk", icon: <img src="/icons/tools/clerk.svg" alt="Clerk" /> },
         { name: "Postman", icon: <img src="/icons/tools/postman.svg" alt="Postman" /> },
-        { name: "Playwright", icon: <img src="/icons/tools/playwright.svg" alt="Playwright" width={50} height={50} /> },
+        { name: "Selenium", icon: <img src="/icons/tools/selenium.svg" alt="Selenium" width={50} height={50} /> },
       ],
     },
     {

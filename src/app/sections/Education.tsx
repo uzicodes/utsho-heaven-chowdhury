@@ -14,7 +14,7 @@ const EducationSection: React.FC = () => {
     const educationData = [
         {
             degree: "Higher Secondary Certificate (HSC)",
-            school: "CANTONEMENT PUBLIC COLLEGE SAIDPUR",
+            school: "CANTONEMENT PUBLIC COLLEGE, SAIDPUR",
             year: "2018 - 2020",
             logo: "/cpscs.png",
             className: "h-21 w-21",
@@ -252,7 +252,7 @@ const EducationSection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.1 }}
                     transition={{ duration: 0.4, delay: 0.1 }}
-                    className="mt-70"
+                    className="mt-60"
                 >
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
