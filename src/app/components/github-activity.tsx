@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { ActivityCalendar } from "react-activity-calendar";
+import dynamic from "next/dynamic";
 import { ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+
+const ActivityCalendar = dynamic(() => import("react-activity-calendar").then((mod) => mod.ActivityCalendar), { ssr: false });
 
 interface GitHubContribution {
   date: string;
