@@ -83,7 +83,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
       }
 
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000);
+      const timeoutId = setTimeout(() => controller.abort(), 20000);
 
       try {
         const response = await fetch(
@@ -123,7 +123,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
       } catch (err) {
         setError(true);
         if (err instanceof Error && err.name === "AbortError") {
-          console.error("GitHub API request timed out");
+          // console.error("GitHub API request timed out");
         } else {
           console.error("Error fetching GitHub data:", err);
         }
