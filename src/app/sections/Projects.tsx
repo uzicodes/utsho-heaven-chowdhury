@@ -4,6 +4,7 @@ import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 import { useRef, useEffect } from "react";
 import * as React from "react";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -34,7 +35,7 @@ const projects: Project[] = [
     title: "LAMB FALCONS ",
     description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement. Used Animated libraries, interactive UI elements for a smooth user experience. Production ready with CI/CD pipelines for seamless updates & maintenance.",
     skills: ["nextjs", "nodejs", "react", "ts", "clerk","gsap","tailwind", "vercel"],
-    link: "/projects/lamb-falcons.png",
+    link: "/projects/lamb-falcons.webp",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
     liveLink: "https://lambfalcons.vercel.app/",
@@ -43,7 +44,7 @@ const projects: Project[] = [
     title: "Culinary Canvas",
     description: "Production ready modern web platform with seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, Catogorized food items \n• Real-time items fetched from MongoDB \n• Profile management, can see previous orders \n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, daily/monthly revenue, resturant metrics & user feedbacks \n• Real-time user feedback system & SSLcommerz for payment integration, invoice generation",
     skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "mongodb", "redis", "vercel", "ssl"],
-    link: "/projects/culinary-canvas.png",
+    link: "/projects/culinary-canvas.webp",
     color: "#ff6b35",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://the-culinary-canvas.vercel.app/",
@@ -52,7 +53,7 @@ const projects: Project[] = [
     title: "Northern Paribahan",
     description: "Seamless ticket booking with real-time seat availability & instant ticket confirmation\n• Users with personalized travel history, route & account management\n• Bus & timetable seeding realtime from Socket.io\n• Supabase for authentication & user management \n• Robust Admin Control for managing routes, schedules, fares & users.\n• SSLCommerz checkout for secure transactions, Mail & PDF ticket delivery.",
     skills: ["nextjs", "nodejs", "react", "ts", "socket", "prisma", "supabase", "ssl", "tailwind", "render"],
-    link: "/projects/northern-paribahan.png",
+    link: "/projects/northern-paribahan.webp",
     color: "#3b82f6",
     githubLink: "https://github.com/uzicodes/northern-paribahan",
     liveLink: "https://northern-paribahan.onrender.com",
@@ -61,7 +62,7 @@ const projects: Project[] = [
     title: "Aura Force",
     description: "Robust Fitness platform streamlining Gym operations & enhancing member experience.\n• Features real-time Class scheduling, Class & Trainer booking.\n• Prisma fetching from Supabase & user feedback realtime from DB \n• Clerk for authentication & user management.\n• User BMI & personalized diet plan.\n• Admin dashboard for managing memberships, trainers & classes efficiently.\n• Animated UI & Responsiveness for engaging user experience \n• SSLCommerz for safe transactions.",
     skills: ["nextjs", "react", "ts", "tailwind", "supabase", "prisma", "redis", "vercel", "clerk"],
-    link: "/projects/aura-force.png",
+    link: "/projects/aura-force.webp",
     color: "#ef4444",
     githubLink: "https://github.com/uzicodes/AuraForce",
     liveLink: "https://auraforce.vercel.app/",
@@ -70,7 +71,7 @@ const projects: Project[] = [
     title: "ALORA",
     description: "Luxurious full-stack e-commerce platform offering an exquisite collection of premium fragrances.\n• Dynamic real-time stock updates, product categorizations, and automated image sanitization pipeline via Cloudinary.\n• Admin dashboard with static caching for instant inventory management and product editing.\n• Prisma ORM integrated with Neon PostgreSQL for efficient, scalable database management.\n• Clerk for Auth, seamless user profiles & automated database syncing via Webhooks.\n• API protection with Upstash Redis rate-limiting to secure critical.\n• Secured smooth checkout process integrated with SSLCommerz",
     skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "clerk", "neon", "redis", "ssl"],
-    link: "/projects/alora.png",
+    link: "/projects/alora.webp",
     color: "#9333ea",
     githubLink: "https://github.com/uzicodes/Alora",
     liveLink: "https://aloraa.vercel.app/",
@@ -79,7 +80,7 @@ const projects: Project[] = [
     title: "ঢাকা-বাসা",
     description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secure authentication, Google SSO, and automated database syncing via Webhooks.\n• Robust posting forms with strict validations using React Hook Form & Zod.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive, modern UI with native Bengali language support for an accessible user experience.",
     skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon","redis","socket","cloudflare", "prisma", "clerk" ],
-    link: "/projects/dhaka-basha.png",
+    link: "/projects/dhaka-basha.webp",
     color: "#10b981",
     githubLink: "https://github.com/uzicodes/Dhaka-Basha",
     liveLink: "https://dhaka-basha.vercel.app/",
@@ -222,14 +223,20 @@ function Card({
         >
           <div className="w-full md:w-[55%] flex flex-col">
             <div className="h-[200px] md:h-[300px] lg:h-[340px] relative overflow-hidden">
-              <motion.img
-                src={url}
-                alt={title}
-                className="w-full h-full object-contain"
+              <motion.div
+                className="w-full h-full relative"
                 initial={{ scale: 0.85 }}
                 whileHover={{ scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-              />
+              >
+                <Image
+                  src={url}
+                  alt={title}
+                  className="object-contain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </motion.div>
 
               <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-black/50 backdrop-blur-md text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium">
                 Project {i + 1}

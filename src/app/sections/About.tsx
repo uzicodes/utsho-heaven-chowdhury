@@ -91,6 +91,7 @@ export default function About(): React.ReactElement {
                   alt="payments illustration"
                   width={1207}
                   height={929}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
               </motion.div>
