@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-const HeroImg = "/about.png";
+const HeroImg = "/about.webp";
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import { GithubActivity } from "@/app/components/github-activity";

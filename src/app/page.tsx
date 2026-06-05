@@ -154,7 +154,7 @@ export default function Home() {
                         className="flex justify-center mt-4 mb-4"
                       >
                         <img
-                          src="/DP_removed_BG.png"
+                          src="/DP_removed_BG.webp"
                           alt="Profile"
                           width={200}
                           height={200}
