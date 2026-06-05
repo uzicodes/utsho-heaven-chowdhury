@@ -37,7 +37,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/hacker.svg",
             date: "March 2026",
             skills: ["Clean Code", "API", "SDLC"],
-            certImage: "/certifications/5.png",
+            certImage: "/certifications/5.webp",
             fullViewUrl: "https://drive.google.com/file/d/1KO2fQrT4YBGHRwztapDMARmyiQEwvPbv/view?usp=drive_link",
         },
         {
@@ -46,7 +46,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/atlassian.svg",
             date: "December 2025",
             skills: ["Agile", "Kanban", "Scrum"],
-            certImage: "/certifications/15.png",
+            certImage: "/certifications/15.webp",
             fullViewUrl: "https://drive.google.com/file/d/1D_e54kJLyycpnQEVHbnrcAL7Fei2tdWR/view?usp=sharing",
         },
         {
@@ -55,7 +55,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/pagerduty.svg",
             date: "December 2025",
             skills: ["CI / CD", "DevOps", "IaC"],
-            certImage: "/certifications/11.png",
+            certImage: "/certifications/11.webp",
             fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
         },
         {
@@ -64,7 +64,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/alberta.svg",
             date: "March 2026",
             skills: ["Agile", "Client ", "Product Lifecycle"],
-            certImage: "/certifications/2.png",
+            certImage: "/certifications/2.webp",
             fullViewUrl: "https://drive.google.com/file/d/1wRRbrow160c8ZBntPQWMCLAgaFGKOt09/view?usp=sharing",
         },
         {
@@ -73,7 +73,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/lamdatest.svg",
             date: "December 2025",
             skills: ["SQA", "Agile Testing", "SDLC"],
-            certImage: "/certifications/12.png",
+            certImage: "/certifications/12.webp",
             fullViewUrl: "https://drive.google.com/file/d/11Pu-_Oko9oUFc-NZfrH6LP-xjxCWM_am/view?usp=sharing",
         },
         {
@@ -82,7 +82,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/cloud/docker.svg",
             date: "November 2025",
             skills: ["Containerization", "Docker Compose", "Docker Image"],
-            certImage: "/certifications/10.png",
+            certImage: "/certifications/10.webp",
             fullViewUrl: "https://drive.google.com/file/d/1yBXVNV6GtR0qoVYNESu5xLgHa0AIhbDu/view?usp=sharing",
         },
         {
@@ -91,7 +91,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/ibm.svg",
             date: "October 2025",
             skills: ["SDLC", "JQuery", "Design Patterns"],
-            certImage: "/certifications/8.jpg",
+            certImage: "/certifications/8.webp",
             fullViewUrl: "https://drive.google.com/file/d/1T05lfqIkMfn1nzfz_4oV5uvoS76LBm9q/view?usp=sharing",
         },
         {
@@ -100,7 +100,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/microsoft.svg",
             date: "October 2025",
             skills: ["CI / CD", "Graph Theory", "OOP"],
-            certImage: "/certifications/7.jpg",
+            certImage: "/certifications/7.webp",
             fullViewUrl: "https://drive.google.com/file/d/1Q3x_w_Iwlb0cohXrWVn4tm64VYKczhcn/view?usp=sharing",
         },
         {
@@ -109,7 +109,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/datacamp.svg",
             date: "August 2025",
             skills: ["LLMs", "MLOPs", "LangChain"],
-            certImage: "/certifications/1.jpg",
+            certImage: "/certifications/1.webp",
             fullViewUrl: "https://drive.google.com/file/d/1VjhvU30KzGRGuVRpZOBk7v78eyTww7mP/view?usp=sharing",
         },
         {
@@ -118,7 +118,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/cloud/github.svg",
             date: "December 2025",
             skills: ["Git Version Control", "Github Actions", "Collaboration"],
-            certImage: "/certifications/14.png",
+            certImage: "/certifications/14.webp",
             fullViewUrl: "https://drive.google.com/file/d/1_v0_WsCgyhb-IArcvEaeMgbHAF_VrIjD/view?usp=sharing",
         },
         {
@@ -127,7 +127,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/anaconda.svg",
             date: "December 2025",
             skills: ["Data Prep", "Regression", "Pandas"],
-            certImage: "/certifications/13.png",
+            certImage: "/certifications/13.webp",
             fullViewUrl: "https://drive.google.com/file/d/15EH6757BzDBdAjuKT_5_RCaLBjcFG9-U/view?usp=sharing",
         },
         {
@@ -136,7 +136,7 @@ const EducationSection: React.FC = () => {
             issuerLogo: "/icons/deeplearning.svg",
             date: "October 2025",
             skills: ["Vectorization", "Shallow NN", "Deep NN"],
-            certImage: "/certifications/9.jpg",
+            certImage: "/certifications/9.webp",
             fullViewUrl: "https://drive.google.com/file/d/1Rg5o2O7opV2ZF9K1-gyLWC9ZVAZE02Pl/view?usp=sharing",
         },
     ];
