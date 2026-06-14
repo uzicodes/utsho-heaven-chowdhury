@@ -23,25 +23,26 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
   const [error, setError] = useState(false);
   const [calendarConfig, setCalendarConfig] = useState({ blockSize: 12, blockMargin: 3 });
   const containerRef = useRef<HTMLDivElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Auto-calculate block size to fit all 53 weeks without scrolling
   const updateCalendarConfig = useCallback(() => {
     const container = containerRef.current;
     if (!container) return;
-    // Available width inside padding (p-6 = 24px each side, sm:p-8 = 32px each side)
-    const containerWidth = container.clientWidth;
+    
+    const styles = window.getComputedStyle(container);
+    const paddingLeft = parseFloat(styles.paddingLeft) || 0;
+    const paddingRight = parseFloat(styles.paddingRight) || 0;
+    
+    // Extra 80px buffer to account for weekday labels on the left and ensure no horizontal scrollbar
+    const containerWidth = container.clientWidth - paddingLeft - paddingRight - 80;
     const weeks = 53;
-    const rows = 7;
-    // blockSize + blockMargin = cell pitch; we need weeks * pitch - margin <= availableWidth
-    // and rows * pitch - margin <= reasonable height
-    // Solve for pitch: pitch <= (availableWidth + margin) / weeks
-    // Try margin ratios: margin ≈ pitch * 0.25
-    // pitch = blockSize + margin, margin = pitch * 0.25 => blockSize = pitch * 0.75
-    const maxPitch = (containerWidth + 2) / weeks;
-    const pitch = Math.floor(maxPitch * 100) / 100; // floor to avoid overflow
-    const margin = Math.max(1, Math.round(pitch * 0.22));
-    const blockSize = Math.max(6, Math.floor(pitch - margin));
+    
+    const maxPitch = containerWidth / weeks;
+    const pitch = Math.floor(maxPitch * 100) / 100;
+    
+    const margin = Math.max(1, Math.floor(pitch * 0.2));
+    const blockSize = Math.max(2, Math.floor(pitch - margin));
+    
     setCalendarConfig({ blockSize, blockMargin: margin });
   }, []);
 
@@ -60,17 +61,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
     }
   }, [loading, updateCalendarConfig]);
 
-  // Scroll to the right when data loads
-  useEffect(() => {
-    if (!loading && data.length > 0 && scrollContainerRef.current) {
-      const timer = setTimeout(() => {
-        if (scrollContainerRef.current) {
-          scrollContainerRef.current.scrollLeft = scrollContainerRef.current.scrollWidth;
-        }
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [loading, data.length]);
+
 
   // Fetch GitHub contribution data
   useEffect(() => {
@@ -245,8 +236,8 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         </div>
 
         {/* Calendar */}
-        <div ref={scrollContainerRef} className="w-full overflow-x-auto pb-4 github-calendar-scroll" style={{ scrollbarColor: "rgba(0, 255, 136, 0.3) rgba(255, 255, 255, 0.05)" }}>
-          <div className="flex flex-col items-center justify-center min-h-[100px] min-w-min">
+        <div className="w-full flex justify-center overflow-hidden pb-4">
+          <div className="flex flex-col items-center justify-center min-h-[100px] w-full max-w-full overflow-hidden">
             <ActivityCalendar
               data={data}
               blockMargin={calendarConfig.blockMargin}
