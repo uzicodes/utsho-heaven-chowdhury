@@ -43,7 +43,7 @@ const projects: Project[] = [
   {
     title: "Culinary Canvas",
     description: "Production ready modern web platform with seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, Catogorized food items \n• Real-time items fetched from MongoDB \n• Profile management, can see previous orders \n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, daily/monthly revenue, resturant metrics & user feedbacks \n• Real-time user feedback system & SSLcommerz for payment integration, invoice generation",
-    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "mongodb", "redis", "vercel", "ssl"],
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "mongodb", "android", "redis", "ssl"],
     link: "/projects/culinary-canvas.webp",
     color: "#ff6b35",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
@@ -61,7 +61,7 @@ const projects: Project[] = [
   {
     title: "Aura Force",
     description: "Robust Fitness platform streamlining Gym operations & enhancing member experience.\n• Features real-time Class scheduling, Class & Trainer booking.\n• Prisma fetching from Supabase & user feedback realtime from DB \n• Clerk for authentication & user management.\n• User BMI & personalized diet plan.\n• Admin dashboard for managing memberships, trainers & classes efficiently.\n• Animated UI & Responsiveness for engaging user experience \n• SSLCommerz for safe transactions.",
-    skills: ["nextjs", "react", "ts", "tailwind", "supabase", "prisma", "redis", "vercel", "clerk"],
+    skills: ["nextjs", "react", "ts", "tailwind", "supabase", "prisma", "redis", "android", "clerk"],
     link: "/projects/aura-force.webp",
     color: "#ef4444",
     githubLink: "https://github.com/uzicodes/AuraForce",
@@ -252,6 +252,7 @@ function Card({
                   render: { src: "/icons/render.svg", alt: "Render", bg: "bg-white", cls: "w-full h-full object-contain" },
                   clerk: { src: "/icons/tools/clerk.svg", alt: "Clerk", bg: "bg-[#1C1C1E]", cls: "w-4 h-4 md:w-6 md:h-6" },
                   neon: { src: "/icons/database/neon.svg", alt: "Neon DB", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
+                  android: { src: "/icons/tools/android.svg", alt: "Android", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
                 };
                 const elements: React.ReactNode[] = [];
                 let batch: string[] = [];
