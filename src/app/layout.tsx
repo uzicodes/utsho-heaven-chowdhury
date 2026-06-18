@@ -36,8 +36,40 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
+// ENHANCED SEO METADATA 
 export const metadata: Metadata = {
-  title: "Utsho Heaven Chowdhury",
+  title: "Utsho Heaven Chowdhury | Full-Stack Developer & Software Engineer",
+  description: "Portfolio of Utsho Heaven Chowdhury, a Full-Stack Software Engineer specializing in Next.js, React, Node.js, and scalable AI integrations based in Dhaka, Bangladesh.",
+  keywords: [
+    "Utsho Heaven Chowdhury",
+    "Utsho Chowdhury",
+    "Full-Stack Developer Dhaka",
+    "Software Engineer Bangladesh",
+    "Next.js Developer Portfolio",
+    "MERN Stack Developer"
+  ],
+  alternates: {
+    canonical: "https://www.utshochowdhury.me",
+  },
+  openGraph: {
+    title: "Utsho Heaven Chowdhury | Full-Stack Developer",
+    description: "Discover my technical projects, scalable software architecture, and AI integrations.",
+    url: "https://www.utshochowdhury.me",
+    siteName: "Utsho Heaven Chowdhury Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -45,8 +77,40 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // STRUCTURED DATA (JSON-LD) FOR GOOGLE SCHEMATICS
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Utsho Heaven Chowdhury",
+    "url": "https://www.utshochowdhury.me",
+    "jobTitle": "Full-Stack Software Engineer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dhaka",
+      "addressCountry": "Bangladesh"
+    },
+    "sameAs": [
+      "https://github.com/uzicodes",
+      "https://www.linkedin.com/in/utsho-heaven-chowdhury"
+    ],
+    "knowsAbout": [
+      "Software Engineering",
+      "Full-Stack Development",
+      "Next.js",
+      "React",
+      "Node.js",
+      "AI Integration"
+    ]
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${ubuntu.variable} ${bricolageGrotesque.variable} ${spaceGrotesk.variable} antialiased bg-black min-h-screen relative`}
       >
