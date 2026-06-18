@@ -326,9 +326,9 @@ function Card({
 
           <div className="w-full md:w-[45%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative">
             <div className="relative z-10">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
                 {title}
-              </h2>
+              </h3>
               {(() => {
                 const parts = description.split('\n');
                 const firstLine = parts[0];

@@ -79,9 +79,9 @@ const BookshelfSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <p className="text-3xl md:text-4xl" style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif', fontWeight: 600 }}>
+          <h2 className="text-3xl md:text-4xl" style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif', fontWeight: 600 }}>
             handpicked my Favorite Books
-          </p>
+          </h2>
         </motion.div>
 
         {/* Bookshelf */}
