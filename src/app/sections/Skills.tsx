@@ -71,6 +71,10 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
         <div className="flex flex-wrap gap-2 justify-center w-full [&_img]:h-6 [&_img]:w-auto md:[&_img]:h-12">
           {skills.map((skill, index) => (
             <div key={index} className="relative group/skill flex items-center justify-center">
+              {/* Tooltip */}
+              <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-gray-900 border border-gray-700 text-white text-[9px] md:text-[10px] px-1.5 py-0.5 rounded-sm opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none z-50">
+                {skill.name}
+              </div>
               <div className="transition-transform duration-300 group-hover/skill:-translate-y-1 cursor-none">
                 {skill.icon}
               </div>
