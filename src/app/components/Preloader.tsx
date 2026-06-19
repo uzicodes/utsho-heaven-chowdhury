@@ -10,19 +10,27 @@ export const Preloader = () => {
 
     useEffect(() => {
         setMounted(true);
-        const handleLoad = () => {
-            setTimeout(() => {
+        let isMounted = true;
+
+        const minTimePromise = new Promise<void>(resolve => setTimeout(resolve, 3000));
+        
+        const loadPromise = new Promise<void>(resolve => {
+            if (document.readyState === 'complete') {
+                resolve();
+            } else {
+                window.addEventListener('load', () => resolve(), { once: true });
+            }
+        });
+
+        Promise.all([minTimePromise, loadPromise]).then(() => {
+            if (isMounted) {
                 setIsLoading(false);
-            }, 500); 
+            }
+        });
+
+        return () => {
+            isMounted = false;
         };
-
-        if (document.readyState === 'complete') {
-            handleLoad();
-        } else {
-            window.addEventListener('load', handleLoad);
-        }
-
-        return () => window.removeEventListener('load', handleLoad);
     }, []);
 
 
