@@ -22,7 +22,7 @@ const Form = () => {
     ];
 
     if (allowedControlKeys.includes(e.key)) return;
-    if (e.ctrlKey || e.metaKey) return; 
+    if (e.ctrlKey || e.metaKey) return;
     if (e.key.length === 1) {
       const isLetter = /\p{L}/u.test(e.key);
       const isSpace = e.key === ' ';
@@ -101,7 +101,7 @@ const Form = () => {
     const input = emailRef.current;
     if (!input) return;
     const parts = input.value.split('@');
-    if (parts.length <= 2) return; 
+    if (parts.length <= 2) return;
     const first = parts.shift() || '';
     const rest = parts.join('');
     input.value = first + '@' + rest;
@@ -114,7 +114,7 @@ const Form = () => {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    
+
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
     const phone = formData.get("phone") as string;
@@ -145,13 +145,13 @@ const Form = () => {
 
     const wordCount = message.trim().length === 0 ? 0 : message.trim().split(/\s+/).length;
     if (wordCount > 500) {
-        newErrors.message = `Message must not exceed 500 words (Current: ${wordCount})`;
+      newErrors.message = `Message must not exceed 500 words (Current: ${wordCount})`;
     }
 
     if (Object.keys(newErrors).length > 0) {
-        setErrors(newErrors);
-        setResult("");
-        return;
+      setErrors(newErrors);
+      setResult("");
+      return;
     }
 
     formData.append("access_key", "25e65c88-7b8e-4e47-95f0-c289b90213e5");
@@ -176,8 +176,8 @@ const Form = () => {
     <StyledWrapper>
       <div className="form-container">
         <form className="form" onSubmit={onSubmit}>
-          <span className="heading">Contact me</span>
-          <span className="c1">Please fill out the details</span>
+          <span className="heading">Contact Me</span>
+          <span className="c1">Please fill the details. I&apos;ll catch you soon !</span>
           <input
             ref={nameRef}
             onKeyDown={handleKeyDown}
@@ -191,7 +191,7 @@ const Form = () => {
             maxLength={100}
           />
           {errors.name && <span className="error-message">{errors.name}</span>}
-          
+
           <input
             ref={emailRef}
             onKeyDown={handleEmailKeyDown}
@@ -204,10 +204,10 @@ const Form = () => {
             required
           />
           {errors.email && <span className="error-message">{errors.email}</span>}
-          
+
           <input className="input" type="tel" name="phone" placeholder="Phone" required maxLength={15} />
           {errors.phone && <span className="error-message">{errors.phone}</span>}
-          
+
           <textarea className="input" name="message" placeholder="Message" rows={4} required />
           {errors.message && <span className="error-message">{errors.message}</span>}
           <div className="button-container">
@@ -240,6 +240,7 @@ const StyledWrapper = styled.div`
       margin: 80px 10px 10px 10px;
       background-color: #001925;
       padding: 16px;
+      font-family: var(--font-space-grotesk), sans-serif;
     border-left: 5px solid #caf438;
     clip-path: polygon(
       0 0,
@@ -284,6 +285,7 @@ const StyledWrapper = styled.div`
     font-weight: bold;
     transition: all 0.2s ease-in-out;
     border-left: 1px solid transparent;
+    font-family: var(--font-space-grotesk), sans-serif;
   }
 
   .form-container .form .input:focus {
@@ -303,6 +305,7 @@ const StyledWrapper = styled.div`
     margin-bottom: 20px;
     border-left: 1px solid transparent;
     transition: all 0.2s ease-in-out;
+    font-family: var(--font-space-grotesk), sans-serif;
   }
 
   .form-container .form .textarea:focus {
@@ -328,6 +331,7 @@ const StyledWrapper = styled.div`
     min-width: 180px;
     display: block;
     margin: 0;
+    font-family: var(--font-space-grotesk), sans-serif;
   }
 
   .form-container .form .button-container .send-button:hover {

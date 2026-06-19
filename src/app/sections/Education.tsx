@@ -81,7 +81,7 @@ const EducationSection: React.FC = () => {
             issuer: "DOCKER",
             issuerLogo: "/icons/cloud/docker.svg",
             date: "November 2025",
-            skills: ["Containerization", "Docker Compose", "Docker Image"],
+            skills: ["Containerization", "Image", "Docker Compose"],
             certImage: "/certifications/10.webp",
             fullViewUrl: "https://drive.google.com/file/d/1yBXVNV6GtR0qoVYNESu5xLgHa0AIhbDu/view?usp=sharing",
         },
@@ -117,7 +117,7 @@ const EducationSection: React.FC = () => {
             issuer: "GITHUB",
             issuerLogo: "/icons/cloud/github.svg",
             date: "December 2025",
-            skills: ["Git Version Control", "Github Actions", "Collaboration"],
+            skills: ["Version Control", "Git Actions", "Code Review"],
             certImage: "/certifications/14.webp",
             fullViewUrl: "https://drive.google.com/file/d/1_v0_WsCgyhb-IArcvEaeMgbHAF_VrIjD/view?usp=sharing",
         },
@@ -236,7 +236,7 @@ const EducationSection: React.FC = () => {
                                     <p className="text-base flex items-center justify-center gap-2 font-semibold" style={{ color: '#0CA81F', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                                         {edu.school}
                                     </p>
-                                    <p className="text-gray-400 flex items-center justify-center gap-2">
+                                    <p className="text-gray-400 flex items-center justify-center gap-2" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                                         <Calendar className="w-4 h-4" />
                                         {edu.year}
                                     </p>
@@ -317,7 +317,7 @@ const EducationSection: React.FC = () => {
                                                     {cert.issuer}
                                                 </p>
                                             </div>
-                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-1 sm:mt-3">
+                                            <div className="flex items-center justify-center text-gray-400 text-xs mt-1 sm:mt-3" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                                                 <span className="flex items-center gap-1">
                                                     <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                                                     {cert.date}
@@ -328,6 +328,7 @@ const EducationSection: React.FC = () => {
                                                     <span
                                                         key={i}
                                                         className="px-2 py-0.5 text-[0.7rem] rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                                                        style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                                     >
                                                         {skill}
                                                     </span>
@@ -339,7 +340,8 @@ const EducationSection: React.FC = () => {
                                             href={cert.fullViewUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="mt-2 sm:mt-3 flex items-center justify-center gap-1 text-[10px] sm:text-xs font-semibold bg-transparent hover:bg-yellow-500/20 text-yellow-400/70 hover:text-blue-400 px-2 py-1 sm:px-3 sm:py-1.5 rounded-none transition-all w-fit mx-auto border border-cyan-400/40 hover:border-yellow-500"
+                                            className="mt-2 sm:mt-3 flex items-center justify-center gap-1 text-[10px] sm:text-xs font-semibold bg-transparent hover:bg-yellow-500/20 text-yellow-400/70 hover:text-blue-400 px-2 py-1 sm:px-3 sm:py-1.5 rounded-none transition-all w-fit mx-auto border border-cyan-400/40 hover:border-green-500"
+                                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                         >
                                             <ExternalLink className="w-3 h-3" />
                                             View Certificate
