@@ -21,7 +21,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
   const [data, setData] = useState<GitHubContribution[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [calendarConfig, setCalendarConfig] = useState({ blockSize: 12, blockMargin: 3 });
+  const [calendarConfig, setCalendarConfig] = useState({ blockSize: 12, blockMargin: 3, isMobile: false });
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Auto-calculate block size to fit all 53 weeks without scrolling
@@ -40,10 +40,11 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
     const maxPitch = containerWidth / weeks;
     const pitch = Math.floor(maxPitch * 100) / 100;
     
+    const isMobile = window.innerWidth < 768;
     const margin = Math.max(1, Math.floor(pitch * 0.2));
     const blockSize = Math.max(2, Math.floor(pitch - margin));
     
-    setCalendarConfig({ blockSize, blockMargin: margin });
+    setCalendarConfig({ blockSize, blockMargin: margin, isMobile });
   }, []);
 
   useEffect(() => {
@@ -250,6 +251,8 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
               labels={{
                 totalCount: "{{count}} contributions in the last year",
               }}
+              showMonthLabels={!calendarConfig.isMobile}
+              showColorLegend={!calendarConfig.isMobile}
             />
           </div>
         </div>
