@@ -187,6 +187,7 @@ const Form = () => {
             type="text"
             name="name"
             placeholder="Name"
+            aria-label="Name"
             required
             maxLength={100}
           />
@@ -201,14 +202,15 @@ const Form = () => {
             type="email"
             name="email"
             placeholder="E-mail"
+            aria-label="E-mail"
             required
           />
           {errors.email && <span className="error-message">{errors.email}</span>}
 
-          <input className="input" type="tel" name="phone" placeholder="Phone" required maxLength={15} />
+          <input className="input" type="tel" name="phone" placeholder="Phone" aria-label="Phone" required maxLength={15} />
           {errors.phone && <span className="error-message">{errors.phone}</span>}
 
-          <textarea className="input" name="message" placeholder="Message" rows={4} required />
+          <textarea className="input" name="message" placeholder="Message" aria-label="Message" rows={4} required />
           {errors.message && <span className="error-message">{errors.message}</span>}
           <div className="button-container">
             <button type="submit" className="send-button">Send Message</button>

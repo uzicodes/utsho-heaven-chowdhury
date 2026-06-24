@@ -28,22 +28,22 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
   const updateCalendarConfig = useCallback(() => {
     const container = containerRef.current;
     if (!container) return;
-    
+
     const styles = window.getComputedStyle(container);
     const paddingLeft = parseFloat(styles.paddingLeft) || 0;
     const paddingRight = parseFloat(styles.paddingRight) || 0;
-    
+
     // Extra 80px buffer to account for weekday labels on the left and ensure no horizontal scrollbar
     const containerWidth = container.clientWidth - paddingLeft - paddingRight - 80;
     const weeks = 53;
-    
+
     const maxPitch = containerWidth / weeks;
     const pitch = Math.floor(maxPitch * 100) / 100;
-    
+
     const isMobile = window.innerWidth < 768;
     const margin = Math.max(1, Math.floor(pitch * 0.2));
     const blockSize = Math.max(2, Math.floor(pitch - margin));
-    
+
     setCalendarConfig({ blockSize, blockMargin: margin, isMobile });
   }, []);
 
@@ -66,6 +66,9 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
 
   // Fetch GitHub contribution data
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    const controller = new AbortController();
+
     const fetchData = async () => {
       if (!username || !/^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,37}[a-zA-Z0-9])?$/.test(username)) {
         console.error("Invalid GitHub username format");
@@ -74,8 +77,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         return;
       }
 
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 20000);
+      timeoutId = setTimeout(() => controller.abort(), 20000);
 
       try {
         const response = await fetch(
@@ -122,11 +124,16 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         setData([]);
       } finally {
         setLoading(false);
-        controller.abort();
+        // controller.abort(); // Handled by cleanup or request completion
       }
     };
 
     fetchData();
+
+    return () => {
+      clearTimeout(timeoutId);
+      controller.abort();
+    };
   }, [username]);
 
   if (loading) {
@@ -182,12 +189,12 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
               href={`https://github.com/${username}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
+              className="flex items-center gap-2.5 transition-opacity hover:opacity-80 group"
               aria-label={`View ${username}'s GitHub profile`}
             >
               <GithubIcon />
               <span
-                className="text-xl font-bold tracking-tight text-white"
+                className="text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#00ff88]"
                 style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
               >
                 @{username}
@@ -223,11 +230,11 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
             href={`https://github.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
+            className="flex items-center gap-2.5 transition-opacity hover:opacity-80 group"
             aria-label={`View ${username}'s GitHub profile`}
           >
             <span
-              className="text-xl sm:text-2xl font-bold tracking-tight text-white"
+              className="text-xl sm:text-2xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#e8aa76]"
               style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
             >
               @{username}
