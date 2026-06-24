@@ -177,7 +177,7 @@ const Form = () => {
       <div className="form-container">
         <form className="form" onSubmit={onSubmit}>
           <span className="heading">Contact Me</span>
-          <span className="c1">Please fill the details. I&apos;ll catch you soon !</span>
+          <span className="c1">Please fill the details, I&apos;ll catch you soon</span>
           <input
             ref={nameRef}
             onKeyDown={handleKeyDown}

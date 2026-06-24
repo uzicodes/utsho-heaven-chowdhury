@@ -108,7 +108,7 @@ export default function Contact() {
                   className="space-y-8 flex flex-col justify-center items-center h-full"
                 >
                   <div className="space-y-5 lg:pr-0">
-                    <h2 className="text-4xl font-bold mb-2 text-green-400 text-left pr-4 lg:pr-12" style={{ marginTop: '48px', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Get in Touch</h2>
+                    <h2 className="text-4xl font-bold mb-2 text-green-400 text-left pr-4 lg:pr-12" style={{ marginTop: '48px', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Let's Talk Code </h2>
                     <div className="mb-7.5"></div>
                     <div className="space-y-4">
                       {contactItems.map((item, index) => (
