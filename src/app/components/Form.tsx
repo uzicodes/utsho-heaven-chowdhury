@@ -1,36 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const allowedControlKeys = [
+    'Backspace',
+    'Delete',
+    'ArrowLeft',
+    'ArrowRight',
+    'ArrowUp',
+    'ArrowDown',
+    'Home',
+    'End',
+    'Tab',
+    'Enter'
+  ];
+
+  if (allowedControlKeys.includes(e.key)) return;
+  if (e.ctrlKey || e.metaKey) return;
+  if (e.key.length === 1) {
+    const isLetter = /\p{L}/u.test(e.key);
+    const isSpace = e.key === ' ';
+    if (!isLetter && !isSpace) {
+      e.preventDefault();
+    }
+  }
+};
+
 const Form = () => {
   const [result, setResult] = React.useState("");
   const [errors, setErrors] = React.useState<{ [key: string]: string }>({});
   const nameRef = React.useRef<HTMLInputElement | null>(null);
   const emailRef = React.useRef<HTMLInputElement | null>(null);
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    const allowedControlKeys = [
-      'Backspace',
-      'Delete',
-      'ArrowLeft',
-      'ArrowRight',
-      'ArrowUp',
-      'ArrowDown',
-      'Home',
-      'End',
-      'Tab',
-      'Enter'
-    ];
 
-    if (allowedControlKeys.includes(e.key)) return;
-    if (e.ctrlKey || e.metaKey) return;
-    if (e.key.length === 1) {
-      const isLetter = /\p{L}/u.test(e.key);
-      const isSpace = e.key === ' ';
-      if (!isLetter && !isSpace) {
-        e.preventDefault();
-      }
-    }
-  };
 
   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
     e.preventDefault();

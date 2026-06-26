@@ -16,6 +16,14 @@ interface ContactItem {
 
 
 
+// Scroll to Top
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 // Social Contact
 export default function Contact() {
   const contactItems: ContactItem[] = [
@@ -84,14 +92,6 @@ export default function Contact() {
     }
   };
 
-
-  // Scroll to Top
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div className="relative bg-transparent">
