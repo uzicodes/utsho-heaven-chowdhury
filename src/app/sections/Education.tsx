@@ -208,7 +208,7 @@ const EducationSection: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {educationData.map((edu, index) => (
                         <motion.div
-                            key={index}
+                            key={edu.school}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: false, amount: 0.1 }}
@@ -272,7 +272,7 @@ const EducationSection: React.FC = () => {
                     >
                         {certificationData.map((cert, index) => (
                             <motion.div
-                                key={index}
+                                key={cert.title}
                                 custom={index}
                                 variants={cardVariants}
                                 className="group relative"
@@ -324,9 +324,9 @@ const EducationSection: React.FC = () => {
                                                 </span>
                                             </div>
                                             <div className="flex flex-wrap justify-center gap-1 mt-1 sm:mt-2">
-                                                {cert.skills.map((skill, i) => (
+                                                {cert.skills.map((skill) => (
                                                     <span
-                                                        key={i}
+                                                        key={skill}
                                                         className="px-2 py-0.5 text-[0.7rem] rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
                                                         style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                                     >

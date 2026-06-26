@@ -111,8 +111,8 @@ export default function Contact() {
                     <h2 className="text-4xl font-bold mb-2 text-green-400 text-left pr-4 lg:pr-12" style={{ marginTop: '48px', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Let's Talk Code </h2>
                     <div className="mb-7.5"></div>
                     <div className="space-y-4">
-                      {contactItems.map((item, index) => (
-                        <div key={index} className="flex items-center space-x-4">
+                      {contactItems.map((item) => (
+                        <div key={item.label} className="flex items-center space-x-4">
                           {item.link ? (
                             <a
                               href={item.link}
