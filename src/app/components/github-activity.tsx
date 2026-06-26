@@ -53,14 +53,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
     return () => window.removeEventListener("resize", updateCalendarConfig);
   }, [updateCalendarConfig]);
 
-  // Recalculate after data loads and container renders
-  useEffect(() => {
-    if (!loading) {
-      // Small delay to ensure the container has rendered
-      const timer = setTimeout(updateCalendarConfig, 50);
-      return () => clearTimeout(timer);
-    }
-  }, [loading, updateCalendarConfig]);
+
 
 
 
@@ -74,6 +67,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         console.error("Invalid GitHub username format");
         setLoading(false);
         setData([]);
+        setTimeout(updateCalendarConfig, 50);
         return;
       }
 
@@ -124,7 +118,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         setData([]);
       } finally {
         setLoading(false);
-        // controller.abort(); // Handled by cleanup or request completion
+        setTimeout(updateCalendarConfig, 50);
       }
     };
 

@@ -83,7 +83,7 @@ export default function IconCloud({
     if (iconSlugs.length > 0) {
       fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
     }
-  }, [iconSlugs]);
+  }, []);
 
   const renderedIcons = useMemo(() => {
     if (!data) return null;

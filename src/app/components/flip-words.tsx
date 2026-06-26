@@ -15,28 +15,24 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
   className,
 }) => {
   const [currentWord, setCurrentWord] = useState<string>(words[0]);
-  const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
-  
   const startAnimation = useCallback(() => {
-    const word: string = words[words.indexOf(currentWord) + 1] || words[0];
-    setCurrentWord(word);
-    setIsAnimating(true);
-  }, [currentWord, words]);
+    setCurrentWord((prev) => words[words.indexOf(prev) + 1] || words[0]);
+  }, [words]);
 
   useEffect(() => {
-    if (!isAnimating) {
-      const timer = setTimeout(() => {
-        startAnimation();
-      }, duration);
-      return () => clearTimeout(timer);
-    }
-  }, [isAnimating, duration, startAnimation]);
+    const timer = setTimeout(() => {
+      startAnimation();
+    }, duration);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <AnimatePresence
       onExitComplete={() => {
-        setIsAnimating(false);
+        setTimeout(() => {
+          startAnimation();
+        }, duration);
       }}
     >
       <motion.div
