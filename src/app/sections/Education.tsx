@@ -7,6 +7,7 @@ import {
     ExternalLink,
 } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const EducationSection: React.FC = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -223,9 +224,11 @@ const EducationSection: React.FC = () => {
                             <div className="space-y-4">
                                 <div className="space-y-2 text-center">
                                     <div className="flex flex-col items-center gap-2">
-                                        <img
+                                        <Image
                                             src={edu.logo}
                                             alt={edu.school + ' logo'}
+                                            width={100}
+                                            height={100}
                                             className={`${edu.className} object-contain`}
                                             style={edu.style}
                                         />
@@ -285,9 +288,11 @@ const EducationSection: React.FC = () => {
 
                                     <div className="w-full mb-1 sm:mb-2">
                                         <div className="relative w-full h-28 sm:h-40 bg-black rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                                            <img
+                                            <Image
                                                 src={cert.certImage}
                                                 alt={cert.title}
+                                                width={400}
+                                                height={300}
                                                 className="w-full h-full object-contain"
                                             />
                                             <div className="absolute top-2 right-2 bg-teal-500/20 text-teal-400 px-2 py-1 rounded text-xs flex items-center gap-1">
@@ -307,9 +312,11 @@ const EducationSection: React.FC = () => {
 
                                             <div className="flex items-center justify-center gap-2">
                                                 {cert.issuerLogo && (
-                                                    <img
+                                                    <Image
                                                         src={cert.issuerLogo}
                                                         alt={`${cert.issuer} logo`}
+                                                        width={20}
+                                                        height={20}
                                                         className="w-5 h-5 object-contain"
                                                     />
                                                 )}

@@ -259,7 +259,7 @@ function Card({
                 const flushBatch = (key: string) => {
                   if (batch.length > 0) {
                     elements.push(
-                      <img key={key} src={`https://skillicons.dev/icons?i=${batch.join(',')}`} alt="Tech Stack" className="h-6 md:h-8 w-auto" loading="lazy" />
+                      <Image key={key} src={`https://skillicons.dev/icons?i=${batch.join(',')}`} alt="Tech Stack" width={200} height={32} className="h-6 md:h-8 w-auto" unoptimized />
                     );
                     batch = [];
                   }
@@ -270,7 +270,7 @@ function Card({
                     flushBatch(`batch-${idx}`);
                     elements.push(
                       <div key={idx} className="h-8 w-auto md:h-10.5 md:w-auto flex items-center justify-center mx-1">
-                        <img src="/icons/gsap.png" alt="GSAP" className="h-full w-auto object-contain scale-[1.2] md:scale-[1.3]" />
+                        <Image src="/icons/gsap.png" alt="GSAP" width={40} height={40} className="h-full w-auto object-contain scale-[1.2] md:scale-[1.3]" />
                       </div>
                     );
                     return;
@@ -280,7 +280,7 @@ function Card({
                     flushBatch(`batch-${idx}`);
                     elements.push(
                       <div key={idx} className={`h-6 w-6 md:h-8 md:w-8 ${icon.bg} rounded flex items-center justify-center ${s !== 'clerk' ? 'p-1' : ''}`}>
-                        <img src={icon.src} alt={icon.alt} className={icon.cls} />
+                        <Image src={icon.src} alt={icon.alt} width={32} height={32} className={icon.cls} />
                       </div>
                     );
                   } else {
@@ -304,7 +304,7 @@ function Card({
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "all" }}
               >
-                <img src="/github.svg" alt="GitHub" width={18} height={18} className="inline-block align-middle" />
+                <Image src="/github.svg" alt="GitHub" width={18} height={18} className="inline-block align-middle" />
                 <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Code</span>
               </motion.a>
 
@@ -318,7 +318,7 @@ function Card({
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "all" }}
               >
-                <img src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={19.5} height={19.5} className="inline-block align-middle" />
+                <Image src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={20} height={20} className="inline-block align-middle" unoptimized />
                 <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Live</span>
               </motion.a>
             </div>

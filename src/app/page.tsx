@@ -153,7 +153,7 @@ export default function Home() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="flex justify-center mt-4 mb-4"
                       >
-                        <img
+                        <Image
                           src="/DP_removed_BG.webp"
                           alt="Profile"
                           width={200}
@@ -186,7 +186,7 @@ export default function Home() {
                       >
                         <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-none bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                           <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
-                            <img src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-2 align-middle" />
+                            <Image src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-2 align-middle" />
                             <span style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>CV</span>
                             <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                           </span>
@@ -217,7 +217,7 @@ export default function Home() {
                         className="rounded-lg contact-social-icon  transition-colors"
                         onClick={() => window.open('https://github.com/uzicodes', '_blank')}
                       >
-                        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" />
+                        <Image src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" unoptimized />
                       </motion.button>
 
                       <motion.button
@@ -226,7 +226,7 @@ export default function Home() {
                         className="rounded-lg contact-social-icon transition-colors"
                         onClick={() => window.open('https://www.linkedin.com/in/utsho-heaven-chowdhury/', '_blank')}
                       >
-                        <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" />
+                        <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />
                       </motion.button>
 
                       <motion.button
@@ -235,7 +235,7 @@ export default function Home() {
                         className=" rounded-lg contact-social-icon transition-colors"
                         onClick={() => window.location.href = 'mailto:utshozi11@gmail.com'}
                       >
-                        <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="w-8 h-8" />
+                        <Image src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="w-8 h-8" unoptimized />
                       </motion.button>
 
                       <div className="inline-flex items-center gap-2 px-2 sm:px-2 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50">

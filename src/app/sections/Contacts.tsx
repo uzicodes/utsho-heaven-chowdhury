@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 const Form = dynamic(() => import("../components/Form"), { ssr: false });
 import { MapPin, ArrowUp } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 interface ContactItem {
   icon: React.ReactNode;
@@ -19,19 +20,19 @@ interface ContactItem {
 export default function Contact() {
   const contactItems: ContactItem[] = [
     {
-      icon: <img src="https://skillicons.dev/icons?i=gmail" alt="Email" className="w-8 h-8" />,
+      icon: <Image src="https://skillicons.dev/icons?i=gmail" alt="Email" width={32} height={32} className="w-8 h-8" unoptimized />,
       label: "Email",
       link: "mailto:utshozi11@gmail.com",
       text: "utshozi11@gmail.com",
     },
     {
-      icon: <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" className="w-8 h-8" />,
+      icon: <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />,
       label: "Linkedin",
       link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
       text: "Connect",
     },
     {
-      icon: <img src="https://skillicons.dev/icons?i=github" alt="GitHub" className="w-8 h-8" />,
+      icon: <Image src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" unoptimized />,
       label: "Github",
       link: "https://github.com/uzicodes",
       text: "uzicodes",
@@ -47,13 +48,13 @@ export default function Contact() {
       text: "Add Friend",
     },
     {
-      icon: <img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" className="w-8 h-8" />,
+      icon: <Image src="https://skillicons.dev/icons?i=instagram" alt="Instagram" width={32} height={32} className="w-8 h-8" unoptimized />,
       label: "Instagram",
       link: "https://instagram.com/utsh0_",
       text: "Follow Me",
     },
     {
-      icon: <img src="/icons/X-logo.svg" alt="X" className="w-8 h-8" />,
+      icon: <Image src="/icons/X-logo.svg" alt="X" width={32} height={32} className="w-8 h-8" unoptimized />,
       label: "X",
       link: "https://x.com/utsh0w",
       text: "Tweet",
