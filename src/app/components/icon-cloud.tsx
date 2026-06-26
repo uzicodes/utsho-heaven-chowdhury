@@ -23,7 +23,7 @@ interface CloudProps {
   };
 }
 
-export const cloudProps: CloudProps = {
+const cloudProps: CloudProps = {
   containerProps: {
     style: {
       display: "flex",
@@ -49,7 +49,7 @@ export const cloudProps: CloudProps = {
   },
 };
 
-export const renderCustomIcon = (
+const renderCustomIcon = (
   icon: SimpleIcon,
   theme: "light" | "dark" | undefined,
   imageArray?: string[]

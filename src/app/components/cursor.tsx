@@ -65,7 +65,7 @@ export const CursorPointer = ({ className, ...props }: CursorPointerProps) => (
 
 export type CursorBodyProps = HTMLAttributes<HTMLSpanElement>;
 
-export const CursorBody = ({
+const CursorBody = ({
   children,
   className,
   ...props
@@ -85,8 +85,8 @@ export const CursorBody = ({
 
 export type CursorNameProps = HTMLAttributes<HTMLSpanElement>;
 
-export const CursorName = (props: CursorNameProps) => <span {...props} />;
+const CursorName = (props: CursorNameProps) => <span {...props} />;
 
 export type CursorMessageProps = HTMLAttributes<HTMLSpanElement>;
 
-export const CursorMessage = (props: CursorMessageProps) => <span {...props} />;
+const CursorMessage = (props: CursorMessageProps) => <span {...props} />;
