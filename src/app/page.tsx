@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import Navbar from './Navbar';
 import { useIsMobile } from '../lib/useIsMobile';
-import Head from 'next/head';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
 import { motion, Variants } from 'framer-motion';
