@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     title: "LAMB FALCONS ",
     description: "This platform serves as the Modern, Dynamic & Central Online hub for the Club, providing Public visitors with essential club details while offering a Secure login & dedicated Member portal for private access & community engagement. Used Animated libraries, interactive UI elements for a smooth user experience. Production ready with CI/CD pipelines for seamless updates & maintenance.",
-    skills: ["nextjs", "nodejs", "react", "ts", "clerk","gsap","tailwind", "vercel"],
+    skills: ["nextjs", "nodejs", "react", "ts", "clerk", "gsap", "tailwind", "vercel"],
     link: "/projects/lamb-falcons.webp",
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
@@ -79,7 +79,7 @@ const projects: Project[] = [
   {
     title: "ঢাকা-বাসা",
     description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secure authentication, Google SSO, and automated database syncing via Webhooks.\n• Robust posting forms with strict validations using React Hook Form & Zod.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive, modern UI with native Bengali language support for an accessible user experience.",
-    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon","redis","socket","cloudflare", "prisma", "clerk" ],
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon", "redis", "socket", "cloudflare", "prisma", "clerk"],
     link: "/projects/dhaka-basha.webp",
     color: "#10b981",
     githubLink: "https://github.com/uzicodes/Dhaka-Basha",
@@ -148,8 +148,8 @@ export default function Projects() {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                   PROJECTS
                 </h2>
-                <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
-                  Showcasing my Technical Projects & Creative Solutions
+                <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                  showcasing my Technical Projects & Creative Solutions
                 </p>
               </div>
               {projects.map((project: Project, i: number) => {
@@ -333,7 +333,7 @@ function Card({
                 const parts = description.split('\n');
                 const firstLine = parts[0];
                 const bulletPoints = parts.slice(1).join('\n');
-                
+
                 return (
                   <>
                     <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug mb-2 md:mb-3" style={{ fontFamily: 'var(--font-bricolage-grotesque), sans-serif' }}>
