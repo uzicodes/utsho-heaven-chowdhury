@@ -8,7 +8,6 @@ import {
   FaGraduationCap,
   FaCode,
   FaEnvelope,
-  FaBars,
 } from "react-icons/fa";
 import './Navbar.css';
 
@@ -21,7 +20,6 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -53,17 +51,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Mobile Menu Resize 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsMenuOpen(false);
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   // Active Link Highlighter 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,7 +79,6 @@ const Navbar = () => {
   // Smooth Scroll Handler 
   const handleScrollTo = (e: React.MouseEvent, id: string) => {
     e.preventDefault(); // STOP the URL from changing
-    setIsMenuOpen(false);
     setActiveLink(id);
 
     if (id === 'home') {
@@ -119,36 +105,19 @@ const Navbar = () => {
         <div className="navbar-gradient-border">
           <nav className="navbar-content" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
 
-            {/* Mobile Header */}
-            <div className="navbar-mobile-header">
-              <a
-                href="#"
-                onClick={(e) => handleScrollTo(e, 'home')}
-                className="navbar-logo"
-              >
-                UTSHO HEAVEN CHOWDHURY
-              </a>
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="navbar-menu-button"
-              >
-                <FaBars />
-              </button>
-            </div>
-
             {/* Navigation Links */}
-            <div className={`navbar-links ${isMenuOpen ? 'navbar-links-open' : ''}`}>
+            <div className="navbar-links">
               <div className="navbar-links-container">
                 {navLinks.map(({ id, icon: Icon, text, href }) => (
                   <Link
                     key={id}
                     href={href}
                     onClick={(e) => handleScrollTo(e, id)}
+                    title={text}
                   >
                     <div className={`navbar-link ${activeLink === id ? 'navbar-link-active' : ''}`}>
                       <Icon
-                        className={`navbar-link-icon ${activeLink === id ? "navbar-link-icon-active" : ""
-                          }`}
+                        className={`navbar-link-icon ${activeLink === id ? "navbar-link-icon-active" : ""}`}
                       />
                       <span className="navbar-link-text">{text}</span>
                     </div>
