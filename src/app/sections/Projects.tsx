@@ -41,13 +41,22 @@ const projects: Project[] = [
     liveLink: "https://lambfalcons.vercel.app/",
   },
   {
+    title: "ঢাকা-বাসা",
+    description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secure authentication, Google SSO, and automated database syncing via Webhooks.\n• Robust posting forms with strict validations using React Hook Form & Zod.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive, modern UI with native Bengali language support for an accessible user experience.",
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon", "redis", "socket", "cloudflare", "prisma", "clerk"],
+    link: "/projects/dhaka-basha.webp",
+    color: "#10b981",
+    githubLink: "https://github.com/uzicodes/Dhaka-Basha",
+    liveLink: "https://dhaka-basha.vercel.app/",
+  },
+  {
     title: "Culinary Canvas",
     description: "Production ready modern web platform with seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, Catogorized food items \n• Real-time items fetched from MongoDB \n• Profile management, can see previous orders \n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, daily/monthly revenue, resturant metrics & user feedbacks \n• Real-time user feedback system & SSLcommerz for payment integration, invoice generation",
     skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "mongodb", "android", "redis", "ssl"],
     link: "/projects/culinary-canvas.webp",
     color: "#ff6b35",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
-    liveLink: "https://the-culinary-canvas.vercel.app/",
+    liveLink: "https://culinarycanvaas.vercel.app/",
   },
   {
     title: "Northern Paribahan",
@@ -75,15 +84,6 @@ const projects: Project[] = [
     color: "#9333ea",
     githubLink: "https://github.com/uzicodes/Alora",
     liveLink: "https://aloraa.vercel.app/",
-  },
-  {
-    title: "ঢাকা-বাসা",
-    description: "Comprehensive Rental platform streamlining property searches & To-Let posting in Dhaka.\n• Advanced filtering by specific Dhaka areas, sub-locations, and property types.\n• Prisma ORM integrated with Neon PostgreSQL for efficient and scalable data fetching.\n• Clerk for secure authentication, Google SSO, and automated database syncing via Webhooks.\n• Robust posting forms with strict validations using React Hook Form & Zod.\n• Personalized user dashboard for managing active listings & saved properties.\n• Responsive, modern UI with native Bengali language support for an accessible user experience.",
-    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "neon", "redis", "socket", "cloudflare", "prisma", "clerk"],
-    link: "/projects/dhaka-basha.webp",
-    color: "#10b981",
-    githubLink: "https://github.com/uzicodes/Dhaka-Basha",
-    liveLink: "https://dhaka-basha.vercel.app/",
   }
 ];
 
