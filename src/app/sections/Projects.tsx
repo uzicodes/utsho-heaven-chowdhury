@@ -198,16 +198,16 @@ function Card({
   return (
     <div
       ref={container}
-      className={`h-screen flex items-center justify-center sticky top-0 project-container ${i === 0 ? 'mt-0' : ''}`}
+      className={`h-screen flex items-center justify-center sticky top-0 project-container pointer-events-none ${i === 0 ? 'mt-0' : ''}`}
     >
       <motion.div
         style={{
           scale,
           top: i === 0 ? "0" : `calc(-5vh + ${i * 25}px)`,
-          transform: `scale(var(--project-scale, 1))`,
+          transform: "scale(var(--project-scale, 1))",
           marginTop: i === 0 ? "0" : "var(--project-margin, 0)",
         }}
-        className={`relative ${i === 0 ? 'top-0' : '-top-[25%]'} h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card`}
+        className={`relative ${i === 0 ? 'top-0' : '-top-[25%]'} h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card pointer-events-auto`}
         whileHover={{
           y: -8,
           transition: { duration: 0.3 },
@@ -293,16 +293,16 @@ function Card({
             </div>
 
             {/* GitHub & Live Link */}
-            <div className="flex items-center justify-center gap-3 py-2 md:py-3 bg-[#574A49]">
+            <div className="flex items-center justify-center gap-3 py-2 md:py-3 bg-[#574A49] relative z-20">
               <motion.a
                 title="GitHub Link"
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-green-500/15 hover:bg-green-500/50 border border-black transition-all cursor-pointer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-green-500/15 hover:bg-green-500/50 border border-black transition-all cursor-pointer pointer-events-auto"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
-                style={{ pointerEvents: "all" }}
+                style={{ pointerEvents: "auto" }}
               >
                 <Image src="/github.svg" alt="GitHub" width={18} height={18} className="inline-block align-middle" />
                 <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Code</span>
@@ -313,10 +313,10 @@ function Card({
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-blue-500/25 hover:bg-blue-500/55 border border-black transition-all cursor-pointer"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-blue-500/25 hover:bg-blue-500/55 border border-black transition-all cursor-pointer pointer-events-auto"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
-                style={{ pointerEvents: "all" }}
+                style={{ pointerEvents: "auto" }}
               >
                 <Image src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={20} height={20} className="inline-block align-middle" unoptimized />
                 <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Live</span>
