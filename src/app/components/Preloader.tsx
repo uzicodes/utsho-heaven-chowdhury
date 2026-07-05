@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 export const Preloader = () => {
     const [isLoading, setIsLoading] = useState(true);
+    const [isZooming, setIsZooming] = useState(false);
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -24,7 +25,12 @@ export const Preloader = () => {
 
         Promise.all([minTimePromise, loadPromise]).then(() => {
             if (isMounted) {
-                setIsLoading(false);
+                setIsZooming(true);
+                setTimeout(() => {
+                    if (isMounted) {
+                        setIsLoading(false);
+                    }
+                }, 750);
             }
         });
 
@@ -58,9 +64,27 @@ export const Preloader = () => {
             />
             {mounted && (
                 <motion.div 
+                    style={{
+                        willChange: "transform, opacity",
+                        transformOrigin: "center center",
+                        backfaceVisibility: "hidden",
+                        WebkitFontSmoothing: "antialiased"
+                    }}
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
+                    animate={
+                        isZooming
+                            ? { scale: 18, opacity: [1, 1, 0] }
+                            : { opacity: 1, scale: 1 }
+                    }
+                    transition={
+                        isZooming
+                            ? { 
+                                duration: 1.25, 
+                                ease: [0.76, 0, 0.24, 1],
+                                opacity: { duration: 1.25, times: [0, 0.5, 1], ease: "easeInOut" }
+                              }
+                            : { duration: 0.8 }
+                    }
                     className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none px-4"
                 >
                     <span
