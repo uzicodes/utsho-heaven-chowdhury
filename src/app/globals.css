@@ -59,8 +59,8 @@ textarea {
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -70,19 +70,11 @@ textarea {
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background: #000000;
   color: var(--foreground);
   font-family: var(--font-space-grotesk), sans-serif;
   cursor: none;
-
 }
 
 html {

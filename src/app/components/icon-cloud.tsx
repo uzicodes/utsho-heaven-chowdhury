@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useMemo, useState, ReactElement } from "react";
-import { useTheme } from "next-themes";
 import { Cloud, fetchSimpleIcons, renderSimpleIcon, SimpleIcon } from "react-icon-cloud";
 
 interface CloudProps {
@@ -51,14 +50,13 @@ const cloudProps: CloudProps = {
 
 const renderCustomIcon = (
   icon: SimpleIcon,
-  theme: "light" | "dark" | undefined,
   imageArray?: string[]
 ): ReactElement =>
   renderSimpleIcon({
     icon,
-    bgHex: theme === "light" ? "#f3f2ef" : "#080510",
-    fallbackHex: theme === "light" ? "#6e6e73" : "#ffffff",
-    minContrastRatio: theme === "dark" ? 2 : 1.2,
+    bgHex: "#080510",
+    fallbackHex: "#ffffff",
+    minContrastRatio: 2,
     size: 42,
     aProps: {
       href: undefined,
@@ -77,7 +75,6 @@ export default function IconCloud({
   iconSlugs = [],
 }: IconCloudProps): ReactElement | null {
   const [data, setData] = useState<{ simpleIcons: Record<string, SimpleIcon> } | null>(null);
-  const { theme } = useTheme();
 
   useEffect(() => {
     if (iconSlugs.length > 0) {
@@ -89,9 +86,9 @@ export default function IconCloud({
     if (!data) return null;
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, (theme as "light" | "dark" | undefined) || "dark")
+      renderCustomIcon(icon)
     );
-  }, [data, theme]);
+  }, [data]);
 
   return (
   // @ts-expect-error: react-icon-cloud types are incomplete for Cloud props
