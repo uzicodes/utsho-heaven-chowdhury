@@ -95,10 +95,7 @@ export const Preloader = () => {
                         textAlign: 'center',
                         lineHeight: '1.2',
                         letterSpacing: '-0.02em',
-                        backgroundImage: 'linear-gradient(135deg, #bf4011, #a65107, #b55d00)',
-                        backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
+                        color: '#810248',
                         WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.95)',
                         paintOrder: 'stroke fill' as any,
                       }}
