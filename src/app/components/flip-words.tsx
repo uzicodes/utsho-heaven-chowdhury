@@ -1,5 +1,6 @@
 "use client";
-import React, { useCallback, useEffect, useState } from "react";
+
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import { AnimatePresence, m } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -20,12 +21,17 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
     setCurrentWord((prev) => words[words.indexOf(prev) + 1] || words[0]);
   }, [words]);
 
+  const onAnimateRef = useRef(startAnimation);
+  useEffect(() => {
+    onAnimateRef.current = startAnimation;
+  }, [startAnimation]);
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      startAnimation();
+      onAnimateRef.current();
     }, duration);
     return () => clearTimeout(timer);
-  }, [startAnimation, duration]);
+  }, [duration]);
 
   return (
     <AnimatePresence
