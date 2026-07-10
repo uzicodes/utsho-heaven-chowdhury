@@ -90,14 +90,17 @@ export const Preloader = () => {
                     <span
                       style={{
                         fontFamily: 'var(--font-space-grotesk), sans-serif',
-                        backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
+                        fontSize: 'clamp(2.75rem, 9vw, 92px)',
+                        fontWeight: 900,
+                        textAlign: 'center',
+                        lineHeight: '1.2',
+                        letterSpacing: '-0.02em',
+                        backgroundImage: 'linear-gradient(135deg, #bf4011, #a65107, #b55d00)',
                         backgroundClip: 'text',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
-                        fontSize: 'clamp(2.5rem, 8vw, 80px)',
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                        lineHeight: '1.2'
+                        WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.95)',
+                        paintOrder: 'stroke fill' as any,
                       }}
                     >
                       UTSHO HEAVEN CHOWDHURY
