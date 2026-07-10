@@ -6,7 +6,7 @@ import {
     Calendar,
     ExternalLink,
 } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { m, Variants } from "framer-motion";
 import Image from "next/image";
 
 const educationData = [
@@ -206,7 +206,7 @@ const EducationSection: React.FC = () => {
                 {/* Education Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {educationData.map((edu, index) => (
-                        <motion.div
+                        <m.div
                             key={edu.school}
                             initial="hidden"
                             whileInView="visible"
@@ -243,12 +243,12 @@ const EducationSection: React.FC = () => {
                                     </p>
                                 </div>
                             </div>
-                        </motion.div>
+                        </m.div>
                     ))}
                 </div>
 
 
-                <motion.div        // Certifications Section
+                <m.div        // Certifications Section
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.1 }}
@@ -264,7 +264,7 @@ const EducationSection: React.FC = () => {
                         </p>
                     </div>
 
-                    <motion.div
+                    <m.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -272,7 +272,7 @@ const EducationSection: React.FC = () => {
                         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                     >
                         {certificationData.map((cert, index) => (
-                            <motion.div
+                            <m.div
                                 key={cert.title}
                                 custom={index}
                                 variants={cardVariants}
@@ -353,10 +353,10 @@ const EducationSection: React.FC = () => {
                                         </a>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </m.div>
                         ))}
-                    </motion.div>
-                </motion.div >
+                    </m.div>
+                </m.div >
             </div >
         </section >
     );

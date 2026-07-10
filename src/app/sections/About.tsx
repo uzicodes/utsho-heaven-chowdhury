@@ -3,10 +3,8 @@
 import Image from "next/image";
 const HeroImg = "/about.webp";
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { m, Variants } from "framer-motion";
 import { GithubActivity } from "@/app/components/github-activity";
-
-
 
 // Image Animation
 const imageRevealVariant: Variants = {
@@ -62,7 +60,7 @@ export default function About(): React.ReactElement {
         <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
 
           {/* Animated Header */}
-          <motion.h2
+          <m.h2
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
@@ -71,13 +69,13 @@ export default function About(): React.ReactElement {
             style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
           >
             Developer, Designer Creator, Innovator
-          </motion.h2>
+          </m.h2>
 
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
 
             {/* Image Side */}
             <div className="relative mb-6 sm:mb-0">
-              <motion.div
+              <m.div
                 className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent"
                 initial="hidden"
                 whileInView="visible"
@@ -93,11 +91,11 @@ export default function About(): React.ReactElement {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-              </motion.div>
+              </m.div>
             </div>
 
             {/* Text Side */}
-            <motion.div
+            <m.div
               className="relative space-y-4"
               variants={textContainerVariant}
               initial="hidden"
@@ -111,30 +109,30 @@ export default function About(): React.ReactElement {
               <div className="pt-6">
                 <blockquote className="relative pl-4">
                   {/* Animated Border Line */}
-                  <motion.span
+                  <m.span
                     variants={borderVariant}
                     className="absolute left-0 top-0 w-1 bg-gray-300"
                   />
 
-                  <motion.p variants={textItemVariant} className="text-white ubuntu-font text-sm md:text-lg text-justify">
+                  <m.p variants={textItemVariant} className="text-white ubuntu-font text-sm md:text-lg text-justify">
                     {`I build scalable, user-centric web applications, bridging the gap between complex architecture and clean design. Right now, I'm deepening my expertise in modern backend infrastructure, DevOps, and system design to build high-availability solutions from the ground up. My passion lies in crafting seamless user experiences always eager to learn new technologies and methodologies to stay at the forefront of the industry. Beyond code, I am a lifelong learner and an active supporter of the developer community. I am committed to sharing knowledge and building tools that empower others to innovate, believing that the best way to move the industry forward is by growing together.`}
-                  </motion.p>
+                  </m.p>
 
                   <div className="mt-6 space-y-3">
                   </div>
                 </blockquote>
                 <br></br>
 
-                <motion.p variants={textItemVariant} className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>{`Let's not forget-`}</motion.p>
+                <m.p variants={textItemVariant} className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>{`Let's not forget-`}</m.p>
 
                 {/* Pop-in animation Code Text */}
-                <motion.p
+                <m.p
                   variants={textItemVariant}
                   className="text-base md:text-xl"
                   style={{ color: '#CF4E5B', fontFamily: 'var(--font-ubuntu), sans-serif', fontStyle: 'italic' }}
                 >
                   {`it all started with a   `}
-                  <motion.span
+                  <m.span
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: false }}
@@ -142,9 +140,9 @@ export default function About(): React.ReactElement {
                     style={{ color: '#5DCF4E', display: 'inline-block', fontFamily: 'var(--font-ubuntu), sans-serif', fontStyle: 'italic' }}
                   >
                     {'<'} hello world {'>'}
-                  </motion.span>
-                </motion.p>
-                <motion.div variants={textItemVariant} className="mt-8">
+                  </m.span>
+                </m.p>
+                <m.div variants={textItemVariant} className="mt-8">
                   <a 
                     href="https://www.supportkori.com/utsho" 
                     target="_blank" 
@@ -165,9 +163,9 @@ export default function About(): React.ReactElement {
                     />
                     <span className="text-lg">Buy me Coffee ?</span>
                   </a>
-                </motion.div>
+                </m.div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
 
           {/* GitHub Activity Calendar */}

@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactLenis } from "lenis/react";
-import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
+import { useTransform, m, useScroll, MotionValue } from "framer-motion";
 import { useRef, useEffect } from "react";
 import * as React from "react";
 import Image from "next/image";
@@ -200,7 +200,7 @@ function Card({
       ref={container}
       className={`h-screen flex items-center justify-center sticky top-0 project-container pointer-events-none ${i === 0 ? 'mt-0' : ''}`}
     >
-      <motion.div
+      <m.div
         style={{
           scale,
           top: i === 0 ? "0" : `calc(-5vh + ${i * 25}px)`,
@@ -213,7 +213,7 @@ function Card({
           transition: { duration: 0.3 },
         }}
       >
-        <motion.div
+        <m.div
           className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl"
           style={{ backgroundColor: '#574A49' }}
           whileHover={{
@@ -223,7 +223,7 @@ function Card({
         >
           <div className="w-full md:w-[55%] flex flex-col">
             <div className="h-[200px] md:h-[300px] lg:h-[340px] relative overflow-hidden">
-              <motion.div
+              <m.div
                 className="w-full h-full relative"
                 initial={{ scale: 0.85 }}
                 whileHover={{ scale: 0.9 }}
@@ -236,7 +236,7 @@ function Card({
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-              </motion.div>
+              </m.div>
 
               <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-black/50 backdrop-blur-md text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium">
                 Project {i + 1}
@@ -295,7 +295,7 @@ function Card({
 
             {/* GitHub & Live Link */}
             <div className="flex items-center justify-center gap-3 py-2 md:py-3 bg-[#574A49] relative z-20">
-              <motion.a
+              <m.a
                 title="GitHub Link"
                 href={githubLink}
                 target="_blank"
@@ -307,9 +307,9 @@ function Card({
               >
                 <Image src="/github.svg" alt="GitHub" width={18} height={18} className="inline-block align-middle" />
                 <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Code</span>
-              </motion.a>
+              </m.a>
 
-              <motion.a
+              <m.a
                 title="Live Link"
                 href={liveLink}
                 target="_blank"
@@ -321,7 +321,7 @@ function Card({
               >
                 <Image src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={20} height={20} className="inline-block align-middle" unoptimized />
                 <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Live</span>
-              </motion.a>
+              </m.a>
             </div>
           </div>
 
@@ -350,8 +350,8 @@ function Card({
               })()}
             </div>
           </div>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </div>
   );
 }

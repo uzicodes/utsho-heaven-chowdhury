@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 interface Book {
   id: number;
@@ -72,7 +72,7 @@ const BookshelfSection = () => {
       <div className="max-w-6xl w-full">
         
         {/* Header Text */}
-        <motion.div 
+        <m.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
@@ -82,13 +82,13 @@ const BookshelfSection = () => {
           <h2 className="text-3xl md:text-4xl" style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif', fontWeight: 600 }}>
             handpicked my Favorite Books
           </h2>
-        </motion.div>
+        </m.div>
 
         {/* Bookshelf */}
         <div className="relative">
 
           {/* Books Container */}
-          <motion.div
+          <m.div
             className="flex justify-center items-end gap-1 pb-0 perspective-1000" 
             style={{ perspective: "2000px", marginTop: "0" }} 
             initial="hidden"
@@ -104,7 +104,7 @@ const BookshelfSection = () => {
             }}
           >
             {books.map((book, index) => (
-              <motion.div
+              <m.div
                 key={book.id}
                 variants={{
                   hidden: { y: -100, opacity: 0 },
@@ -189,19 +189,19 @@ const BookshelfSection = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
 
           {/* Bottom Shelf */}
-          <motion.div 
+          <m.div 
             className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl"
             initial={{ scaleX: 0, opacity: 0 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
           >
-          </motion.div>
+          </m.div>
         </div>
 
       </div>

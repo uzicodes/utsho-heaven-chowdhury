@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import { useIsMobile } from '../lib/useIsMobile';
 import Image from 'next/image';
 import { FlipWords } from './components/flip-words';
-import { motion, Variants } from 'framer-motion';
+import { m, Variants } from 'framer-motion';
 
 // IMPORTING SECTIONS
 import BookshelfSection from './components/BookshelfSection';
@@ -56,7 +56,7 @@ export default function Home() {
               <div className="flex min-h-[65vh] items-center">
 
                 {/* Hero Text */}
-                <motion.div
+                <m.div
                   className="w-full lg:w-1/2"
                   variants={containerVariants}
                   initial="hidden"
@@ -65,18 +65,18 @@ export default function Home() {
                   <div className="space-y-6" style={{ marginTop: '-0.20rem' }}>
 
                     {/* Welcome badge */}
-                    <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
+                    <m.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
                       <div className={`inline-flex items-center ${isMobile ? 'gap-1 px-1.5 py-0.5' : 'gap-1.5 px-2 py-1'} rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2`}>
                         <div className={`${isMobile ? 'w-1.5 h-1.5' : 'w-1.5 h-1.5'} rounded-full bg-green-400 animate-pulse`}></div>
                         <span className={`text-gray-300 font-medium ${isMobile ? 'text-[8px]' : 'text-[11px]'}`} style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                           AVAILABLE TO WORK
                         </span>
                       </div>
-                    </motion.div>
+                    </m.div>
 
                     {/* Name Heading */}
                     {isMobile ? (
-                      <motion.h1 variants={itemVariants} className="hero-text font-bold leading-tight text-center mb-2">
+                      <m.h1 variants={itemVariants} className="hero-text font-bold leading-tight text-center mb-2">
                         <span className="text-white block mb-1 mt-0" style={{ fontSize: '1.25rem' }}>Hello I&apos;m,</span>
                         <span
                           className="hero-name"
@@ -97,9 +97,9 @@ export default function Home() {
                         >
                           UTSHO HEAVEN CHOWDHURY
                         </span>
-                      </motion.h1>
+                      </m.h1>
                     ) : (
-                      <motion.h1 variants={itemVariants} className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                      <m.h1 variants={itemVariants} className="hero-text text-3xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                         <span
                           className="text-white"
                           style={{
@@ -127,11 +127,11 @@ export default function Home() {
                         >
                           UTSHO HEAVEN CHOWDHURY
                         </span>
-                      </motion.h1>
+                      </m.h1>
                     )}
 
                     {/* Role badge */}
-                    <motion.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
+                    <m.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
                       <div className={`inline-flex items-center gap-2 sm:gap-3 ${isMobile ? 'px-2 py-1.5' : 'px-4 sm:px-8 py-3 sm:py-5'} rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 ${isMobile ? 'mb-6 sm:mb-8' : 'mb-2'} backdrop-blur-sm ${isMobile ? 'min-w-[240px] min-h-[40px]' : 'min-w-[320px] min-h-[64px]'}`} style={!isMobile ? { marginLeft: '-5px' } : {}}>
                         <i className={`fas fa-rocket text-blue-400 animate-bounce ${isMobile ? 'text-[10px]' : 'text-sm sm:text-base'}`}></i>
                         <span>
@@ -141,11 +141,11 @@ export default function Home() {
                           />
                         </span>
                       </div>
-                    </motion.div>
+                    </m.div>
 
                     {/* Mobile Image */}
                     {isMobile && (
-                      <motion.div
+                      <m.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
@@ -166,17 +166,17 @@ export default function Home() {
                             boxShadow: '0 4px 20px rgba(0,0,0,0.5)'
                           }}
                         />
-                      </motion.div>
+                      </m.div>
                     )}
 
                     {/* Description */}
-                    <motion.div variants={itemVariants} className={`mt-4 text-xl text-gray-300 max-w-xl ${isMobile ? 'text-center mx-auto' : 'ml-auto'}`} style={{ marginLeft: isMobile ? undefined : '5px', fontFamily: 'var(--font-space-grotesk), monospace' }}>
+                    <m.div variants={itemVariants} className={`mt-4 text-xl text-gray-300 max-w-xl ${isMobile ? 'text-center mx-auto' : 'ml-auto'}`} style={{ marginLeft: isMobile ? undefined : '5px', fontFamily: 'var(--font-space-grotesk), monospace' }}>
                       Full-Stack Software Developer actively seeking opportunities to integrate Intelligent systems into Real-world solutions.
-                    </motion.div>
+                    </m.div>
 
                     {/* CTA Buttons */}
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-2 mt-4">
-                      <motion.a
+                    <m.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-2 mt-4">
+                      <m.a
                         href="https://drive.google.com/file/d/1UiITMC1UhNa9bMl_sRLiXJxsgS8TDPqE/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -191,9 +191,9 @@ export default function Home() {
                             <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                           </span>
                         </span>
-                      </motion.a>
+                      </m.a>
 
-                      <motion.a
+                      <m.a
                         href="https://calendly.com/utsho/30min"
                         target="_blank"
                         whileHover={{ scale: 1.05 }}
@@ -206,51 +206,51 @@ export default function Home() {
                           </span>
                           <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12 absolute right-3 top-1/2 -translate-y-1/2"></i>
                         </span>
-                      </motion.a>
-                    </motion.div>
+                      </m.a>
+                    </m.div>
 
                     {/* Social Icons */}
-                    <motion.div variants={itemVariants} className={`flex gap-4 mt-6 items-center ${isMobile ? 'justify-center flex-wrap' : ''}`}>
-                      <motion.button
+                    <m.div variants={itemVariants} className={`flex gap-4 mt-6 items-center ${isMobile ? 'justify-center flex-wrap' : ''}`}>
+                      <m.button
                         whileHover={{ scale: 1.1 }}
                         aria-label="GitHub"
                         className="rounded-lg contact-social-icon  transition-colors"
                         onClick={() => window.open('https://github.com/uzicodes', '_blank')}
                       >
                         <Image src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" unoptimized />
-                      </motion.button>
+                      </m.button>
 
-                      <motion.button
+                      <m.button
                         whileHover={{ scale: 1.1 }}
                         aria-label="LinkedIn"
                         className="rounded-lg contact-social-icon transition-colors"
                         onClick={() => window.open('https://www.linkedin.com/in/utsho-heaven-chowdhury/', '_blank')}
                       >
                         <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />
-                      </motion.button>
+                      </m.button>
 
-                      <motion.button
+                      <m.button
                         whileHover={{ scale: 1.1 }}
                         aria-label="Email"
                         className=" rounded-lg contact-social-icon transition-colors"
                         onClick={() => window.location.href = 'mailto:utshozi11@gmail.com'}
                       >
                         <Image src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="w-8 h-8" unoptimized />
-                      </motion.button>
+                      </m.button>
 
                       <div className="inline-flex items-center gap-2 px-2 sm:px-2 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50">
                         <span className="text-gray-300 text-[10px] sm:text-xs font-medium" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
                           utshozi11@gmail.com
                         </span>
                       </div>
-                    </motion.div>
+                    </m.div>
                   </div>
-                </motion.div>
+                </m.div>
 
                 {/* Glowing Card */}
                 {!isMobile && (
                   <div className="w-full lg:w-1/2 relative">
-                    <motion.div
+                    <m.div
                       initial={{ opacity: 0, scale: 0.8, x: "-50%", y: 0 }}
                       animate={{
                         opacity: 1,
@@ -294,7 +294,7 @@ export default function Home() {
                           }}
                         />
                       </div>
-                    </motion.div>
+                    </m.div>
                   </div>
                 )}
               </div>
@@ -310,7 +310,7 @@ export default function Home() {
 
           {/* ABOUT SECTION */}
           <section id="about" className="relative">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -319,7 +319,7 @@ export default function Home() {
             >
               <About />
               <div style={{ height: '2rem', width: '100%' }} />
-            </motion.div>
+            </m.div>
           </section>
 
           {/* SKILLS SECTION */}

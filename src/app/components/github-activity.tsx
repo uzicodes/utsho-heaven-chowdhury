@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const ActivityCalendar = dynamic(() => import("react-activity-calendar").then((mod) => mod.ActivityCalendar), { ssr: false });
 
@@ -166,7 +166,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
   if (error || data.length === 0) {
     return (
       <div className="w-full mt-12">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
@@ -199,14 +199,14 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
           <p className="text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
             Unable to load GitHub activity data.
           </p>
-        </motion.div>
+        </m.div>
       </div>
     );
   }
 
   return (
     <div className="w-full mt-12" ref={containerRef}>
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.2 }}
@@ -258,7 +258,6 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
           </div>
         </div>
 
-
         {/* Decorative Glow */}
         <div
           className="absolute -top-20 -right-20 w-56 h-56 rounded-full pointer-events-none"
@@ -274,7 +273,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
             filter: "blur(60px)",
           }}
         />
-      </motion.div>
+      </m.div>
     </div>
   );
 }

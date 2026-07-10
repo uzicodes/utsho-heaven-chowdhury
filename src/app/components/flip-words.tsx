@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface FlipWordsProps {
@@ -35,7 +35,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
         }, duration);
       }}
     >
-      <motion.div
+      <m.div
         style={{ color: '#0B74E3', fontFamily: 'var(--font-jetbrains-mono), monospace' }}
         initial={{
           opacity: 0,
@@ -66,7 +66,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
       >
         
         {currentWord.split(" ").map((word: string, wordIndex: number) => (
-          <motion.span
+          <m.span
             key={word + wordIndex}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -77,7 +77,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
             className="inline-block whitespace-nowrap"
           >
             {word.split("").map((letter: string, letterIndex: number) => (
-              <motion.span
+              <m.span
                 key={word + letterIndex}
                 initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -88,12 +88,12 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
                 className="inline-block"
               >
                 {letter}
-              </motion.span>
+              </m.span>
             ))}
             <span className="inline-block">&nbsp;</span>
-          </motion.span>
+          </m.span>
         ))}
-      </motion.div>
+      </m.div>
     </AnimatePresence>
   );
 };

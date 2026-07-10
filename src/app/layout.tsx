@@ -4,6 +4,7 @@ import "./globals.css";
 import { Cursor, CursorPointer } from "@/app/components/cursor";
 import { StarsBackground } from "@/app/components/stars";
 import { Preloader } from "@/app/components/Preloader";
+import { MotionProvider } from "@/app/components/MotionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -115,18 +116,20 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsMono.variable} ${ubuntu.variable} ${bricolageGrotesque.variable} ${spaceGrotesk.variable} antialiased bg-black min-h-screen relative`}
       >
         <Preloader />
-        <div className="fixed inset-0 z-0 pointer-events-none">
-          <StarsBackground
-            className="h-full w-full bg-transparent"
-            starColor="#ffffff"
-          />
-        </div>
-        <div className="relative z-50">
-          <Cursor />
-        </div>
-        <div className="relative z-10">
-          {children}
-        </div>
+        <MotionProvider>
+          <div className="fixed inset-0 z-0 pointer-events-none">
+            <StarsBackground
+              className="h-full w-full bg-transparent"
+              starColor="#ffffff"
+            />
+          </div>
+          <div className="relative z-50">
+            <Cursor />
+          </div>
+          <div className="relative z-10">
+            {children}
+          </div>
+        </MotionProvider>
       </body>
     </html>
   );

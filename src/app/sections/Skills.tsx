@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { Card, CardContent } from "@/app/components/card";
 import dynamic from "next/dynamic";
-import { motion, Variants } from "framer-motion";
+import { m, Variants } from "framer-motion";
 
 const IconCloudDemo = dynamic(() => import("@/app/components/globe"), { ssr: false });
 
@@ -60,7 +60,7 @@ const cardVariants: Variants = {    //Flip-effect
 
 //Single Card Component
 const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
-  <motion.div variants={cardVariants} className="h-full" style={{ transformStyle: 'preserve-3d' }}>
+  <m.div variants={cardVariants} className="h-full" style={{ transformStyle: 'preserve-3d' }}>
     <Card className="group h-full relative overflow-hidden bg-gray-900/80 border-gray-700 hover:border-blue-500/60 hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_2.5rem_-0.5rem_rgba(59,130,246,0.4)]">
       <CardContent className="p-3 md:p-6 relative z-10">
         <div className="flex items-center justify-center gap-4 mb-3 md:mb-6 w-full">
@@ -83,7 +83,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
         </div>
       </CardContent>
     </Card>
-  </motion.div>
+  </m.div>
 );
 
 const skillCategories: SkillCategory[] = [
@@ -165,7 +165,7 @@ const SkillsSection: React.FC = () => {
 
       <section className="container mx-auto px-4 py-11 relative z-10">
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
           whileInView={{
             opacity: 1,
@@ -183,9 +183,9 @@ const SkillsSection: React.FC = () => {
           className="flex justify-center items-center"
         >
           <IconCloudDemo />
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -201,7 +201,7 @@ const SkillsSection: React.FC = () => {
               color={category.color}
             />
           ))}
-        </motion.div>      {/* keyframe animation */}
+        </m.div>      {/* keyframe animation */}
       </section>
     </main>
   );

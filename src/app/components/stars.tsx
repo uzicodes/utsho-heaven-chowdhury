@@ -3,7 +3,7 @@
 import * as React from "react";
 import {
   type HTMLMotionProps,
-  motion,
+  m,
   type SpringOptions,
   type Transition,
   useMotionValue,
@@ -47,7 +47,7 @@ function StarLayer({
   }, [count, starColor]);
 
   return (
-    <motion.div
+    <m.div
       animate={{ y: [0, -2000] }}
       className={cn("absolute top-0 left-0 w-full h-[2000px]", className)}
       data-slot="star-layer"
@@ -70,7 +70,7 @@ function StarLayer({
           boxShadow: boxShadow,
         }}
       />
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -121,7 +121,7 @@ function StarsBackground({
       onMouseMove={handleMouseMove}
       {...props}
     >
-      <motion.div
+      <m.div
         className={cn({ "pointer-events-none": !pointerEvents })}
         style={{ x: springX, y: springY }}
       >
@@ -151,7 +151,7 @@ function StarsBackground({
             ease: "linear",
           }}
         />
-      </motion.div>
+      </m.div>
       {children}
     </div>
   );

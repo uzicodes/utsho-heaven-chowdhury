@@ -4,7 +4,7 @@ import * as React from "react";
 import dynamic from "next/dynamic";
 const Form = dynamic(() => import("../components/Form"), { ssr: false });
 import { MapPin, ArrowUp } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { m, Variants } from "framer-motion";
 import Image from "next/image";
 
 interface ContactItem {
@@ -13,8 +13,6 @@ interface ContactItem {
   link?: string;
   text: string;
 }
-
-
 
 // Scroll to Top
 const scrollToTop = () => {
@@ -33,13 +31,13 @@ const contactItems: ContactItem[] = [
   },
   {
     icon: <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />,
-    label: "Linkedin",
+    label: "LinkedIn",
     link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
     text: "Connect",
   },
   {
     icon: <Image src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" unoptimized />,
-    label: "Github",
+    label: "GitHub",
     link: "https://github.com/uzicodes",
     text: "uzicodes",
   },
@@ -102,7 +100,7 @@ export default function Contact() {
             <div className="container mx-auto">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
 
-                <motion.div
+                <m.div
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.1 }}
@@ -151,9 +149,9 @@ export default function Contact() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
 
-                <motion.div   // Contact Form 
+                <m.div   // Contact Form 
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.1 }}
@@ -161,7 +159,7 @@ export default function Contact() {
                   className="flex justify-center items-center w-full lg:justify-center"
                 >
                   <Form />
-                </motion.div>
+                </m.div>
               </div>
             </div>
           </section>
@@ -172,7 +170,7 @@ export default function Contact() {
           className="absolute bottom-10 right-10 p-4 bg-transparent border border-white rounded-full text-white hover:scale-110 transition-all duration-300 z-50"
           aria-label="Scroll to top"
         >
-          <motion.div
+          <m.div
             animate={{ y: [0, -5, 0] }}
             transition={{
               duration: 0.5,
@@ -182,7 +180,7 @@ export default function Contact() {
             }}
           >
             <ArrowUp className="w-6 h-6" />
-          </motion.div>
+          </m.div>
         </button>
       </div>
     </div>
