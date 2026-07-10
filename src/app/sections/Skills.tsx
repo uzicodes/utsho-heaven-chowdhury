@@ -61,10 +61,10 @@ const cardVariants: Variants = {    //Flip-effect
 //Single Card Component
 const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
   <m.div variants={cardVariants} className="h-full" style={{ transformStyle: 'preserve-3d' }}>
-    <Card className="group h-full relative overflow-hidden bg-gray-900/80 border-gray-700 hover:border-blue-500/60 hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_2.5rem_-0.5rem_rgba(59,130,246,0.4)]">
+    <Card className="group h-full relative overflow-hidden bg-gray-900/80 border-gray-700 hover:border-green-500/60 hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_2.5rem_-0.5rem_rgba(34,197,94,0.4)]">
       <CardContent className="p-3 md:p-6 relative z-10">
         <div className="flex items-center justify-center gap-4 mb-3 md:mb-6 w-full">
-          <h3 className="text-lg md:text-2xl font-extrabold tracking-tight text-center" style={{ color: '#A8325A', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+          <h3 className="text-lg md:text-2xl font-extrabold tracking-tight text-center" style={{ color: '#A8325A', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
             {title}
           </h3>
         </div>

@@ -14,7 +14,7 @@ export const Preloader = () => {
         let isMounted = true;
 
         const minTimePromise = new Promise<void>(resolve => setTimeout(resolve, 3000));
-        
+
         const loadPromise = new Promise<void>(resolve => {
             if (document.readyState === 'complete') {
                 resolve();
@@ -40,14 +40,14 @@ export const Preloader = () => {
     }, []);
 
 
-    
+
     const [shouldRender, setShouldRender] = useState(true);
-    
+
     useEffect(() => {
         if (!isLoading) {
             const timeout = setTimeout(() => {
                 setShouldRender(false);
-            }, 800); 
+            }, 800);
             return () => clearTimeout(timeout);
         }
     }, [isLoading]);
@@ -57,13 +57,13 @@ export const Preloader = () => {
     return (
         <div className={`preloader-overlay ${!isLoading ? 'hidden' : ''}`}>
             <LetterGlitch
-              glitchSpeed={50}
-              centerVignette={false}
-              outerVignette={false}
-              smooth={true}
+                glitchSpeed={50}
+                centerVignette={false}
+                outerVignette={false}
+                smooth={true}
             />
             {mounted && (
-                <motion.div 
+                <motion.div
                     style={{
                         willChange: "transform, opacity",
                         transformOrigin: "center center",
@@ -78,29 +78,29 @@ export const Preloader = () => {
                     }
                     transition={
                         isZooming
-                            ? { 
-                                duration: 1.25, 
+                            ? {
+                                duration: 1.25,
                                 ease: [0.76, 0, 0.24, 1],
                                 opacity: { duration: 1.25, times: [0, 0.5, 1], ease: "easeInOut" }
-                              }
+                            }
                             : { duration: 0.8 }
                     }
                     className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none px-4"
                 >
                     <span
-                      style={{
-                        fontFamily: 'var(--font-space-grotesk), sans-serif',
-                        fontSize: 'clamp(2.75rem, 9vw, 92px)',
-                        fontWeight: 900,
-                        textAlign: 'center',
-                        lineHeight: '1.2',
-                        letterSpacing: '-0.02em',
-                        color: '#810248',
-                        WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.95)',
-                        paintOrder: 'stroke fill' as any,
-                      }}
+                        style={{
+                            fontFamily: 'var(--font-space-grotesk), sans-serif',
+                            fontSize: 'clamp(2.75rem, 9vw, 92px)',
+                            fontWeight: 900,
+                            textAlign: 'center',
+                            lineHeight: '1.2',
+                            letterSpacing: '-0.02em',
+                            color: '#BF2808',
+                            WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.95)',
+                            paintOrder: 'stroke fill' as any,
+                        }}
                     >
-                      UTSHO HEAVEN CHOWDHURY
+                        UTSHO HEAVEN CHOWDHURY
                     </span>
                 </motion.div>
             )}

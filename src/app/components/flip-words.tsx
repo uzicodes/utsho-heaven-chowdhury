@@ -42,7 +42,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
       }}
     >
       <m.div
-        style={{ color: '#0B74E3', fontFamily: 'var(--font-jetbrains-mono), monospace' }}
+        style={{ color: '#0B74E3', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
         initial={{
           opacity: 0,
           y: 10,
@@ -80,7 +80,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
               delay: wordIndex * 0.3,
               duration: 0.3,
             }}
-            className="inline-block whitespace-nowrap"
+            className="inline-block whitespace-nowrap mr-2"
           >
             {word.split("").map((letter: string, letterIndex: number) => (
               <m.span
@@ -96,7 +96,6 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
                 {letter}
               </m.span>
             ))}
-            <span className="inline-block">&nbsp;</span>
           </m.span>
         ))}
       </m.div>

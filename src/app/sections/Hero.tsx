@@ -43,7 +43,7 @@ export default function Hero() {
               <m.div variants={itemVariants} className={`flex ${isMobile ? 'justify-center' : ''}`}>
                 <div className={`inline-flex items-center ${isMobile ? 'gap-1 px-1.5 py-0.5' : 'gap-1.5 px-2 py-1'} rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-2`}>
                   <div className={`${isMobile ? 'w-1.5 h-1.5' : 'w-1.5 h-1.5'} rounded-full bg-green-400 animate-pulse`}></div>
-                  <span className={`text-gray-300 font-medium ${isMobile ? 'text-[8px]' : 'text-[11px]'}`} style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                  <span className={`text-gray-300 font-medium ${isMobile ? 'text-[8px]' : 'text-[11px]'}`} style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                     AVAILABLE TO WORK
                   </span>
                 </div>
@@ -157,12 +157,12 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-800 to-green-700 p-0.5 rounded-none transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                  className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-800 to-green-700 p-0.5 rounded-none transition-all duration-300"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
-                    <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
+                    <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium">
                       <Image src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-2 align-middle" />
-                      <span style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>CV</span>
+                      <span style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>CV</span>
                       <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                     </span>
                   </span>
@@ -173,11 +173,11 @@ export default function Hero() {
                   target="_blank"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-none bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA] sm:ml-2 ml-0"
+                  className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-none bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 sm:ml-2 ml-0"
                 >
                   <span className="block w-full px-6 sm:px-2 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700 relative">
-                    <span className="flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white min-w-[120px]">
-                      <span style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>CONSULTATIONS</span>
+                    <span className="flex items-center justify-center gap-2 text-gray-300 font-medium min-w-[120px]">
+                      <span style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>CONSULTATIONS</span>
                     </span>
                     <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12 absolute right-3 top-1/2 -translate-y-1/2"></i>
                   </span>
@@ -214,7 +214,7 @@ export default function Hero() {
                 </m.button>
 
                 <div className="inline-flex items-center gap-2 px-2 sm:px-2 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50">
-                  <span className="text-gray-300 text-[10px] sm:text-xs font-medium" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                  <span className="text-gray-300 text-[10px] sm:text-xs font-medium" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                     utshozi11@gmail.com
                   </span>
                 </div>

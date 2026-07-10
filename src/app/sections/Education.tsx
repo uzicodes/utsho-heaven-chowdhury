@@ -259,7 +259,7 @@ const EducationSection: React.FC = () => {
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                             PROFESSIONAL CERTIFICATIONS
                         </h2>
-                        <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                        <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                             Self-development through Industry Recognized Certifications
                         </p>
                     </div>
@@ -318,7 +318,7 @@ const EducationSection: React.FC = () => {
                                                         className="w-5 h-5 object-contain"
                                                     />
                                                 )}
-                                                <p className="text-sm font-semibold" style={{ color: '#0ca81f', fontSize: '0.95rem', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
+                                                <p className="text-sm font-semibold" style={{ color: '#0ca81f', fontSize: '0.95rem', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                                                     {cert.issuer}
                                                 </p>
                                             </div>
