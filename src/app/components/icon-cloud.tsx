@@ -141,8 +141,10 @@ interface IconCloudProps {
   imageArray?: string[];
 }
 
+const EMPTY_SLUGS: string[] = [];
+
 export default function IconCloud({
-  iconSlugs = [],
+  iconSlugs = EMPTY_SLUGS,
 }: IconCloudProps): ReactElement | null {
   const [data, setData] = useState<{ simpleIcons: Record<string, SimpleIcon> } | null>(null);
 
@@ -167,30 +169,23 @@ export default function IconCloud({
       }
 
       const loadedIcons: Record<string, SimpleIcon> = {};
-      const batchSize = 5; // 5 concurrent requests to prevent browser/CDN connection drops
 
-      for (let i = 0; i < iconSlugs.length; i += batchSize) {
-        if (!isMounted) break;
-        const batch = iconSlugs.slice(i, i + batchSize);
-        await Promise.all(
-          batch.map(async (slug) => {
-            const result = await fetchIconWithRetry(slug);
-            if (result) {
-              loadedIcons[slug] = {
-                title: result.title,
-                slug,
-                hex: iconColors[slug] || "#ffffff",
-                path: result.path,
-              };
-            }
-          })
-        );
-        // Update state progressively as each batch finishes so icons appear immediately
-        if (isMounted && Object.keys(loadedIcons).length > 0) {
-          setData({ simpleIcons: { ...loadedIcons } });
+      const promises = iconSlugs.map(async (slug) => {
+        const result = await fetchIconWithRetry(slug);
+        if (result) {
+          loadedIcons[slug] = {
+            title: result.title,
+            slug,
+            hex: iconColors[slug] || "#ffffff",
+            path: result.path,
+          };
         }
-        // Tiny pause between batches to prevent CDN rate limiting
-        await new Promise((r) => setTimeout(r, 80));
+      });
+
+      await Promise.all(promises);
+
+      if (isMounted && Object.keys(loadedIcons).length > 0) {
+        setData({ simpleIcons: { ...loadedIcons } });
       }
 
       // Save to localStorage
