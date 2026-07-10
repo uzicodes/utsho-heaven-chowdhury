@@ -72,37 +72,37 @@ export const metadata: Metadata = {
   },
 };
 
+// STRUCTURED DATA (JSON-LD) FOR GOOGLE SCHEMATICS
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Utsho Heaven Chowdhury",
+  "url": "https://www.utshochowdhury.me",
+  "jobTitle": "Full-Stack Software Engineer",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dhaka",
+    "addressCountry": "Bangladesh"
+  },
+  "sameAs": [
+    "https://github.com/uzicodes",
+    "https://www.linkedin.com/in/utsho-heaven-chowdhury"
+  ],
+  "knowsAbout": [
+    "Software Engineering",
+    "Full-Stack Development",
+    "Next.js",
+    "React",
+    "Node.js",
+    "AI Integration"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // STRUCTURED DATA (JSON-LD) FOR GOOGLE SCHEMATICS
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Utsho Heaven Chowdhury",
-    "url": "https://www.utshochowdhury.me",
-    "jobTitle": "Full-Stack Software Engineer",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Dhaka",
-      "addressCountry": "Bangladesh"
-    },
-    "sameAs": [
-      "https://github.com/uzicodes",
-      "https://www.linkedin.com/in/utsho-heaven-chowdhury"
-    ],
-    "knowsAbout": [
-      "Software Engineering",
-      "Full-Stack Development",
-      "Next.js",
-      "React",
-      "Node.js",
-      "AI Integration"
-    ]
-  };
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head>

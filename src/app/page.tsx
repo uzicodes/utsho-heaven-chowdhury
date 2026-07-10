@@ -15,13 +15,23 @@ import Projects from './sections/Projects';
 import Education from './sections/Education';
 import Contact from './sections/Contacts';
 
-export default function Home() {
-  const words = [
-    "Full-Stack Software Dev | System Design",
-    "React | TypeScript | Node.js | PostgreSQL ",
-    "Let's Build Something Amazing Together !",
-  ];
+const words = [
+  "Full-Stack Software Dev | System Design",
+  "React | TypeScript | Node.js | PostgreSQL ",
+  "Let's Build Something Amazing Together !",
+];
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50, damping: 20 } },
+};
+
+export default function Home() {
   const isMobile = useIsMobile(640);
 
   // FORCE SCROLL TO TOP ON RELOAD
@@ -31,17 +41,6 @@ export default function Home() {
     }
     window.scrollTo(0, 0);
   }, []);
-
-  // Animation Variants
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50, damping: 20 } },
-  };
 
   return (
     <>

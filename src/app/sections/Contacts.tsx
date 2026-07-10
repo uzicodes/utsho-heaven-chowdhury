@@ -24,73 +24,74 @@ const scrollToTop = () => {
   });
 };
 
+const contactItems: ContactItem[] = [
+  {
+    icon: <Image src="https://skillicons.dev/icons?i=gmail" alt="Email" width={32} height={32} className="w-8 h-8" unoptimized />,
+    label: "Email",
+    link: "mailto:utshozi11@gmail.com",
+    text: "utshozi11@gmail.com",
+  },
+  {
+    icon: <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />,
+    label: "Linkedin",
+    link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
+    text: "Connect",
+  },
+  {
+    icon: <Image src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" unoptimized />,
+    label: "Github",
+    link: "https://github.com/uzicodes",
+    text: "uzicodes",
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-blue-600">
+        <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z" />
+      </svg>
+    ),
+    label: "Facebook",
+    link: "https://www.facebook.com/utsh0z",
+    text: "Add Friend",
+  },
+  {
+    icon: <Image src="https://skillicons.dev/icons?i=instagram" alt="Instagram" width={32} height={32} className="w-8 h-8" unoptimized />,
+    label: "Instagram",
+    link: "https://instagram.com/utsh0_",
+    text: "Follow Me",
+  },
+  {
+    icon: <Image src="/icons/X-logo.svg" alt="X" width={32} height={32} className="w-8 h-8" unoptimized />,
+    label: "X",
+    link: "https://x.com/utsh0w",
+    text: "Tweet",
+  },
+  {
+    icon: <MapPin className="w-8 h-8 text-red-500" />,
+    label: "Location",
+    text: "Dhaka, Bangladesh",
+  },
+];
+
+const leftVariant: Variants = {
+  hidden: { x: -100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
+};
+
+const rightVariant: Variants = {
+  hidden: { x: 100, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
+};
+
 // Social Contact
 export default function Contact() {
-  const contactItems: ContactItem[] = [
-    {
-      icon: <Image src="https://skillicons.dev/icons?i=gmail" alt="Email" width={32} height={32} className="w-8 h-8" unoptimized />,
-      label: "Email",
-      link: "mailto:utshozi11@gmail.com",
-      text: "utshozi11@gmail.com",
-    },
-    {
-      icon: <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />,
-      label: "Linkedin",
-      link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
-      text: "Connect",
-    },
-    {
-      icon: <Image src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" unoptimized />,
-      label: "Github",
-      link: "https://github.com/uzicodes",
-      text: "uzicodes",
-    },
-    {
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-blue-600">
-          <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.326v21.348C0 23.4.6 24 1.326 24H12.82v-9.294H9.692V11.01h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.696h-3.12V24h6.116C23.4 24 24 23.4 24 22.674V1.326C24 .6 23.4 0 22.675 0z" />
-        </svg>
-      ),
-      label: "Facebook",
-      link: "https://www.facebook.com/utsh0z",
-      text: "Add Friend",
-    },
-    {
-      icon: <Image src="https://skillicons.dev/icons?i=instagram" alt="Instagram" width={32} height={32} className="w-8 h-8" unoptimized />,
-      label: "Instagram",
-      link: "https://instagram.com/utsh0_",
-      text: "Follow Me",
-    },
-    {
-      icon: <Image src="/icons/X-logo.svg" alt="X" width={32} height={32} className="w-8 h-8" unoptimized />,
-      label: "X",
-      link: "https://x.com/utsh0w",
-      text: "Tweet",
-    },
-    {
-      icon: <MapPin className="w-8 h-8 text-red-500" />,
-      label: "Location",
-      text: "Dhaka, Bangladesh",
-    },
-  ];
-
-  const leftVariant: Variants = {
-    hidden: { x: -100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" }
-    }
-  };
-
-  const rightVariant: Variants = {
-    hidden: { x: 100, opacity: 0 },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" }
-    }
-  };
 
 
   return (

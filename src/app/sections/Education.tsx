@@ -9,188 +9,186 @@ import {
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
+const educationData = [
+    {
+        degree: "Higher Secondary Certificate (HSC)",
+        school: "CANTONEMENT PUBLIC COLLEGE, SAIDPUR",
+        year: "2018 - 2020",
+        logo: "/cpscs.png",
+        className: "h-21 w-21",
+        style: { maxWidth: '85px', maxHeight: '85px' }
+    },
+    {
+        degree: "Bachelor's in Computer Science (CS)",
+        school: "BRAC UNIVERSITY - DHAKA",
+        year: "2022 - 2026",
+        logo: "/bracu.png",
+        className: "h-24 w-24",
+        style: { maxWidth: '96px', maxHeight: '96px' }
+    },
+];
+
+const certificationData = [
+    {
+        title: "Software Engineering",
+        issuer: "HACKERRANK",
+        issuerLogo: "/icons/hacker.svg",
+        date: "March 2026",
+        skills: ["Clean Code", "API", "SDLC"],
+        certImage: "/certifications/5.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1KO2fQrT4YBGHRwztapDMARmyiQEwvPbv/view?usp=drive_link",
+    },
+    {
+        title: "Agile Project Management Professional",
+        issuer: "ATLASSIAN",
+        issuerLogo: "/icons/atlassian.svg",
+        date: "December 2025",
+        skills: ["Agile", "Kanban", "Scrum"],
+        certImage: "/certifications/15.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1D_e54kJLyycpnQEVHbnrcAL7Fei2tdWR/view?usp=sharing",
+    },
+    {
+        title: "DevOps Professional Certificate",
+        issuer: "PAGERDUTY",
+        issuerLogo: "/icons/pagerduty.svg",
+        date: "December 2025",
+        skills: ["CI / CD", "DevOps", "IaC"],
+        certImage: "/certifications/11.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
+    },
+    {
+        title: "Software Product Management",
+        issuer: "UNIVERSITY OF ALBERTA",
+        issuerLogo: "/icons/alberta.svg",
+        date: "March 2026",
+        skills: ["Agile", "Client ", "Product Lifecycle"],
+        certImage: "/certifications/2.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1wRRbrow160c8ZBntPQWMCLAgaFGKOt09/view?usp=sharing",
+    },
+    {
+        title: "Software Testing Professional",
+        issuer: "LAMBDATEST",
+        issuerLogo: "/icons/lamdatest.svg",
+        date: "December 2025",
+        skills: ["SQA", "Agile Testing", "SDLC"],
+        certImage: "/certifications/12.webp",
+        fullViewUrl: "https://drive.google.com/file/d/11Pu-_Oko9oUFc-NZfrH6LP-xjxCWM_am/view?usp=sharing",
+    },
+    {
+        title: "Docker Foundations Professional",
+        issuer: "DOCKER",
+        issuerLogo: "/icons/cloud/docker.svg",
+        date: "November 2025",
+        skills: ["Containerization", "Image", "Docker Compose"],
+        certImage: "/certifications/10.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1yBXVNV6GtR0qoVYNESu5xLgHa0AIhbDu/view?usp=sharing",
+    },
+    {
+        title: "Introduction Software Engineering",
+        issuer: "IBM",
+        issuerLogo: "/icons/ibm.svg",
+        date: "October 2025",
+        skills: ["SDLC", "JQuery", "Design Patterns"],
+        certImage: "/certifications/8.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1T05lfqIkMfn1nzfz_4oV5uvoS76LBm9q/view?usp=sharing",
+    },
+    {
+        title: "Foundations Coding Full-Stack",
+        issuer: "MICROSOFT",
+        issuerLogo: "/icons/microsoft.svg",
+        date: "October 2025",
+        skills: ["CI / CD", "Graph Theory", "OOP"],
+        certImage: "/certifications/7.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1Q3x_w_Iwlb0cohXrWVn4tm64VYKczhcn/view?usp=sharing",
+    },
+    {
+        title: "AI Engineer For Developers Associate",
+        issuer: "DATACAMP",
+        issuerLogo: "/icons/datacamp.svg",
+        date: "August 2025",
+        skills: ["LLMs", "MLOPs", "LangChain"],
+        certImage: "/certifications/1.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1VjhvU30KzGRGuVRpZOBk7v78eyTww7mP/view?usp=sharing",
+    },
+    {
+        title: "Career Essentials in GitHub Professional",
+        issuer: "GITHUB",
+        issuerLogo: "/icons/cloud/github.svg",
+        date: "December 2025",
+        skills: ["Version Control", "Git Actions", "Code Review"],
+        certImage: "/certifications/14.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1_v0_WsCgyhb-IArcvEaeMgbHAF_VrIjD/view?usp=sharing",
+    },
+    {
+        title: "Machine Learning with Python",
+        issuer: "ANACONDA",
+        issuerLogo: "/icons/anaconda.svg",
+        date: "December 2025",
+        skills: ["Data Prep", "Regression", "Pandas"],
+        certImage: "/certifications/13.webp",
+        fullViewUrl: "https://drive.google.com/file/d/15EH6757BzDBdAjuKT_5_RCaLBjcFG9-U/view?usp=sharing",
+    },
+    {
+        title: "Neural Networks & Deep Learning",
+        issuer: "DEEPLEARNING",
+        issuerLogo: "/icons/deeplearning.svg",
+        date: "October 2025",
+        skills: ["Vectorization", "Shallow NN", "Deep NN"],
+        certImage: "/certifications/9.webp",
+        fullViewUrl: "https://drive.google.com/file/d/1Rg5o2O7opV2ZF9K1-gyLWC9ZVAZE02Pl/view?usp=sharing",
+    },
+];
+
+// Container Animation:
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.05,
+        },
+    },
+};
+
+const cardVariants: Variants = {   //certs slide-in effect
+    hidden: (index: number) => ({
+        opacity: 0,
+        x: index % 2 === 0 ? -100 : 100,
+        y: 0,
+    }),
+    visible: {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        transition: {
+            type: "spring",
+            stiffness: 50,
+            damping: 20
+        },
+    },
+};
+
+const educationCardVariants: Variants = {    // 3D "flip up" effect for Edu Cards
+    hidden: {
+        opacity: 0,
+        scale: 0.5,
+        rotateX: -90
+    },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        rotateX: 0,
+        transition: {
+            type: "spring",
+            stiffness: 1600,
+            damping: 18,
+            mass: 0.18
+        }
+    }
+};
+
 const EducationSection: React.FC = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-    const educationData = [
-        {
-            degree: "Higher Secondary Certificate (HSC)",
-            school: "CANTONEMENT PUBLIC COLLEGE, SAIDPUR",
-            year: "2018 - 2020",
-            logo: "/cpscs.png",
-            className: "h-21 w-21",
-            style: { maxWidth: '85px', maxHeight: '85px' }
-        },
-        {
-            degree: "Bachelor's in Computer Science (CS)",
-            school: "BRAC UNIVERSITY - DHAKA",
-            year: "2022 - 2026",
-            logo: "/bracu.png",
-            className: "h-24 w-24",
-            style: { maxWidth: '96px', maxHeight: '96px' }
-        },
-    ];
-
-    const certificationData = [
-        {
-            title: "Software Engineering",
-            issuer: "HACKERRANK",
-            issuerLogo: "/icons/hacker.svg",
-            date: "March 2026",
-            skills: ["Clean Code", "API", "SDLC"],
-            certImage: "/certifications/5.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1KO2fQrT4YBGHRwztapDMARmyiQEwvPbv/view?usp=drive_link",
-        },
-        {
-            title: "Agile Project Management Professional",
-            issuer: "ATLASSIAN",
-            issuerLogo: "/icons/atlassian.svg",
-            date: "December 2025",
-            skills: ["Agile", "Kanban", "Scrum"],
-            certImage: "/certifications/15.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1D_e54kJLyycpnQEVHbnrcAL7Fei2tdWR/view?usp=sharing",
-        },
-        {
-            title: "DevOps Professional Certificate",
-            issuer: "PAGERDUTY",
-            issuerLogo: "/icons/pagerduty.svg",
-            date: "December 2025",
-            skills: ["CI / CD", "DevOps", "IaC"],
-            certImage: "/certifications/11.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1fzXhMO1K_Cby79JkSioa2vlAfvGMa1Ez/view?usp=sharing",
-        },
-        {
-            title: "Software Product Management",
-            issuer: "UNIVERSITY OF ALBERTA",
-            issuerLogo: "/icons/alberta.svg",
-            date: "March 2026",
-            skills: ["Agile", "Client ", "Product Lifecycle"],
-            certImage: "/certifications/2.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1wRRbrow160c8ZBntPQWMCLAgaFGKOt09/view?usp=sharing",
-        },
-        {
-            title: "Software Testing Professional",
-            issuer: "LAMBDATEST",
-            issuerLogo: "/icons/lamdatest.svg",
-            date: "December 2025",
-            skills: ["SQA", "Agile Testing", "SDLC"],
-            certImage: "/certifications/12.webp",
-            fullViewUrl: "https://drive.google.com/file/d/11Pu-_Oko9oUFc-NZfrH6LP-xjxCWM_am/view?usp=sharing",
-        },
-        {
-            title: "Docker Foundations Professional",
-            issuer: "DOCKER",
-            issuerLogo: "/icons/cloud/docker.svg",
-            date: "November 2025",
-            skills: ["Containerization", "Image", "Docker Compose"],
-            certImage: "/certifications/10.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1yBXVNV6GtR0qoVYNESu5xLgHa0AIhbDu/view?usp=sharing",
-        },
-        {
-            title: "Introduction Software Engineering",
-            issuer: "IBM",
-            issuerLogo: "/icons/ibm.svg",
-            date: "October 2025",
-            skills: ["SDLC", "JQuery", "Design Patterns"],
-            certImage: "/certifications/8.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1T05lfqIkMfn1nzfz_4oV5uvoS76LBm9q/view?usp=sharing",
-        },
-        {
-            title: "Foundations Coding Full-Stack",
-            issuer: "MICROSOFT",
-            issuerLogo: "/icons/microsoft.svg",
-            date: "October 2025",
-            skills: ["CI / CD", "Graph Theory", "OOP"],
-            certImage: "/certifications/7.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1Q3x_w_Iwlb0cohXrWVn4tm64VYKczhcn/view?usp=sharing",
-        },
-        {
-            title: "AI Engineer For Developers Associate",
-            issuer: "DATACAMP",
-            issuerLogo: "/icons/datacamp.svg",
-            date: "August 2025",
-            skills: ["LLMs", "MLOPs", "LangChain"],
-            certImage: "/certifications/1.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1VjhvU30KzGRGuVRpZOBk7v78eyTww7mP/view?usp=sharing",
-        },
-        {
-            title: "Career Essentials in GitHub Professional",
-            issuer: "GITHUB",
-            issuerLogo: "/icons/cloud/github.svg",
-            date: "December 2025",
-            skills: ["Version Control", "Git Actions", "Code Review"],
-            certImage: "/certifications/14.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1_v0_WsCgyhb-IArcvEaeMgbHAF_VrIjD/view?usp=sharing",
-        },
-        {
-            title: "Machine Learning with Python",
-            issuer: "ANACONDA",
-            issuerLogo: "/icons/anaconda.svg",
-            date: "December 2025",
-            skills: ["Data Prep", "Regression", "Pandas"],
-            certImage: "/certifications/13.webp",
-            fullViewUrl: "https://drive.google.com/file/d/15EH6757BzDBdAjuKT_5_RCaLBjcFG9-U/view?usp=sharing",
-        },
-        {
-            title: "Neural Networks & Deep Learning",
-            issuer: "DEEPLEARNING",
-            issuerLogo: "/icons/deeplearning.svg",
-            date: "October 2025",
-            skills: ["Vectorization", "Shallow NN", "Deep NN"],
-            certImage: "/certifications/9.webp",
-            fullViewUrl: "https://drive.google.com/file/d/1Rg5o2O7opV2ZF9K1-gyLWC9ZVAZE02Pl/view?usp=sharing",
-        },
-    ];
-
-
-
-    // Container Animation:
-    const containerVariants: Variants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.05,
-            },
-        },
-    };
-
-    const cardVariants: Variants = {   //certs slide-in effect
-        hidden: (index: number) => ({
-            opacity: 0,
-            x: index % 2 === 0 ? -100 : 100,
-            y: 0,
-        }),
-        visible: {
-            opacity: 1,
-            x: 0,
-            y: 0,
-            transition: {
-                type: "spring",
-                stiffness: 50,
-                damping: 20
-            },
-        },
-    };
-
-    const educationCardVariants: Variants = {    // 3D "flip up" effect for Edu Cards
-        hidden: {
-            opacity: 0,
-            scale: 0.5,
-            rotateX: -90
-        },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            rotateX: 0,
-            transition: {
-                type: "spring",
-                stiffness: 1600,
-                damping: 18,
-                mass: 0.18
-            }
-        }
-    };
 
     return (
         <section className="min-h-screen relative overflow-hidden overflow-x-clip py-20 bg-transparent">

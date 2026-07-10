@@ -8,55 +8,54 @@ import { GithubActivity } from "@/app/components/github-activity";
 
 
 
+// Image Animation
+const imageRevealVariant: Variants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.95,
+    filter: "blur(10px)" // starts blurry
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    filter: "blur(0px)", // becomes clear
+    transition: {
+      duration: 1,
+      ease: "easeOut"
+    }
+  }
+};
+
+// Text Container
+const textContainerVariant: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.4 }
+  }
+};
+
+// Text Item
+const textItemVariant: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
+
+// Border Animation
+const borderVariant: Variants = {
+  hidden: { height: 0, opacity: 0 },
+  visible: {
+    height: "100%",
+    opacity: 1,
+    transition: { duration: 0.8, ease: "easeOut", delay: 0.6 }
+  }
+};
+
 export default function About(): React.ReactElement {
-
-  // Image Animation
-  const imageRevealVariant: Variants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.95,
-      filter: "blur(10px)" // starts blurry
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      filter: "blur(0px)", // becomes clear
-      transition: {
-        duration: 1,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  // Text Container
-  const textContainerVariant: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.4 }
-    }
-  };
-
-  // Text Item
-  const textItemVariant: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
-
-  // Border Animation
-  const borderVariant: Variants = {
-    hidden: { height: 0, opacity: 0 },
-    visible: {
-      height: "100%",
-      opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.6 }
-    }
-  };
-
   return (
     <>
       <section id="about" className="text-white overflow-x-clip" style={{ background: 'transparent', marginBottom: '2rem' }}>

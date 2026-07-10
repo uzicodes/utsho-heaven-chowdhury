@@ -27,6 +27,40 @@ const interpolateColor = (start: any, end: any, factor: number) => {
   return `rgb(${result.r}, ${result.g}, ${result.b})`;
 };
 
+const containerStyle: React.CSSProperties = {
+  position: 'relative',
+  width: '100%',
+  height: '100%',
+  backgroundColor: '#000000',
+  overflow: 'hidden'
+};
+
+const canvasStyle: React.CSSProperties = {
+  display: 'block',
+  width: '100%',
+  height: '100%'
+};
+
+const outerVignetteStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  pointerEvents: 'none',
+  background: 'radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%)'
+};
+
+const centerVignetteStyle: React.CSSProperties = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  pointerEvents: 'none',
+  background: 'radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%)'
+};
+
 const LetterGlitch = ({
   glitchColors = ['#2b4539', '#61dca3', '#61b3dc'],
   className = '',
@@ -206,40 +240,6 @@ const LetterGlitch = ({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [glitchSpeed, smooth]);
-
-  const containerStyle: React.CSSProperties = {
-    position: 'relative',
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#000000',
-    overflow: 'hidden'
-  };
-
-  const canvasStyle: React.CSSProperties = {
-    display: 'block',
-    width: '100%',
-    height: '100%'
-  };
-
-  const outerVignetteStyle: React.CSSProperties = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    pointerEvents: 'none',
-    background: 'radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%)'
-  };
-
-  const centerVignetteStyle: React.CSSProperties = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    pointerEvents: 'none',
-    background: 'radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%)'
-  };
 
   return (
     <div style={containerStyle} className={className}>
