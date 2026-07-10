@@ -58,7 +58,7 @@ export const Preloader = () => {
         <div className={`preloader-overlay ${!isLoading ? 'hidden' : ''}`}>
             <LetterGlitch
               glitchSpeed={50}
-              centerVignette={true}
+              centerVignette={false}
               outerVignette={false}
               smooth={true}
             />
