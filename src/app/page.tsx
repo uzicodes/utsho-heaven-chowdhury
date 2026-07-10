@@ -52,7 +52,7 @@ export default function Home() {
         <main className="min-h-screen relative z-10 pt-32">
 
           {/* HERO SECTION */}
-          <section id="home">
+          <section id="home" className="relative">
             <div className="container mx-auto px-6 lg:px-8">
               <div className="flex min-h-[65vh] items-center">
 
@@ -157,8 +157,10 @@ export default function Home() {
                           alt="Profile"
                           width={200}
                           height={200}
+                          priority
                           style={{
                             maxWidth: '80vw',
+                            width: 'auto',
                             height: 'auto',
                             borderRadius: '1rem',
                             objectFit: 'cover',
@@ -301,14 +303,14 @@ export default function Home() {
           </section>
 
           {/* BOOKSHELF SECTION */}
-          <section id="bookshelf">
+          <section id="bookshelf" className="relative">
             <div className="container mx-auto px-6 lg:px-8 mt-20">
               <BookshelfSection />
             </div>
           </section>
 
           {/* ABOUT SECTION */}
-          <section id="about">
+          <section id="about" className="relative">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -322,22 +324,22 @@ export default function Home() {
           </section>
 
           {/* SKILLS SECTION */}
-          <section id="skills">
+          <section id="skills" className="relative">
             <SkillsPage />
           </section>
 
           {/* PROJECTS SECTION */}
-          <section id="projects">
+          <section id="projects" className="relative">
             <Projects />
           </section>
 
           {/* EDUCATION SECTION */}
-          <section id="education">
+          <section id="education" className="relative">
             <Education />
           </section>
 
           {/* CONTACTS SECTION */}
-          <section id="contacts">
+          <section id="contacts" className="relative">
             <Contact />
           </section>
 
