@@ -40,9 +40,16 @@ function StarLayer({
   className,
   ...props
 }: StarLayerProps) {
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const boxShadow = React.useMemo(() => {
+    if (!isMounted) return "";
     return generateStars(count, starColor);
-  }, [count, starColor]);
+  }, [isMounted, count, starColor]);
 
   return (
     <m.div
