@@ -256,20 +256,21 @@ function Card({
                 };
                 const elements: React.ReactNode[] = [];
                 let batch: string[] = [];
-                const flushBatch = (key: string) => {
+                const flushBatch = (batchKey: string) => {
                   if (batch.length > 0) {
+                    const joinedSkills = batch.join(',');
                     elements.push(
-                      <Image key={key} src={`https://skillicons.dev/icons?i=${batch.join(',')}`} alt="Tech Stack" width={200} height={32} className="h-6 md:h-8 w-auto" unoptimized />
+                      <Image key={`skillicons-${batchKey}-${joinedSkills}`} src={`https://skillicons.dev/icons?i=${joinedSkills}`} alt="Tech Stack" width={200} height={32} className="h-6 md:h-8 w-auto" unoptimized />
                     );
                     batch = [];
                   }
                 };
-                skills.forEach((skill, idx) => {
+                skills.forEach((skill) => {
                   const s = skill.toLowerCase();
                   if (s === 'gsap') {
-                    flushBatch(`batch-${idx}`);
+                    flushBatch(`before-${skill}`);
                     elements.push(
-                      <div key={idx} className="h-8 w-auto md:h-10.5 md:w-auto flex items-center justify-center mx-1">
+                      <div key={skill} className="h-8 w-auto md:h-10.5 md:w-auto flex items-center justify-center mx-1">
                         <Image src="/icons/gsap.png" alt="GSAP" width={40} height={40} className="h-full w-auto object-contain scale-[1.2] md:scale-[1.3]" />
                       </div>
                     );
@@ -277,9 +278,9 @@ function Card({
                   }
                   const icon = customIcons[s];
                   if (icon) {
-                    flushBatch(`batch-${idx}`);
+                    flushBatch(`before-${skill}`);
                     elements.push(
-                      <div key={idx} className={`h-6 w-6 md:h-8 md:w-8 ${icon.bg} rounded flex items-center justify-center ${s !== 'clerk' ? 'p-1' : ''}`}>
+                      <div key={skill} className={`h-6 w-6 md:h-8 md:w-8 ${icon.bg} rounded flex items-center justify-center ${s !== 'clerk' ? 'p-1' : ''}`}>
                         <Image src={icon.src} alt={icon.alt} width={32} height={32} className={icon.cls} />
                       </div>
                     );
@@ -287,7 +288,7 @@ function Card({
                     batch.push(skill);
                   }
                 });
-                flushBatch('batch-end');
+                flushBatch('final');
                 return elements;
               })()}
             </div>

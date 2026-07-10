@@ -61,8 +61,7 @@ const cardVariants: Variants = {    //Flip-effect
 //Single Card Component
 const SkillCard: React.FC<SkillCardProps> = ({ title, skills, color }) => (
   <motion.div variants={cardVariants} className="h-full" style={{ transformStyle: 'preserve-3d' }}>
-    <Card className="group h-full relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(100,100,255,0.1)] to-transparent group-hover:via-[rgba(100,100,255,0.2)] animate-shimmer"></div>
+    <Card className="group h-full relative overflow-hidden bg-gray-900/80 border-gray-700 hover:border-blue-500/60 hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_2.5rem_-0.5rem_rgba(59,130,246,0.4)]">
       <CardContent className="p-3 md:p-6 relative z-10">
         <div className="flex items-center justify-center gap-4 mb-3 md:mb-6 w-full">
           <h3 className="text-lg md:text-2xl font-extrabold tracking-tight text-center" style={{ color: '#A8325A', fontFamily: 'var(--font-jetbrains-mono), monospace' }}>
@@ -204,19 +203,6 @@ const SkillsSection: React.FC = () => {
           ))}
         </motion.div>      {/* keyframe animation */}
       </section>
-      <style jsx>{`          
-        @keyframes shimmer {                           
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-        .animate-shimmer {
-          animation: shimmer 2s infinite;
-        }
-      `}</style>
     </main>
   );
 };
