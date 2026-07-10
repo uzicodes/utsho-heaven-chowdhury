@@ -40,10 +40,8 @@ function StarLayer({
   className,
   ...props
 }: StarLayerProps) {
-  const [boxShadow, setBoxShadow] = React.useState<string>("");
-
-  React.useEffect(() => {
-    setBoxShadow(generateStars(count, starColor));
+  const boxShadow = React.useMemo(() => {
+    return generateStars(count, starColor);
   }, [count, starColor]);
 
   return (

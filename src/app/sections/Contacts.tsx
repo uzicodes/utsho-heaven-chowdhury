@@ -166,6 +166,7 @@ export default function Contact() {
         </div>
 
         <button
+          type="button"
           onClick={scrollToTop} //Floating Scroll-Top Button
           className="absolute bottom-10 right-10 p-4 bg-transparent border border-white rounded-full text-white hover:scale-110 transition-all duration-300 z-50"
           aria-label="Scroll to top"
