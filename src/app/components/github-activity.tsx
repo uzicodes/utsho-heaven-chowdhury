@@ -128,7 +128,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
       clearTimeout(timeoutId);
       controller.abort();
     };
-  }, [username]);
+  }, [username, updateCalendarConfig]);
 
   if (loading) {
     return (

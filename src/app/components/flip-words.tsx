@@ -25,7 +25,7 @@ export const FlipWords: React.FC<FlipWordsProps> = ({
       startAnimation();
     }, duration);
     return () => clearTimeout(timer);
-  }, []);
+  }, [startAnimation, duration]);
 
   return (
     <AnimatePresence
