@@ -38,6 +38,17 @@ const slugs: string[] = [
   "tailwindcss",
   "ruby",
   "python",
+  "css3",
+  "fastapi",
+  "neon",
+  "amazonwebservices",
+  "cloudflare",
+  "selenium",
+  "postman",
+  "canva",
+  "adobephotoshop",
+  "framer",
+  "webflow",
 ];
 
 function IconCloudDemo() {

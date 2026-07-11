@@ -53,12 +53,12 @@ const iconColors: Record<string, string> = {
   javascript: "#F7DF1E",
   react: "#61DAFB",
   android: "#3DDC84",
-  vercel: "#ffffff",
+  vercel: "#A1A1AA",
   html5: "#E34F26",
   nodedotjs: "#66CC33",
   angular: "#DD0031",
-  express: "#ffffff",
-  nextdotjs: "#ffffff",
+  express: "#828282",
+  nextdotjs: "#0070F3",
   prisma: "#62A9FF",
   postgresql: "#648CE6",
   firebase: "#FFCA28",
@@ -75,16 +75,27 @@ const iconColors: Record<string, string> = {
   gitlab: "#FC6D26",
   androidstudio: "#3DDC84",
   figma: "#F24E1E",
-  notion: "#ffffff",
+  notion: "#FFFDF9",
   clerk: "#6C47FF",
   linux: "#FCC624",
   arduino: "#00D2DC",
   googlecloud: "#4285F4",
   mongodb: "#47A248",
-  github: "#ffffff",
+  github: "#6F42C1",
   tailwindcss: "#06B6D4",
   ruby: "#CC342D",
   python: "#3776AB",
+  css3: "#1572B6",
+  fastapi: "#009688",
+  neon: "#00E599",
+  amazonwebservices: "#FF9900",
+  cloudflare: "#F38020",
+  selenium: "#43B02A",
+  postman: "#FF6C37",
+  canva: "#00C4CC",
+  adobephotoshop: "#31A8FF",
+  framer: "#0055FF",
+  webflow: "#146EF5",
 };
 
 const fetchIconWithRetry = async (slug: string): Promise<{ title: string; path: string } | null> => {
@@ -154,7 +165,7 @@ export default function IconCloud({
     let isMounted = true;
     const fetchAllIcons = async () => {
       // Check local cache first so subsequent loads are 0ms and offline-friendly
-      const cacheKey = `icon_cloud_cache_v2_${iconSlugs.join('_')}`;
+      const cacheKey = `icon_cloud_cache_v3_${iconSlugs.join('_')}`;
       try {
         const cached = localStorage.getItem(cacheKey);
         if (cached) {

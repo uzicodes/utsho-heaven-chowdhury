@@ -324,7 +324,6 @@ const EducationSection: React.FC = () => {
                                             </div>
                                             <div className="flex items-center justify-center text-gray-400 text-xs mt-1 sm:mt-3" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                                                 <span className="flex items-center gap-1">
-                                                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                                                     {cert.date}
                                                 </span>
                                             </div>
