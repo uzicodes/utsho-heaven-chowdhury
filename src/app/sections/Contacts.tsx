@@ -26,8 +26,8 @@ const contactItems: ContactItem[] = [
   {
     icon: <Image src="https://skillicons.dev/icons?i=gmail" alt="Email" width={32} height={32} className="w-8 h-8" unoptimized />,
     label: "Email",
-    link: "mailto:utshozi11@gmail.com",
-    text: "utshozi11@gmail.com",
+    link: "mailto:utsho8chowdhury@gmail.com",
+    text: "utsho8chowdhury@gmail.com",
   },
   {
     icon: <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />,

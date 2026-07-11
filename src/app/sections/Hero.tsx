@@ -185,7 +185,7 @@ export default function Hero() {
               </m.div>
 
               {/* Social Icons */}
-              <m.div variants={itemVariants} className={`flex gap-4 mt-6 items-center ${isMobile ? 'justify-center flex-wrap' : ''}`}>
+              <m.div variants={itemVariants} className={`flex gap-2 sm:gap-2.5 mt-6 items-center ${isMobile ? 'justify-center flex-wrap' : ''}`}>
                 <m.button
                   whileHover={{ scale: 1.1 }}
                   aria-label="GitHub"
@@ -208,14 +208,14 @@ export default function Hero() {
                   whileHover={{ scale: 1.1 }}
                   aria-label="Email"
                   className=" rounded-lg contact-social-icon transition-colors"
-                  onClick={() => window.location.href = 'mailto:utshozi11@gmail.com'}
+                  onClick={() => window.location.href = 'mailto:utsho8chowdhury@gmail.com'}
                 >
                   <Image src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="w-8 h-8" unoptimized />
                 </m.button>
 
                 <div className="inline-flex items-center gap-2 px-2 sm:px-2 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50">
-                  <span className="text-gray-300 text-[10px] sm:text-xs font-medium" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                    utshozi11@gmail.com
+                  <span className="text-gray-300 text-[20px] sm:text-xs font-medium" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                    utsho8chowdhury@gmail.com 
                   </span>
                 </div>
               </m.div>
