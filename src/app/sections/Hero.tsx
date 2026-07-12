@@ -159,10 +159,10 @@ export default function Hero() {
                   whileTap={{ scale: 0.95 }}
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-800 to-green-700 p-0.5 rounded-none transition-all duration-300"
                 >
-                  <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
-                    <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium">
-                      <Image src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-2 align-middle" />
-                      <span style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>CV</span>
+                  <span className="block w-full px-4 sm:px-5 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
+                    <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium transition-colors duration-300 group-hover:text-[#ff6b35]">
+                      <Image src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-0.1 align-middle" />
+                      <span style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>RESUME</span>
                       <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                     </span>
                   </span>
@@ -176,10 +176,10 @@ export default function Hero() {
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-none bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 sm:ml-2 ml-0"
                 >
                   <span className="block w-full px-6 sm:px-2 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700 relative">
-                    <span className="flex items-center justify-center gap-2 text-gray-300 font-medium min-w-[120px]">
+                    <span className="flex items-center justify-center gap-2 text-gray-300 font-medium min-w-[120px] transition-colors duration-300 group-hover:text-[#ff6b35]">
                       <span style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>CONSULTATIONS</span>
                     </span>
-                    <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12 absolute right-3 top-1/2 -translate-y-1/2"></i>
+                    <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12 absolute right-3 top-1/2 -translate-y-1/2 text-gray-300 transition-colors duration-300 group-hover:text-[#ff6b35]"></i>
                   </span>
                 </m.a>
               </m.div>
@@ -215,7 +215,7 @@ export default function Hero() {
 
                 <div className="inline-flex items-center gap-2 px-2 sm:px-2 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50">
                   <span className="text-gray-300 text-[20px] sm:text-xs font-medium" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                    utsho8chowdhury@gmail.com 
+                    utsho8chowdhury@gmail.com
                   </span>
                 </div>
               </m.div>
