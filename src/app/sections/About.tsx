@@ -29,17 +29,17 @@ const textContainerVariant: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.4 }
+    transition: { staggerChildren: 0.12, delayChildren: 0.2 }
   }
 };
 
 // Text Item
 const textItemVariant: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 18 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.48, ease: "easeOut" }
   }
 };
 
@@ -49,7 +49,7 @@ const borderVariant: Variants = {
   visible: {
     height: "100%",
     opacity: 1,
-    transition: { duration: 0.8, ease: "easeOut", delay: 0.6 }
+    transition: { duration: 0.6, ease: "easeOut", delay: 0.25 }
   }
 };
 
@@ -168,7 +168,7 @@ export default function About(): React.ReactElement {
               variants={textContainerVariant}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.1 }}
             >
 
 
