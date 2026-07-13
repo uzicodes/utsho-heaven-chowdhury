@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 const HeroImg = "/about.webp";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { m, Variants } from "framer-motion";
 import { GithubActivity } from "@/app/components/github-activity";
 
@@ -54,6 +54,74 @@ const borderVariant: Variants = {
 };
 
 export default function About(): React.ReactElement {
+  const widgetContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+
+    if (document.querySelector('script[data-id="utsho"]')) return;
+
+    const script = document.createElement('script');
+    script.src = 'https://www.supportkori.com/widget.js';
+    script.setAttribute('data-id', 'utsho');
+    script.setAttribute('data-message', 'Buy me a Coffee');
+    script.setAttribute('data-color', '#FFDD00');
+    script.setAttribute('data-position', 'right');
+    script.async = true;
+    document.body.appendChild(script);
+
+
+    const moveWidget = () => {
+      const btn = document.querySelector('.sk-widget-btn') as HTMLElement | null;
+      const iframeContainer = document.querySelector('.sk-widget-iframe-container') as HTMLElement | null;
+
+      if (btn && widgetContainerRef.current && !widgetContainerRef.current.contains(btn)) {
+        btn.style.position = 'relative';
+        btn.style.bottom = 'auto';
+        btn.style.right = 'auto';
+        btn.style.left = 'auto';
+        btn.style.top = 'auto';
+        btn.style.zIndex = '10';
+        btn.style.width = 'fit-content';
+        btn.style.display = 'inline-flex';
+        widgetContainerRef.current.appendChild(btn);
+
+        // button text "Buy me a Coffee"
+        const textEl = btn.querySelector('span') || btn.querySelector('p') || btn.lastChild;
+        if (textEl && textEl.nodeType === Node.ELEMENT_NODE) {
+          (textEl as HTMLElement).textContent = 'Buy me a Coffee';
+        } else if (textEl && textEl.nodeType === Node.TEXT_NODE) {
+          textEl.textContent = 'Buy me a Coffee';
+        }
+      }
+
+      if (iframeContainer && widgetContainerRef.current && !widgetContainerRef.current.contains(iframeContainer)) {
+
+        iframeContainer.style.position = 'absolute';
+        iframeContainer.style.bottom = '60px';
+        iframeContainer.style.right = '0';
+        iframeContainer.style.left = 'auto';
+        iframeContainer.style.top = 'auto';
+        widgetContainerRef.current.appendChild(iframeContainer);
+      }
+
+      if (btn && widgetContainerRef.current?.contains(btn)) {
+        observer.disconnect();
+      }
+    };
+
+    const observer = new MutationObserver(moveWidget);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Also try after a delay in case it was already added
+    const timeout = setTimeout(moveWidget, 2000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeout);
+      script.remove();
+    };
+  }, []);
+
   return (
     <>
       <section id="about" className="text-white overflow-x-clip" style={{ background: 'transparent', marginBottom: '2rem' }}>
@@ -142,27 +210,8 @@ export default function About(): React.ReactElement {
                     {'<'} hello world {'>'}
                   </m.span>
                 </m.p>
-                <m.div variants={textItemVariant} className="mt-8">
-                  <a 
-                    href="https://www.supportkori.com/utsho" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-2 py-2 rounded-lg font-bold hover:scale-105 transition-transform shadow-lg cursor-pointer"
-                    style={{ 
-                      backgroundColor: '#FFDD00', 
-                      color: '#000000',
-                      border: '1px solid #11111111',
-                      fontFamily: '"ubuntu", sans-serif'
-                    }}
-                  >
-                    <Image 
-                      src="/icons/buymecoffee.svg" 
-                      alt="Buy me a coffee" 
-                      width={28} 
-                      height={28} 
-                    />
-                    <span className="text-lg">Buy me Coffee ?</span>
-                  </a>
+                <m.div variants={textItemVariant} className="mt-8" style={{ position: 'relative', overflow: 'visible' }}>
+                  <div ref={widgetContainerRef} style={{ position: 'relative' }} />
                 </m.div>
               </div>
             </m.div>
