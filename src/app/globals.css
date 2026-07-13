@@ -4,7 +4,9 @@ button,
 [role="button"],
 input,
 select,
-textarea {
+textarea,
+.sk-widget-btn,
+.sk-widget-btn * {
   cursor: none !important;
 }
 

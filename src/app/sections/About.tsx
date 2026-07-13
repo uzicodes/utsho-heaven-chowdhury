@@ -92,6 +92,14 @@ export default function About(): React.ReactElement {
         } else if (textEl && textEl.nodeType === Node.TEXT_NODE) {
           textEl.textContent = 'Buy me a Coffee';
         }
+
+        // Enforce custom cursor only (remove default pointer cursor)
+        btn.style.setProperty('cursor', 'none', 'important');
+        btn.querySelectorAll('*').forEach((el) => {
+          if (el instanceof HTMLElement) {
+            el.style.setProperty('cursor', 'none', 'important');
+          }
+        });
       }
 
       if (iframeContainer && widgetContainerRef.current && !widgetContainerRef.current.contains(iframeContainer)) {
