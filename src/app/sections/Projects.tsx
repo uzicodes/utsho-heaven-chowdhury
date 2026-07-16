@@ -215,7 +215,7 @@ function Card({
       >
         <m.div
           className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl"
-          style={{ backgroundColor: '#574A49' }}
+          style={{ backgroundColor: '#3D5A30' }}
           whileHover={{
             boxShadow: `0 0 30px -5px ${color}40`,
             transition: { duration: 0.4 }
@@ -244,7 +244,7 @@ function Card({
             </div>
 
             {/* Custom Tech Stack Icons */}
-            <div className="flex items-center justify-center flex-wrap gap-1.5 px-3 py-1 bg-[#574A49]">
+            <div className="flex items-center justify-center flex-wrap gap-1.5 px-3 py-1 bg-[#3D5A30]">
               {(() => {
                 const customIcons: Record<string, { src: string; alt: string; bg: string; cls: string }> = {
                   socket: { src: "/icons/socket.svg", alt: "Socket", bg: "bg-white", cls: "w-full h-full object-contain" },
@@ -294,19 +294,19 @@ function Card({
             </div>
 
             {/* GitHub & Live Link */}
-            <div className="flex items-center justify-center gap-3 py-2 md:py-3 bg-[#574A49] relative z-20">
+            <div className="flex items-center justify-center gap-3 py-2 md:py-3 bg-[#3D5A30] relative z-20">
               <m.a
                 title="GitHub Link"
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-green-500/15 hover:bg-green-500/50 border border-black transition-all cursor-pointer pointer-events-auto"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all cursor-pointer pointer-events-auto"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "auto" }}
               >
                 <Image src="/github.svg" alt="GitHub" width={18} height={18} className="inline-block align-middle" />
-                <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Code</span>
+                <span className="text-xs md:text-sm font-bold text-[#121111] ubuntu-font">Code</span>
               </m.a>
 
               <m.a
@@ -314,13 +314,13 @@ function Card({
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-blue-500/25 hover:bg-blue-500/55 border border-black transition-all cursor-pointer pointer-events-auto"
+                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all cursor-pointer pointer-events-auto"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "auto" }}
               >
                 <Image src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={20} height={20} className="inline-block align-middle" unoptimized />
-                <span className="text-xs md:text-sm font-medium text-[#7fe525] ubuntu-font">Live</span>
+                <span className="text-xs md:text-sm font-bold text-[#121111] ubuntu-font">Live</span>
               </m.a>
             </div>
           </div>
