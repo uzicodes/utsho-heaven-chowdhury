@@ -294,19 +294,19 @@ function Card({
             </div>
 
             {/* GitHub & Live Link */}
-            <div className="flex items-center justify-center gap-3 py-2 md:py-3 bg-[#3D5A30] relative z-20">
+            <div className="flex items-center justify-center gap-2 md:gap-3 py-1.5 md:py-3 bg-[#3D5A30] relative z-20">
               <m.a
                 title="GitHub Link"
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all cursor-pointer pointer-events-auto"
+                className="group flex items-center gap-1.5 md:gap-2 px-2 py-1 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all cursor-pointer pointer-events-auto"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "auto" }}
               >
-                <Image src="/github.svg" alt="GitHub" width={18} height={18} className="inline-block align-middle" />
-                <span className="text-xs md:text-sm font-bold text-[#121111] ubuntu-font">Code</span>
+                <Image src="/github.svg" alt="GitHub" width={18} height={18} className="w-3.5 h-3.5 md:w-[18px] md:h-[18px] inline-block align-middle" />
+                <span className="text-[10px] md:text-sm font-bold text-[#121111] ubuntu-font">Code</span>
               </m.a>
 
               <m.a
@@ -314,20 +314,20 @@ function Card({
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all cursor-pointer pointer-events-auto"
+                className="group flex items-center gap-1.5 md:gap-2 px-2 py-1 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all cursor-pointer pointer-events-auto"
                 whileHover={{ y: -2, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400 }}
                 style={{ pointerEvents: "auto" }}
               >
-                <Image src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={20} height={20} className="inline-block align-middle" unoptimized />
-                <span className="text-xs md:text-sm font-bold text-[#121111] ubuntu-font">Live</span>
+                <Image src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={20} height={20} className="w-4 h-4 md:w-[20px] md:h-[20px] inline-block align-middle" unoptimized />
+                <span className="text-[10px] md:text-sm font-bold text-[#121111] ubuntu-font">Live</span>
               </m.a>
             </div>
           </div>
 
           <div className="w-full md:w-[45%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative">
             <div className="relative z-10">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 text-center" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
                 {title}
               </h3>
               {(() => {
