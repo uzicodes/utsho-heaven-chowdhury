@@ -230,7 +230,7 @@ const EducationSection: React.FC = () => {
                                             className={`${edu.className} object-contain`}
                                             style={edu.style}
                                         />
-                                        <h3 className="text-xl font-bold" style={{ color: '#C94B76', fontFamily: 'var(--font-ubuntu), sans-serif' }}>
+                                        <h3 className="text-xl font-bold" style={{ color: '#C94B76', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                                             {edu.degree}
                                         </h3>
                                     </div>

@@ -190,22 +190,18 @@ export default function About(): React.ReactElement {
                     className="absolute left-0 top-0 w-1 bg-gray-300"
                   />
 
-                  <m.p variants={textItemVariant} className="text-white ubuntu-font text-sm md:text-lg text-justify">
+                  <m.p variants={textItemVariant} className="text-white text-sm md:text-lg text-justify" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif', hyphens: 'auto', WebkitHyphens: 'auto' }}>
                     {`I build scalable, user-centric web applications, bridging the gap between complex architecture and clean design. Right now, I'm deepening my expertise in modern backend infrastructure, DevOps, and system design to build high-availability solutions from the ground up. My passion lies in crafting seamless user experiences always eager to learn new technologies and methodologies to stay at the forefront of the industry. Beyond code, I am a lifelong learner and an active supporter of the developer community. I am committed to sharing knowledge and building tools that empower others to innovate, believing that the best way to move the industry forward is by growing together.`}
                   </m.p>
-
-                  <div className="mt-6 space-y-3">
-                  </div>
                 </blockquote>
-                <br></br>
 
-                <m.p variants={textItemVariant} className="text-white mb-2 text-sm md:text-base" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>{`Let's not forget-`}</m.p>
+                <m.p variants={textItemVariant} className="text-white mt-6 mb-2 text-sm md:text-base" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>{`Let's not forget-`}</m.p>
 
                 {/* Pop-in animation Code Text */}
                 <m.p
                   variants={textItemVariant}
                   className="text-base md:text-xl"
-                  style={{ color: '#CF4E5B', fontFamily: 'var(--font-ubuntu), sans-serif', fontStyle: 'italic' }}
+                  style={{ color: '#CF4E5B', fontFamily: 'var(--font-space-grotesk), sans-serif', fontStyle: 'italic' }}
                 >
                   {`it all started with a   `}
                   <m.span
@@ -213,7 +209,7 @@ export default function About(): React.ReactElement {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: false }}
                     transition={{ type: "spring", stiffness: 200 }}
-                    style={{ color: '#5DCF4E', display: 'inline-block', fontFamily: 'var(--font-ubuntu), sans-serif', fontStyle: 'italic' }}
+                    style={{ color: '#5DCF4E', display: 'inline-block', fontFamily: 'var(--font-space-grotesk), sans-serif', fontStyle: 'italic' }}
                   >
                     {'<'} hello world {'>'}
                   </m.span>

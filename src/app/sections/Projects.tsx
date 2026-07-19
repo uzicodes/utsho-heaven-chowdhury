@@ -306,7 +306,7 @@ function Card({
                 style={{ pointerEvents: "auto" }}
               >
                 <Image src="/github.svg" alt="GitHub" width={18} height={18} className="w-3.5 h-3.5 md:w-[18px] md:h-[18px] inline-block align-middle" />
-                <span className="text-[10px] md:text-sm font-bold text-[#121111] ubuntu-font">Code</span>
+                <span className="text-[10px] md:text-sm font-bold text-[#121111]" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Code</span>
               </m.a>
 
               <m.a
@@ -320,14 +320,14 @@ function Card({
                 style={{ pointerEvents: "auto" }}
               >
                 <Image src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={20} height={20} className="w-4 h-4 md:w-[20px] md:h-[20px] inline-block align-middle" unoptimized />
-                <span className="text-[10px] md:text-sm font-bold text-[#121111] ubuntu-font">Live</span>
+                <span className="text-[10px] md:text-sm font-bold text-[#121111]" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Live</span>
               </m.a>
             </div>
           </div>
 
           <div className="w-full md:w-[45%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative">
             <div className="relative z-10">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 text-center" style={{ fontFamily: 'var(--font-ubuntu), sans-serif' }}>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 text-center" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                 {title}
               </h3>
               {(() => {
@@ -337,11 +337,11 @@ function Card({
 
                 return (
                   <>
-                    <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug mb-2 md:mb-3" style={{ fontFamily: 'var(--font-bricolage-grotesque), sans-serif' }}>
+                    <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug mb-2 md:mb-3" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                       {firstLine}
                     </p>
                     {bulletPoints && (
-                      <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug whitespace-pre-line" style={{ fontFamily: 'var(--font-bricolage-grotesque), sans-serif' }}>
+                      <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug whitespace-pre-line" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                         {bulletPoints}
                       </p>
                     )}

@@ -21,10 +21,7 @@ textarea,
   z-index: 2;
 }
 
-.ubuntu-font {
-  font-family: var(--font-ubuntu), sans-serif;
-  font-weight: 400;
-}
+
 
 /* GitHub Activity Component */
 @keyframes pulse {

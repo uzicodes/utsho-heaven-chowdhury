@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Ubuntu, Bricolage_Grotesque, Space_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono, Bricolage_Grotesque, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Cursor, CursorPointer } from "@/app/components/cursor";
 import { StarsBackground } from "@/app/components/stars";
@@ -16,11 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const ubuntu = Ubuntu({
-  variable: "--font-ubuntu",
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-});
+
 
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
@@ -108,7 +104,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ubuntu.variable} ${bricolageGrotesque.variable} ${spaceGrotesk.variable} antialiased bg-black min-h-screen relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} ${spaceGrotesk.variable} antialiased bg-black min-h-screen relative`}
       >
         <Preloader />
         <MotionProvider>
