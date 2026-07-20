@@ -1,8 +1,9 @@
+import * as React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { projectDetails, ProjectSlug } from "@/lib/projectDetails";
-import Navbar from "@/app/Navbar";
+import BackToProjects from "./BackToProjects";
 
 interface ProjectPageProps {
     params: Promise<{ slug: string }>;
@@ -50,7 +51,6 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
 
     return (
         <div className="min-h-screen bg-[#0f1115] text-gray-300 font-sans selection:bg-blue-500/30">
-            <Navbar />
 
             {/* 🔵 HERO SECTION (Blue Gradient with Wave Divider) */}
             <section className="bg-gradient-to-br from-[#1a2e6b] via-[#1e3a8a] to-[#1e40af] text-white pt-28 pb-36 px-6 lg:px-12 relative overflow-hidden">
@@ -61,15 +61,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
 
                     {/* Left: Text Content */}
                     <div className="flex-1 space-y-5">
-                        <Link
-                            href="/#projects"
-                            className="inline-flex items-center gap-2 text-blue-200 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors group"
-                        >
-                            <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            Back to Projects
-                        </Link>
+                        <BackToProjects />
 
                         <h1
                             className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight"
@@ -130,8 +122,8 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
 
                 {/* SVG Wave Divider */}
                 <div className="absolute -bottom-px left-0 w-full overflow-hidden leading-none z-0">
-                    <svg className="relative block w-[calc(100%+2px)] -ml-px h-[50px] md:h-[80px]" viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0,60 C360,100 720,20 1080,60 C1260,80 1380,70 1440,60 L1440,100 L0,100 Z" fill="#0f1115" />
+                    <svg className="relative block w-[calc(100%+2px)] -ml-px h-[60px] md:h-[90px]" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,80 C120,110 240,50 360,70 C480,90 600,30 720,50 C840,70 960,100 1080,60 C1200,20 1360,80 1440,70 L1440,120 L0,120 Z" fill="#0f1115" />
                     </svg>
                 </div>
             </section>
@@ -208,29 +200,55 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                                 Tech Stack
                             </h3>
                             <div className="grid grid-cols-6 gap-2">
-                                {project.techStack.map((tech) => {
-                                    const techIconMap: Record<string, string> = {
+                                {(() => {
+                                    // Map projectDetails techStack names to skillicons.dev slugs
+                                    const techToSlug: Record<string, string> = {
                                         'Next.js': 'nextjs', 'Node.js': 'nodejs', 'React': 'react',
                                         'TypeScript': 'ts', 'Tailwind CSS': 'tailwind', 'MongoDB': 'mongodb',
                                         'Redis': 'redis', 'Prisma': 'prisma', 'Supabase': 'supabase',
-                                        'GSAP': 'ae', 'Clerk': 'workers', 'Socket.io': 'bun',
-                                        'SSLCommerz': 'stripe', 'Neon DB': 'postgres', 'Render': 'netlify',
-                                        'Cloudinary': 'cloudflare',
+                                        'Vercel': 'vercel', 'Cloudflare': 'cloudflare',
                                     };
-                                    const iconSlug = techIconMap[tech] || tech.toLowerCase().replace(/[\s.]+/g, '');
-                                    return (
-                                        <div key={tech} className="flex flex-col items-center gap-1 group" title={tech}>
-                                            <Image
-                                                src={`https://skillicons.dev/icons?i=${iconSlug}`}
-                                                alt={tech}
-                                                width={40}
-                                                height={40}
-                                                className="w-10 h-10 rounded-lg transition-transform duration-200 group-hover:scale-110"
-                                                unoptimized
-                                            />
-                                        </div>
-                                    );
-                                })}
+                                    // Custom icons (same as Projects.tsx)
+                                    const customIcons: Record<string, { src: string; alt: string; bg: string }> = {
+                                        'GSAP': { src: '/icons/gsap.png', alt: 'GSAP', bg: 'bg-transparent' },
+                                        'Clerk': { src: '/icons/tools/clerk.svg', alt: 'Clerk', bg: 'bg-[#1C1C1E]' },
+                                        'Socket.io': { src: '/icons/socket.svg', alt: 'Socket.io', bg: 'bg-white' },
+                                        'SSLCommerz': { src: '/icons/ssl.jpg', alt: 'SSLCommerz', bg: 'bg-white' },
+                                        'Render': { src: '/icons/render.svg', alt: 'Render', bg: 'bg-white' },
+                                        'Neon DB': { src: '/icons/database/neon.svg', alt: 'Neon DB', bg: 'bg-transparent' },
+                                    };
+
+                                    const elements: React.ReactNode[] = [];
+
+                                    project.techStack.forEach((tech) => {
+                                        const custom = customIcons[tech];
+                                        if (custom) {
+                                            elements.push(
+                                                <div key={tech} className={`w-10 h-10 ${custom.bg} rounded-lg flex items-center justify-center p-1`} title={tech}>
+                                                    <Image src={custom.src} alt={custom.alt} width={32} height={32} className="w-full h-full object-contain" />
+                                                </div>
+                                            );
+                                        } else {
+                                            const slug = techToSlug[tech];
+                                            if (slug) {
+                                                elements.push(
+                                                    <Image
+                                                        key={tech}
+                                                        src={`https://skillicons.dev/icons?i=${slug}`}
+                                                        alt={tech}
+                                                        width={40}
+                                                        height={40}
+                                                        className="w-10 h-10 rounded-lg"
+                                                        unoptimized
+                                                        title={tech}
+                                                    />
+                                                );
+                                            }
+                                        }
+                                    });
+
+                                    return elements;
+                                })()}
                             </div>
                         </div>
 
@@ -281,32 +299,46 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
             </section>
 
             {/* 🟢 "Have an idea brewing?" CTA Banner */}
-            <section className="relative bg-gradient-to-r from-[#0c2d48] via-[#14395e] to-[#0c2d48] py-16 px-6 lg:px-12 overflow-hidden">
-                {/* Subtle decorative gradient */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(59,130,246,0.08),transparent_60%)] pointer-events-none" />
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-                    <div className="space-y-3 max-w-2xl">
-                        <h2
-                            className="text-3xl md:text-4xl font-bold text-white"
-                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
-                        >
-                            Have an idea brewing?
-                        </h2>
-                        <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-                            Let&apos;s turn your vision into a production-ready reality. Scalable code, clean architecture, and the tech to make it happen.
-                        </p>
-                    </div>
-                    <Link
-                        href="/#contacts"
-                        className="flex-shrink-0 inline-flex items-center gap-2 bg-[#e07a3a] hover:bg-[#c96a2f] text-white font-bold py-3.5 px-8 rounded-lg transition-colors shadow-lg shadow-orange-900/30 text-sm uppercase tracking-wider"
-                        style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
-                    >
-                        Start a Project
-                    </Link>
+            <div className="relative">
+                {/* Top wavy border */}
+                <div className="absolute -top-px left-0 w-full overflow-hidden leading-none z-10 rotate-180">
+                    <svg className="relative block w-full h-[25px] md:h-[35px]" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,30 C180,55 360,5 540,30 C720,55 900,5 1080,30 C1260,55 1380,20 1440,30 L1440,60 L0,60 Z" fill="#0c2d48" />
+                    </svg>
                 </div>
 
+                <section className="relative bg-gradient-to-r from-[#0c2d48] via-[#14395e] to-[#0c2d48] py-16 pt-20 pb-20 px-6 lg:px-12 overflow-hidden">
+                    {/* Subtle decorative gradient */}
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(59,130,246,0.08),transparent_60%)] pointer-events-none" />
+                    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+                        <div className="space-y-3 max-w-2xl">
+                            <h2
+                                className="text-3xl md:text-4xl font-bold text-white"
+                                style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                            >
+                                Have an idea brewing?
+                            </h2>
+                            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+                                Let&apos;s turn your vision into a production-ready reality. Scalable code, clean architecture, and the tech to make it happen.
+                            </p>
+                        </div>
+                        <Link
+                            href="/#contacts"
+                            className="flex-shrink-0 inline-flex items-center gap-2 bg-[#e07a3a] hover:bg-[#c96a2f] text-white font-bold py-3.5 px-8 rounded-lg transition-colors shadow-lg shadow-orange-900/30 text-sm uppercase tracking-wider"
+                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                        >
+                            Start a Project
+                        </Link>
+                    </div>
+                </section>
 
-            </section>
+                {/* Bottom wavy border */}
+                <div className="absolute -bottom-px left-0 w-full overflow-hidden leading-none z-10">
+                    <svg className="relative block w-full h-[25px] md:h-[35px]" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,30 C180,55 360,5 540,30 C720,55 900,5 1080,30 C1260,55 1380,20 1440,30 L1440,60 L0,60 Z" fill="#0f1115" />
+                    </svg>
+                </div>
+            </div>
 
             {/* 🔴 FOOTER */}
             <footer className="bg-[#0f1115] pt-20 pb-8 px-6 lg:px-12">
@@ -333,10 +365,10 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                     <div className="space-y-4 pt-4">
                         <p className="text-xs text-gray-600 uppercase tracking-widest font-medium">Navigate</p>
                         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                            {["Start", "About", "Experience", "Skills", "Projects", "WhyMe?", "Call Me", "Blog"].map((item) => (
+                            {["Home", "About", "Skills", "Projects", "Contacts"].map((item) => (
                                 <Link
                                     key={item}
-                                    href={item === "Start" ? "/" : `/#${item.toLowerCase().replace("?", "")}`}
+                                    href={item === "Home" ? "/" : `/#${item.toLowerCase().replace("?", "")}`}
                                     className="text-sm text-gray-400 hover:text-white transition-colors font-medium"
                                     style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                 >
