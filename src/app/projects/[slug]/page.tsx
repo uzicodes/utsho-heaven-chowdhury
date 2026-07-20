@@ -81,7 +81,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                                     href={project.liveUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-white text-blue-900 px-5 py-2.5 rounded-md font-bold text-sm hover:bg-gray-100 transition-colors shadow-lg shadow-black/20"
+                                    className="inline-flex items-center gap-2 bg-blue-900/40 text-white border border-blue-400/25 px-5 py-2.5 rounded-none font-bold text-sm hover:bg-blue-800/50 transition-colors backdrop-blur-sm"
                                     style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                 >
                                     Live Site
@@ -95,7 +95,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                                     href={project.githubUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-blue-900/40 text-white border border-blue-400/25 px-5 py-2.5 rounded-md font-bold text-sm hover:bg-blue-800/50 transition-colors backdrop-blur-sm"
+                                    className="inline-flex items-center gap-2 bg-blue-900/40 text-white border border-blue-400/25 px-5 py-2.5 rounded-none font-bold text-sm hover:bg-blue-800/50 transition-colors backdrop-blur-sm"
                                     style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                 >
                                     <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24">
@@ -286,7 +286,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                             </p>
                             <Link
                                 href="/#contacts"
-                                className="inline-flex w-full justify-center items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                                className="inline-flex w-full justify-center items-center gap-2 bg-transparent border-2 border-blue-600 hover:bg-blue-600 text-white hover:text-black font-bold py-3 px-6 rounded-none transition-colors"
                                 style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                             >
                                 GET IN TOUCH
@@ -325,7 +325,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                     </div>
                     <Link
                         href="/#contacts"
-                        className="flex-shrink-0 inline-flex items-center gap-2 bg-[#e07a3a] hover:bg-[#c96a2f] text-white font-bold py-3.5 px-8 rounded-lg transition-colors shadow-lg shadow-orange-900/30 text-sm uppercase tracking-wider"
+                        className="flex-shrink-0 inline-flex items-center gap-2 bg-[#e07a3a] hover:bg-[#c96a2f] text-white hover:text-black font-bold py-3.5 px-8 rounded-none transition-colors shadow-lg shadow-orange-900/30 text-sm uppercase tracking-wider"
                         style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                     >
                         Start a Project
