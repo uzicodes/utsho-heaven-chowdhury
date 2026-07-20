@@ -5,6 +5,7 @@ import { useTransform, m, useScroll, MotionValue } from "framer-motion";
 import { useRef, useEffect } from "react";
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   title: string;
@@ -14,6 +15,7 @@ interface Project {
   color: string;
   githubLink: string;
   liveLink: string;
+  detailsLink: string;
 }
 
 interface CardProps {
@@ -28,6 +30,7 @@ interface CardProps {
   targetScale: number;
   githubLink: string;
   liveLink: string;
+  detailsLink: string;
 }
 
 const projects: Project[] = [
@@ -39,6 +42,7 @@ const projects: Project[] = [
     color: "#0be890",
     githubLink: "https://github.com/uzicodes/lamb-falcons",
     liveLink: "https://lambfalcons.vercel.app/",
+    detailsLink: "/projects/lamb-falcons",
   },
   {
     title: "ঢাকা-বাসা",
@@ -48,6 +52,7 @@ const projects: Project[] = [
     color: "#10b981",
     githubLink: "https://github.com/uzicodes/Dhaka-Basha",
     liveLink: "https://dhaka-basha.vercel.app/",
+    detailsLink: "/projects/dhaka-basha",
   },
   {
     title: "Culinary Canvas",
@@ -57,6 +62,7 @@ const projects: Project[] = [
     color: "#ff6b35",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
     liveLink: "https://culinarycanvaas.vercel.app/",
+    detailsLink: "/projects/culinary-canvas",
   },
   {
     title: "Northern Paribahan",
@@ -66,6 +72,7 @@ const projects: Project[] = [
     color: "#3b82f6",
     githubLink: "https://github.com/uzicodes/northern-paribahan",
     liveLink: "https://northern-paribahan.onrender.com",
+    detailsLink: "/projects/northern-paribahan",
   },
   {
     title: "Aura Force",
@@ -75,6 +82,7 @@ const projects: Project[] = [
     color: "#ef4444",
     githubLink: "https://github.com/uzicodes/AuraForce",
     liveLink: "https://auraforce.vercel.app/",
+    detailsLink: "/projects/aura-force",
   },
   {
     title: "ALORA",
@@ -84,6 +92,7 @@ const projects: Project[] = [
     color: "#9333ea",
     githubLink: "https://github.com/uzicodes/Alora",
     liveLink: "https://aloraa.vercel.app/",
+    detailsLink: "/projects/alora",
   }
 ];
 
@@ -168,6 +177,7 @@ export default function Projects() {
                     targetScale={targetScale}
                     githubLink={project.githubLink}
                     liveLink={project.liveLink}
+                    detailsLink={project.detailsLink}
                   />
                 );
               })}
@@ -191,6 +201,7 @@ function Card({
   targetScale,
   githubLink,
   liveLink,
+  detailsLink,
 }: CardProps) {
   const container = useRef<HTMLDivElement>(null);
   const scale = useTransform(progress, range, [1, targetScale]);
@@ -321,6 +332,20 @@ function Card({
               >
                 <Image src="https://img.icons8.com/glyph-neue/64/1A1A1A/globe--v1.png" alt="Live" width={20} height={20} className="w-4 h-4 md:w-[20px] md:h-[20px] inline-block align-middle" unoptimized />
                 <span className="text-[10px] md:text-sm font-bold text-[#121111]" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Live</span>
+              </m.a>
+
+              <m.a
+                title="Project Details"
+                href={detailsLink}
+                className="group flex items-center gap-1.5 md:gap-2 px-2 py-1 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all cursor-pointer pointer-events-auto"
+                whileHover={{ y: -2, scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+                style={{ pointerEvents: "auto" }}
+              >
+                <svg className="w-3.5 h-3.5 md:w-[16px] md:h-[16px] inline-block align-middle" fill="none" viewBox="0 0 24 24" stroke="#121111" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg>
+                <span className="text-[10px] md:text-sm font-bold text-[#121111]" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Details</span>
               </m.a>
             </div>
           </div>

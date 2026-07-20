@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projectDetails, ProjectSlug } from "@/lib/projectDetails";
 import BackToProjects from "./BackToProjects";
+import NavigateLink from "./NavigateLink";
 
 interface ProjectPageProps {
     params: Promise<{ slug: string }>;
@@ -366,14 +367,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                         <p className="text-xs text-gray-600 uppercase tracking-widest font-medium">Navigate</p>
                         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
                             {["Home", "About", "Skills", "Projects", "Contacts"].map((item) => (
-                                <Link
-                                    key={item}
-                                    href={item === "Home" ? "/" : `/#${item.toLowerCase().replace("?", "")}`}
-                                    className="text-sm text-gray-400 hover:text-white transition-colors font-medium"
-                                    style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
-                                >
-                                    {item}
-                                </Link>
+                                <NavigateLink key={item} item={item} />
                             ))}
                         </nav>
                     </div>
