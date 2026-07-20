@@ -43,7 +43,7 @@ export default function NavigateLink({ item }: NavigateLinkProps) {
     return (
         <button
             onClick={handleClick}
-            className="text-sm text-gray-400 hover:text-white transition-colors font-medium cursor-pointer"
+            className="text-sm text-gray-400 hover:text-[#06CC2D] transition-colors font-medium cursor-pointer"
             style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
         >
             {item}

@@ -48,7 +48,7 @@ const contactItems: ContactItem[] = [
       </svg>
     ),
     label: "Facebook",
-    link: "https://www.facebook.com/utsh0z",
+    link: "https://www.facebook.com/utsh0chowdhury",
     text: "Add Friend",
   },
   {
