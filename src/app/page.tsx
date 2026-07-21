@@ -14,12 +14,24 @@ import Education from './sections/Education';
 import Contact from './sections/Contacts';
 
 export default function Home() {
-  // FORCE SCROLL TO TOP ON RELOAD
+  // FORCE SCROLL TO TOP ON RELOAD IF NO HASH
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.history.scrollRestoration = 'manual';
     }
-    window.scrollTo(0, 0);
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    } else {
+      setTimeout(() => {
+        const id = window.location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          // Remove hash from URL without triggering a reload
+          window.history.replaceState(null, '', window.location.pathname);
+        }
+      }, 100);
+    }
   }, []);
 
   return (
