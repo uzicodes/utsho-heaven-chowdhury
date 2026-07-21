@@ -6,6 +6,7 @@ import { projectDetails, ProjectSlug } from "@/lib/projectDetails";
 import BackToProjects from "./BackToProjects";
 import NavigateLink from "./NavigateLink";
 import ScrollToTop from "./ScrollToTop";
+import { ReactLenis } from "lenis/react";
 
 interface ProjectPageProps {
     params: Promise<{ slug: string }>;
@@ -52,6 +53,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
     const videoId = getYouTubeId(project.videoUrl);
 
     return (
+        <ReactLenis root>
         <div className="min-h-screen bg-[#0f1115] text-gray-300 font-sans selection:bg-blue-500/30">
             <ScrollToTop />
 
@@ -391,5 +393,6 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                 </div>
             </footer>
         </div>
+        </ReactLenis>
     );
 }
