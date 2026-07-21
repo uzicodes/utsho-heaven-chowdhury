@@ -30,7 +30,7 @@ export default function BackToProjects({ slug }: { slug: string }) {
     return (
         <button
             onClick={handleClick}
-            className="inline-flex items-center gap-2 text-blue-200 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors group cursor-pointer"
+            className="inline-flex items-center gap-2 text-blue-200 hover:text-black text-xs font-bold uppercase tracking-widest transition-colors group cursor-pointer"
         >
             <svg
                 className="w-4 h-4 transition-transform group-hover:-translate-x-1"
