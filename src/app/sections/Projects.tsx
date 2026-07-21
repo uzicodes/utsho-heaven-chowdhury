@@ -334,19 +334,20 @@ function Card({
                 <span className="text-[10px] md:text-sm font-bold text-[#121111]" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Live</span>
               </m.a>
 
-              <m.a
-                title="Project Details"
-                href={detailsLink}
-                className="group flex items-center gap-1.5 md:gap-2 px-2 py-1 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all cursor-pointer pointer-events-auto"
-                whileHover={{ y: -2, scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
-                style={{ pointerEvents: "auto" }}
-              >
-                <svg className="w-3.5 h-3.5 md:w-[16px] md:h-[16px] inline-block align-middle" fill="none" viewBox="0 0 24 24" stroke="#121111" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-                <span className="text-[10px] md:text-sm font-bold text-[#121111]" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Details</span>
-              </m.a>
+              <Link href={detailsLink} className="inline-block cursor-pointer">
+                <m.div
+                  title="Project Details"
+                  className="group flex items-center gap-1.5 md:gap-2 px-2 py-1 md:px-4 md:py-2 rounded-none bg-sky-200 hover:bg-white border border-black transition-all pointer-events-auto"
+                  whileHover={{ y: -2, scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                  style={{ pointerEvents: "auto" }}
+                >
+                  <svg className="w-3.5 h-3.5 md:w-[16px] md:h-[16px] inline-block align-middle" fill="none" viewBox="0 0 24 24" stroke="#121111" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                  </svg>
+                  <span className="text-[10px] md:text-sm font-bold text-[#121111]" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>Details</span>
+                </m.div>
+              </Link>
             </div>
           </div>
 

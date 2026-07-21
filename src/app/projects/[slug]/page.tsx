@@ -36,7 +36,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
     const slug = resolvedParams.slug as ProjectSlug;
     const project = projectDetails[slug];
 
-    // If a user types a random URL, send them to a 404 page
+    // If a user types a random URL, send them 404 page
     if (!project) notFound();
 
     // Extract YouTube video ID from URL
@@ -53,11 +53,9 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
     return (
         <div className="min-h-screen bg-[#0f1115] text-gray-300 font-sans selection:bg-blue-500/30">
 
-            {/* 🔵 HERO SECTION (Blue Gradient with Wave Divider) */}
+            {/* HERO SECTION */}
             <section className="bg-gradient-to-br from-[#1a2e6b] via-[#1e3a8a] to-[#1e40af] text-white pt-28 pb-36 px-6 lg:px-12 relative overflow-hidden">
-                {/* Subtle radial glow behind content */}
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(59,130,246,0.15),transparent_70%)] pointer-events-none" />
-
                 <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 z-10 relative">
 
                     {/* Left: Text Content */}
@@ -129,11 +127,11 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                 </div>
             </section>
 
-            {/* ⚫ MAIN CONTENT SECTION (Dark Background) */}
+            {/* MAIN CONTENT SECTION */}
             <section className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
 
-                    {/* LEFT COLUMN (Spans 2/3) */}
+                    {/* LEFT COLUMN */}
                     <div className="lg:col-span-2 space-y-16">
 
                         {/* The Problem */}
@@ -189,7 +187,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                         )}
                     </div>
 
-                    {/* RIGHT COLUMN (Spans 1/3) */}
+                    {/* RIGHT COLUMN */}
                     <div className="space-y-10">
 
                         {/* Tech Stack */}
@@ -273,7 +271,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                             </div>
                         </div>
 
-                        {/* CTA Card — "Like this project?" */}
+                        {/* CTA Card */}
                         <div className="bg-gradient-to-b from-gray-900 to-[#0f1115] border border-gray-800 p-8 rounded-2xl text-center shadow-xl">
                             <h3
                                 className="text-xl font-bold text-white mb-3"
@@ -299,7 +297,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                 </div>
             </section>
 
-            {/* 🟢 "Have an idea brewing?" CTA Banner */}
+            {/* "Have an idea brewing?" CTA Banner */}
             <section className="relative bg-gradient-to-r from-[#0c2d48] via-[#14395e] to-[#0c2d48] py-24 px-6 lg:px-12 overflow-hidden">
                 {/* Top wavy border */}
                 <div className="absolute -top-px left-0 w-full overflow-hidden leading-none z-10">
@@ -340,7 +338,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                 </div>
             </section>
 
-            {/* 🔴 FOOTER */}
+            {/* FOOTER */}
             <footer className="bg-[#0f1115] pt-20 pb-8 px-6 lg:px-12 overflow-hidden">
                 <div className="w-full max-w-7xl mx-auto text-center space-y-8">
 
