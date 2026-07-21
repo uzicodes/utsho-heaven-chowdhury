@@ -87,7 +87,7 @@ export default function Home() {
               {/* Email */}
               <a
                 href="mailto:utsho8chowdhury@gmail.com"
-                className="inline-block text-[#e07a3a] hover:text-[#f09050] text-lg sm:text-xl md:text-2xl font-bold tracking-wider transition-colors"
+                className="inline-block text-[#e07a3a] hover:text-[#06CC2D] text-lg sm:text-xl md:text-2xl font-bold tracking-wider transition-colors"
                 style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
               >
                 utsho8chowdhury@gmail.com

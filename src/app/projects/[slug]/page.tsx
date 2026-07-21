@@ -303,13 +303,24 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                             Let&apos;s turn your vision into a production-ready reality. Scalable code, clean architecture, and the tech to make it happen for the greater good.
                         </p>
                     </div>
-                    <Link
-                        href="/#contacts"
-                        className="flex-shrink-0 inline-flex items-center gap-2 bg-[#e07a3a] hover:bg-[#c96a2f] text-white hover:text-black font-bold py-3.5 px-8 rounded-none transition-colors shadow-lg shadow-orange-900/30 text-sm uppercase tracking-wider"
-                        style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
-                    >
-                        Start a Project
-                    </Link>
+                    <div className="flex-shrink-0 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto md:ml-16 lg:ml-28 xl:ml-36">
+                        <Link
+                            href="/#contacts"
+                            className="inline-flex justify-center items-center gap-2 bg-[#e07a3a] border border-[#e07a3a] text-black hover:bg-transparent hover:text-white font-bold py-3.5 px-8 rounded-none transition-colors shadow-lg shadow-orange-900/30 text-sm uppercase tracking-wider w-full sm:w-auto min-w-[200px]"
+                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                        >
+                            Start a Project
+                        </Link>
+                        <a
+                            href="https://calendly.com/utsho/30min"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex justify-center items-center gap-2 bg-[#06CC2D] border border-[#06CC2D] text-black hover:bg-transparent hover:text-white font-bold py-3.5 px-8 rounded-none transition-colors text-sm uppercase tracking-wider w-full sm:w-auto min-w-[200px]"
+                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                        >
+                            Book Consultation
+                        </a>
+                    </div>
                 </div>
 
                 {/* Bottom wavy border */}
@@ -335,7 +346,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                     {/* Email */}
                     <a
                         href="mailto:utsho8chowdhury@gmail.com"
-                        className="inline-block text-[#e07a3a] hover:text-[#f09050] text-lg sm:text-xl md:text-2xl font-bold tracking-wider transition-colors"
+                        className="inline-block text-[#e07a3a] hover:text-[#06CC2D] text-lg sm:text-xl md:text-2xl font-bold tracking-wider transition-colors"
                         style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                     >
                         utsho8chowdhury@gmail.com
