@@ -208,6 +208,7 @@ function Card({
 
   return (
     <div
+      id={`project-${detailsLink.split('/').filter(Boolean).pop()}`}
       ref={container}
       className={`h-screen flex items-center justify-center sticky top-0 project-container pointer-events-none ${i === 0 ? 'mt-0' : ''}`}
     >

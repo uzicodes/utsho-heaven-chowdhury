@@ -5,6 +5,7 @@ import Link from "next/link";
 import { projectDetails, ProjectSlug } from "@/lib/projectDetails";
 import BackToProjects from "./BackToProjects";
 import NavigateLink from "./NavigateLink";
+import ScrollToTop from "./ScrollToTop";
 
 interface ProjectPageProps {
     params: Promise<{ slug: string }>;
@@ -52,6 +53,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
 
     return (
         <div className="min-h-screen bg-[#0f1115] text-gray-300 font-sans selection:bg-blue-500/30">
+            <ScrollToTop />
 
             {/* HERO SECTION */}
             <section className="bg-gradient-to-br from-[#1a2e6b] via-[#1e3a8a] to-[#1e40af] text-white pt-28 pb-36 px-6 lg:px-12 relative overflow-hidden">
@@ -60,7 +62,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
 
                     {/* Left: Text Content */}
                     <div className="flex-1 space-y-5">
-                        <BackToProjects />
+                        <BackToProjects slug={slug} />
 
                         <h1
                             className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight"

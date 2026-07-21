@@ -2,18 +2,18 @@
 
 import { useRouter } from "next/navigation";
 
-export default function BackToProjects() {
+export default function BackToProjects({ slug }: { slug: string }) {
     const router = useRouter();
 
     const handleClick = (e: React.MouseEvent) => {
         e.preventDefault();
         router.push("/");
 
-        // After navigation, scroll to the projects section
+        // After navigation, scroll to the specific project card
         const checkAndScroll = () => {
-            const el = document.getElementById("projects");
+            const el = document.getElementById(`project-${slug}`);
             if (el) {
-                const headerOffset = 80;
+                const headerOffset = 40; // Reduced offset since cards are sticky and center themselves
                 const elementPosition = el.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 window.scrollTo({ top: offsetPosition, behavior: "smooth" });
