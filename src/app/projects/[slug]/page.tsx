@@ -139,8 +139,8 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                         {/* The Problem */}
                         <div>
                             <h2
-                                className="text-3xl font-bold text-white mb-6"
-                                style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                                className="text-3xl font-bold mb-6"
+                                style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                             >
                                 The Problem
                             </h2>
@@ -152,15 +152,15 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                         {/* Development Process */}
                         <div>
                             <h2
-                                className="text-3xl font-bold text-white mb-8"
-                                style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                                className="text-3xl font-bold mb-8"
+                                style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                             >
                                 Development Process
                             </h2>
                             <div className="space-y-10 border-l-2 border-gray-800 pl-8 ml-3">
                                 {project.developmentProcess.map((item, index) => (
                                     <div key={index} className="relative">
-                                        <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-2 border-blue-500 bg-[#0f1115] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
+                                        <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-2 border-green-500 bg-[#0f1115] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
                                         <h3
                                             className="text-xl font-bold text-white mb-2"
                                             style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
@@ -253,26 +253,6 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                             </div>
                         </div>
 
-                        {/* Categories */}
-                        <div>
-                            <h3
-                                className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
-                                style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
-                            >
-                                Category
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                                {project.categories.map((cat) => (
-                                    <span
-                                        key={cat}
-                                        className="px-3 py-1 bg-blue-900/20 text-blue-400 border border-blue-900/50 rounded-full text-xs font-bold uppercase tracking-wider"
-                                    >
-                                        {cat}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
                         {/* CTA Card */}
                         <div className="bg-gradient-to-b from-gray-900 to-[#0f1115] border border-gray-800 p-8 rounded-2xl text-center shadow-xl">
                             <h3
@@ -320,7 +300,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                             Have an idea brewing?
                         </h2>
                         <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-                            Let&apos;s turn your vision into a production-ready reality. Scalable code, clean architecture, and the tech to make it happen.
+                            Let&apos;s turn your vision into a production-ready reality. Scalable code, clean architecture, and the tech to make it happen for the greater good.
                         </p>
                     </div>
                     <Link

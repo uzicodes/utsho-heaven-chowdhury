@@ -12,7 +12,7 @@ export interface Project {
         details: string;
     }[];
     techStack: string[];
-    categories: string[];
+
 }
 
 export const projectDetails: Record<string, Project> = {
@@ -41,7 +41,6 @@ export const projectDetails: Record<string, Project> = {
             }
         ],
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Clerk", "GSAP", "Tailwind CSS"],
-        categories: ["Full-Stack", "Community Portal", "Web App"],
         liveUrl: "https://lambfalcons.vercel.app/",
         githubUrl: "https://github.com/uzicodes/lamb-falcons",
     },
@@ -75,7 +74,6 @@ export const projectDetails: Record<string, Project> = {
             }
         ],
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Neon DB", "Redis", "Socket.io", "Prisma", "Clerk", "Tailwind CSS"],
-        categories: ["Real Estate", "Full-Stack", "Localization"],
         liveUrl: "https://dhaka-basha.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Dhaka-Basha",
     },
@@ -109,7 +107,6 @@ export const projectDetails: Record<string, Project> = {
             }
         ],
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "MongoDB", "Redis", "SSLCommerz", "Tailwind CSS"],
-        categories: ["E-Commerce", "Admin Dashboard", "Full-Stack"],
         liveUrl: "https://culinarycanvaas.vercel.app/",
         githubUrl: "https://github.com/uzicodes/culinary-canvas",
     },
@@ -143,7 +140,6 @@ export const projectDetails: Record<string, Project> = {
             }
         ],
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Socket.io", "Prisma", "Supabase", "SSLCommerz", "Render"],
-        categories: ["Logistics", "Real-time Web App", "Full-Stack"],
         liveUrl: "https://northern-paribahan.onrender.com",
         githubUrl: "https://github.com/uzicodes/northern-paribahan",
     },
@@ -177,7 +173,6 @@ export const projectDetails: Record<string, Project> = {
             }
         ],
         techStack: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "Redis", "Clerk", "Tailwind CSS"],
-        categories: ["Health & Fitness", "SaaS", "Full-Stack"],
         liveUrl: "https://auraforce.vercel.app/",
         githubUrl: "https://github.com/uzicodes/AuraForce",
     },
@@ -211,7 +206,6 @@ export const projectDetails: Record<string, Project> = {
             }
         ],
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Neon DB", "Redis", "Clerk", "SSLCommerz", "Tailwind CSS"],
-        categories: ["E-Commerce", "High-Performance", "Full-Stack"],
         liveUrl: "https://aloraa.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Alora",
     }
