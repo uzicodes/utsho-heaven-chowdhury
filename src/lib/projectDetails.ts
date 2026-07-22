@@ -47,12 +47,12 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://lambfalcons.vercel.app/",
         githubUrl: "https://github.com/uzicodes/lamb-falcons",
         featureSpotlight: [
-            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 1" },
-            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 2" },
-            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 3" },
-            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 4" },
-            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 5" },
-            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 6" }
+            { imageUrl: "/projects/detailed-page/lamb-falcons/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/lamb-falcons/2.webp", caption: "Featured Merchandise Section (ongoing)" },
+            { imageUrl: "/projects/detailed-page/lamb-falcons/3.webp", caption: "Squad Members Info Section (ongoing)" },
+            { imageUrl: "/projects/detailed-page/lamb-falcons/4.webp", caption: "Featured Images for Gallery Overview (ongoing)" },
+            { imageUrl: "/projects/detailed-page/lamb-falcons/5.webp", caption: "Membership Dashboard Preview (ongoing)" },
+            { imageUrl: "/projects/detailed-page/lamb-falcons/6.webp", caption: "Testimonial & About Us Section (ongoing)" }
         ]
     },
 
