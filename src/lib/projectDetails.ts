@@ -211,12 +211,12 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://auraforce.vercel.app/",
         githubUrl: "https://github.com/uzicodes/AuraForce",
         featureSpotlight: [
-            { imageUrl: "/projects/aura-force.webp", caption: "Class Booking (Mock)" },
-            { imageUrl: "/projects/aura-force.webp", caption: "Trainer Profiles (Mock)" },
-            { imageUrl: "/projects/aura-force.webp", caption: "Workout Tracking (Mock)" },
-            { imageUrl: "/projects/aura-force.webp", caption: "Member Dashboard (Mock)" },
-            { imageUrl: "/projects/aura-force.webp", caption: "Diet Plan Generator (Mock)" },
-            { imageUrl: "/projects/aura-force.webp", caption: "Admin Overview (Mock)" }
+            { imageUrl: "/projects/detailed-page/aura-force/1.webp", caption: "Device Responsiveness Interface " },
+            { imageUrl: "/projects/detailed-page/aura-force/2.webp", caption: "Trainers Detailed Profiles " },
+            { imageUrl: "/projects/detailed-page/aura-force/3.webp", caption: "Class Schedule and Booking " },
+            { imageUrl: "/projects/detailed-page/aura-force/4.webp", caption: "Member Profile Dashboard " },
+            { imageUrl: "/projects/detailed-page/aura-force/5.webp", caption: "Dynamic Admin Panel" },
+            { imageUrl: "/projects/detailed-page/aura-force/6.webp", caption: "Public Posting Forum" }
         ]
     },
 
