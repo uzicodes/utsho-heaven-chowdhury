@@ -88,12 +88,12 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://dhaka-basha.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Dhaka-Basha",
         featureSpotlight: [
-            { imageUrl: "/projects/dhaka-basha.webp", caption: "Advanced Filtering (Mock)" },
-            { imageUrl: "/projects/dhaka-basha.webp", caption: "Map Integration (Mock)" },
-            { imageUrl: "/projects/dhaka-basha.webp", caption: "Property Details (Mock)" },
-            { imageUrl: "/projects/dhaka-basha.webp", caption: "User Dashboard (Mock)" },
-            { imageUrl: "/projects/dhaka-basha.webp", caption: "Admin Panel (Mock)" },
-            { imageUrl: "/projects/dhaka-basha.webp", caption: "Mobile View (Mock)" }
+            { imageUrl: "/projects/detailed-page/dhaka-basha/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/dhaka-basha/2.webp", caption: "Advanced Filtering System" },
+            { imageUrl: "/projects/detailed-page/dhaka-basha/3.webp", caption: "Rental Posting Form" },
+            { imageUrl: "/projects/detailed-page/dhaka-basha/4.webp", caption: "User Dashboard Management (Posts, Chats, Saved)" },
+            { imageUrl: "/projects/detailed-page/dhaka-basha/5.webp", caption: "Chat UI with Rental Post Owners" },
+            { imageUrl: "/projects/detailed-page/dhaka-basha/6.webp", caption: "Post View with Detailed Info" }
         ]
     },
 
