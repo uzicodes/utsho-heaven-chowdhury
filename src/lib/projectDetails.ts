@@ -16,6 +16,11 @@ export interface Project {
         imageUrl: string;
         caption: string;
     }[];
+
+    architecture?: {
+        diagramUrl: string;
+        description: string;
+    };
 }
 
 export const projectDetails: Record<string, Project> = {

@@ -282,6 +282,30 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                     </div>
                 </section>
 
+                {/* System Architecture Section */}
+                {project.architecture && (
+                    <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+                        <h2
+                            className="text-3xl font-bold mb-6 text-[#F5BE27]"
+                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                        >
+                            System Architecture
+                        </h2>
+                        <p className="text-lg leading-relaxed text-gray-400 mb-10 max-w-3xl">
+                            {project.architecture.description}
+                        </p>
+                        <div className="relative w-full aspect-square md:aspect-[21/9] rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-gray-800 bg-[#0a0b0e]">
+                            <Image
+                                src={project.architecture.diagramUrl}
+                                alt={`${project.title} System Architecture`}
+                                fill
+                                className="object-contain p-4 md:p-8"
+                                sizes="(max-width: 1280px) 100vw, 1280px"
+                            />
+                        </div>
+                    </section>
+                )}
+
                 {/* Feature Spotlight Section */}
                 {project.featureSpotlight && project.featureSpotlight.length > 0 && (
                     <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
@@ -410,3 +434,4 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
         </ReactLenis>
     );
 }
+
