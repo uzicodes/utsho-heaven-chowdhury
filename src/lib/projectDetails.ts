@@ -129,12 +129,12 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://culinarycanvaas.vercel.app/",
         githubUrl: "https://github.com/uzicodes/culinary-canvas",
         featureSpotlight: [
-            { imageUrl: "/projects/culinary-canvas.webp", caption: "Menu Interface (Mock)" },
-            { imageUrl: "/projects/culinary-canvas.webp", caption: "Cart Summary (Mock)" },
-            { imageUrl: "/projects/culinary-canvas.webp", caption: "Checkout Flow (Mock)" },
-            { imageUrl: "/projects/culinary-canvas.webp", caption: "Order Tracking (Mock)" },
-            { imageUrl: "/projects/culinary-canvas.webp", caption: "Admin Dashboard (Mock)" },
-            { imageUrl: "/projects/culinary-canvas.webp", caption: "Analytics (Mock)" }
+            { imageUrl: "/projects/detailed-page/culinary-canvas/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/culinary-canvas/2.webp", caption: "Category & Menu Page" },
+            { imageUrl: "/projects/detailed-page/culinary-canvas/3.webp", caption: "User Profile Management" },
+            { imageUrl: "/projects/detailed-page/culinary-canvas/4.webp", caption: "Customizable Cart Page" },
+            { imageUrl: "/projects/detailed-page/culinary-canvas/5.webp", caption: "Order Checkout & Payment Processing Page" },
+            { imageUrl: "/projects/detailed-page/culinary-canvas/6.webp", caption: "Admin Dashboard Analytics" }
         ]
     },
 
