@@ -51,6 +51,10 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Clerk", "GSAP", "Tailwind CSS"],
         liveUrl: "https://lambfalcons.vercel.app/",
         githubUrl: "https://github.com/uzicodes/lamb-falcons",
+        architecture: {
+            diagramUrl: "/projects/detailed-page/lamb-falcons/architechture.webp",
+            description: "The architecture of Lamb Falcons, featuring Clerk authentication for private member portals, GSAP-driven interactive elements, and Vercel CI/CD deployment."
+        },
         featureSpotlight: [
             { imageUrl: "/projects/detailed-page/lamb-falcons/1.webp", caption: "Device Responsive Interface" },
             { imageUrl: "/projects/detailed-page/lamb-falcons/2.webp", caption: "Featured Merchandise Section (ongoing)" },
@@ -92,6 +96,10 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Neon DB", "Redis", "Socket.io", "Prisma", "Clerk", "Tailwind CSS"],
         liveUrl: "https://dhaka-basha.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Dhaka-Basha",
+        architecture: {
+            diagramUrl: "/projects/detailed-page/dhaka-basha/architechture.webp",
+            description: "The architecture of Dhaka Basha, leveraging Prisma ORM with Neon PostgreSQL, Redis caching, Socket.io real-time chat, and localized Bengali support."
+        },
         featureSpotlight: [
             { imageUrl: "/projects/detailed-page/dhaka-basha/1.webp", caption: "Device Responsive Interface" },
             { imageUrl: "/projects/detailed-page/dhaka-basha/2.webp", caption: "Advanced Filtering System" },
@@ -133,6 +141,10 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "MongoDB", "Redis", "SSLCommerz", "Tailwind CSS"],
         liveUrl: "https://culinarycanvaas.vercel.app/",
         githubUrl: "https://github.com/uzicodes/culinary-canvas",
+        architecture: {
+            diagramUrl: "/projects/detailed-page/culinary-canvas/architechture.webp",
+            description: "The architecture of Culinary Canvas, integrating MongoDB database management, Redis caching, SSLCommerz payment gateway, and admin business analytics."
+        },
         featureSpotlight: [
             { imageUrl: "/projects/detailed-page/culinary-canvas/1.webp", caption: "Device Responsive Interface" },
             { imageUrl: "/projects/detailed-page/culinary-canvas/2.webp", caption: "Category & Menu Page" },
@@ -174,6 +186,10 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Socket.io", "Prisma", "Supabase", "SSLCommerz", "Render"],
         liveUrl: "https://northern-paribahan.onrender.com",
         githubUrl: "https://github.com/uzicodes/northern-paribahan",
+        architecture: {
+            diagramUrl: "/projects/detailed-page/northern-paribahan/architechture.webp",
+            description: "The architecture of Northern Paribahan, incorporating Socket.io real-time seat availability, Supabase authentication, Prisma ORM, and automated PDF ticket delivery."
+        },
         featureSpotlight: [
             { imageUrl: "/projects/northern-paribahan.webp", caption: "Search Routes (Mock)" },
             { imageUrl: "/projects/northern-paribahan.webp", caption: "Seat Selection (Mock)" },
@@ -215,6 +231,11 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "Redis", "Clerk", "Tailwind CSS"],
         liveUrl: "https://auraforce.vercel.app/",
         githubUrl: "https://github.com/uzicodes/AuraForce",
+
+        architecture: {
+            diagramUrl: "/projects/detailed-page/aura-force/architechture.webp",
+            description: "The architecture of Aura Force, featuring secure authentication, real-time data synchronization, and streamlined gym management workflows."
+        },
         featureSpotlight: [
             { imageUrl: "/projects/detailed-page/aura-force/1.webp", caption: "Device Responsiveness Interface " },
             { imageUrl: "/projects/detailed-page/aura-force/2.webp", caption: "Trainers Detailed Profiles " },
@@ -256,6 +277,10 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Neon DB", "Redis", "Clerk", "SSLCommerz", "Tailwind CSS"],
         liveUrl: "https://aloraa.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Alora",
+        architecture: {
+            diagramUrl: "/projects/detailed-page/alora/architechture.webp",
+            description: "The architecture of Alora, utilizing Neon PostgreSQL with Prisma ORM, Upstash Redis rate-limiting for API protection, Clerk authentication, and SSLCommerz payment processing."
+        },
         featureSpotlight: [
             { imageUrl: "/projects/detailed-page/alora/1.webp", caption: "Device Responsive Interface" },
             { imageUrl: "/projects/detailed-page/alora/2.webp", caption: "Product Page Interface" },
