@@ -252,12 +252,12 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://aloraa.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Alora",
         featureSpotlight: [
-            { imageUrl: "/projects/alora.webp", caption: "Product Grid (Mock)" },
-            { imageUrl: "/projects/alora.webp", caption: "Quick View (Mock)" },
-            { imageUrl: "/projects/alora.webp", caption: "Shopping Cart (Mock)" },
-            { imageUrl: "/projects/alora.webp", caption: "User Profile (Mock)" },
-            { imageUrl: "/projects/alora.webp", caption: "Admin Inventory (Mock)" },
-            { imageUrl: "/projects/alora.webp", caption: "Order Management (Mock)" }
+            { imageUrl: "/projects/detailed-page/alora/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/alora/2.webp", caption: "Product Page Interface" },
+            { imageUrl: "/projects/detailed-page/alora/3.webp", caption: "User Profile Management" },
+            { imageUrl: "/projects/detailed-page/alora/4.webp", caption: "Customizable Cart Page" },
+            { imageUrl: "/projects/detailed-page/alora/5.webp", caption: "Secured Checkout Page" },
+            { imageUrl: "/projects/detailed-page/alora/6.webp", caption: "Dynamic Inventory Management" }
         ]
     }
 };
