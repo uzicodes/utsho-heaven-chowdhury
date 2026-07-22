@@ -12,7 +12,10 @@ export interface Project {
         details: string;
     }[];
     techStack: string[];
-
+    featureSpotlight?: {
+        imageUrl: string;
+        caption: string;
+    }[];
 }
 
 export const projectDetails: Record<string, Project> = {
@@ -43,6 +46,14 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Clerk", "GSAP", "Tailwind CSS"],
         liveUrl: "https://lambfalcons.vercel.app/",
         githubUrl: "https://github.com/uzicodes/lamb-falcons",
+        featureSpotlight: [
+            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 1" },
+            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 2" },
+            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 3" },
+            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 4" },
+            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 5" },
+            { imageUrl: "/projects/lamb-falcons.webp", caption: "Feature Spotlight 6" }
+        ]
     },
 
     "dhaka-basha": {
@@ -76,6 +87,14 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Neon DB", "Redis", "Socket.io", "Prisma", "Clerk", "Tailwind CSS"],
         liveUrl: "https://dhaka-basha.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Dhaka-Basha",
+        featureSpotlight: [
+            { imageUrl: "/projects/dhaka-basha.webp", caption: "Advanced Filtering (Mock)" },
+            { imageUrl: "/projects/dhaka-basha.webp", caption: "Map Integration (Mock)" },
+            { imageUrl: "/projects/dhaka-basha.webp", caption: "Property Details (Mock)" },
+            { imageUrl: "/projects/dhaka-basha.webp", caption: "User Dashboard (Mock)" },
+            { imageUrl: "/projects/dhaka-basha.webp", caption: "Admin Panel (Mock)" },
+            { imageUrl: "/projects/dhaka-basha.webp", caption: "Mobile View (Mock)" }
+        ]
     },
 
     "culinary-canvas": {
@@ -109,6 +128,14 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "MongoDB", "Redis", "SSLCommerz", "Tailwind CSS"],
         liveUrl: "https://culinarycanvaas.vercel.app/",
         githubUrl: "https://github.com/uzicodes/culinary-canvas",
+        featureSpotlight: [
+            { imageUrl: "/projects/culinary-canvas.webp", caption: "Menu Interface (Mock)" },
+            { imageUrl: "/projects/culinary-canvas.webp", caption: "Cart Summary (Mock)" },
+            { imageUrl: "/projects/culinary-canvas.webp", caption: "Checkout Flow (Mock)" },
+            { imageUrl: "/projects/culinary-canvas.webp", caption: "Order Tracking (Mock)" },
+            { imageUrl: "/projects/culinary-canvas.webp", caption: "Admin Dashboard (Mock)" },
+            { imageUrl: "/projects/culinary-canvas.webp", caption: "Analytics (Mock)" }
+        ]
     },
 
     "northern-paribahan": {
@@ -142,6 +169,14 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Socket.io", "Prisma", "Supabase", "SSLCommerz", "Render"],
         liveUrl: "https://northern-paribahan.onrender.com",
         githubUrl: "https://github.com/uzicodes/northern-paribahan",
+        featureSpotlight: [
+            { imageUrl: "/projects/northern-paribahan.webp", caption: "Search Routes (Mock)" },
+            { imageUrl: "/projects/northern-paribahan.webp", caption: "Seat Selection (Mock)" },
+            { imageUrl: "/projects/northern-paribahan.webp", caption: "Payment Gateway (Mock)" },
+            { imageUrl: "/projects/northern-paribahan.webp", caption: "Ticket PDF (Mock)" },
+            { imageUrl: "/projects/northern-paribahan.webp", caption: "Admin Controls (Mock)" },
+            { imageUrl: "/projects/northern-paribahan.webp", caption: "Real-time Updates (Mock)" }
+        ]
     },
 
     "aura-force": {
@@ -175,6 +210,14 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "Redis", "Clerk", "Tailwind CSS"],
         liveUrl: "https://auraforce.vercel.app/",
         githubUrl: "https://github.com/uzicodes/AuraForce",
+        featureSpotlight: [
+            { imageUrl: "/projects/aura-force.webp", caption: "Class Booking (Mock)" },
+            { imageUrl: "/projects/aura-force.webp", caption: "Trainer Profiles (Mock)" },
+            { imageUrl: "/projects/aura-force.webp", caption: "Workout Tracking (Mock)" },
+            { imageUrl: "/projects/aura-force.webp", caption: "Member Dashboard (Mock)" },
+            { imageUrl: "/projects/aura-force.webp", caption: "Diet Plan Generator (Mock)" },
+            { imageUrl: "/projects/aura-force.webp", caption: "Admin Overview (Mock)" }
+        ]
     },
 
     "alora": {
@@ -208,6 +251,14 @@ export const projectDetails: Record<string, Project> = {
         techStack: ["Next.js", "Node.js", "React", "TypeScript", "Neon DB", "Redis", "Clerk", "SSLCommerz", "Tailwind CSS"],
         liveUrl: "https://aloraa.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Alora",
+        featureSpotlight: [
+            { imageUrl: "/projects/alora.webp", caption: "Product Grid (Mock)" },
+            { imageUrl: "/projects/alora.webp", caption: "Quick View (Mock)" },
+            { imageUrl: "/projects/alora.webp", caption: "Shopping Cart (Mock)" },
+            { imageUrl: "/projects/alora.webp", caption: "User Profile (Mock)" },
+            { imageUrl: "/projects/alora.webp", caption: "Admin Inventory (Mock)" },
+            { imageUrl: "/projects/alora.webp", caption: "Order Management (Mock)" }
+        ]
     }
 };
 

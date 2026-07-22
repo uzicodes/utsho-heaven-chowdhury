@@ -281,6 +281,37 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                     </div>
                 </section>
 
+                {/* Feature Spotlight Section */}
+                {project.featureSpotlight && project.featureSpotlight.length > 0 && (
+                    <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+                        <h2
+                            className="text-3xl font-bold mb-10 text-[#F5BE27]"
+                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                        >
+                            Feature Spotlight
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {project.featureSpotlight.map((feature, index) => (
+                                <div key={index} className="flex flex-col gap-4">
+                                    <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-800 group">
+                                        <Image
+                                            src={feature.imageUrl}
+                                            alt={feature.caption}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+                                    </div>
+                                    <div className="border-l-4 border-[#F5BE27] pl-4">
+                                        <p className="text-gray-300 text-sm leading-relaxed">
+                                            {feature.caption}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                )}
+
                 {/* "Have an idea brewing?" CTA Banner */}
                 <section className="relative bg-gradient-to-r from-[#0c2d48] via-[#14395e] to-[#0c2d48] py-24 px-6 lg:px-12 overflow-hidden">
                     {/* Top wavy border */}
