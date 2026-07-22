@@ -6,6 +6,7 @@ import { projectDetails, ProjectSlug } from "@/lib/projectDetails";
 import BackToProjects from "./BackToProjects";
 import NavigateLink from "./NavigateLink";
 import ScrollToTop from "./ScrollToTop";
+import FeatureSpotlight from "./FeatureSpotlight";
 import { ReactLenis } from "lenis/react";
 
 interface ProjectPageProps {
@@ -290,25 +291,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                         >
                             Feature Spotlight
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {project.featureSpotlight.map((feature, index) => (
-                                <div key={index} className="flex flex-col gap-4">
-                                    <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-gray-800 group">
-                                        <Image
-                                            src={feature.imageUrl}
-                                            alt={feature.caption}
-                                            fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                        />
-                                    </div>
-                                    <div className="border-l-4 border-[#F5BE27] pl-4">
-                                        <p className="text-gray-300 text-sm leading-relaxed">
-                                            {feature.caption}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <FeatureSpotlight items={project.featureSpotlight} />
                     </section>
                 )}
 
