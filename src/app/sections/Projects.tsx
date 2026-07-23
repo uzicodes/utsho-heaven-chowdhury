@@ -99,13 +99,13 @@ const projects: Project[] = [
 
 const buildingTools: Project[] = [
   {
-    title: "Task & Routine Planner",
+    title: "SCAN-REACT",
     description: "A customized browser extension and theme designed to help university students seamlessly track tasks, quizzes, and assignments directly from their new tab.",
     skills: ["react", "ts", "tailwind"],
     link: "/projects/lamb-falcons.webp",
     color: "#eab308",
-    githubLink: "https://github.com/uzicodes",
-    liveLink: "#",
+    githubLink: "https://github.com/uzicodes/Scan-React",
+    liveLink: "https://scanreact.vercel.app",
     detailsLink: "/projects/task-planner",
   },
   {
@@ -117,36 +117,6 @@ const buildingTools: Project[] = [
     githubLink: "https://github.com/uzicodes",
     liveLink: "#",
     detailsLink: "/projects/upstash-limiter",
-  },
-  {
-    title: "Custom Terminal Theme",
-    description: "A sleek, highly readable terminal theme and configuration dotfiles tailored for modern web development, prioritizing git integration and path readability.",
-    skills: ["bash", "git"],
-    link: "/projects/culinary-canvas.webp",
-    color: "#0ea5e9",
-    githubLink: "https://github.com/uzicodes",
-    liveLink: "#",
-    detailsLink: "/projects/terminal-theme",
-  },
-  {
-    title: "React Component Generator",
-    description: "A CLI tool written in Node.js that instantly scaffolds React components, automatically generating tests, storybook files, and CSS modules with standard boilerplate.",
-    skills: ["nodejs", "ts"],
-    link: "/projects/dhaka-basha.webp",
-    color: "#8b5cf6",
-    githubLink: "https://github.com/uzicodes",
-    liveLink: "#",
-    detailsLink: "/projects/component-generator",
-  },
-  {
-    title: "Local Database Seeder",
-    description: "A fast utility script to seed complex relational local databases with realistic fake data for rapid full-stack prototyping and testing.",
-    skills: ["prisma", "nodejs", "mongodb"],
-    link: "/projects/northern-paribahan.webp",
-    color: "#f97316",
-    githubLink: "https://github.com/uzicodes",
-    liveLink: "#",
-    detailsLink: "/projects/db-seeder",
   }
 ];
 
@@ -277,6 +247,7 @@ export default function Projects() {
                   />
                 );
               })}
+              <div className="h-screen pointer-events-none" />
             </div>
           </div>
         </ReactLenis>
@@ -334,10 +305,10 @@ function Card({
         style={{
           scale,
           x: isTool ? x : 0,
-          top: `calc(${i * 35}px)`,
-          marginTop: "var(--project-margin, 0)",
+          top: isTool ? `calc(${i * 35}px)` : (i === 0 ? "0" : `calc(-5vh + ${i * 25}px)`),
+          marginTop: isTool ? "var(--project-margin, 0)" : (i === 0 ? "0" : "var(--project-margin, 0)"),
         }}
-        className={`relative top-0 h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card pointer-events-auto`}
+        className={`relative ${isTool ? 'top-0' : (i === 0 ? 'top-0' : '-top-[25%]')} h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card pointer-events-auto`}
         whileHover={{
           y: -8,
           transition: { duration: 0.3 },
@@ -345,7 +316,7 @@ function Card({
       >
         <m.div
           className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl"
-          style={{ 
+          style={{
             backgroundColor: '#3D5A30',
             transform: "scale(var(--project-scale, 1))",
             transformOrigin: "top"
