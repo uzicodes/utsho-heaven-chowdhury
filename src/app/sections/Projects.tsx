@@ -219,7 +219,7 @@ export default function Projects() {
             <div className="text-white w-full bg-transparent">
               <div className="text-center mb-0 pt-72">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                  BUILDING TOOLS
+                  BUILDING TOOLS (ON-PROGRESS)
                 </h2>
                 <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                   developed Utilities & Tools to streamline Developer workflows
