@@ -97,8 +97,8 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://dhaka-basha.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Dhaka-Basha",
         architecture: {
-            diagramUrl: "/projects/detailed-page/dhaka-basha/architechture.webp",
-            description: "The architecture of Dhaka Basha, leveraging Prisma ORM with Neon PostgreSQL, Redis caching, Socket.io real-time chat, and localized Bengali support."
+            diagramUrl: "/projects/detailed-page/dhaka-basha/dhaka-basha.webp",
+            description: "A robust multi-tier architecture powering both Web and Android (Capacitor) clients. API requests pass through custom Next.js Middleware with Upstash Redis rate-limiting to prevent abuse. User authentication and database synchronization are managed asynchronously via Clerk Webhooks, real-time events are broadcast through Pusher WebSockets, and data persistence is handled via Prisma ORM querying a serverless Neon PostgreSQL database."
         },
         featureSpotlight: [
             { imageUrl: "/projects/detailed-page/dhaka-basha/1.webp", caption: "Device Responsive Interface" },

@@ -294,12 +294,13 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                         <p className="text-lg leading-relaxed text-gray-400 mb-10 max-w-3xl">
                             {project.architecture.description}
                         </p>
-                        <div className="relative w-full aspect-square md:aspect-[21/9] rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-gray-800 bg-[#0a0b0e]">
+                        <div className="relative w-full max-w-4xl mx-auto flex justify-center items-center rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-gray-800 bg-[#0a0b0e] p-4 md:p-8">
                             <Image
                                 src={project.architecture.diagramUrl}
                                 alt={`${project.title} System Architecture`}
-                                fill
-                                className="object-contain p-4 md:p-8"
+                                width={1200}
+                                height={1200}
+                                className="w-full max-w-5xl h-auto object-contain"
                                 sizes="(max-width: 1280px) 100vw, 1280px"
                             />
                         </div>
