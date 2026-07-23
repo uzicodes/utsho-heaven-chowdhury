@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactLenis } from "lenis/react";
-import { useTransform, m, useScroll, MotionValue } from "framer-motion";
+import { useTransform, m, useScroll, MotionValue, useSpring } from "framer-motion";
 import { useRef, useEffect } from "react";
 import * as React from "react";
 import Image from "next/image";
@@ -117,6 +117,36 @@ const buildingTools: Project[] = [
     githubLink: "https://github.com/uzicodes",
     liveLink: "#",
     detailsLink: "/projects/upstash-limiter",
+  },
+  {
+    title: "Custom Terminal Theme",
+    description: "A sleek, highly readable terminal theme and configuration dotfiles tailored for modern web development, prioritizing git integration and path readability.",
+    skills: ["bash", "git"],
+    link: "/projects/culinary-canvas.webp",
+    color: "#0ea5e9",
+    githubLink: "https://github.com/uzicodes",
+    liveLink: "#",
+    detailsLink: "/projects/terminal-theme",
+  },
+  {
+    title: "React Component Generator",
+    description: "A CLI tool written in Node.js that instantly scaffolds React components, automatically generating tests, storybook files, and CSS modules with standard boilerplate.",
+    skills: ["nodejs", "ts"],
+    link: "/projects/dhaka-basha.webp",
+    color: "#8b5cf6",
+    githubLink: "https://github.com/uzicodes",
+    liveLink: "#",
+    detailsLink: "/projects/component-generator",
+  },
+  {
+    title: "Local Database Seeder",
+    description: "A fast utility script to seed complex relational local databases with realistic fake data for rapid full-stack prototyping and testing.",
+    skills: ["prisma", "nodejs", "mongodb"],
+    link: "/projects/northern-paribahan.webp",
+    color: "#f97316",
+    githubLink: "https://github.com/uzicodes",
+    liveLink: "#",
+    detailsLink: "/projects/db-seeder",
   }
 ];
 
@@ -271,11 +301,23 @@ function Card({
   isTool,
 }: CardProps) {
   const container = useRef<HTMLDivElement>(null);
-  const scale = useTransform(progress, range, [1, targetScale]);
 
-  const { scrollYProgress: cardEntryProgress } = useScroll({
+  const smoothProgress = useSpring(progress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+  const scale = useTransform(smoothProgress, range, [1, targetScale]);
+
+  const { scrollYProgress: cardEntryProgressRaw } = useScroll({
     target: container,
     offset: ["start center", "start start"],
+  });
+
+  const cardEntryProgress = useSpring(cardEntryProgressRaw, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
   });
 
   const xLeft = useTransform(cardEntryProgress, [0, 1], ["-150%", "0%"]);
@@ -292,10 +334,10 @@ function Card({
         style={{
           scale,
           x: isTool ? x : 0,
-          top: i === 0 ? "0" : `calc(-5vh + ${i * 25}px)`,
-          marginTop: i === 0 ? "0" : "var(--project-margin, 0)",
+          top: `calc(${i * 35}px)`,
+          marginTop: "var(--project-margin, 0)",
         }}
-        className={`relative ${i === 0 ? 'top-0' : '-top-[25%]'} h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card pointer-events-auto`}
+        className={`relative top-0 h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card pointer-events-auto`}
         whileHover={{
           y: -8,
           transition: { duration: 0.3 },
