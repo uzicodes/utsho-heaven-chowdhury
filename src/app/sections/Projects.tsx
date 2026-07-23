@@ -96,10 +96,39 @@ const projects: Project[] = [
   }
 ];
 
+const buildingTools: Project[] = [
+  {
+    title: "Task & Routine Planner",
+    description: "A customized browser extension and theme designed to help university students seamlessly track tasks, quizzes, and assignments directly from their new tab.",
+    skills: ["react", "ts", "tailwind"],
+    link: "/projects/lamb-falcons.webp",
+    color: "#eab308",
+    githubLink: "https://github.com/uzicodes",
+    liveLink: "#",
+    detailsLink: "/projects/task-planner",
+  },
+  {
+    title: "Upstash Rate Limiter Utility",
+    description: "A lightweight, plug-and-play middleware setup for Next.js to secure API routes against spamming using Upstash Redis, featuring custom frontend error toasts on 429 status codes.",
+    skills: ["nextjs", "ts", "redis"],
+    link: "/projects/alora.webp",
+    color: "#f43f5e",
+    githubLink: "https://github.com/uzicodes",
+    liveLink: "#",
+    detailsLink: "/projects/upstash-limiter",
+  }
+];
+
 export default function Projects() {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
+    offset: ["start start", "end end"],
+  });
+
+  const toolsContainer = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: toolsScrollProgress } = useScroll({
+    target: toolsContainer,
     offset: ["start start", "end end"],
   });
 
@@ -178,6 +207,41 @@ export default function Projects() {
                     githubLink={project.githubLink}
                     liveLink={project.liveLink}
                     detailsLink={project.detailsLink}
+                  />
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Building Tools Section */}
+          <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={toolsContainer}>
+            <div className="text-white w-full bg-transparent">
+              <div className="text-center mb-0 pt-72">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                  BUILDING TOOLS
+                </h2>
+                <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                  developed Utilities & Tools to streamline developer workflows
+                </p>
+              </div>
+
+              {buildingTools.map((tool: Project, i: number) => {
+                const targetScale: number = 1 - (buildingTools.length - i) * 0.05;
+                return (
+                  <Card
+                    key={tool.title}
+                    i={i}
+                    url={tool.link}
+                    title={tool.title}
+                    color={tool.color}
+                    description={tool.description}
+                    skills={tool.skills}
+                    progress={toolsScrollProgress}
+                    range={[i * 0.25, 1]}
+                    targetScale={targetScale}
+                    githubLink={tool.githubLink}
+                    liveLink={tool.liveLink}
+                    detailsLink={tool.detailsLink}
                   />
                 );
               })}
