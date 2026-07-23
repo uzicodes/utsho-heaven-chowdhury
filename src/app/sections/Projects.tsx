@@ -31,6 +31,7 @@ interface CardProps {
   githubLink: string;
   liveLink: string;
   detailsLink: string;
+  isTool?: boolean;
 }
 
 const projects: Project[] = [
@@ -213,7 +214,7 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Building Tools Section */}
+          {/* BUILDING TOOLS SECTION */}
           <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={toolsContainer}>
             <div className="text-white w-full bg-transparent">
               <div className="text-center mb-0 pt-72">
@@ -221,7 +222,7 @@ export default function Projects() {
                   BUILDING TOOLS
                 </h2>
                 <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                  developed Utilities & Tools to streamline developer workflows
+                  developed Utilities & Tools to streamline Developer workflows
                 </p>
               </div>
 
@@ -242,6 +243,7 @@ export default function Projects() {
                     githubLink={tool.githubLink}
                     liveLink={tool.liveLink}
                     detailsLink={tool.detailsLink}
+                    isTool={true}
                   />
                 );
               })}
@@ -266,9 +268,19 @@ function Card({
   githubLink,
   liveLink,
   detailsLink,
+  isTool,
 }: CardProps) {
   const container = useRef<HTMLDivElement>(null);
   const scale = useTransform(progress, range, [1, targetScale]);
+
+  const { scrollYProgress: cardEntryProgress } = useScroll({
+    target: container,
+    offset: ["start center", "start start"],
+  });
+
+  const xLeft = useTransform(cardEntryProgress, [0, 1], ["-150%", "0%"]);
+  const xRight = useTransform(cardEntryProgress, [0, 1], ["150%", "0%"]);
+  const x = i % 2 === 0 ? xLeft : xRight;
 
   return (
     <div
@@ -279,8 +291,8 @@ function Card({
       <m.div
         style={{
           scale,
+          x: isTool ? x : 0,
           top: i === 0 ? "0" : `calc(-5vh + ${i * 25}px)`,
-          transform: "scale(var(--project-scale, 1))",
           marginTop: i === 0 ? "0" : "var(--project-margin, 0)",
         }}
         className={`relative ${i === 0 ? 'top-0' : '-top-[25%]'} h-auto w-[90%] md:w-[85%] lg:w-[75%] xl:w-[65%] origin-top project-card pointer-events-auto`}
@@ -291,7 +303,11 @@ function Card({
       >
         <m.div
           className="w-full flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-xl"
-          style={{ backgroundColor: '#3D5A30' }}
+          style={{ 
+            backgroundColor: '#3D5A30',
+            transform: "scale(var(--project-scale, 1))",
+            transformOrigin: "top"
+          }}
           whileHover={{
             boxShadow: `0 0 30px -5px ${color}40`,
             transition: { duration: 0.4 }
