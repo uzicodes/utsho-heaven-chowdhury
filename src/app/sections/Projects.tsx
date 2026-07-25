@@ -100,13 +100,13 @@ const projects: Project[] = [
 const buildingTools: Project[] = [
   {
     title: "SCAN-REACT",
-    description: "A customized browser extension and theme designed to help university students seamlessly track tasks, quizzes, and assignments directly from their new tab.",
-    skills: ["react", "ts", "tailwind"],
-    link: "/projects/lamb-falcons.webp",
+    description: "Static React code analysis platform engineered to optimize repositories for the native React Compiler.\n• Programmatic AST-based code diagnostics running on a custom serverless-ready Node.js analysis engine.\n• Featuring V8 engine memory guards & GitHub API metadata pre-flight checks.\n• API protection with Redis rate-limiting.\n• react-doctor invoked via its programmatic Node API.\n• GitHub REST API for Source Control Interface utilized for pre-flight repository size metadata.\n• Interactive diagnostic dashboard featuring atomic, copy-to-clipboard AI-Prompt utilities for rapid IDE refinement.",
+    skills: ["nextjs", "ts", "nodejs", "v8", "tailwind", "rest-api", "redis", "render"],
+    link: "/projects/Tools/scan-react/scan-react.webp",
     color: "#eab308",
     githubLink: "https://github.com/uzicodes/Scan-React",
     liveLink: "https://scanreact.vercel.app",
-    detailsLink: "/projects/task-planner",
+    detailsLink: "/projects/  task-planner",
   },
   {
     title: "Upstash Rate Limiter Utility",
@@ -355,6 +355,8 @@ function Card({
                   socket: { src: "/icons/socket.svg", alt: "Socket", bg: "bg-white", cls: "w-full h-full object-contain" },
                   ssl: { src: "/icons/ssl.jpg", alt: "SSLCommerz", bg: "bg-white", cls: "w-full h-full object-contain" },
                   render: { src: "/icons/render.svg", alt: "Render", bg: "bg-white", cls: "w-full h-full object-contain" },
+                  "rest-api": { src: "/icons/rest-api.svg", alt: "REST API", bg: "bg-white", cls: "w-full h-full object-contain" },
+                  v8: { src: "/icons/V8.svg", alt: "V8 Engine", bg: "bg-white", cls: "w-full h-full object-contain" },
                   clerk: { src: "/icons/tools/clerk.svg", alt: "Clerk", bg: "bg-[#1C1C1E]", cls: "w-4 h-4 md:w-6 md:h-6" },
                   neon: { src: "/icons/database/neon.svg", alt: "Neon DB", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
                   android: { src: "/icons/tools/android.svg", alt: "Android", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
