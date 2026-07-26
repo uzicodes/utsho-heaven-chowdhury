@@ -100,7 +100,7 @@ const projects: Project[] = [
 const buildingTools: Project[] = [
   {
     title: "SCAN-REACT",
-    description: "Static React code analysis platform engineered to optimize repositories for the native React Compiler.\n• Programmatic AST-based code diagnostics running on a custom serverless-ready Node.js analysis engine.\n• Featuring V8 engine memory guards & GitHub API metadata pre-flight checks.\n• API protection with Redis rate-limiting.\n• react-doctor invoked via its programmatic Node API.\n• GitHub REST API for Source Control Interface utilized for pre-flight repository size metadata.\n• Interactive diagnostic dashboard featuring atomic, copy-to-clipboard AI-Prompt utilities for rapid IDE refinement.",
+    description: "Static React code analysis platform engineered to optimize repositories for the native React Compiler.\n• Programmatic AST-based code diagnostics running on a custom serverless-ready Node.js analysis engine.\n• Featuring V8 engine memory guards & GitHub API metadata pre-flight checks.\n• API protection with Redis rate-limiting.\n• react-doctor invoked via its programmatic Node API.\n• GitHub REST API for Source Control Interface utilized for pre-flight repository size metadata.\n• Interactive diagnostic dashboard featuring atomic, ready-to-use AI-Prompt for rapid IDE refinement.",
     skills: ["nextjs", "ts", "nodejs", "v8", "tailwind", "rest-api", "redis", "render"],
     link: "/projects/Tools/scan-react/scan-react.webp",
     color: "#eab308",
@@ -344,7 +344,7 @@ function Card({
               </m.div>
 
               <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-black/50 backdrop-blur-md text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium">
-                Project {i + 1}
+                {isTool ? 'Tool' : 'Project'} {i + 1}
               </div>
             </div>
 
@@ -447,7 +447,7 @@ function Card({
             </div>
           </div>
 
-          <div className="w-full md:w-[45%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative">
+          <div className="w-full md:w-[50%] lg:w-[55%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative md:-ml-4 lg:-ml-8">
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 text-center" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                 {title}
@@ -455,17 +455,28 @@ function Card({
               {(() => {
                 const parts = description.split('\n');
                 const firstLine = parts[0];
-                const bulletPoints = parts.slice(1).join('\n');
+                const restLines = parts.slice(1);
 
                 return (
                   <>
-                    <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug mb-2 md:mb-3" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                    <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug mb-2 md:mb-3 break-all" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                       {firstLine}
                     </p>
-                    {bulletPoints && (
-                      <p className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug whitespace-pre-line" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                        {bulletPoints}
-                      </p>
+                    {restLines.length > 0 && (
+                      <div className="text-xs md:text-sm lg:text-base text-[#121111] font-semibold leading-snug" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                        {restLines.map((line, idx) => {
+                          const trimmed = line.trim();
+                          if (trimmed.startsWith('•')) {
+                            return (
+                              <div key={idx} className="flex items-start break-all">
+                                <span className="text-white mr-1.5">•</span>
+                                <span className="flex-1">{trimmed.substring(1).trim()}</span>
+                              </div>
+                            );
+                          }
+                          return <div key={idx} className="break-all">{line}</div>;
+                        })}
+                      </div>
                     )}
                   </>
                 );
