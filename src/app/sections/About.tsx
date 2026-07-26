@@ -141,10 +141,10 @@ export default function About(): React.ReactElement {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-10 max-w-xl text-4xl font-semibold lg:text-5xl"
+            className="relative z-10 max-w-none text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold whitespace-normal sm:whitespace-nowrap text-center sm:text-left"
             style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
           >
-            Developer, Designer Creator, Innovator
+            Developer | Designer <br className="sm:hidden" /><span className="hidden sm:inline">| </span>Creator | Innovator
           </m.h2>
 
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">

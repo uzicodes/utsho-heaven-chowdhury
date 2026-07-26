@@ -94,7 +94,7 @@ export default function Hero() {
                       backgroundClip: 'text',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
-                      fontSize: '45px',
+                      fontSize: '50px',
                       display: 'block',
                       marginTop: '0',
                       lineHeight: '1'

@@ -70,16 +70,16 @@ const BookshelfSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center py-20 px-4 overflow-x-clip">
       <div className="max-w-6xl w-full">
-        
+
         {/* Header Text */}
-        <m.div 
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl" style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif', fontWeight: 600 }}>
+          <h2 className="text-base sm:text-2xl md:text-3xl whitespace-nowrap" style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif', fontWeight: 600 }}>
             handpicked my Favorite Books
           </h2>
         </m.div>
@@ -89,11 +89,11 @@ const BookshelfSection = () => {
 
           {/* Books Container */}
           <m.div
-            className="flex justify-center items-end gap-1 pb-0 perspective-1000" 
-            style={{ perspective: "2000px", marginTop: "0" }} 
+            className="flex justify-center items-end gap-1 pb-0 perspective-1000"
+            style={{ perspective: "2000px", marginTop: "0" }}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, margin: "-100px" }} 
+            viewport={{ once: false, margin: "-100px" }}
             variants={{
               visible: {
                 transition: {
@@ -108,8 +108,8 @@ const BookshelfSection = () => {
                 key={book.id}
                 variants={{
                   hidden: { y: -100, opacity: 0 },
-                  visible: { 
-                    y: 0, 
+                  visible: {
+                    y: 0,
                     opacity: 1,
                     transition: {
                       type: "spring",
@@ -194,7 +194,7 @@ const BookshelfSection = () => {
           </m.div>
 
           {/* Bottom Shelf */}
-          <m.div 
+          <m.div
             className="relative bg-gradient-to-b from-shelf-wood to-shelf-wood/90 h-6 rounded-lg shadow-2xl"
             initial={{ scaleX: 0, opacity: 0 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
