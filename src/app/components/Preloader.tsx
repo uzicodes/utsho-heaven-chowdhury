@@ -15,13 +15,39 @@ export const Preloader = () => {
 
         const minTimePromise = new Promise<void>(resolve => setTimeout(resolve, 3000));
 
-        const loadPromise = new Promise<void>(resolve => {
+        const windowLoadPromise = new Promise<void>(resolve => {
             if (document.readyState === 'complete') {
                 resolve();
             } else {
                 window.addEventListener('load', () => resolve(), { once: true });
             }
         });
+
+        // Eagerly load all images and wait for them
+        const imagesLoadPromise = new Promise<void>(resolve => {
+            // Small timeout to ensure all DOM elements are mounted
+            setTimeout(() => {
+                const images = Array.from(document.querySelectorAll('img'));
+                
+                images.forEach(img => {
+                    if (img.loading === 'lazy') {
+                        img.loading = 'eager';
+                    }
+                });
+
+                const imagePromises = images.map(img => {
+                    if (img.complete) return Promise.resolve();
+                    return new Promise<void>(res => {
+                        img.addEventListener('load', () => res(), { once: true });
+                        img.addEventListener('error', () => res(), { once: true });
+                    });
+                });
+
+                Promise.all(imagePromises).then(() => resolve());
+            }, 50);
+        });
+
+        const loadPromise = Promise.all([windowLoadPromise, imagesLoadPromise]);
 
         Promise.all([minTimePromise, loadPromise]).then(() => {
             if (isMounted) {
