@@ -100,7 +100,7 @@ const projects: Project[] = [
 const buildingTools: Project[] = [
   {
     title: "SCAN-REACT",
-    description: "Static React code analysis platform engineered to optimize repositories for the native React Compiler.\n• Programmatic AST-based code diagnostics running on a custom serverless-ready Node.js analysis engine.\n• Featuring V8 engine memory guards & GitHub API metadata pre-flight checks.\n• API protection with Redis rate-limiting.\n• react-doctor invoked via its programmatic Node API.\n• GitHub REST API for Source Control Interface utilized for pre-flight repository size metadata.\n• Interactive diagnostic dashboard featuring atomic, ready-to-use AI-Prompt for rapid IDE refinement.",
+    description: "Static React code analysis platform engineered to optimize repositories for the native React Compiler.\n• Programmatic AST-based code diagnostics running on a custom serverless-ready Node.js analysis engine.\n• Featuring V8 engine memory guards & GitHub API metadata pre-flight checks.\n• API protection with Redis rate-limiting.\n• react-doctor invoked via its programmatic Node API.\n• GitHub REST API for Source Control Interface utilized for pre-flight repository size metadata.\n• Interactive diagnostic dashboard featuring atomic, ready-to-use AI-Prompt for rapid IDE refinement. \n• Decoupled cloud architecture, Vercel for the Next.js frontend and Render for backend execution containers.",
     skills: ["nextjs", "ts", "nodejs", "v8", "tailwind", "rest-api", "redis", "render"],
     link: "/projects/Tools/scan-react/scan-react.webp",
     color: "#eab308",
@@ -109,14 +109,14 @@ const buildingTools: Project[] = [
     detailsLink: "/projects/  task-planner",
   },
   {
-    title: "Upstash Rate Limiter Utility",
-    description: "A lightweight, plug-and-play middleware setup for Next.js to secure API routes against spamming using Upstash Redis, featuring custom frontend error toasts on 429 status codes.",
-    skills: ["nextjs", "ts", "redis"],
-    link: "/projects/alora.webp",
+    title: "STATS-TUBE",
+    description: "High-performance YouTube analytics and competitor intelligence platform engineered to uncover deep engagement metrics & channel momentum.\n• Server-side proxy routing for YouTube Data API v3.\n• Endpoint protection & API quota managing from Redis.\n• Highly optimized data pipeline using batch fetching for extensive video statistics with sub-second latency.\n• Token-based API pagination for data rendering.\n• Interactive data visualization by React-Recharts library.\n• Dynamic RPM used for financial modeling and upload velocity tracking for deep content strategy analysis.\n• Algorithmic head-to-head comparison featuring AI matchup summaries and engagement scoring.\n• Serverless bug reporting integrated via Web3Forms API.",
+    skills: ["nextjs", "youtube", "ts", "tailwind", "recharts", "redis",],
+    link: "/projects/Tools/stats-tube/stats-tube.webp",
     color: "#f43f5e",
-    githubLink: "https://github.com/uzicodes",
-    liveLink: "#",
-    detailsLink: "/projects/upstash-limiter",
+    githubLink: "https://github.com/uzicodes/Stats-Tube",
+    liveLink: "https://stats-tube.vercel.app",
+    detailsLink: "/projects/Tools/stats-tube/stats-tube.webp",
   }
 ];
 
@@ -219,7 +219,7 @@ export default function Projects() {
             <div className="text-white w-full bg-transparent">
               <div className="text-center mb-0 pt-72">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                  BUILDING TOOLS (ON-PROGRESS)
+                  BUILDING TOOLS
                 </h2>
                 <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                   developed Utilities & Tools to streamline Developer workflows
@@ -360,6 +360,8 @@ function Card({
                   clerk: { src: "/icons/tools/clerk.svg", alt: "Clerk", bg: "bg-[#1C1C1E]", cls: "w-4 h-4 md:w-6 md:h-6" },
                   neon: { src: "/icons/database/neon.svg", alt: "Neon DB", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
                   android: { src: "/icons/tools/android.svg", alt: "Android", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
+                  recharts: { src: "/icons/recharts.svg", alt: "Recharts", bg: "bg-transparent", cls: "w-full h-full object-contain" },
+                  youtube: { src: "/icons/youtube.svg", alt: "YouTube", bg: "bg-transparent", cls: "w-full h-full object-contain" },
                 };
                 const elements: React.ReactNode[] = [];
                 let batch: string[] = [];
@@ -386,8 +388,9 @@ function Card({
                   const icon = customIcons[s];
                   if (icon) {
                     flushBatch(`before-${skill}`);
+                    const isSpecial = s === 'clerk' || s === 'recharts' || s === 'youtube';
                     elements.push(
-                      <div key={skill} className={`h-6 w-6 md:h-8 md:w-8 ${icon.bg} rounded flex items-center justify-center ${s !== 'clerk' ? 'p-1' : ''}`}>
+                      <div key={skill} className={`h-6 w-6 md:h-8 md:w-8 ${icon.bg} rounded flex items-center justify-center ${!isSpecial ? 'p-1' : ''}`}>
                         <Image src={icon.src} alt={icon.alt} width={32} height={32} className={icon.cls} />
                       </div>
                     );
