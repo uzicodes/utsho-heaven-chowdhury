@@ -78,7 +78,7 @@ const jsonLd = {
   },
   "sameAs": [
     "https://github.com/uzicodes",
-    "https://www.linkedin.com/in/utsho-heaven-chowdhury"
+    "https://www.linkedin.com/in/utshochowdhury"
   ],
   "knowsAbout": [
     "Software Engineering",

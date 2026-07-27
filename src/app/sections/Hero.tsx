@@ -199,7 +199,7 @@ export default function Hero() {
                   whileHover={{ scale: 1.1 }}
                   aria-label="LinkedIn"
                   className="rounded-lg contact-social-icon transition-colors"
-                  onClick={() => window.open('https://www.linkedin.com/in/utsho-heaven-chowdhury/', '_blank')}
+                  onClick={() => window.open('https://www.linkedin.com/in/utshochowdhury/', '_blank')}
                 >
                   <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />
                 </m.button>

@@ -26,7 +26,7 @@ const contactItems: ContactItem[] = [
   {
     icon: <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />,
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/utsho-heaven-chowdhury/",
+    link: "https://www.linkedin.com/in/utshochowdhury/",
     text: "Connect",
   },
   {
