@@ -137,12 +137,14 @@ const skillCategories: SkillCategory[] = [
     color: "text-pink-400",
     skills: [
       { name: "Git", icon: <Image src="/icons/tools/git.svg" alt="Git" width={48} height={48} /> },
-      
+
       { name: "Nginx", icon: <Image src="/icons/tools/nginx.svg" alt="Nginx" width={48} height={48} /> },
       { name: "Android Studio", icon: <Image src="/icons/tools/android.svg" alt="Android Studio" width={48} height={48} /> },
       { name: "Clerk", icon: <Image src="/icons/tools/clerk.svg" alt="Clerk" width={48} height={48} /> },
-      { name: "Selenium", icon: <Image src="/icons/tools/selenium.svg" alt="Selenium" width={50} height={50}
-       /> },
+      {
+        name: "Selenium", icon: <Image src="/icons/tools/selenium.svg" alt="Selenium" width={50} height={50}
+        />
+      },
       { name: "Postman", icon: <Image src="/icons/tools/postman.svg" alt="Postman" width={48} height={48} /> },
     ],
   },
