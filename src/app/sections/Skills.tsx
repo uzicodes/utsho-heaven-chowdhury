@@ -156,7 +156,7 @@ const skillCategories: SkillCategory[] = [
       { name: "Canva", icon: <Image src="/icons/ui/canva.svg" alt="Canva" width={35} height={43} /> },
       { name: "Photoshop", icon: <Image src="/icons/ui/ps.svg" alt="Photoshop" width={48} height={48} /> },
       { name: "Framer", icon: <Image src="/icons/ui/framer.svg" alt="Framer" width={48} height={48} /> },
-      { name: "Webflow", icon: <Image src="/icons/ui/webflow.svg" alt="Webflow" width={41} height={41} /> },
+
     ],
   },
 ];
