@@ -192,7 +192,7 @@ export default function Hero() {
                   className="rounded-lg contact-social-icon  transition-colors"
                   onClick={() => window.open('https://github.com/uzicodes', '_blank')}
                 >
-                  <Image src="https://skillicons.dev/icons?i=github" alt="GitHub" width={32} height={32} className="w-8 h-8" unoptimized />
+                  <Image src="https://skills.syvixor.com/api/icons?i=github&perline=12&radius=60" alt="GitHub" width={35} height={35} className="w-9 h-9" unoptimized />
                 </m.button>
 
                 <m.button
@@ -201,7 +201,7 @@ export default function Hero() {
                   className="rounded-lg contact-social-icon transition-colors"
                   onClick={() => window.open('https://www.linkedin.com/in/utshochowdhury/', '_blank')}
                 >
-                  <Image src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />
+                  <Image src="https://skills.syvixor.com/api/icons?i=linkedin&perline=12&radius=60" alt="LinkedIn" width={32} height={32} className="w-8 h-8" unoptimized />
                 </m.button>
 
                 <m.button
@@ -210,7 +210,7 @@ export default function Hero() {
                   className=" rounded-lg contact-social-icon transition-colors"
                   onClick={() => window.location.href = 'mailto:utsho8chowdhury@gmail.com'}
                 >
-                  <Image src="https://skillicons.dev/icons?i=gmail" alt="Gmail" width={32} height={32} className="w-8 h-8" unoptimized />
+                  <Image src="https://skills.syvixor.com/api/icons?i=gmail&perline=12&radius=60" alt="Gmail" width={35} height={35} className="w-9 h-9" unoptimized />
                 </m.button>
 
                 <div className="inline-flex items-center gap-2 px-2 sm:px-2 py-1 sm:py-1.5 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50">

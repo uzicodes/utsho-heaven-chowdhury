@@ -58,7 +58,7 @@ const projects: Project[] = [
   {
     title: "Culinary Canvas",
     description: "Production ready modern web platform with seamless experience while admins efficiently manage operations.\n• Easy Ordering flow, Catogorized food items \n• Real-time items fetched from MongoDB \n• Profile management, can see previous orders \n• Admin Dashboard with CRUD operations in items & sections (add/delete/update)\n• Admin can check orders, daily/monthly revenue, resturant metrics & user feedbacks \n• Real-time user feedback system & SSLcommerz for payment integration, invoice generation",
-    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "mongodb", "android", "redis", "ssl"],
+    skills: ["nextjs", "nodejs", "react", "ts", "tailwind", "mongodb", "capacitor", "redis", "ssl"],
     link: "/projects/culinary-canvas.webp",
     color: "#ff6b35",
     githubLink: "https://github.com/uzicodes/culinary-canvas",
@@ -78,7 +78,7 @@ const projects: Project[] = [
   {
     title: "Aura Force",
     description: "Robust Fitness platform streamlining Gym operations & enhancing member experience.\n• Features real-time Class scheduling, Class & Trainer booking.\n• Prisma fetching from Supabase & user feedback realtime from DB \n• Clerk for authentication & user management.\n• User BMI & personalized diet plan.\n• Admin dashboard for managing memberships, trainers & classes efficiently.\n• Animated UI & Responsiveness for engaging user experience \n• SSLCommerz for safe transactions.",
-    skills: ["nextjs", "react", "ts", "tailwind", "supabase", "prisma", "redis", "android", "clerk"],
+    skills: ["nextjs", "react", "ts", "tailwind", "supabase", "prisma", "redis", "capacitor", "clerk"],
     link: "/projects/aura-force.webp",
     color: "#ef4444",
     githubLink: "https://github.com/uzicodes/AuraForce",
@@ -101,7 +101,7 @@ const buildingTools: Project[] = [
   {
     title: "SCAN-REACT",
     description: "Static React code analysis platform engineered to optimize repositories for the native React Compiler.\n• Programmatic AST-based code diagnostics running on a custom serverless-ready Node.js analysis engine.\n• Featuring V8 engine memory guards & GitHub API metadata pre-flight checks.\n• API protection with Redis rate-limiting.\n• react-doctor invoked via its programmatic Node API.\n• GitHub REST API for Source Control Interface utilized for pre-flight repository size metadata.\n• Interactive diagnostic dashboard featuring atomic, ready-to-use AI-Prompt for rapid IDE refinement. \n• Decoupled cloud architecture, Vercel for the Next.js frontend and Render for backend execution containers.",
-    skills: ["nextjs", "ts", "nodejs", "v8", "tailwind", "rest-api", "redis", "render"],
+    skills: ["nextjs", "ts", "nodejs", "v8", "tailwind", "rest", "redis", "render"],
     link: "/projects/Tools/scan-react/scan-react.webp",
     color: "#eab308",
     githubLink: "https://github.com/uzicodes/Scan-React",
@@ -355,11 +355,11 @@ function Card({
                   socket: { src: "/icons/socket.svg", alt: "Socket", bg: "bg-white", cls: "w-full h-full object-contain" },
                   ssl: { src: "/icons/ssl.jpg", alt: "SSLCommerz", bg: "bg-white", cls: "w-full h-full object-contain" },
                   render: { src: "/icons/render.svg", alt: "Render", bg: "bg-white", cls: "w-full h-full object-contain" },
-                  "rest-api": { src: "/icons/rest-api.svg", alt: "REST API", bg: "bg-white", cls: "w-full h-full object-contain" },
+                  rest: { src: "/icons/REST.svg", alt: "REST API", bg: "bg-white", cls: "w-full h-full object-contain" },
                   v8: { src: "/icons/V8.svg", alt: "V8 Engine", bg: "bg-white", cls: "w-full h-full object-contain" },
                   clerk: { src: "/icons/tools/clerk.svg", alt: "Clerk", bg: "bg-[#1C1C1E]", cls: "w-4 h-4 md:w-6 md:h-6" },
                   neon: { src: "/icons/database/neon.svg", alt: "Neon DB", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
-                  android: { src: "/icons/tools/android.svg", alt: "Android", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
+                  capacitor: { src: "/icons/capacitor.svg", alt: "Capacitor", bg: "bg-transparent", cls: "w-full h-full object-contain scale-[1.3]" },
                   recharts: { src: "/icons/recharts.svg", alt: "Recharts", bg: "bg-transparent", cls: "w-full h-full object-contain" },
                   youtube: { src: "/icons/youtube.svg", alt: "YouTube", bg: "bg-transparent", cls: "w-full h-full object-contain" },
                 };
