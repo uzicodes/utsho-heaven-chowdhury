@@ -55,7 +55,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
 
     return (
         <ReactLenis root>
-            <div className="min-h-screen bg-[#0f1115] text-gray-300 font-sans selection:bg-blue-500/30">
+            <div className="min-h-screen bg-[#0f1115] text-gray-300 selection:bg-blue-500/30" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                 <ScrollToTop />
 
                 {/* HERO SECTION */}
@@ -143,7 +143,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                             <div>
                                 <h2
                                     className="text-3xl font-bold mb-6"
-                                    style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                                    style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                 >
                                     The Problem
                                 </h2>
@@ -156,7 +156,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                             <div>
                                 <h2
                                     className="text-3xl font-bold mb-8"
-                                    style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                                    style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                 >
                                     Development Process
                                 </h2>
@@ -165,8 +165,8 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                                         <div key={index} className="relative">
                                             <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full border-2 border-green-500 bg-[#0f1115] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></span>
                                             <h3
-                                                className="text-xl font-bold text-white mb-2"
-                                                style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                                                className="text-xl font-bold mb-2"
+                                                style={{ color: '#F5E7D9', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                             >
                                                 {item.step}
                                             </h3>
@@ -286,8 +286,8 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                 {project.architecture && (
                     <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
                         <h2
-                            className="text-3xl font-bold mb-6 text-[#F5BE27]"
-                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                            className="text-3xl font-bold mb-6"
+                            style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                         >
                             System Architecture
                         </h2>
@@ -311,8 +311,8 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                 {project.featureSpotlight && project.featureSpotlight.length > 0 && (
                     <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
                         <h2
-                            className="text-3xl font-bold mb-10 text-[#F5BE27]"
-                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                            className="text-3xl font-bold mb-10"
+                            style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                         >
                             Feature Spotlight
                         </h2>
