@@ -184,7 +184,7 @@ export default function Projects() {
           <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={container}>
             <div className="text-white w-full bg-transparent">
               <div className="text-center mb-0 pt-32">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1" style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                   PROJECTS
                 </h2>
                 <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
@@ -218,7 +218,7 @@ export default function Projects() {
           <div className="bg-transparent relative z-10 min-h-screen pt-12" ref={toolsContainer}>
             <div className="text-white w-full bg-transparent">
               <div className="text-center mb-0 pt-72">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1" style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                   BUILDING TOOLS
                 </h2>
                 <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>

@@ -79,7 +79,7 @@ const BookshelfSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-base sm:text-2xl md:text-3xl whitespace-nowrap" style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif', fontWeight: 600 }}>
+          <h2 className="text-base sm:text-2xl md:text-3xl whitespace-nowrap" style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif', fontWeight: 600 }}>
             handpicked my Favorite Books
           </h2>
         </m.div>

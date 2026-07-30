@@ -194,7 +194,7 @@ const EducationSection: React.FC = () => {
         <section className="min-h-screen relative overflow-hidden overflow-x-clip py-20 bg-transparent">
             <div className="max-w-6xl mx-auto px-4 relative z-10 capitalize">
                 <div className="text-center mb-12 pt-72">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                         EDUCATIONAL JOURNEY
                     </h2>
                     <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
@@ -256,7 +256,7 @@ const EducationSection: React.FC = () => {
                     className="mt-60"
                 >
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: '#F5BE27', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                             PROFESSIONAL CERTIFICATIONS
                         </h2>
                         <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>

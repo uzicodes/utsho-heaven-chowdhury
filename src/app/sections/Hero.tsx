@@ -57,10 +57,7 @@ export default function Hero() {
                     className="hero-name"
                     style={{
                       fontFamily: 'var(--font-space-grotesk), sans-serif',
-                      backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
+                      color: '#FB4500',
                       fontSize: '1.5rem',
                       display: 'block',
                       marginTop: '0',
@@ -90,10 +87,7 @@ export default function Hero() {
                     className="hero-name whitespace-nowrap"
                     style={{
                       fontFamily: 'var(--font-space-grotesk), sans-serif',
-                      backgroundImage: 'linear-gradient(135deg, #ff6b35, #f7931e, #ff9500)',
-                      backgroundClip: 'text',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
+                      color: '#FB4500',
                       fontSize: '50px',
                       display: 'block',
                       marginTop: '0',

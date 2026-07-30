@@ -142,7 +142,7 @@ export default function About(): React.ReactElement {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative z-10 max-w-none text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold whitespace-normal sm:whitespace-nowrap text-center sm:text-left"
-            style={{ color: '#DEB34B', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+            style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
           >
             Developer | Designer <br className="sm:hidden" /><span className="hidden sm:inline">| </span>Creator | Innovator
           </m.h2>
