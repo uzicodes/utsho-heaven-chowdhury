@@ -218,7 +218,7 @@ const Form = () => {
             <button type="submit" className="send-button">Send Message</button>
             <div className="reset-button-container"></div>
           </div>
-          <span style={{ color: '#caf438', fontWeight: 'bold', marginTop: '10px', display: 'block' }}>{result}</span>
+          <span style={{ color: '#FB4500', fontWeight: 'bold', marginTop: '10px', display: 'block' }}>{result}</span>
         </form>
       </div>
     </StyledWrapper>
@@ -227,7 +227,7 @@ const Form = () => {
 
 const StyledWrapper = styled.div`
   .orange {
-    color: #caf438;
+    color: #FB4500;
   }
 
   .error-message {
@@ -245,7 +245,7 @@ const StyledWrapper = styled.div`
       background-color: #001925;
       padding: 16px;
       font-family: var(--font-space-grotesk), sans-serif;
-    border-left: 5px solid #caf438;
+    border-left: 5px solid #FB4500;
     clip-path: polygon(
       0 0,
       100% 0,
@@ -257,7 +257,7 @@ const StyledWrapper = styled.div`
 
   .heading {
     display: block;
-    color: #d3f35f;
+    color: #FB4500;
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 20px;
@@ -293,7 +293,7 @@ const StyledWrapper = styled.div`
   }
 
   .form-container .form .input:focus {
-    border-left: 5px solid #caf438;
+    border-left: 5px solid #FB4500;
   }
 
   .form-container .form .textarea {
@@ -302,7 +302,7 @@ const StyledWrapper = styled.div`
     border: none;
     outline: none;
     background-color: #013747;
-    color: #caf438;
+    color: #FB4500;
     font-weight: bold;
     resize: none;
     max-height: 150px;
@@ -313,7 +313,7 @@ const StyledWrapper = styled.div`
   }
 
   .form-container .form .textarea:focus {
-    border-left: 5px solid #caf438;
+    border-left: 5px solid #FB4500;
   }
 
   .form-container .form .button-container {
@@ -325,12 +325,12 @@ const StyledWrapper = styled.div`
   }
 
   .form-container .form .button-container .send-button {
-    background: #caf438;
+    background: transparent;
     padding: 10px 32px;
-    color: #001925;
+    color: #FB4500;
     text-align: center;
     font-weight: bold;
-    border: 1px solid transparent;
+    border: 1px solid #FB4500;
     transition: all 0.2s ease-in-out;
     min-width: 180px;
     display: block;
@@ -339,9 +339,9 @@ const StyledWrapper = styled.div`
   }
 
   .form-container .form .button-container .send-button:hover {
-    background: transparent;
-    border: 1px solid #ff7a01;
-    color: #caf438;
+    background: #FB4500;
+    border: 1px solid transparent;
+    color: #001925;
   }
 
   .form-container .form .button-container .reset-button-container {
@@ -353,7 +353,7 @@ const StyledWrapper = styled.div`
     position: relative;
     text-align: center;
     padding: 10px;
-    color: #caf438;
+    color: #FB4500;
     font-weight: bold;
     background: #001925;
     clip-path: polygon(
@@ -371,7 +371,7 @@ const StyledWrapper = styled.div`
     .button-container
     .reset-button-container
     .reset-button:hover {
-    background: #caf438;
+    background: #FB4500;
     color: #001925;
   }`;
 

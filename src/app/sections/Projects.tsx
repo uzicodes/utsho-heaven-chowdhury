@@ -187,8 +187,8 @@ export default function Projects() {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1" style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                   PROJECTS
                 </h2>
-                <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                  showcasing my Technical Projects & Creative Solutions
+                <p className="max-w-2xl mx-auto text-sm md:text-lg" style={{ color: '#F5E7D9', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                  Showcasing my Technical Projects & Creative Solutions
                 </p>
               </div>
               {projects.map((project: Project, i: number) => {
@@ -221,8 +221,8 @@ export default function Projects() {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1" style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                   BUILDING TOOLS
                 </h2>
-                <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
-                  developed Utilities & Tools to streamline Developer workflows
+                <p className="max-w-2xl mx-auto text-sm md:text-lg" style={{ color: '#F5E7D9', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+                  Developed Utilities & Tools to streamline Developer workflows
                 </p>
               </div>
 
