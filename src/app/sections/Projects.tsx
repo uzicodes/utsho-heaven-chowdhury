@@ -106,7 +106,7 @@ const buildingTools: Project[] = [
     color: "#eab308",
     githubLink: "https://github.com/uzicodes/Scan-React",
     liveLink: "https://scanreact.vercel.app",
-    detailsLink: "/projects/  task-planner",
+    detailsLink: "/tools/scan-react",
   },
   {
     title: "STATS-TUBE",
@@ -116,7 +116,7 @@ const buildingTools: Project[] = [
     color: "#f43f5e",
     githubLink: "https://github.com/uzicodes/Stats-Tube",
     liveLink: "https://stats-tube.vercel.app",
-    detailsLink: "/projects/Tools/stats-tube/stats-tube.webp",
+    detailsLink: "/tools/stats-tube",
   }
 ];
 
