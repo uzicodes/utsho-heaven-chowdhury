@@ -198,14 +198,13 @@ export default async function ToolDetail({ params }: ToolPageProps) {
                             {/* Tech Stack */}
                             <div>
                                 <h3
-                                    className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4"
-                                    style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                                    className="text-xs font-bold uppercase tracking-widest mb-4 text-center"
+                                    style={{ color: '#FB4500', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                                 >
                                     Tech Stack
                                 </h3>
-                                <div className="flex flex-wrap justify-center gap-2 max-w-[280px]">
+                                <div className="flex flex-wrap justify-center gap-2 max-w-[280px] mx-auto">
                                     {(() => {
-                                        // Map toolDetails techStack names to skillicons.dev slugs
                                         const techToSlug: Record<string, string> = {
                                             'Next.js': 'nextjs', 'Node.js': 'nodejs', 'React': 'react',
                                             'TypeScript': 'ts', 'Tailwind CSS': 'tailwind', 'MongoDB': 'mongodb',
@@ -220,6 +219,11 @@ export default async function ToolDetail({ params }: ToolPageProps) {
                                             'SSLCommerz': { src: '/icons/ssl.jpg', alt: 'SSLCommerz', bg: 'bg-white' },
                                             'Render': { src: '/icons/render.svg', alt: 'Render', bg: 'bg-white' },
                                             'Neon DB': { src: '/icons/database/neon.svg', alt: 'Neon DB', bg: 'bg-transparent' },
+                                            'Capacitor': { src: '/icons/capacitor.svg', alt: 'Capacitor', bg: 'bg-transparent' },
+                                            'REST API': { src: '/icons/REST.svg', alt: 'REST API', bg: 'bg-white' },
+                                            'V8 Engine': { src: '/icons/V8.svg', alt: 'V8 Engine', bg: 'bg-white' },
+                                            'Recharts': { src: '/icons/recharts.svg', alt: 'Recharts', bg: 'bg-transparent' },
+                                            'YouTube': { src: '/icons/youtube.svg', alt: 'YouTube', bg: 'bg-transparent' },
                                         };
 
                                         const elements: React.ReactNode[] = [];

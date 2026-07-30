@@ -51,7 +51,7 @@ export const toolDetails: Record<string, Tool> = {
                 details: "Decoupled cloud architecture, Vercel for the Next.js frontend and Render for backend execution containers."
             }
         ],
-        techStack: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Redis", "Render"],
+        techStack: ["Next.js", "TypeScript", "Node.js", "Tailwind CSS", "Redis", "Render", "V8 Engine", "REST API"],
         liveUrl: "https://scanreact.vercel.app",
         githubUrl: "https://github.com/uzicodes/Scan-React",
         architecture: {
@@ -91,7 +91,7 @@ export const toolDetails: Record<string, Tool> = {
                 details: "Algorithmic head-to-head comparison featuring AI matchup summaries and engagement scoring."
             }
         ],
-        techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Redis"],
+        techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Redis", "YouTube", "Recharts"],
         liveUrl: "https://stats-tube.vercel.app",
         githubUrl: "https://github.com/uzicodes/Stats-Tube",
         architecture: {

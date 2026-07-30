@@ -93,7 +93,7 @@ export const projectDetails: Record<string, Project> = {
                 details: "Created personalized user dashboards and designed a responsive, modern UI with native Bengali language support."
             }
         ],
-        techStack: ["Next.js", "Node.js", "React", "TypeScript", "Neon DB", "Redis", "Socket.io", "Prisma", "Clerk", "Tailwind CSS"],
+        techStack: ["Next.js", "Node.js", "React", "TypeScript", "Neon DB", "Redis", "Socket.io", "Prisma", "Clerk", "Tailwind CSS", "Capacitor"],
         liveUrl: "https://dhaka-basha.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Dhaka-Basha",
         architecture: {
@@ -138,7 +138,7 @@ export const projectDetails: Record<string, Project> = {
                 details: "Integrated SSLcommerz for secure payment processing and automated invoice generation."
             }
         ],
-        techStack: ["Next.js", "Node.js", "React", "TypeScript", "MongoDB", "Redis", "SSLCommerz", "Tailwind CSS"],
+        techStack: ["Next.js", "Node.js", "React", "TypeScript", "MongoDB", "Redis", "SSLCommerz", "Tailwind CSS", "Capacitor"],
         liveUrl: "https://culinarycanvaas.vercel.app/",
         githubUrl: "https://github.com/uzicodes/culinary-canvas",
         architecture: {
@@ -228,7 +228,7 @@ export const projectDetails: Record<string, Project> = {
                 details: "Designed an animated, highly responsive UI and secured all financial transactions via SSLCommerz."
             }
         ],
-        techStack: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "Redis", "Clerk", "Tailwind CSS"],
+        techStack: ["Next.js", "React", "TypeScript", "Supabase", "Prisma", "Redis", "Clerk", "Tailwind CSS", "Capacitor"],
         liveUrl: "https://auraforce.vercel.app/",
         githubUrl: "https://github.com/uzicodes/AuraForce",
 
