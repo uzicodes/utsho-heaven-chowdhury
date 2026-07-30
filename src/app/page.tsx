@@ -90,8 +90,8 @@ export default function Home() {
             <div className="w-full max-w-7xl mx-auto text-center space-y-8 relative">
               {/* Big Heading */}
               <h2
-                className="text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-extrabold text-white leading-none tracking-tight md:whitespace-nowrap"
-                style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                className="text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-extrabold leading-none tracking-tight md:whitespace-nowrap"
+                style={{ color: '#F5E7D9', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
               >
                 LET&apos;S MAKE<span className="hidden md:inline"> </span><br className="md:hidden" />IT HAPPEN
               </h2>
@@ -99,7 +99,7 @@ export default function Home() {
               {/* Email */}
               <a
                 href="mailto:utsho8chowdhury@gmail.com"
-                className="inline-block text-[#e07a3a] hover:text-[#06CC2D] text-lg sm:text-xl md:text-2xl font-bold tracking-wider transition-colors"
+                className="inline-block text-[#FB4500] hover:text-[#06CC2D] text-lg sm:text-xl md:text-2xl font-bold tracking-wider transition-colors"
                 style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
               >
                 utsho8chowdhury@gmail.com

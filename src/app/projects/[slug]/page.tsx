@@ -69,7 +69,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
 
                             <h1
                                 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight"
-                                style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                                style={{ color: '#F5E7D9', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                             >
                                 {project.title}
                             </h1>
@@ -378,8 +378,8 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
 
                         {/* Big Heading */}
                         <h2
-                            className="text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-extrabold text-white leading-none tracking-tight md:whitespace-nowrap"
-                            style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
+                            className="text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem] font-extrabold leading-none tracking-tight md:whitespace-nowrap"
+                            style={{ color: '#F5E7D9', fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                         >
                             LET&apos;S MAKE<span className="hidden md:inline"> </span><br className="md:hidden" />IT HAPPEN
                         </h2>
@@ -387,7 +387,7 @@ export default async function ProjectDetail({ params }: ProjectPageProps) {
                         {/* Email */}
                         <a
                             href="mailto:utsho8chowdhury@gmail.com"
-                            className="inline-block text-[#e07a3a] hover:text-[#06CC2D] text-lg sm:text-xl md:text-2xl font-bold tracking-wider transition-colors"
+                            className="inline-block text-[#FB4500] hover:text-[#06CC2D] text-lg sm:text-xl md:text-2xl font-bold tracking-wider transition-colors"
                             style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                         >
                             utsho8chowdhury@gmail.com

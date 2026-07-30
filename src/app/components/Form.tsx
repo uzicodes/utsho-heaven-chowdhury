@@ -264,7 +264,7 @@ const StyledWrapper = styled.div`
   }
   .c1 {
     display: block;
-    color: #CC6D0E;
+    color: #F5E7D9;
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 20px;

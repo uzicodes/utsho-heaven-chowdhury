@@ -452,7 +452,7 @@ function Card({
 
           <div className="w-full md:w-[50%] lg:w-[55%] p-4 pt-2 md:p-6 md:pt-3 lg:p-8 lg:pt-4 flex flex-col justify-between relative md:-ml-4 lg:-ml-8">
             <div className="relative z-10">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 text-center" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-0.5 text-center" style={{ color: '#F5E7D9', fontFamily: 'var(--font-space-grotesk), sans-serif' }}>
                 {title}
               </h3>
               {(() => {
