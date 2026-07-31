@@ -104,7 +104,12 @@ export const toolDetails: Record<string, Tool> = {
             description: "The architecture of Stats-Tube, featuring high-performance proxy routing and batch fetching data pipeline."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/Tools/stats-tube/stats-tube.webp", caption: "High-performance YouTube analytics" }
+            { imageUrl: "/projects/Tools/stats-tube/1.webp", caption: "Device Responsive Interphase" },
+            { imageUrl: "/projects/Tools/stats-tube/2.webp", caption: "Creator Dashboard detailed with channel stats" },
+            { imageUrl: "/projects/Tools/stats-tube/3.webp", caption: "Analytics Visualization with recharts package" },
+            { imageUrl: "/projects/Tools/stats-tube/4.webp", caption: "Momentum Graph (Video vs Millions)" },
+            { imageUrl: "/projects/Tools/stats-tube/5.webp", caption: "Video Library detailed with video analytics." },
+            { imageUrl: "/projects/Tools/stats-tube/6.webp", caption: "Creator Head-to-Head Comparison with metrics." }
         ]
     }
 };
