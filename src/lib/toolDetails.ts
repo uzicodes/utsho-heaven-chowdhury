@@ -59,7 +59,12 @@ export const toolDetails: Record<string, Tool> = {
             description: "The architecture of Scan-React, utilizing decoupled cloud architecture for frontend and backend execution containers."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/Tools/scan-react/scan-react.webp", caption: "Static React code analysis platform" }
+            { imageUrl: "/projects/Tools/scan-react/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/Tools/scan-react/2.webp", caption: "Scanning Architechture Pipeline" },
+            { imageUrl: "/projects/Tools/scan-react/3.webp", caption: "Analysis Engine Breakdown as Loader" },
+            { imageUrl: "/projects/Tools/scan-react/4.webp", caption: "Scan Result Dashboard" },
+            { imageUrl: "/projects/Tools/scan-react/5.webp", caption: "Issues in proper Details with Copyable AI Prompt" },
+            { imageUrl: "/projects/Tools/scan-react/6.webp", caption: "Dynamic Bug Report From (Web3) " }
         ]
     },
 
