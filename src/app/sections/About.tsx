@@ -195,12 +195,12 @@ export default function About(): React.ReactElement {
                   </m.p>
                 </blockquote>
 
-                <m.p variants={textItemVariant} className="text-white mt-6 mb-2 text-sm md:text-base" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>{`Let's not forget-`}</m.p>
+                <m.p variants={textItemVariant} className="text-white mt-6 mb-2 text-sm md:text-base text-center sm:text-left" style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>{`Let's not forget-`}</m.p>
 
                 {/* Pop-in animation Code Text */}
                 <m.p
                   variants={textItemVariant}
-                  className="text-base md:text-xl"
+                  className="text-base md:text-xl text-center sm:text-left"
                   style={{ color: '#CF4E5B', fontFamily: 'var(--font-space-grotesk), sans-serif', fontStyle: 'italic' }}
                 >
                   {`it all started with a   `}
@@ -214,8 +214,8 @@ export default function About(): React.ReactElement {
                     {'<'} hello world {'>'}
                   </m.span>
                 </m.p>
-                <m.div variants={textItemVariant} className="mt-8" style={{ position: 'relative', overflow: 'visible' }}>
-                  <div ref={widgetContainerRef} style={{ position: 'relative' }} />
+                <m.div variants={textItemVariant} className="mt-8 flex justify-center sm:justify-start" style={{ position: 'relative', overflow: 'visible' }}>
+                  <div ref={widgetContainerRef} className="flex justify-center sm:justify-start w-full" style={{ position: 'relative' }} />
                 </m.div>
               </div>
             </m.div>
