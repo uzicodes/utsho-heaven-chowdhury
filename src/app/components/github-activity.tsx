@@ -21,7 +21,7 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
   const [data, setData] = useState<GitHubContribution[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [calendarConfig, setCalendarConfig] = useState({ blockSize: 12, blockMargin: 3, isMobile: false });
+  const [calendarConfig, setCalendarConfig] = useState<{ blockSize: number; blockMargin: number; isMobile: boolean } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Auto-calculate block size to fit all 53 weeks without scrolling
@@ -33,14 +33,15 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
     const paddingLeft = parseFloat(styles.paddingLeft) || 0;
     const paddingRight = parseFloat(styles.paddingRight) || 0;
 
-    // Extra 80px buffer to account for weekday labels on the left and ensure no horizontal scrollbar
-    const containerWidth = container.clientWidth - paddingLeft - paddingRight - 80;
+    const isMobile = window.innerWidth < 768;
+    // Extra buffer to account for weekday labels on the left and ensure no horizontal scrollbar
+    const buffer = isMobile ? 8 : 80;
+    const containerWidth = container.clientWidth - paddingLeft - paddingRight - buffer;
     const weeks = 53;
 
     const maxPitch = containerWidth / weeks;
     const pitch = Math.floor(maxPitch * 100) / 100;
 
-    const isMobile = window.innerWidth < 768;
     const margin = Math.max(1, Math.floor(pitch * 0.2));
     const blockSize = Math.max(2, Math.floor(pitch - margin));
 
@@ -205,13 +206,14 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
   }
 
   return (
-    <div className="w-full mt-12" ref={containerRef}>
+    <div className="w-full mt-12">
       <m.div
+        ref={containerRef}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="w-full p-6 sm:p-8 rounded-2xl relative overflow-hidden"
+        className="w-full p-4 sm:p-8 rounded-2xl relative overflow-hidden"
         style={{
           background: "rgba(255,255,255,0.03)",
           border: "1px solid rgba(255,255,255,0.06)",
@@ -240,21 +242,25 @@ export function GithubActivity({ username = "uzicodes" }: GitHubActivityProps) {
         {/* Calendar */}
         <div className="w-full flex justify-center overflow-hidden pb-4">
           <div className="flex flex-col items-center justify-center min-h-[100px] w-full max-w-full overflow-hidden">
-            <ActivityCalendar
-              data={data}
-              blockMargin={calendarConfig.blockMargin}
-              blockSize={calendarConfig.blockSize}
-              fontSize={12}
-              colorScheme="dark"
-              theme={{
-                dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-              }}
-              labels={{
-                totalCount: "{{count}} contributions in the last year",
-              }}
-              showMonthLabels={!calendarConfig.isMobile}
-              showColorLegend={!calendarConfig.isMobile}
-            />
+            {calendarConfig ? (
+              <ActivityCalendar
+                data={data}
+                blockMargin={calendarConfig.blockMargin}
+                blockSize={calendarConfig.blockSize}
+                fontSize={12}
+                colorScheme="dark"
+                theme={{
+                  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+                }}
+                labels={{
+                  totalCount: "{{count}} contributions in the last year",
+                }}
+                showMonthLabels={!calendarConfig.isMobile}
+                showColorLegend={!calendarConfig.isMobile}
+              />
+            ) : (
+              <div className="h-[100px]" />
+            )}
           </div>
         </div>
 
