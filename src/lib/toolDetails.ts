@@ -27,7 +27,7 @@ export const toolDetails: Record<string, Tool> = {
         title: "SCAN-REACT",
         tagline: "Static React code analysis platform.",
         shortDescription: "Static React code analysis platform engineered to optimize repositories for the native React Compiler.",
-        coverImage: "/projects/Tools/scan-react/scan-react.webp",
+        coverImage: "/projects/scan-react.webp",
         theProblem: "Developers needed an interactive diagnostic dashboard featuring atomic, ready-to-use AI-Prompt for rapid IDE refinement to prepare for React Compiler.",
         developmentProcess: [
             {

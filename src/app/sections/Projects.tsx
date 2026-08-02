@@ -102,7 +102,7 @@ const buildingTools: Project[] = [
     title: "SCAN-REACT",
     description: "Static React code analysis platform engineered to optimize repositories for the native React Compiler.\n• Programmatic AST-based code diagnostics running on a custom serverless-ready Node.js analysis engine.\n• Featuring V8 engine memory guards & GitHub API metadata pre-flight checks.\n• API protection with Redis rate-limiting.\n• react-doctor invoked via its programmatic Node API.\n• GitHub REST API for Source Control Interface utilized for pre-flight repository size metadata.\n• Interactive diagnostic dashboard featuring atomic, ready-to-use AI-Prompt for rapid IDE refinement. \n• Decoupled cloud architecture, Vercel for the Next.js frontend and Render for backend execution containers.",
     skills: ["nextjs", "ts", "nodejs", "v8", "tailwind", "rest", "redis", "render"],
-    link: "/projects/Tools/scan-react/scan-react.webp",
+    link: "/projects/scan-react.webp",
     color: "#eab308",
     githubLink: "https://github.com/uzicodes/Scan-React",
     liveLink: "https://scanreact.vercel.app",
