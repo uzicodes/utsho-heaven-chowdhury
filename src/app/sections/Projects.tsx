@@ -344,7 +344,7 @@ function Card({
               </m.div>
 
               <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-black/50 backdrop-blur-md text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium">
-                {isTool ? 'Tool' : 'Project'} {i + 1}
+                {`${isTool ? "Tool" : "Project"} - ${i + 1}`}
               </div>
             </div>
 
