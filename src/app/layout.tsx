@@ -88,6 +88,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${spaceGrotesk.variable} antialiased bg-black min-h-screen relative`}
+        suppressHydrationWarning
       >
         <Preloader />
         <MotionProvider>

@@ -149,11 +149,11 @@ export default function Hero() {
                 <m.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-block"
+                  className="w-full sm:w-auto"
                 >
                   <Link 
                     href="/resume"
-                    className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-800 to-green-700 p-0.5 rounded-none transition-all duration-300"
+                    className="w-full group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-800 to-green-700 p-0.5 rounded-none transition-all duration-300"
                   >
                     <span className="block w-full px-4 sm:px-5 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                       <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium transition-colors duration-300 group-hover:text-[#ff6b35]">
@@ -170,7 +170,7 @@ export default function Hero() {
                   target="_blank"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-none bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 sm:ml-2 ml-0"
+                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-none bg-gradient-to-r from-green-800 to-green-700 transition-all duration-300 sm:ml-2 ml-0"
                 >
                   <span className="block w-full px-6 sm:px-2 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700 relative">
                     <span className="flex items-center justify-center gap-2 text-gray-300 font-medium min-w-[120px] transition-colors duration-300 group-hover:text-[#ff6b35]">
