@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { m, Variants } from "framer-motion";
 import { FlipWords } from "../components/flip-words";
 import { useIsMobile } from "../../lib/useIsMobile";
@@ -145,22 +146,24 @@ export default function Hero() {
 
               {/* CTA Buttons */}
               <m.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-2 mt-4">
-                <m.a
-                  href="https://drive.google.com/file/d/1UiITMC1UhNa9bMl_sRLiXJxsgS8TDPqE/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <m.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-800 to-green-700 p-0.5 rounded-none transition-all duration-300"
+                  className="inline-block"
                 >
-                  <span className="block w-full px-4 sm:px-5 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
-                    <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium transition-colors duration-300 group-hover:text-[#ff6b35]">
-                      <Image src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-0.1 align-middle" />
-                      <span style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>RESUME</span>
-                      <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
+                  <Link 
+                    href="/resume"
+                    className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-800 to-green-700 p-0.5 rounded-none transition-all duration-300"
+                  >
+                    <span className="block w-full px-4 sm:px-5 py-3 sm:py-4 rounded-none bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
+                      <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium transition-colors duration-300 group-hover:text-[#ff6b35]">
+                        <Image src="/pdf.png" alt="PDF" width={22} height={22} className="inline-block mr-0.1 align-middle" />
+                        <span style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}>RESUME</span>
+                        <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
+                      </span>
                     </span>
-                  </span>
-                </m.a>
+                  </Link>
+                </m.div>
 
                 <m.a
                   href="https://calendly.com/utsho/30min"
