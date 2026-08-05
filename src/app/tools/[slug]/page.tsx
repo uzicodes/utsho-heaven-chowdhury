@@ -306,6 +306,7 @@ export default async function ToolDetail({ params }: ToolPageProps) {
                                 height={1200}
                                 className="w-full max-w-5xl h-auto object-contain"
                                 sizes="(max-width: 1280px) 100vw, 1280px"
+                                unoptimized
                             />
                         </div>
                     </section>
