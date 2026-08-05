@@ -177,6 +177,35 @@ export default function Projects() {
     };
   }, []);
 
+  useEffect(() => {
+    // Check if we came from a project detail page
+    const lastViewedProject = sessionStorage.getItem("lastViewedProject");
+    if (lastViewedProject) {
+      let attempts = 0;
+
+      const checkAndScroll = () => {
+        const el = document.getElementById(`project-${lastViewedProject}`);
+        if (el) {
+          const headerOffset = 40; // Reduced offset since cards are sticky and center themselves
+          const elementPosition = el.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+          
+          // Clear it after successful scroll
+          sessionStorage.removeItem("lastViewedProject");
+        } else if (attempts < 50) {
+          attempts++;
+          requestAnimationFrame(checkAndScroll);
+        } else {
+          sessionStorage.removeItem("lastViewedProject");
+        }
+      };
+
+      // Small delay to let the homepage render
+      setTimeout(checkAndScroll, 300);
+    }
+  }, []);
+
   return (
     <div className="bg-transparent relative min-h-screen">
       <div className="relative z-10">

@@ -1,30 +1,18 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function BackToTools({ slug }: { slug: string }) {
     const router = useRouter();
 
+    useEffect(() => {
+        sessionStorage.setItem("lastViewedProject", slug);
+    }, [slug]);
+
     const handleClick = (e: React.MouseEvent) => {
         e.preventDefault();
         router.push("/");
-
-        // After navigation, scroll to the specific project card
-        const checkAndScroll = () => {
-            const el = document.getElementById(`project-${slug}`);
-            if (el) {
-                const headerOffset = 40; // Reduced offset since cards are sticky and center themselves
-                const elementPosition = el.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-            } else {
-                // Element not yet in DOM, retry
-                requestAnimationFrame(checkAndScroll);
-            }
-        };
-
-        // Small delay to let the homepage render
-        setTimeout(checkAndScroll, 300);
     };
 
     return (

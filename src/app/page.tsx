@@ -20,7 +20,10 @@ export default function Home() {
       window.history.scrollRestoration = 'manual';
     }
     if (!window.location.hash) {
-      window.scrollTo(0, 0);
+      const lastViewedProject = sessionStorage.getItem("lastViewedProject");
+      if (!lastViewedProject) {
+        window.scrollTo(0, 0);
+      }
     } else {
       setTimeout(() => {
         const id = window.location.hash.replace('#', '');
