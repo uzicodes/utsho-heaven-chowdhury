@@ -52,16 +52,16 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://lambfalcons.vercel.app/",
         githubUrl: "https://github.com/uzicodes/lamb-falcons",
         architecture: {
-            diagramUrl: "/projects/detailed-page/lamb-falcons/architechture.webp",
+            diagramUrl: "/projects/detailed-page/projects/lamb-falcons/architechture.webp",
             description: "The architecture of Lamb Falcons, featuring Clerk authentication for private member portals, GSAP-driven interactive elements, and Vercel CI/CD deployment."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/detailed-page/lamb-falcons/1.webp", caption: "Device Responsive Interface" },
-            { imageUrl: "/projects/detailed-page/lamb-falcons/2.webp", caption: "Featured Merchandise Section (ongoing)" },
-            { imageUrl: "/projects/detailed-page/lamb-falcons/3.webp", caption: "Squad Members Info Section (ongoing)" },
-            { imageUrl: "/projects/detailed-page/lamb-falcons/4.webp", caption: "Featured Images for Gallery Overview (ongoing)" },
-            { imageUrl: "/projects/detailed-page/lamb-falcons/5.webp", caption: "Membership Dashboard Preview (ongoing)" },
-            { imageUrl: "/projects/detailed-page/lamb-falcons/6.webp", caption: "Testimonial & About Us Section (ongoing)" }
+            { imageUrl: "/projects/detailed-page/projects/lamb-falcons/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/projects/lamb-falcons/2.webp", caption: "Featured Merchandise Section (ongoing)" },
+            { imageUrl: "/projects/detailed-page/projects/lamb-falcons/3.webp", caption: "Squad Members Info Section (ongoing)" },
+            { imageUrl: "/projects/detailed-page/projects/lamb-falcons/4.webp", caption: "Featured Images for Gallery Overview (ongoing)" },
+            { imageUrl: "/projects/detailed-page/projects/lamb-falcons/5.webp", caption: "Membership Dashboard Preview (ongoing)" },
+            { imageUrl: "/projects/detailed-page/projects/lamb-falcons/6.webp", caption: "Testimonial & About Us Section (ongoing)" }
         ]
     },
 
@@ -97,16 +97,16 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://dhaka-basha.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Dhaka-Basha",
         architecture: {
-            diagramUrl: "/projects/detailed-page/dhaka-basha/dhaka-basha.webp",
+            diagramUrl: "/projects/detailed-page/arch-diagrams/dhaka-basha.webp",
             description: "A robust multi-tier architecture powering both Web and Android (Capacitor) clients. API requests pass through custom Next.js Middleware with Upstash Redis rate-limiting to prevent abuse. User authentication and database synchronization are managed asynchronously via Clerk Webhooks, real-time events are broadcast through Pusher WebSockets, and data persistence is handled via Prisma ORM querying a serverless Neon PostgreSQL database."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/detailed-page/dhaka-basha/1.webp", caption: "Device Responsive Interface" },
-            { imageUrl: "/projects/detailed-page/dhaka-basha/2.webp", caption: "Advanced Filtering System" },
-            { imageUrl: "/projects/detailed-page/dhaka-basha/3.webp", caption: "Rental Posting Form" },
-            { imageUrl: "/projects/detailed-page/dhaka-basha/4.webp", caption: "User Dashboard Management (Posts, Chats, Saved)" },
-            { imageUrl: "/projects/detailed-page/dhaka-basha/5.webp", caption: "Chat UI with Rental Post Owners" },
-            { imageUrl: "/projects/detailed-page/dhaka-basha/6.webp", caption: "Post View with Detailed Info" }
+            { imageUrl: "/projects/detailed-page/projects/dhaka-basha/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/projects/dhaka-basha/2.webp", caption: "Advanced Filtering System" },
+            { imageUrl: "/projects/detailed-page/projects/dhaka-basha/3.webp", caption: "Rental Posting Form" },
+            { imageUrl: "/projects/detailed-page/projects/dhaka-basha/4.webp", caption: "User Dashboard Management (Posts, Chats, Saved)" },
+            { imageUrl: "/projects/detailed-page/projects/dhaka-basha/5.webp", caption: "Chat UI with Rental Post Owners" },
+            { imageUrl: "/projects/detailed-page/projects/dhaka-basha/6.webp", caption: "Post View with Detailed Info" }
         ]
     },
 
@@ -142,16 +142,16 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://culinarycanvaas.vercel.app/",
         githubUrl: "https://github.com/uzicodes/culinary-canvas",
         architecture: {
-            diagramUrl: "/projects/detailed-page/culinary-canvas/architechture.webp",
+            diagramUrl: "/projects/detailed-page/arch-diagrams/culinary-canvas.webp",
             description: "The architecture of Culinary Canvas, integrating MongoDB database management, Redis caching, SSLCommerz payment gateway, and admin business analytics."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/detailed-page/culinary-canvas/1.webp", caption: "Device Responsive Interface" },
-            { imageUrl: "/projects/detailed-page/culinary-canvas/2.webp", caption: "Category & Menu Page" },
-            { imageUrl: "/projects/detailed-page/culinary-canvas/3.webp", caption: "User Profile Management" },
-            { imageUrl: "/projects/detailed-page/culinary-canvas/4.webp", caption: "Customizable Cart Page" },
-            { imageUrl: "/projects/detailed-page/culinary-canvas/5.webp", caption: "Order Checkout & Payment Processing Page" },
-            { imageUrl: "/projects/detailed-page/culinary-canvas/6.webp", caption: "Admin Dashboard Analytics" }
+            { imageUrl: "/projects/detailed-page/projects/culinary-canvas/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/projects/culinary-canvas/2.webp", caption: "Category & Menu Page" },
+            { imageUrl: "/projects/detailed-page/projects/culinary-canvas/3.webp", caption: "User Profile Management" },
+            { imageUrl: "/projects/detailed-page/projects/culinary-canvas/4.webp", caption: "Customizable Cart Page" },
+            { imageUrl: "/projects/detailed-page/projects/culinary-canvas/5.webp", caption: "Order Checkout & Payment Processing Page" },
+            { imageUrl: "/projects/detailed-page/projects/culinary-canvas/6.webp", caption: "Admin Dashboard Analytics" }
         ]
     },
 
@@ -233,16 +233,16 @@ export const projectDetails: Record<string, Project> = {
         githubUrl: "https://github.com/uzicodes/AuraForce",
 
         architecture: {
-            diagramUrl: "/projects/detailed-page/aura-force/architechture.webp",
+            diagramUrl: "/projects/detailed-page/arch-diagrams/aura-force.webp",
             description: "The architecture of Aura Force, featuring secure authentication, real-time data synchronization, and streamlined gym management workflows."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/detailed-page/aura-force/1.webp", caption: "Device Responsiveness Interface " },
-            { imageUrl: "/projects/detailed-page/aura-force/2.webp", caption: "Trainers Detailed Profiles " },
-            { imageUrl: "/projects/detailed-page/aura-force/3.webp", caption: "Class Schedule and Booking " },
-            { imageUrl: "/projects/detailed-page/aura-force/4.webp", caption: "Member Profile Dashboard " },
-            { imageUrl: "/projects/detailed-page/aura-force/5.webp", caption: "Dynamic Admin Panel" },
-            { imageUrl: "/projects/detailed-page/aura-force/6.webp", caption: "Public Posting Forum" }
+            { imageUrl: "/projects/detailed-page/projects/aura-force/1.webp", caption: "Device Responsiveness Interface " },
+            { imageUrl: "/projects/detailed-page/projects/aura-force/2.webp", caption: "Trainers Detailed Profiles " },
+            { imageUrl: "/projects/detailed-page/projects/aura-force/3.webp", caption: "Class Schedule and Booking " },
+            { imageUrl: "/projects/detailed-page/projects/aura-force/4.webp", caption: "Member Profile Dashboard " },
+            { imageUrl: "/projects/detailed-page/projects/aura-force/5.webp", caption: "Dynamic Admin Panel" },
+            { imageUrl: "/projects/detailed-page/projects/aura-force/6.webp", caption: "Public Posting Forum" }
         ]
     },
 
@@ -278,16 +278,16 @@ export const projectDetails: Record<string, Project> = {
         liveUrl: "https://aloraa.vercel.app/",
         githubUrl: "https://github.com/uzicodes/Alora",
         architecture: {
-            diagramUrl: "/projects/detailed-page/alora/architechture.webp",
+            diagramUrl: "/projects/detailed-page/arch-diagrams/alora.webp",
             description: "The architecture of Alora, utilizing Neon PostgreSQL with Prisma ORM, Upstash Redis rate-limiting for API protection, Clerk authentication, and SSLCommerz payment processing."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/detailed-page/alora/1.webp", caption: "Device Responsive Interface" },
-            { imageUrl: "/projects/detailed-page/alora/2.webp", caption: "Product Page Interface" },
-            { imageUrl: "/projects/detailed-page/alora/3.webp", caption: "User Profile Management" },
-            { imageUrl: "/projects/detailed-page/alora/4.webp", caption: "Customizable Cart Page" },
-            { imageUrl: "/projects/detailed-page/alora/5.webp", caption: "Secured Checkout Page" },
-            { imageUrl: "/projects/detailed-page/alora/6.webp", caption: "Dynamic Inventory Management" }
+            { imageUrl: "/projects/detailed-page/projects/alora/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/projects/alora/2.webp", caption: "Product Page Interface" },
+            { imageUrl: "/projects/detailed-page/projects/alora/3.webp", caption: "User Profile Management" },
+            { imageUrl: "/projects/detailed-page/projects/alora/4.webp", caption: "Customizable Cart Page" },
+            { imageUrl: "/projects/detailed-page/projects/alora/5.webp", caption: "Secured Checkout Page" },
+            { imageUrl: "/projects/detailed-page/projects/alora/6.webp", caption: "Dynamic Inventory Management" }
         ]
     }
 };

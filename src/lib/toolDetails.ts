@@ -55,16 +55,16 @@ export const toolDetails: Record<string, Tool> = {
         liveUrl: "https://scanreact.vercel.app",
         githubUrl: "https://github.com/uzicodes/Scan-React",
         architecture: {
-            diagramUrl: "/projects/Tools/scan-react/scan-react.webp",
+            diagramUrl: "/projects/detailed-page/arch-diagrams/scan-react.webp",
             description: "The architecture of Scan-React, utilizing decoupled cloud architecture for frontend and backend execution containers."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/Tools/scan-react/1.webp", caption: "Device Responsive Interface" },
-            { imageUrl: "/projects/Tools/scan-react/2.webp", caption: "Scanning Architechture Pipeline" },
-            { imageUrl: "/projects/Tools/scan-react/3.webp", caption: "Analysis Engine Breakdown as Loader" },
-            { imageUrl: "/projects/Tools/scan-react/4.webp", caption: "Scan Result Dashboard" },
-            { imageUrl: "/projects/Tools/scan-react/5.webp", caption: "Issues in proper Details with Copyable AI Prompt" },
-            { imageUrl: "/projects/Tools/scan-react/6.webp", caption: "Dynamic Bug Report From (Web3) " }
+            { imageUrl: "/projects/detailed-page/tools/scan-react/1.webp", caption: "Device Responsive Interface" },
+            { imageUrl: "/projects/detailed-page/tools/scan-react/2.webp", caption: "Scanning Architechture Pipeline" },
+            { imageUrl: "/projects/detailed-page/tools/scan-react/3.webp", caption: "Analysis Engine Breakdown as Loader" },
+            { imageUrl: "/projects/detailed-page/tools/scan-react/4.webp", caption: "Scan Result Dashboard" },
+            { imageUrl: "/projects/detailed-page/tools/scan-react/5.webp", caption: "Issues in proper Details with Copyable AI Prompt" },
+            { imageUrl: "/projects/detailed-page/tools/scan-react/6.webp", caption: "Dynamic Bug Report From (Web3) " }
         ]
     },
 
@@ -72,7 +72,7 @@ export const toolDetails: Record<string, Tool> = {
         title: "STATS-TUBE",
         tagline: "High-performance YouTube analytics.",
         shortDescription: "High-performance YouTube analytics and competitor intelligence platform engineered to uncover deep engagement metrics & channel momentum.",
-        coverImage: "/projects/Tools/stats-tube/stats-tube.webp",
+        coverImage: "/projects/stats-tube.webp",
         theProblem: "Deep content strategy analysis and engagement metrics are hard to uncover effectively using native tools.",
         developmentProcess: [
             {
@@ -100,16 +100,16 @@ export const toolDetails: Record<string, Tool> = {
         liveUrl: "https://stats-tube.vercel.app",
         githubUrl: "https://github.com/uzicodes/Stats-Tube",
         architecture: {
-            diagramUrl: "/projects/Tools/stats-tube/stats-tube.webp",
+            diagramUrl: "/projects/detailed-page/arch-diagrams/stats-tube.webp",
             description: "The architecture of Stats-Tube, featuring high-performance proxy routing and batch fetching data pipeline."
         },
         featureSpotlight: [
-            { imageUrl: "/projects/Tools/stats-tube/1.webp", caption: "Device Responsive Interphase" },
-            { imageUrl: "/projects/Tools/stats-tube/2.webp", caption: "Creator Dashboard detailed with channel stats" },
-            { imageUrl: "/projects/Tools/stats-tube/3.webp", caption: "Analytics Visualization with recharts package" },
-            { imageUrl: "/projects/Tools/stats-tube/4.webp", caption: "Momentum Graph (Video vs Millions)" },
-            { imageUrl: "/projects/Tools/stats-tube/5.webp", caption: "Video Library detailed with video analytics." },
-            { imageUrl: "/projects/Tools/stats-tube/6.webp", caption: "Creator Head-to-Head Comparison with metrics." }
+            { imageUrl: "/projects/detailed-page/tools/stats-tube/1.webp", caption: "Device Responsive Interphase" },
+            { imageUrl: "/projects/detailed-page/tools/stats-tube/2.webp", caption: "Creator Dashboard detailed with channel stats" },
+            { imageUrl: "/projects/detailed-page/tools/stats-tube/3.webp", caption: "Analytics Visualization with recharts package" },
+            { imageUrl: "/projects/detailed-page/tools/stats-tube/4.webp", caption: "Momentum Graph (Video vs Millions)" },
+            { imageUrl: "/projects/detailed-page/tools/stats-tube/5.webp", caption: "Video Library detailed with video analytics." },
+            { imageUrl: "/projects/detailed-page/tools/stats-tube/6.webp", caption: "Creator Head-to-Head Comparison with metrics." }
         ]
     }
 };

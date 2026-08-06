@@ -112,7 +112,7 @@ const buildingTools: Project[] = [
     title: "STATS-TUBE",
     description: "High-performance YouTube analytics and competitor intelligence platform engineered to uncover deep engagement metrics & channel momentum.\n• Server-side proxy routing for YouTube Data API v3.\n• Endpoint protection & API quota managing from Redis.\n• Highly optimized data pipeline using batch fetching for extensive video statistics with sub-second latency.\n• Token-based API pagination for data rendering.\n• Interactive data visualization by React-Recharts library.\n• Dynamic RPM used for financial modeling and upload velocity tracking for deep content strategy analysis.\n• Algorithmic head-to-head comparison featuring AI matchup summaries and engagement scoring.\n• Serverless bug reporting integrated via Web3Forms API.",
     skills: ["nextjs", "youtube", "ts", "tailwind", "recharts", "redis",],
-    link: "/projects/Tools/stats-tube/stats-tube.webp",
+    link: "/projects/stats-tube.webp",
     color: "#f43f5e",
     githubLink: "https://github.com/uzicodes/Stats-Tube",
     liveLink: "https://stats-tube.vercel.app",
@@ -190,7 +190,7 @@ export default function Projects() {
           const elementPosition = el.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
           window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-          
+
           // Clear it after successful scroll
           sessionStorage.removeItem("lastViewedProject");
         } else if (attempts < 50) {
