@@ -13,8 +13,13 @@ export const Preloader = () => {
         setMounted(true);
         let isMounted = true;
 
-        const minTimePromise = new Promise<void>(resolve => setTimeout(resolve, 3000));
+        const hasVisited = typeof window !== 'undefined' && sessionStorage.getItem('hasVisited');
 
+        // Minimum duration: 3000ms (3s) for first load, 500ms (0.5s) for refresh
+        const minTimeDuration = hasVisited ? 500 : 3000;
+        const minTimePromise = new Promise<void>(resolve => setTimeout(resolve, minTimeDuration));
+
+        // Window load promise
         const windowLoadPromise = new Promise<void>(resolve => {
             if (document.readyState === 'complete') {
                 resolve();
@@ -23,10 +28,14 @@ export const Preloader = () => {
             }
         });
 
-        // Eagerly load all images and wait for them
+        // Font load promise
+        const fontsLoadPromise = (typeof document !== 'undefined' && document.fonts)
+            ? document.fonts.ready.then(() => {}).catch(() => {})
+            : Promise.resolve();
+
+        // Eagerly load all images across all components and wait for them to finish
         const imagesLoadPromise = new Promise<void>(resolve => {
-            // Small timeout to ensure all DOM elements are mounted
-            setTimeout(() => {
+            const checkImages = () => {
                 const images = Array.from(document.querySelectorAll('img'));
                 
                 images.forEach(img => {
@@ -44,19 +53,35 @@ export const Preloader = () => {
                 });
 
                 Promise.all(imagePromises).then(() => resolve());
-            }, 50);
+            };
+
+            setTimeout(checkImages, 50);
         });
 
-        const loadPromise = Promise.all([windowLoadPromise, imagesLoadPromise]);
+        // Safety fallback timeout (10s max) to prevent infinite hanging if network stalls
+        const maxSafetyPromise = new Promise<void>(resolve => setTimeout(resolve, 10000));
 
+        const pageAssetsPromise = Promise.race([
+            Promise.all([windowLoadPromise, fontsLoadPromise, imagesLoadPromise]),
+            maxSafetyPromise
+        ]);
+
+        const loadPromise = hasVisited ? Promise.resolve() : pageAssetsPromise;
+
+        // Resolves when minimum duration (3s) AND all component assets are fully loaded
         Promise.all([minTimePromise, loadPromise]).then(() => {
             if (isMounted) {
+                try {
+                    sessionStorage.setItem('hasVisited', 'true');
+                } catch (e) {
+                    // Ignore storage errors
+                }
                 setIsZooming(true);
                 setTimeout(() => {
                     if (isMounted) {
                         setIsLoading(false);
                     }
-                }, 750);
+                }, hasVisited ? 300 : 750);
             }
         });
 
