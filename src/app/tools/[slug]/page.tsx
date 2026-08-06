@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { toolDetails, ToolSlug } from "@/lib/toolDetails";
 import BackToTools from "./BackToTools";
-import NavigateLink from "@/app/projects/[slug]/NavigateLink";
-import ScrollToTop from "@/app/projects/[slug]/ScrollToTop";
-import FeatureSpotlight from "@/app/projects/[slug]/FeatureSpotlight";
+import NavigateLink from "./NavigateLink";
+import ScrollToTop from "./ScrollToTop";
+import FeatureSpotlight from "./FeatureSpotlight";
 import { ReactLenis } from "lenis/react";
 
 interface ToolPageProps {
